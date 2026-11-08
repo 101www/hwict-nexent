@@ -1,0 +1,157 @@
+- alert
+- generic: "* *"
+- generic: "* * * *"
+- banner:
+  - banner:
+    - link "logo Nexent":
+      - /url: /
+      - img "logo"
+      - generic: Nexent
+    - link "Github":
+      - /url: https://github.com/ModelEngine-Group/nexent
+      - text: Github
+    - link "ModelEngine":
+      - /url: http://modelengine-ai.net
+    - text: 简体中文
+    - button "通知":
+    - generic: [账号已隐藏]
+- complementary:
+  - menu:
+    - menuitem "首页":
+      - generic: 首页
+    - menuitem "开始问答":
+      - generic: 开始问答
+    - menuitem "自动任务":
+      - generic: 自动任务
+    - menuitem "智能体开发":
+      - generic: 智能体开发
+    - menuitem "资源仓库":
+      - generic: 资源仓库
+    - menuitem "资源管理":
+      - generic: 资源管理
+  - button:
+- main:
+  - button "返回":
+    - generic: 返回
+  - button "版本管理":
+    - generic: 版本管理
+  - main:
+    - heading "配置" [level=3]
+    - text: 草稿
+    - text: "当前发布版本:"
+    - generic: 高血压用药决策助手-2610132226
+    - generic: / 共 1 个版本
+    - button "智能生成":
+      - generic: 智能生成
+    - tablist:
+      - tab "基本设置" [selected]
+      - tab "工具与技能"
+      - tab "高级设置"
+    - tabpanel "基本设置":
+      - button "展示信息 配置图标、展示名称、变量名、作者和简介" [expanded]:
+        - generic: 展示信息
+        - paragraph: 配置图标、展示名称、变量名、作者和简介
+      - generic "智能体名称": "* 智能体名称"
+      - textbox "* 智能体名称":
+        - /placeholder: 请输入智能体名称
+        - text: 高血压用药决策助手
+      - generic: 9 / 60
+      - generic "智能体变量名": "* 智能体变量名"
+      - textbox "* 智能体变量名":
+        - /placeholder: 请输入智能体变量名
+        - text: www
+      - generic: 3 / 60
+      - generic "作者": "* 作者"
+      - textbox "* 作者":
+        - /placeholder: 请输入作者名称
+        - text: [账号已隐藏]
+      - generic "智能体描述": "* 智能体描述"
+      - textbox "* 智能体描述":
+        - /placeholder: 请输入智能体描述
+        - text: 基于临床指南的高血压用药决策辅助，每条结论可溯源
+      - generic: 24 / 500
+      - generic "标签"
+      - generic: —
+      - button "编辑标签":
+        - generic: 编辑标签
+      - generic: 智能体图标
+      - button:
+      - generic: 支持 PNG、JPEG、GIF、WebP，最大 2 MB
+      - button "模型与提示词 配置大语言模型以及智能体角色、使用要求和示例" [expanded]:
+        - generic: 模型与提示词
+        - paragraph: 配置大语言模型以及智能体角色、使用要求和示例
+      - generic "模型": "模型 :"
+      - generic "deepseek-flash":
+        - generic: deepseek-flash
+      - combobox
+      - img "down":
+      - button "调整模型优先级" [disabled]:
+      - button "模型参数覆盖":
+      - tablist:
+        - tab "智能体角色" [selected]
+        - tab "使用要求"
+        - tab "示例"
+      - tabpanel "智能体角色":
+        - textbox "请输入智能体的角色、职责和能力": 你是高血压指南与管理标准的资料溯源助手，帮助用户查询三份文档、核对关系、适用条件和版本。结论以工具返回的原文为依据，不把待核验抽取说成已经审核的医疗建议。回答简明，提供可追溯的出处。
+        - button "放大查看":
+      - button "知识库 选择知识库后自动启用知识库检索能力并建立关联":
+        - generic: 知识库
+        - paragraph: 选择知识库后自动启用知识库检索能力并建立关联
+      - button "配置":
+        - generic: 配置
+      - button "选择知识库":
+        - generic: 选择知识库
+      - button "会话引导 配置用户首次进入会话时的开场白和示例问题":
+        - generic: 会话引导
+        - paragraph: 配置用户首次进入会话时的开场白和示例问题
+    - button "停止当前生成并解除编辑锁定" [disabled]:
+      - generic: 解除锁定
+    - button "调试":
+      - generic: 调试
+    - button "发布":
+      - generic: 发布
+    - heading "调试" [level=3]
+    - generic: 对比模式
+    - switch
+    - button "Maximize debug panel":
+    - button "关闭调试":
+    - generic: 血压达标和未达标患者分别多久随访
+    - generic: 高血压用药决策助手
+    - status:
+      - status:
+        - generic: success
+      - generic: 已完成
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 1
+    - paragraph: <｜｜DSML｜｜ calls> <｜｜DSML｜｜ invoke name="code"> <｜｜DSML｜｜ parameter name="code" string="true">r = query_relations(keyword="followUpEvery", limit=20) print(r)</｜｜DSML｜｜ parameter> </｜｜DSML｜｜ invoke> </｜｜DSML｜｜ calls>
+    - button "复制":
+      - generic: 复制
+    - button "刷新":
+      - generic: 刷新
+    - button "更多":
+      - generic: 更多
+    - generic "生成耗时 850ms":
+      - text: 850ms
+    - button "1% 本轮":
+      - generic: 1%
+      - generic: 本轮
+    - button "滚动到底部" [disabled]:
+      - generic: 滚动到底部
+    - button "规划":
+      - text: 规划
+    - button "执行":
+      - text: 执行
+    - textbox "发送消息..." [active]
+    - combobox:
+      - generic: deepseek-flash
+    - button "添加附件":
+      - generic: 添加附件
+    - button [disabled]:
+    - button "发送" [disabled]:
+- contentinfo:
+  - text: Nexent © 2026
+  - generic: · v2.7.0
+  - link "使用条款":
+    - /url: https://github.com/nexent-hub/nexent?tab=License-1-ov-file#readme

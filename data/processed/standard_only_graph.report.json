@@ -1,0 +1,261 @@
+{
+  "documents": [
+    {
+      "id": "N-DOC-cbf1c1ce2a3d61",
+      "file": "WS-T872-2025_重排.txt",
+      "title": "基层医疗卫生机构高血压防治管理标准",
+      "year": "2025",
+      "profile": "standard",
+      "warnings": [],
+      "reference_year_evidence": {
+        "file": "WS-T872-2025_重排.txt",
+        "section": "REFERENCES",
+        "page": 8,
+        "block_id": "B-232e1532f133",
+        "start": 22,
+        "end": 51,
+        "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+        "section_status": "from_text_heading",
+        "verification": "pending",
+        "confidence": 0.95,
+        "confidence_basis": "rule_heuristic_not_calibrated"
+      },
+      "referenced_primary_year": "2021",
+      "verification": "pending",
+      "confidence": 0.9,
+      "confidence_basis": "rule_heuristic_not_calibrated",
+      "verification_reasons": [
+        "document_metadata_requires_review"
+      ]
+    }
+  ],
+  "counts": {
+    "documents": 1,
+    "blocks": 35,
+    "nodes": 76,
+    "edges": 173,
+    "thresholds": 2,
+    "discarded": 0
+  },
+  "threshold_candidates_count": 2,
+  "pending_counts": {
+    "nodes": 76,
+    "edges": 173,
+    "thresholds": 2,
+    "threshold_candidates": 2,
+    "edge_candidates": 0,
+    "entity_candidates": 13,
+    "extraction_candidates": 11
+  },
+  "clinical_relations_by_source": {
+    "WS-T872-2025_重排.txt": 5
+  },
+  "history_snapshots": [
+    {
+      "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\standard_only_graph.history\\3ed17814da0855bebe9f5b83821c9bd6900a89afa625874c8d78c1112fb51bf9.json",
+      "sha256": "3ed17814da0855bebe9f5b83821c9bd6900a89afa625874c8d78c1112fb51bf9",
+      "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+      "verification": "pending",
+      "confidence": 1.0,
+      "confidence_basis": "exact_file_snapshot_sha256"
+    },
+    {
+      "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\standard_only_graph.history\\8b25538bdf4cb47af8f2df17a913364cae237abe4a7f53e36b47d7667220588c.json",
+      "sha256": "8b25538bdf4cb47af8f2df17a913364cae237abe4a7f53e36b47d7667220588c",
+      "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+      "verification": "pending",
+      "confidence": 1.0,
+      "confidence_basis": "exact_file_snapshot_sha256"
+    }
+  ],
+  "relations": {
+    "containsSection": 35,
+    "evidencedBy": 114,
+    "followUpEvery": 2,
+    "recommendsEquipment": 1,
+    "references": 4,
+    "referralWhen": 3,
+    "requiresDrugClass": 5,
+    "requiresEducation": 1,
+    "requiresEquipment": 7,
+    "requiresFollowUp": 1
+  },
+  "references": [
+    {
+      "id": "E-806c180128154a",
+      "headId": "N-B-13be9bab232a",
+      "relation": "references",
+      "tailId": "N-REF-ee7a3bdd86014a",
+      "condition": "",
+      "rule": "R-EXPLICIT-REFERENCE",
+      "file": "WS-T872-2025_重排.txt",
+      "section": "8.1",
+      "page": 5,
+      "block_id": "B-13be9bab232a",
+      "start": 70,
+      "end": 96,
+      "evidence": "血压达标的目标值参见《国家基层高血压防治管理指南》。",
+      "section_status": "from_text_heading",
+      "verification": "pending",
+      "confidence": 0.55,
+      "confidence_basis": "rule_heuristic_not_calibrated",
+      "resolution": "missing",
+      "requested_year": "2021",
+      "candidate_doc_ids": [],
+      "version_evidence": {
+        "file": "WS-T872-2025_重排.txt",
+        "section": "REFERENCES",
+        "page": 8,
+        "block_id": "B-232e1532f133",
+        "start": 22,
+        "end": 51,
+        "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+        "section_status": "from_text_heading",
+        "verification": "pending",
+        "confidence": 0.95,
+        "confidence_basis": "rule_heuristic_not_calibrated"
+      },
+      "document_available": false,
+      "sufficient": false,
+      "verification_reasons": [
+        "missing"
+      ]
+    },
+    {
+      "id": "E-f7cb5c4f69d996",
+      "headId": "N-B-8e14135f673d",
+      "relation": "references",
+      "tailId": "N-REF-ee7a3bdd86014a",
+      "condition": "",
+      "rule": "R-EXPLICIT-REFERENCE",
+      "file": "WS-T872-2025_重排.txt",
+      "section": "7",
+      "page": 4,
+      "block_id": "B-8e14135f673d",
+      "start": 362,
+      "end": 398,
+      "evidence": "高血压、正常高值血压及正常血压的定义参见《国家基层高血压防治管理指南》。",
+      "section_status": "needs_layout_review",
+      "verification": "pending",
+      "confidence": 0.55,
+      "confidence_basis": "rule_heuristic_not_calibrated",
+      "resolution": "missing",
+      "requested_year": "2021",
+      "candidate_doc_ids": [],
+      "version_evidence": {
+        "file": "WS-T872-2025_重排.txt",
+        "section": "REFERENCES",
+        "page": 8,
+        "block_id": "B-232e1532f133",
+        "start": 22,
+        "end": 51,
+        "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+        "section_status": "from_text_heading",
+        "verification": "pending",
+        "confidence": 0.95,
+        "confidence_basis": "rule_heuristic_not_calibrated"
+      },
+      "document_available": false,
+      "sufficient": false,
+      "verification_reasons": [
+        "layout_or_section_unverified",
+        "missing"
+      ]
+    },
+    {
+      "id": "E-fcb839e0ee4e82",
+      "headId": "N-B-8e14135f673d",
+      "relation": "references",
+      "tailId": "N-REF-ee7a3bdd86014a",
+      "condition": "",
+      "rule": "R-EXPLICIT-REFERENCE",
+      "file": "WS-T872-2025_重排.txt",
+      "section": "7",
+      "page": 4,
+      "block_id": "B-8e14135f673d",
+      "start": 399,
+      "end": 469,
+      "evidence": "生活方式指导包括：合理膳食（含减少钠盐、增加钾盐摄入）、控制体重、规律运动、戒烟、戒酒、\n高血压诊断标准参见《国家基层高血压防治管理指南》。",
+      "section_status": "needs_layout_review",
+      "verification": "pending",
+      "confidence": 0.55,
+      "confidence_basis": "rule_heuristic_not_calibrated",
+      "resolution": "missing",
+      "requested_year": "2021",
+      "candidate_doc_ids": [],
+      "version_evidence": {
+        "file": "WS-T872-2025_重排.txt",
+        "section": "REFERENCES",
+        "page": 8,
+        "block_id": "B-232e1532f133",
+        "start": 22,
+        "end": 51,
+        "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+        "section_status": "from_text_heading",
+        "verification": "pending",
+        "confidence": 0.95,
+        "confidence_basis": "rule_heuristic_not_calibrated"
+      },
+      "document_available": false,
+      "sufficient": false,
+      "verification_reasons": [
+        "layout_or_section_unverified",
+        "missing"
+      ]
+    },
+    {
+      "id": "E-e7f285fcfebd55",
+      "headId": "N-B-bee9a4b090b8",
+      "relation": "references",
+      "tailId": "N-REF-ee7a3bdd86014a",
+      "condition": "",
+      "rule": "R-EXPLICIT-REFERENCE",
+      "file": "WS-T872-2025_重排.txt",
+      "section": "8.2",
+      "page": 5,
+      "block_id": "B-bee9a4b090b8",
+      "start": 218,
+      "end": 239,
+      "evidence": "具体参见《国家基层高血压防\n治管理指南》。",
+      "section_status": "from_text_heading",
+      "verification": "pending",
+      "confidence": 0.55,
+      "confidence_basis": "rule_heuristic_not_calibrated",
+      "resolution": "missing",
+      "requested_year": "2021",
+      "candidate_doc_ids": [],
+      "version_evidence": {
+        "file": "WS-T872-2025_重排.txt",
+        "section": "REFERENCES",
+        "page": 8,
+        "block_id": "B-232e1532f133",
+        "start": 22,
+        "end": 51,
+        "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+        "section_status": "from_text_heading",
+        "verification": "pending",
+        "confidence": 0.95,
+        "confidence_basis": "rule_heuristic_not_calibrated"
+      },
+      "document_available": false,
+      "sufficient": false,
+      "verification_reasons": [
+        "missing"
+      ]
+    }
+  ],
+  "conflicts": {
+    "hard": [],
+    "candidates": [],
+    "within_document": [],
+    "note": "hard 保留兼容字段；未经人工裁决，本管线不自动生成已确认冲突。"
+  },
+  "limitations": [
+    "表格勾选关系未恢复，不推断表格列对应关系。",
+    "标准第 4、6 物理页存在文本错序，章节标记需核读，原文和页码仍保留。",
+    "全文中的诊疗数值仅保存为 threshold_candidates，未核验前不用于数值决策。",
+    "三份全文药物关系使用分源新规则；所有自动抽取关系待人工核验。",
+    "未解析药物语句、数字及重叠实体保留为待核验候选，缺端点/证据断言完整保留。",
+    "数值不同仅为待核对差异，不能自动认定为医学冲突。"
+  ]
+}

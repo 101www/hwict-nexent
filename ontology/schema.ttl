@@ -1,0 +1,22 @@
+# TODO: 领域本体定义（实体类型 / 关系类型 / 数值约束）
+# 示例骨架，请按所选行业替换
+@prefix : <http://example.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Entity a owl:Class .
+# --- 实体类型 ---
+# :Disease   a owl:Class ; rdfs:subClassOf :Entity .
+# :Drug      a owl:Class ; rdfs:subClassOf :Entity .
+# :Indicator a owl:Class ; rdfs:subClassOf :Entity .
+# :Clause    a owl:Class ; rdfs:subClassOf :Entity .
+# :Policy    a owl:Class ; rdfs:subClassOf :Entity .
+
+# --- 关系类型 ---
+# :contraindicatedFor  a owl:ObjectProperty .
+# :requiresReductionWhen a owl:ObjectProperty .
+# :basisClause a owl:ObjectProperty .
+# :revisedBy a owl:ObjectProperty .
+
+# --- 数值约束（数值比较推理的关键）---
+# :thresholdValue a owl:DatatypeProperty .

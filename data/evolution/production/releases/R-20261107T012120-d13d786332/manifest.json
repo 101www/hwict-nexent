@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-07T01:21:20+00:00",
+  "sources": [
+    {
+      "file": "WS-T872-2025_重排.txt",
+      "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\raw\\WS-T872-2025_重排.txt",
+      "sha256": "e0da41f86a17b44077a2b47382ed5fe3210b8216c01dce69e04857523e4c1973",
+      "bytes": 9727,
+      "snapshot": "source__e0da41f86a17b44077a2b47382ed5fe3210b8216c01dce69e04857523e4c1973.txt"
+    },
+    {
+      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+      "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\raw\\国家基层高血压防治管理指南2025版_重排.txt",
+      "sha256": "6a1423129a87455eb2a6127811606e25c62b35c80bb290c4a3d5d34d93f3bb12",
+      "bytes": 75702,
+      "snapshot": "source__6a1423129a87455eb2a6127811606e25c62b35c80bb290c4a3d5d34d93f3bb12.txt"
+    },
+    {
+      "file": "中国高血压临床实践指南2025版_重排.txt",
+      "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\raw\\中国高血压临床实践指南2025版_重排.txt",
+      "sha256": "6fa7e4b11d5ffc2c109c2a00cfb5cce52f938ad5a24ebb50c9898ed3e63d5e43",
+      "bytes": 278924,
+      "snapshot": "source__6fa7e4b11d5ffc2c109c2a00cfb5cce52f938ad5a24ebb50c9898ed3e63d5e43.txt"
+    }
+  ],
+  "files": {
+    "graph.json": "5516e2bd97523424b4d44872f7ee1a0d057125f2776b3680b7c1d9abf790353f",
+    "ontology.json": "3b28177a05a36de0a3f494655d4492ac08cd20864aee9718596de8feb8329a8b",
+    "ontology__clinical_relation_rules.json": "1fd3a8eb9b067d85e00b8925ca0b284a6c49926fb8d2a133c18f6491e7baf4d5",
+    "ontology__decision_rules.json": "f1f40b775ba3f848f40a1ea187b5bc3997f086dd111e0d0334c11b14e19af8d1",
+    "ontology__lexicon.json": "7db21222858939c5258b43dc52521740d47d0f608a9cef305758ff117c2ca84d",
+    "ontology__management_rules.json": "dace618da1fcaa46c9c9e6ced4da7285c98e4bf5c8779c13c84b0ceb3fd36e19",
+    "ontology__ontology.json": "3b28177a05a36de0a3f494655d4492ac08cd20864aee9718596de8feb8329a8b",
+    "ontology__relation_rules.json": "05327444fd3fcf39b4909f3c7c4a6c850d8f6c241e4f39d2b071716d48a0dbeb",
+    "pipeline__build_graph.py": "820fc96e5111e64ef282ae70a979557723a1ad8337f02904e888ded557c83322",
+    "pipeline__clinical_extractor.py": "3e1e0010f23641ef01bf42fdc9a55667487c4d280b6e8b86a3abd8486e4dd8b2",
+    "pipeline__conflict_review.py": "36dd118e93f034823a0af2c014b2b0c5e2371e6a37837d9a8fdfab5ec277e569",
+    "pipeline__decision_extractor.py": "0a9104dee32351b28bd299d9a875f22c2cc23262c5f39c94767823cb431636e1",
+    "pipeline__document_blocks.py": "cb6fc60ec9f89e0b0843bd1d080e950b08a1423c530e27bd6a62d77645929e0b",
+    "pipeline__evolution.py": "8c0da88c2f72fe9ec4aaa7f3423abe9c30852d96b0dfed7e06f52746bf81e842",
+    "pipeline__graph_builder.py": "33f1769ee1ac3395f996b6941ec5b8b044ce8fe24ed69dcb751782a4ec4f15af",
+    "pipeline__ingest.py": "1233e872ac42080fc99e5f0e1c1eedb214dc2dee9b7dec512a52ac399cae8bcf",
+    "pipeline__management_extractor.py": "66722a13041cd1fdd5d8539bf8733c323b97b03b1cd3348d19b21e68a7878526",
+    "pipeline__ocr.py": "6d4d47c032ad62035c2196c8ed9ba8092658f688f60b0b508cfd13110c4eeb6c",
+    "pipeline__pdf_layout.py": "e854ca2ba0a88c7c30e7d3e24ba4acce13574933785f4b04d242f1b00e462d98",
+    "pipeline__table_parser.py": "3812fb1baf7fa4fb6eb98b8032dbe19383f4e652ecd9f638e0cebaade88e3b29",
+    "pipeline__verification.py": "246af5df5964db32fa5499605acb5c959f136e09d9814cb112747435b27cc56f",
+    "source__e0da41f86a17b44077a2b47382ed5fe3210b8216c01dce69e04857523e4c1973.txt": "e0da41f86a17b44077a2b47382ed5fe3210b8216c01dce69e04857523e4c1973",
+    "source__6a1423129a87455eb2a6127811606e25c62b35c80bb290c4a3d5d34d93f3bb12.txt": "6a1423129a87455eb2a6127811606e25c62b35c80bb290c4a3d5d34d93f3bb12",
+    "source__6fa7e4b11d5ffc2c109c2a00cfb5cce52f938ad5a24ebb50c9898ed3e63d5e43.txt": "6fa7e4b11d5ffc2c109c2a00cfb5cce52f938ad5a24ebb50c9898ed3e63d5e43"
+  },
+  "kind": "imported_baseline",
+  "label": "正式基线：沿用现有三份全文图谱；自动知识仍待核验"
+}

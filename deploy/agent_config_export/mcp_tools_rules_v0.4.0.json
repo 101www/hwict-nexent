@@ -1,0 +1,349 @@
+{
+  "format": "actual_mcp_tools_list",
+  "source": "docs/validation/mcp-v04-smoke-report.json",
+  "server": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {
+      "completions": {},
+      "logging": {},
+      "prompts": {
+        "listChanged": true
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": true
+      },
+      "tools": {
+        "listChanged": true
+      }
+    },
+    "serverInfo": {
+      "name": "kg-tools",
+      "version": "0.2.0"
+    }
+  },
+  "tools": [
+    {
+      "name": "compare_threshold",
+      "description": "仅将数值与已结构化的数值约束作数学比较，保留适用条件和出处。需要匹配单位；命中不构成临床结论，未核验数字候选不会参与。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string",
+            "description": "主题关键词，例如：血压达标患者随访间隔"
+          },
+          "value": {
+            "type": "number",
+            "format": "double",
+            "description": "要比较的数值"
+          },
+          "unit": {
+            "type": "string",
+            "description": "单位，必须与记录相同，例如：月"
+          }
+        },
+        "required": [
+          "subject",
+          "value",
+          "unit"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_evidence",
+      "description": "按关系或引用中的block_id取得完整原文块。偏移start/end为Python字符索引，原文不重排、不改写。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "block_id": {
+            "type": "string",
+            "description": "原文块ID，例如关系中的 block_id"
+          }
+        },
+        "required": [
+          "block_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "resolve_regimen",
+      "description": "按完整人群组合两跳证据：人群←首选方案→择一/必要药物成分。只连接同regimen_group并核对代号定义，保留限制和排版疑点，不是个体处方。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "population": {
+            "type": "string",
+            "description": "完整人群，例如高血压合并糖尿病患者"
+          }
+        },
+        "required": [
+          "population"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "lookup_clause",
+      "description": "直接检索保存的文档原文块，包括尚未抽成关系的内容；返回原文、物理页码、章节和block_id。为关键词检索，非语义RAG。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "原文关键词，例如：随访频率"
+          },
+          "standard": {
+            "type": "string",
+            "description": "限定文件名，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "find_entities",
+      "description": "按名称、别名、ID、类型查找真实图谱节点。返回待核验状态和少量出处；未命中不代表原文不存在。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "关键词，例如：血压达标患者"
+          },
+          "type": {
+            "type": "string",
+            "description": "类型，如 Disease/DrugClass/Population/Equipment/SourceDoc，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "query_relations",
+      "description": "按实体名称或关系名称查找关系，返回完整条件、例外、原文、页码、置信分和待核验状态。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "关键词，例如：随访、血压达标患者、requiresEquipment"
+          },
+          "file": {
+            "type": "string",
+            "description": "限定文件名，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "evaluate_blood_pressure",
+      "description": "对收缩压/舒张压进行OR组合边界比较，并检查诊室、规范测量、4周内非同日3次等条款前提。单次140/90只达到边界，不自动确诊。不得猜测用户未提供的测量条件。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "systolic": {
+            "type": "number",
+            "format": "double",
+            "description": "收缩压数值"
+          },
+          "diastolic": {
+            "type": "number",
+            "format": "double",
+            "description": "舒张压数值"
+          },
+          "unit": {
+            "type": "string",
+            "description": "单位，目前只支持mmHg"
+          },
+          "measurement_method": {
+            "type": "string",
+            "description": "office/home/ambulatory/unknown；用户未说明时传unknown"
+          },
+          "standardized": {
+            "type": "boolean",
+            "description": "是否规范测量，用户未说明时不填"
+          },
+          "readings_json": {
+            "type": "string",
+            "description": "可选复测记录JSON数组，每项date为YYYY-MM-DD、sbp/dbp为数值；不得编造复测记录"
+          }
+        },
+        "required": [
+          "systolic",
+          "diastolic",
+          "unit"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "detect_conflicts",
+      "description": "比较已结构化数值差异及药物推荐作用域。区分配备vs一线初始用药、同范围正反推荐与条件不足；均保留原文，不能自动裁决医学冲突。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string",
+            "description": "主题关键词，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "check_references",
+      "description": "检查标准引用的指南及版本，区分未入库、版本不匹配和已匹配；有同名文档不代表引用要求已补全。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "来源文件或被引文件关键词，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "query_candidates",
+      "description": "查询保留的待核验抽取，包括未解析药物语句、数值和重叠实体。候选不作为已确认知识使用；支持翻页，不删除原始记录。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "关键词，例如：转诊、ARNI"
+          },
+          "collection": {
+            "type": "string",
+            "description": "集合名，可留空；edge_candidates/entity_candidates/extraction_candidates/threshold_candidates"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "traverse_relations",
+      "description": "沿业务关系做有界多跳检索，支持正反向查找且保留每条边的原始方向、条件和证据。结果只表示证据连通，不是已验证的医学推断。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "start_entity": {
+            "type": "string",
+            "description": "起点名称或ID，例如：血压达标患者"
+          },
+          "relation": {
+            "type": "string",
+            "description": "限定关系，可留空"
+          },
+          "hops": {
+            "type": "integer",
+            "format": "int32",
+            "description": "最大跳数，默认2，最多3"
+          },
+          "end_entity": {
+            "type": "string",
+            "description": "可选终点的准确名称或ID"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "最大路径数，默认10，最多50"
+          }
+        },
+        "required": [
+          "start_entity"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "graph_status",
+      "description": "查看当前加载的真实图谱文件、构建时间、文档版本、数量及局限。先用此工具确认数据来源。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+Browser tab: 7, Title: "AI Agent Platform", URL: "http://192.168.100.150:3000/zh/agent-space?tab=mine&agent_id=1".
+1 AXWebArea AI Agent Platform, URL: 192.168.100.150:3000/zh/agent-space?tab=mine&agent_id=1
+	2 container
+		189 text Agent 仓库
+		3 container
+			4 link Description: logo Nexent, Value: 192.168.100.150:3000/
+			5 link Description: Github, Value: github.com/ModelEngine-Group/nexent
+			6 link Description: ModelEngine, Value: modelengine-ai.net/
+			7 image
+			33 text 简体中文
+			8 image
+			9 button 通知
+				10 image
+			34 text [账号已隐藏]
+			11 image
+		12 menu
+			35 首页
+				36 image
+				37 text 首页
+			38 开始问答
+				39 image
+				40 text 开始问答
+			41 自动任务
+				42 image
+				43 text 自动任务
+			16 (collapsed) 智能体开发, Secondary Actions: Expand
+				17 image
+				44 text 智能体开发
+			23 (expanded) 资源仓库, Secondary Actions: Collapse
+				24 image
+				45 text 资源仓库
+			190 menu rc-menu-uuid-_r_i_-/resource-space-popup
+				191 Agent 仓库
+					192 image
+					193 text Agent 仓库
+				194 MCP 仓库
+					195 image
+					196 text MCP 仓库
+				197 Skill 仓库
+					198 image
+					199 text Skill 仓库
+			46 资源管理
+				47 image
+				48 text 资源管理
+		26 button
+			27 image
+		200 container
+			201 image
+			202 heading Agent 仓库, Value: 1
+				203 text Agent 仓库
+			204 text 浏览同租户共享仓库、管理你有权限的智能体，并发布与审核。
+		205 tab group
+			206 tab (selectable, settable, boolean) 仓库 0, Value: 0, ID: radix-_r_55_-trigger-repository
+			207 tab (selected, settable, boolean) 我的智能体 1, Value: 1, ID: radix-_r_55_-trigger-mine
+			208 tab (selectable, settable, boolean) 审核中心, Value: 0, ID: radix-_r_55_-trigger-review
+		209 text field (settable)
+		210 button 标签筛选
+		211 button 全部 1
+			212 text 全部
+			213 text 1
+		214 button 我创建的 1
+			215 text 我创建的
+			216 text 1
+		217 button 其他人的 0
+			218 text 其他人的
+			219 text 0
+		220 button 创建新的智能体
+		221 container
+			222 button
+			223 heading 高血压用药决策助手, Value: 2, ID: resource-card-title-_r_5k_
+				224 text 高血压用药决策助手
+			225 text 当前版本 高血压用药决策助手-2611081425
+			226 pop up button 更多操作
+			227 text 已发布
+			228 text 基于临床指南的高血压用药决策辅助，每条结论可溯源
+			229 text 2026-11-07
+			230 button 编辑
+		231 content list
+			232 container Previous Page
+				233 button (disabled) left
+					234 image left
+			235 text 1
+			236 container Next Page
+				237 button (disabled) right
+					238 image right
+		188 text Nexent © 2026 ·  v2.7.0
+		32 link Description: 使用条款, Value: github.com/nexent-hub/nexent?tab=License-1-ov-file#readme
+		239 menu
+			240 申请上架
+			241 评估
+			242 调用与分享
+			243 删除
+
+The focused UI element is 1 AXWebArea AI Agent Platform, URL: 192.168.100.150:3000/zh/agent-space?tab=mine&agent_id=1

@@ -1,0 +1,1188 @@
+{
+  "version": "0.4.0",
+  "description": "三份全文分源规则；药物选择与联合方案建模依据基层指南5.4.2/5.4.3；每条断言只使用自己来源的原文，自动抽取均待人工核验。",
+  "basis_primary_sections": [
+    "5.4.2",
+    "5.4.3"
+  ],
+  "drug_codes": {
+    "A": [
+      "血管紧张素转换酶抑制剂",
+      "血管紧张素II受体阻滞剂"
+    ],
+    "B": [
+      "β受体阻滞剂"
+    ],
+    "C": [
+      "二氢吡啶类钙通道阻滞剂"
+    ],
+    "D": [
+      "利尿剂"
+    ]
+  },
+  "scopes": {
+    "A": "A：ACEI和ARB。.*?(?=B：β受体阻滞剂。)",
+    "B": "B：β受体阻滞剂。.*?(?=C：CCB。)",
+    "C": "C：CCB。.*?(?=D：利尿剂。)",
+    "D": "D：利尿剂。.*?(?=近年来)"
+  },
+  "candidate_drug_pattern": "ACEI|ARB|CCB|ARNI|SPC|SGLT2|GLP|受体阻滞剂|利尿剂|普利|沙坦|地平|降压药|药物|[ABCD]\\+",
+  "candidate_relation_pattern": "推荐|首选|禁用|慎用|联用|联合|适用|配备|替代|监测|不良反应|禁忌|选择|治疗|剂量|[ABCD]\\+",
+  "rules": [
+    {
+      "id": "STD-DRUG-STOCK",
+      "profiles": [
+        "standard"
+      ],
+      "pattern": "基层医疗卫生机构应至少配备5大类降压药：.*?β受体阻滞剂。",
+      "facts": [
+        {
+          "head": "基层医疗卫生机构",
+          "relation": "requiresDrugClass",
+          "tail": "血管紧张素转换酶抑制剂",
+          "head_type": "Organization",
+          "tail_type": "DrugClass"
+        },
+        {
+          "head": "基层医疗卫生机构",
+          "relation": "requiresDrugClass",
+          "tail": "血管紧张素II受体阻滞剂",
+          "head_type": "Organization",
+          "tail_type": "DrugClass"
+        },
+        {
+          "head": "基层医疗卫生机构",
+          "relation": "requiresDrugClass",
+          "tail": "二氢吡啶类钙通道阻滞剂",
+          "head_type": "Organization",
+          "tail_type": "DrugClass"
+        },
+        {
+          "head": "基层医疗卫生机构",
+          "relation": "requiresDrugClass",
+          "tail": "噻嗪类利尿剂",
+          "head_type": "Organization",
+          "tail_type": "DrugClass"
+        },
+        {
+          "head": "基层医疗卫生机构",
+          "relation": "requiresDrugClass",
+          "tail": "β受体阻滞剂",
+          "head_type": "Organization",
+          "tail_type": "DrugClass"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "4.2",
+      "modality": "应至少配备",
+      "clinical_scope": {
+        "purpose": "机构药物保障；不等于一线初始用药"
+      }
+    },
+    {
+      "id": "PR-DRUG-STOCK",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "基层医疗卫生机构应配备下述五大类降压药：.*?噻嗪类利尿剂常用于降压。",
+      "facts": [
+        {
+          "head": "基层医疗卫生机构",
+          "relation": "recommendsDrugClass",
+          "tail": "血管紧张素转换酶抑制剂",
+          "head_type": "Organization",
+          "tail_type": "DrugClass"
+        },
+        {
+          "head": "基层医疗卫生机构",
+          "relation": "recommendsDrugClass",
+          "tail": "血管紧张素II受体阻滞剂",
+          "head_type": "Organization",
+          "tail_type": "DrugClass"
+        },
+        {
+          "head": "基层医疗卫生机构",
+          "relation": "requiresDrugClass",
+          "tail": "钙通道阻滞剂",
+          "head_type": "Organization",
+          "tail_type": "DrugClass"
+        },
+        {
+          "head": "基层医疗卫生机构",
+          "relation": "requiresDrugClass",
+          "tail": "噻嗪类利尿剂",
+          "head_type": "Organization",
+          "tail_type": "DrugClass"
+        },
+        {
+          "head": "基层医疗卫生机构",
+          "relation": "requiresDrugClass",
+          "tail": "β受体阻滞剂",
+          "head_type": "Organization",
+          "tail_type": "DrugClass"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "1.3",
+      "condition": "ACEI与ARB建议都配备；无条件者至少配备其中一种",
+      "modality": "应配备",
+      "clinical_scope": {
+        "purpose": "机构药物保障",
+        "limited_resource_stock_requirement": {
+          "at_least_one": [
+            "血管紧张素转换酶抑制剂",
+            "血管紧张素II受体阻滞剂"
+          ]
+        }
+      }
+    },
+    {
+      "id": "PR-SELECT-FIVE",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "尽量选用证据明确、可改善预后的五大类降压药物，即ACEI、ARB、β受体阻滞剂、CCB、噻嗪类利尿剂，以及由上述药物组成的单片复方制剂。",
+      "facts": [
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "recommendedFor",
+          "tail": "高血压",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "高血压",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "β受体阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "高血压",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "钙通道阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "高血压",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "噻嗪类利尿剂",
+          "relation": "recommendedFor",
+          "tail": "高血压",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "modality": "尽量选用",
+      "clinical_scope": {
+        "purpose": "基层降压药物选择"
+      }
+    },
+    {
+      "id": "PR-A-INDICATIONS",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢性肾脏病的患者，有充足的证据证明可改善预后。",
+      "facts": [
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "recommendedFor",
+          "tail": "心力衰竭",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "recommendedFor",
+          "tail": "心肌梗死",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "recommendedFor",
+          "tail": "糖尿病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "recommendedFor",
+          "tail": "慢性肾脏病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "心力衰竭",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "心肌梗死",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "糖尿病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "慢性肾脏病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "scope": "A",
+      "condition": "高血压合并相应疾病；心肌梗死为心肌梗死后",
+      "modality": "尤其适用于"
+    },
+    {
+      "id": "PR-A-PROTEINURIA",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护作用",
+      "facts": [
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "recommendedFor",
+          "tail": "蛋白尿",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "蛋白尿",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "scope": "A",
+      "condition": "高血压合并蛋白尿；原文描述肾脏保护作用"
+    },
+    {
+      "id": "PR-A-CONTRAINDICATIONS",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "但双侧肾动脉狭窄、血肌酐≥3mg/dl（265µmol/L）的严重肾功能不全及高钾血症患者禁用。",
+      "facts": [
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "contraindicatedFor",
+          "tail": "双侧肾动脉狭窄",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "contraindicatedFor",
+          "tail": "严重肾功能不全",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "contraindicatedFor",
+          "tail": "高钾血症",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "contraindicatedFor",
+          "tail": "双侧肾动脉狭窄",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "contraindicatedFor",
+          "tail": "严重肾功能不全",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "contraindicatedFor",
+          "tail": "高钾血症",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "scope": "A",
+      "condition": "严重肾功能不全限定：血肌酐≥3mg/dl（265µmol/L）",
+      "modality": "禁用"
+    },
+    {
+      "id": "PR-A-PREGNANCY",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "妊娠或计划妊娠患者禁用。",
+      "facts": [
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "contraindicatedFor",
+          "tail": "妊娠或计划妊娠患者",
+          "head_type": "DrugClass",
+          "tail_type": "Population"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "contraindicatedFor",
+          "tail": "妊娠或计划妊娠患者",
+          "head_type": "DrugClass",
+          "tail_type": "Population"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "scope": "A",
+      "modality": "禁用"
+    },
+    {
+      "id": "PR-BB-FAST-HEART",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "尤其适用于心率偏快（诊室静息心率≥80次/min）的患者。",
+      "facts": [
+        {
+          "head": "β受体阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "诊室静息心率≥80次/min患者",
+          "head_type": "DrugClass",
+          "tail_type": "Population"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "scope": "B",
+      "condition": "诊室静息心率≥80次/min",
+      "modality": "尤其适用于"
+    },
+    {
+      "id": "PR-BB-NONACUTE",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "用于合并心肌梗死或心力衰竭的非急性期患者，可改善预后",
+      "facts": [
+        {
+          "head": "β受体阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "心肌梗死",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "β受体阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "心力衰竭",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "scope": "B",
+      "condition": "高血压合并心肌梗死或心力衰竭；非急性期",
+      "modality": "可改善预后"
+    },
+    {
+      "id": "PR-BB-CONTRAINDICATIONS",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "β受体阻滞剂禁用于严重心动过缓、病态窦房结综合征、二度或三度房室阻滞和支气管哮喘患者。",
+      "facts": [
+        {
+          "head": "β受体阻滞剂",
+          "relation": "contraindicatedFor",
+          "tail": "严重心动过缓",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "β受体阻滞剂",
+          "relation": "contraindicatedFor",
+          "tail": "病态窦房结综合征",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "β受体阻滞剂",
+          "relation": "contraindicatedFor",
+          "tail": "二度或三度房室阻滞",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "β受体阻滞剂",
+          "relation": "contraindicatedFor",
+          "tail": "支气管哮喘",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "scope": "B",
+      "modality": "禁用"
+    },
+    {
+      "id": "PR-BB-CAUTION",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "运动员、外周血管疾病患者及伴睡眠呼吸暂停综合征的患者慎用，建议遵循上级医院建议。",
+      "facts": [
+        {
+          "head": "β受体阻滞剂",
+          "relation": "cautionFor",
+          "tail": "运动员",
+          "head_type": "DrugClass",
+          "tail_type": "Population"
+        },
+        {
+          "head": "β受体阻滞剂",
+          "relation": "cautionFor",
+          "tail": "外周血管疾病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "β受体阻滞剂",
+          "relation": "cautionFor",
+          "tail": "睡眠呼吸暂停",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "scope": "B",
+      "condition": "遵循上级医院建议",
+      "modality": "慎用"
+    },
+    {
+      "id": "PR-DIURETIC-INDICATIONS",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "尤其适用于老年人、单纯收缩期高血压及合并心力衰竭的患者。",
+      "facts": [
+        {
+          "head": "噻嗪类利尿剂",
+          "relation": "recommendedFor",
+          "tail": "老年人",
+          "head_type": "DrugClass",
+          "tail_type": "Population"
+        },
+        {
+          "head": "噻嗪类利尿剂",
+          "relation": "recommendedFor",
+          "tail": "单纯收缩期高血压",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "噻嗪类利尿剂",
+          "relation": "recommendedFor",
+          "tail": "心力衰竭",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "scope": "D",
+      "modality": "尤其适用于"
+    },
+    {
+      "id": "PR-DIURETIC-MONITOR",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "长期应用利尿剂者应监测血钾",
+      "facts": [
+        {
+          "head": "利尿剂",
+          "relation": "requiresMonitoring",
+          "tail": "血钾",
+          "head_type": "DrugClass",
+          "tail_type": "Indicator"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "scope": "D",
+      "condition": "长期应用利尿剂",
+      "modality": "应监测"
+    },
+    {
+      "id": "PR-THIAZIDE-GOUT",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "痛风患者禁用噻嗪类利尿剂。",
+      "facts": [
+        {
+          "head": "噻嗪类利尿剂",
+          "relation": "contraindicatedFor",
+          "tail": "痛风",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "scope": "D",
+      "modality": "禁用"
+    },
+    {
+      "id": "PR-SPC-PREFERRED",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "近年来由上述药物组合而成的单片复方制剂由于服用方便、依从性好，推荐首选。",
+      "facts": [
+        {
+          "head": "单片复方制剂",
+          "relation": "preferredFor",
+          "tail": "高血压",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "modality": "推荐首选",
+      "condition": "上述药物组合的单片复方制剂；仍需遵守组成成分的适应证和禁忌证"
+    },
+    {
+      "id": "PR-ARNI-ALTERNATIVE",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "有条件者也可根据血压达标情况及适应证选择用ARNI替代ACEI/ARB。",
+      "facts": [
+        {
+          "head": "血管紧张素受体脑啡肽酶抑制剂",
+          "relation": "alternativeTo",
+          "tail": "血管紧张素转换酶抑制剂",
+          "head_type": "DrugClass",
+          "tail_type": "DrugClass"
+        },
+        {
+          "head": "血管紧张素受体脑啡肽酶抑制剂",
+          "relation": "alternativeTo",
+          "tail": "血管紧张素II受体阻滞剂",
+          "head_type": "DrugClass",
+          "tail_type": "DrugClass"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "condition": "有条件者；根据血压达标情况及适应证",
+      "modality": "也可"
+    },
+    {
+      "id": "PR-ARNI-INTERACTIONS",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "ARNI不能与ACEI、ARB（相同成分的ARB除外）、阿利吉仑联用。",
+      "facts": [
+        {
+          "head": "血管紧张素受体脑啡肽酶抑制剂",
+          "relation": "notCombinedWith",
+          "tail": "血管紧张素转换酶抑制剂",
+          "head_type": "DrugClass",
+          "tail_type": "DrugClass"
+        },
+        {
+          "head": "血管紧张素受体脑啡肽酶抑制剂",
+          "relation": "notCombinedWith",
+          "tail": "血管紧张素II受体阻滞剂",
+          "head_type": "DrugClass",
+          "tail_type": "DrugClass"
+        },
+        {
+          "head": "血管紧张素受体脑啡肽酶抑制剂",
+          "relation": "notCombinedWith",
+          "tail": "阿利吉仑",
+          "head_type": "DrugClass",
+          "tail_type": "Drug"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "exceptions": [
+        "相同成分的ARB除外"
+      ],
+      "modality": "不能联用"
+    },
+    {
+      "id": "PR-INITIAL-SINGLE",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "收缩压<150mmHg且舒张压<90mmHg：单药起始，可选择C、A、D或B。",
+      "facts": [
+        {
+          "head": "二氢吡啶类钙通道阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "年龄<80岁且无合并症患者",
+          "head_type": "DrugClass",
+          "tail_type": "Population"
+        },
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "recommendedFor",
+          "tail": "年龄<80岁且无合并症患者",
+          "head_type": "DrugClass",
+          "tail_type": "Population"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "年龄<80岁且无合并症患者",
+          "head_type": "DrugClass",
+          "tail_type": "Population"
+        },
+        {
+          "head": "利尿剂",
+          "relation": "recommendedFor",
+          "tail": "年龄<80岁且无合并症患者",
+          "head_type": "DrugClass",
+          "tail_type": "Population"
+        },
+        {
+          "head": "β受体阻滞剂",
+          "relation": "recommendedFor",
+          "tail": "年龄<80岁且无合并症患者",
+          "head_type": "DrugClass",
+          "tail_type": "Population"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.3.1",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "uses_codes": true,
+      "condition": "年龄<80岁、无合并症；收缩压<150且舒张压<90mmHg；含B方案适用于诊室静息心率≥80次/min；单药选择之一",
+      "choice_group": "single_drug:one_of",
+      "clinical_scope": {
+        "purpose": "单药起始"
+      }
+    },
+    {
+      "id": "PR-INITIAL-COMBINATION",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "收缩压≥150mmHg和（或）舒张压≥90mmHg：推荐两种药物联合使用，如C\\+A、A\\+D、C\\+D或C\\+B，首选相应的单片复方制剂。",
+      "facts": [],
+      "confidence": 0.92,
+      "section_prefix": "5.4.3.1",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "condition": "年龄<80岁且无合并症；含B方案适用于诊室静息心率≥80次/min；调整后观察2~4周；非耐受或紧急情况另处理",
+      "regimens": [
+        {
+          "codes": "C+A",
+          "tail": "年龄<80岁且无合并症患者",
+          "tail_type": "Population",
+          "relation": "recommendedRegimenFor"
+        },
+        {
+          "codes": "A+D",
+          "tail": "年龄<80岁且无合并症患者",
+          "tail_type": "Population",
+          "relation": "recommendedRegimenFor"
+        },
+        {
+          "codes": "C+D",
+          "tail": "年龄<80岁且无合并症患者",
+          "tail_type": "Population",
+          "relation": "recommendedRegimenFor"
+        },
+        {
+          "codes": "C+B",
+          "tail": "年龄<80岁且无合并症患者",
+          "tail_type": "Population",
+          "relation": "recommendedRegimenFor"
+        }
+      ]
+    },
+    {
+      "id": "PR-MI-INITIAL",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "合并心肌梗死：首选A\\+B，小剂量联用，避免出现低血压。",
+      "facts": [],
+      "confidence": 0.92,
+      "section_prefix": "5.4.3.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "condition": "高血压合并心肌梗死；小剂量联用；避免低血压",
+      "regimens": [
+        {
+          "codes": "A+B",
+          "tail": "心肌梗死"
+        }
+      ]
+    },
+    {
+      "id": "PR-HF-INITIAL",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "合并心力衰竭：A\\+B，小剂量联用，.*?若血压仍未达标可加C（限氨氯地平、非洛地平）。",
+      "facts": [],
+      "confidence": 0.92,
+      "section_prefix": "5.4.3.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "condition": "高血压合并心力衰竭；初始A+B小剂量联用；血压偏低者缓慢加量；后续加药遵守原文条件",
+      "regimens": [
+        {
+          "codes": "A+B",
+          "tail": "心力衰竭",
+          "relation": "recommendedRegimenFor"
+        }
+      ]
+    },
+    {
+      "id": "PR-COMORBID-DM",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "合并糖尿病：首选A，血压未达标者加用C或D。",
+      "facts": [
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "preferredFor",
+          "tail": "糖尿病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "preferredFor",
+          "tail": "糖尿病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "高血压合并糖尿病患者",
+          "head_type": "Population",
+          "relation": "hasCondition",
+          "tail": "高血压",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "高血压合并糖尿病患者",
+          "head_type": "Population",
+          "relation": "hasCondition",
+          "tail": "糖尿病",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.3.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "uses_codes": true,
+      "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文",
+      "choice_group": "A:one_of",
+      "modality": "首选",
+      "clinical_scope": {
+        "population": "高血压合并糖尿病患者",
+        "purpose": "合并症用药选择"
+      },
+      "regimens": [
+        {
+          "codes": "A",
+          "tail": "高血压合并糖尿病患者",
+          "tail_type": "Population",
+          "relation": "preferredRegimenFor"
+        }
+      ]
+    },
+    {
+      "id": "PR-COMORBID-CKD",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "合并慢性肾脏病：首选A，血压未达标者加用C或D。",
+      "facts": [
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "preferredFor",
+          "tail": "慢性肾脏病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "preferredFor",
+          "tail": "慢性肾脏病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.3.2",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "uses_codes": true,
+      "condition": "高血压合并慢性肾脏病；A为ACEI或ARB；未达标后续加药另见原文；血肌酐首次超正常时由上级医院决定方案",
+      "choice_group": "A:one_of",
+      "modality": "首选"
+    },
+    {
+      "id": "PR-NO-ACEI-ARB",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "不宜联合应用ACEI与ARB。",
+      "facts": [
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "notCombinedWith",
+          "tail": "血管紧张素II受体阻滞剂",
+          "head_type": "DrugClass",
+          "tail_type": "DrugClass"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "5.4.4",
+      "basis_sections": [
+        "5.4.2",
+        "5.4.3"
+      ],
+      "condition": "两类药物不宜同时联合；不影响二者作为替代选项",
+      "modality": "不宜"
+    },
+    {
+      "id": "CL-FIRST-LINE",
+      "profiles": [
+        "clinical"
+      ],
+      "pattern": "推荐将血管紧张素转化酶抑制剂.*?利尿剂作为无临床合并症的高血压患者的一线初始降压药物（1B）",
+      "facts": [
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "firstLineFor",
+          "tail": "高血压",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "firstLineFor",
+          "tail": "高血压",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "钙通道阻滞剂",
+          "relation": "firstLineFor",
+          "tail": "高血压",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "利尿剂",
+          "relation": "firstLineFor",
+          "tail": "高血压",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "CQ13",
+      "clinical_scope": {
+        "population": "无临床合并症的高血压患者",
+        "purpose": "一线初始降压"
+      },
+      "condition": "无临床合并症；推荐等级1B",
+      "modality": "推荐"
+    },
+    {
+      "id": "CL-BB-NOT-FIRST-LINE",
+      "profiles": [
+        "clinical"
+      ],
+      "pattern": "因此本指南不建议将β受体阻滞剂作为一线初始降压药物。",
+      "facts": [
+        {
+          "head": "β受体阻滞剂",
+          "relation": "excludedFromFirstLine",
+          "tail": "高血压",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "CQ13",
+      "clinical_scope": {
+        "population": "无临床合并症的高血压患者",
+        "purpose": "一线初始降压"
+      },
+      "condition": "无临床合并症的一线初始用药；不等于所有场景禁用",
+      "modality": "不建议"
+    },
+    {
+      "id": "CL-CHD-ANGINA",
+      "profiles": [
+        "clinical"
+      ],
+      "pattern": "高血压合并冠心病，有劳力型心绞痛症状的患者，降压药物推荐首选β受体阻滞剂和CCB（1C）",
+      "facts": [
+        {
+          "head": "β受体阻滞剂",
+          "relation": "preferredFor",
+          "tail": "冠心病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "钙通道阻滞剂",
+          "relation": "preferredFor",
+          "tail": "冠心病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "CQ15",
+      "condition": "合并冠心病且有劳力型心绞痛症状；1C；未据此断定两类药必须联用",
+      "clinical_scope": {
+        "population": "高血压合并冠心病且有劳力型心绞痛"
+      },
+      "modality": "推荐首选"
+    },
+    {
+      "id": "CL-DM-BP",
+      "profiles": [
+        "clinical"
+      ],
+      "pattern": "高血压合并2型糖尿病患者，推荐首选ACEI/ARB控制血压（1B）",
+      "facts": [
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "preferredFor",
+          "tail": "2型糖尿病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "血管紧张素II受体阻滞剂",
+          "relation": "preferredFor",
+          "tail": "2型糖尿病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "CQ18",
+      "condition": "高血压合并2型糖尿病；控制血压；1B；ACEI或ARB择一",
+      "choice_group": "ACEI_or_ARB:one_of",
+      "modality": "推荐首选"
+    },
+    {
+      "id": "CL-DM-ADJUNCT",
+      "profiles": [
+        "clinical"
+      ],
+      "pattern": "高血压合并2型糖尿病患者，建议优选SGLT2i或GLP[‑⁃-]1RA治疗（2B）",
+      "facts": [
+        {
+          "head": "SGLT2抑制剂",
+          "relation": "preferredFor",
+          "tail": "2型糖尿病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        },
+        {
+          "head": "GLP-1受体激动剂",
+          "relation": "preferredFor",
+          "tail": "2型糖尿病",
+          "head_type": "DrugClass",
+          "tail_type": "Disease"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "CQ18",
+      "condition": "高血压合并2型糖尿病；改善预后/降糖治疗；2B；不标为一线初始降压药",
+      "clinical_scope": {
+        "purpose": "改善预后/降糖"
+      },
+      "choice_group": "adjunct:one_of",
+      "modality": "建议优选"
+    },
+    {
+      "id": "CL-NO-ACEI-ARB",
+      "profiles": [
+        "clinical"
+      ],
+      "pattern": "临床上不推荐ACEI与ARB联合降压，以免发生低血压、高钾血症及肾功能恶化等情况",
+      "facts": [
+        {
+          "head": "血管紧张素转换酶抑制剂",
+          "relation": "notCombinedWith",
+          "tail": "血管紧张素II受体阻滞剂",
+          "head_type": "DrugClass",
+          "tail_type": "DrugClass"
+        }
+      ],
+      "confidence": 0.92,
+      "section_prefix": "CQ18",
+      "modality": "不推荐"
+    },
+    {
+      "id": "PR-ARNI-INSTANCE",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "沙库巴曲缬沙坦是新近推荐的ARNI类降压药",
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2"
+      ],
+      "confidence": 0.95,
+      "facts": [
+        {
+          "head": "沙库巴曲缬沙坦",
+          "head_type": "Drug",
+          "relation": "instanceOf",
+          "tail": "血管紧张素受体脑啡肽酶抑制剂",
+          "tail_type": "DrugClass"
+        }
+      ]
+    },
+    {
+      "id": "PR-LOOP-INSTANCE",
+      "profiles": [
+        "primary"
+      ],
+      "pattern": "袢利尿剂（如呋塞米）",
+      "section_prefix": "5.4.2",
+      "basis_sections": [
+        "5.4.2"
+      ],
+      "confidence": 0.95,
+      "facts": [
+        {
+          "head": "呋塞米",
+          "head_type": "Drug",
+          "relation": "instanceOf",
+          "tail": "袢利尿剂",
+          "tail_type": "DrugClass"
+        }
+      ]
+    }
+  ]
+}

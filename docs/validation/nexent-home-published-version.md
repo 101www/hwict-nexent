@@ -1,0 +1,98 @@
+- alert: Agent 仓库
+- generic: "* *"
+- generic: "* * * *"
+- banner:
+  - banner:
+    - link "logo Nexent":
+      - /url: /
+      - img "logo"
+      - generic: Nexent
+    - link "Github":
+      - /url: https://github.com/ModelEngine-Group/nexent
+      - text: Github
+    - link "ModelEngine":
+      - /url: http://modelengine-ai.net
+    - text: 简体中文
+    - button "通知":
+    - generic: [账号已隐藏]
+- complementary:
+  - menu:
+    - menuitem "首页":
+      - generic: 首页
+    - menuitem "开始问答":
+      - generic: 开始问答
+    - menuitem "自动任务":
+      - generic: 自动任务
+    - menuitem "智能体开发":
+      - generic: 智能体开发
+    - menuitem "资源仓库" [expanded]:
+      - generic: 资源仓库
+    - menuitem "资源管理":
+      - generic: 资源管理
+  - button:
+- main:
+  - heading "Agent 仓库" [level=1]
+  - paragraph: 浏览同租户共享仓库、管理你有权限的智能体，并发布与审核。
+  - tablist:
+    - tab "仓库 0":
+      - text: 仓库
+      - generic: "0"
+    - tab "我的智能体 1" [selected]:
+      - text: 我的智能体
+      - generic: "1"
+    - tab "审核中心":
+      - text: 审核中心
+  - textbox "搜索 Agent 名称、描述或标签"
+  - button "标签筛选":
+    - generic: 标签筛选
+  - button "全部 1":
+    - text: 全部
+    - generic: "1"
+  - button "我创建的 1":
+    - text: 我创建的
+    - generic: "1"
+  - button "其他人的 0":
+    - text: 其他人的
+    - generic: "0"
+  - button "创建新的智能体":
+    - generic: 创建新的智能体
+  - button "高血压用药决策助手"
+  - heading "高血压用药决策助手" [level=2]
+  - generic: 当前版本 高血压用药决策助手-2610182135
+  - button "更多操作":
+  - generic: 已发布
+  - generic: 基于临床指南的高血压用药决策辅助，每条结论可溯源
+  - text: 2026-10-18
+  - button "编辑":
+    - generic: 编辑
+  - list:
+    - listitem "Previous Page":
+      - button "left" [disabled]:
+        - img "left":
+    - listitem "1":
+      - generic: "1"
+    - listitem "Next Page":
+      - button "right" [disabled]:
+        - img "right":
+- contentinfo:
+  - text: Nexent © 2026
+  - generic: · v2.7.0
+  - link "使用条款":
+    - /url: https://github.com/nexent-hub/nexent?tab=License-1-ov-file#readme
+- menu:
+  - menuitem "Agent 仓库":
+    - text: Agent 仓库
+  - menuitem "MCP 仓库":
+    - text: MCP 仓库
+  - menuitem "Skill 仓库":
+    - text: Skill 仓库
+- menu:
+  - menuitem "申请上架":
+    - generic: 申请上架
+  - menuitem "评估":
+    - generic: 评估
+  - separator
+  - menuitem "调用与分享":
+    - generic: 调用与分享
+  - menuitem "删除":
+    - generic: 删除

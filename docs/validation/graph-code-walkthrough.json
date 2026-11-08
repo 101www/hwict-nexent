@@ -1,0 +1,113 @@
+{
+  "audit_date": "2026-11-06",
+  "kind": "offline_python_extractor_and_saved_graph_check_not_live_java_or_mcp",
+  "executed_functions": [
+    "load_blocks",
+    "describe_document",
+    "extract_clinical",
+    "annotate"
+  ],
+  "source_graph": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.json",
+  "source_graph_sha256": "5cb3a9cc4b69e3eae5585abd9e7a0755f06c7a217f05455269bb5e15641bad9d",
+  "source_graph_built_at": "2026-10-18T22:01:10+08:00",
+  "rule": {
+    "id": "PR-COMORBID-DM",
+    "pattern": "合并糖尿病：首选A，血压未达标者加用C或D。",
+    "regimens": [
+      {
+        "codes": "A",
+        "tail": "高血压合并糖尿病患者",
+        "tail_type": "Population",
+        "relation": "preferredRegimenFor"
+      }
+    ]
+  },
+  "matches": [
+    {
+      "block_id": "B-257f599f3070",
+      "normalized_match": "合并糖尿病：首选A，血压未达标者加用C或D。",
+      "source_span": {
+        "file": "国家基层高血压防治管理指南2025版_重排.txt",
+        "section": "5.4.6.1",
+        "page": 9,
+        "block_id": "B-257f599f3070",
+        "start": 153,
+        "end": 179,
+        "evidence": "合并糖尿病：首选 A，血压未达标者加用 C 或 D。",
+        "section_status": "from_text_heading",
+        "verification": "pending",
+        "confidence": 0.95,
+        "confidence_basis": "rule_heuristic_not_calibrated"
+      }
+    }
+  ],
+  "extracted_edges": [
+    {
+      "id": "E-66e12bb6b24d32",
+      "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+      "relation": "preferredRegimenFor",
+      "tailId": "N-高血压合并糖尿病患者",
+      "regimen_group": "RG-932a72981a09ec",
+      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+      "page": 9,
+      "section": "5.4.6.1",
+      "block_id": "B-257f599f3070",
+      "start": 153,
+      "end": 179,
+      "verification": "pending",
+      "confidence": 0.55
+    },
+    {
+      "id": "E-44eefca91accf2",
+      "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+      "relation": "hasAlternativeComponent",
+      "tailId": "N-血管紧张素转换酶抑制剂",
+      "regimen_group": "RG-932a72981a09ec",
+      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+      "page": 6,
+      "section": "5.4.2",
+      "block_id": "B-f9564b21fff0",
+      "start": 0,
+      "end": 1454,
+      "verification": "pending",
+      "confidence": 0.88
+    },
+    {
+      "id": "E-6020f469be1583",
+      "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+      "relation": "hasAlternativeComponent",
+      "tailId": "N-血管紧张素II受体阻滞剂",
+      "regimen_group": "RG-932a72981a09ec",
+      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+      "page": 6,
+      "section": "5.4.2",
+      "block_id": "B-f9564b21fff0",
+      "start": 0,
+      "end": 1454,
+      "verification": "pending",
+      "confidence": 0.88
+    }
+  ],
+  "checks": [
+    {
+      "edge_id": "E-66e12bb6b24d32",
+      "same_as_saved_complete_record": true,
+      "evidence_equals_saved_block_slice": true
+    },
+    {
+      "edge_id": "E-44eefca91accf2",
+      "same_as_saved_complete_record": true,
+      "evidence_equals_saved_block_slice": true
+    },
+    {
+      "edge_id": "E-6020f469be1583",
+      "same_as_saved_complete_record": true,
+      "evidence_equals_saved_block_slice": true
+    }
+  ],
+  "all_passed": true,
+  "notes": [
+    "No graph, rules, source text, or runtime service was modified.",
+    "Code quotations and links are checked separately; this record does not claim live Java execution."
+  ]
+}

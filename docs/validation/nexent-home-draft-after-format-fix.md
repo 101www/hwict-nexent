@@ -1,0 +1,275 @@
+- alert
+- generic: "* *"
+- generic: "* * * *"
+- banner:
+  - banner:
+    - link "logo Nexent":
+      - /url: /
+      - img "logo"
+      - generic: Nexent
+    - link "Github":
+      - /url: https://github.com/ModelEngine-Group/nexent
+      - text: Github
+    - link "ModelEngine":
+      - /url: http://modelengine-ai.net
+    - text: 简体中文
+    - button "通知":
+    - generic: [账号已隐藏]
+- complementary:
+  - menu:
+    - menuitem "首页":
+      - generic: 首页
+    - menuitem "开始问答":
+      - generic: 开始问答
+    - menuitem "自动任务":
+      - generic: 自动任务
+    - menuitem "智能体开发":
+      - generic: 智能体开发
+    - menuitem "资源仓库":
+      - generic: 资源仓库
+    - menuitem "资源管理":
+      - generic: 资源管理
+  - button:
+- main:
+  - button "返回":
+    - generic: 返回
+  - button "版本管理":
+    - generic: 版本管理
+  - main:
+    - heading "配置" [level=3]
+    - text: 草稿
+    - text: "当前发布版本:"
+    - generic: 高血压用药决策助手-2610132226
+    - generic: / 共 1 个版本
+    - button "智能生成":
+      - generic: 智能生成
+    - tablist:
+      - tab "基本设置" [selected]
+      - tab "工具与技能"
+      - tab "高级设置"
+    - tabpanel "基本设置":
+      - button "展示信息 配置图标、展示名称、变量名、作者和简介" [expanded]:
+        - generic: 展示信息
+        - paragraph: 配置图标、展示名称、变量名、作者和简介
+      - generic "智能体名称": "* 智能体名称"
+      - textbox "* 智能体名称":
+        - /placeholder: 请输入智能体名称
+        - text: 高血压用药决策助手
+      - generic: 9 / 60
+      - generic "智能体变量名": "* 智能体变量名"
+      - textbox "* 智能体变量名":
+        - /placeholder: 请输入智能体变量名
+        - text: www
+      - generic: 3 / 60
+      - generic "作者": "* 作者"
+      - textbox "* 作者":
+        - /placeholder: 请输入作者名称
+        - text: [账号已隐藏]
+      - generic "智能体描述": "* 智能体描述"
+      - textbox "* 智能体描述":
+        - /placeholder: 请输入智能体描述
+        - text: 基于临床指南的高血压用药决策辅助，每条结论可溯源
+      - generic: 24 / 500
+      - generic "标签"
+      - generic: —
+      - button "编辑标签":
+        - generic: 编辑标签
+      - generic: 智能体图标
+      - button:
+      - generic: 支持 PNG、JPEG、GIF、WebP，最大 2 MB
+      - button "模型与提示词 配置大语言模型以及智能体角色、使用要求和示例" [expanded]:
+        - generic: 模型与提示词
+        - paragraph: 配置大语言模型以及智能体角色、使用要求和示例
+      - generic "模型": "模型 :"
+      - generic "deepseek-flash":
+        - generic: deepseek-flash
+      - combobox
+      - img "down":
+      - button "调整模型优先级" [disabled]:
+      - button "模型参数覆盖":
+      - tablist:
+        - tab "智能体角色"
+        - tab "使用要求" [selected]
+        - tab "示例"
+      - tabpanel "使用要求":
+        - textbox "请输入此智能体的使用要求或约束条件": 回答规则： 1. 本助手用于指南和管理标准的资料查询、证据核对。不得仅凭模型记忆给出个体化处方、剂量或确定诊疗结论。 2. 所有事实须先查询工具。管理要求和关系用 query_relations；确认实体用 find_entities；未命中时用 lookup_clause 查原文，必要时用 query_candidates 查待解析候选。未命中不代表原文不存在。 3. 原文核对使用关系的 block_id 调用 get_evidence。每个结论注明文件名、PDF物理页码、章节和关键原文，不固定引用某一指南，不把文件名年份当作实际刊期。 4. 查询指南引用和版本是否匹配时优先调用 check_references。version_mismatch 要明确披露，不得用2025候选静默替代标准实际引用的2021版本。 5. 必须保留 condition、scope、modality、exceptions 和 supporting_evidence 的限制。不得将“宜”改为“必须”；A表示ACEI或ARB，不得把择一选项写成同时使用。 6. traverse_relations 返回的是 evidence_path，图连通不代表临床推断有效；必须保留原始关系方向。compare_threshold只做同单位数学比较；detect_conflicts只列待审核数值差异，不能自动裁决医学冲突。 7. verification=pending 表示自动抽取待核验。confidence是未经校准的规则分数，不是医学正确率。sufficient=false 不妨碍报告原文明确写了什么，但不能宣称已验证临床决策。 8. truncated=true 且需完整清单时，用offset翻页。证据不足时说明已知部分与缺失的具体版本、条款或条件，不编造引文、页码或知识。 9. 问当前图谱信息时调用graph_status；普通问题不用反复调用。回答先给原文支持的结论，再给出处和不确定性。随访对比可查询query_relations(keyword="followUpEvery",limit=10)，保留“至少”和达标/未达标人群的区别。 10. 证据足够后立即回答，避免重复工具调用。同一block_id最多核对一次；普通随访查询不额外查询图谱概况、引用版本或数学比较。默认用一段结论和简短出处表，核验状态统一说明一次；不重复长篇局限清单。用户专门问版本、数值或图谱概况时再调用对应工具。 11. 不得把“参考文献中列出”自行称为“规范性引用”，除非原文明示该性质。不同记录的block_id可能不同，不得声称正文与参考文献共用同一个block。版本问题只需说明引用年份、当前候选年份、原文出处及缺少逐条核对依据，避免扩写无关推论。 12. 最终回答必须是面向用户的自然语言，不得输出DSML、invoke、工具调用代码或内部调用标记。使用平台提供的工具调用机制完成查询，查询结束后直接给出有出处的简短回答。 13. 图谱MCP与平台知识库是不同的数据来源。随访间隔、机构配备、管理要求等问题，先用query_relations检索，再按返回block_id核对get_evidence；随访间隔使用keyword="followUpEvery"。不能只调用knowledge_base_search就断言全部资料没有依据。图谱未命中时再查lookup_clause及必要候选；若MCP未启用、连接失败或调用报错，明确说工具不可用，不能说原文不存在或要求用户重复上传已有文档。
+        - button "放大查看":
+      - button "知识库 选择知识库后自动启用知识库检索能力并建立关联":
+        - generic: 知识库
+        - paragraph: 选择知识库后自动启用知识库检索能力并建立关联
+      - button "配置":
+        - generic: 配置
+      - button "选择知识库":
+        - generic: 选择知识库
+      - button "会话引导 配置用户首次进入会话时的开场白和示例问题":
+        - generic: 会话引导
+        - paragraph: 配置用户首次进入会话时的开场白和示例问题
+    - button "停止当前生成并解除编辑锁定" [disabled]:
+      - generic: 解除锁定
+    - button "调试":
+      - generic: 调试
+    - button "发布":
+      - generic: 发布
+    - heading "调试" [level=3]
+    - generic: 对比模式
+    - switch
+    - button "Maximize debug panel":
+    - button "关闭调试":
+    - generic: 血压达标和未达标患者分别多久随访
+    - generic: 高血压用药决策助手
+    - status:
+      - status:
+        - generic: success
+      - generic: 已完成
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 1
+      - text: 我先查询知识图谱中与随访频率相关的关系。
+    - text: <code> relations = query_relations(keyword="followUpEvery", limit=10) print(relations) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: relations = query_relations(keyword="followUpEvery", limit=10)
+      - generic: print(relations)
+    - button "1 tool call":
+      - generic: 1 tool call
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 2
+      - text: "I need to verify evidence by block_id. Four relations, three distinct blocks: B-6e3c9e3c8d5a, B-99383b6fd379, B-c79ea4f8af58. Each block only once."
+    - paragraph: "Let me call get_evidence for the three blocks in parallel.<code> ev = parallel_executor(tasks=[ (get_evidence, {\"block_id\": \"B-6e3c9e3c8d5a\"}, \"b1\"), (get_evidence, {\"block_id\": \"B-99383b6fd379\"}, \"b2\"), (get_evidence, {\"block_id\": \"B-c79ea4f8af58\"}, \"b3\"), ], max_workers=3) print(ev) </code>"
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: ev = parallel_executor(tasks=[
+      - generic: "(get_evidence, {\"block_id\": \"B-6e3c9e3c8d5a\"}, \"b1\"),"
+      - generic: "(get_evidence, {\"block_id\": \"B-99383b6fd379\"}, \"b2\"),"
+      - generic: "(get_evidence, {\"block_id\": \"B-c79ea4f8af58\"}, \"b3\"),"
+      - generic: "], max_workers=3)"
+      - generic: print(ev)
+    - button "4 tool calls":
+      - generic: 4 tool calls
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 3
+      - text: I have evidence from three blocks. Both documents agree. Provide answer with citations. Need reference marks? Citation marks come from retrieval tool results (knowledge_base_search) — MCP tools don't return reference_mark. So no citation marks; use source table instead.
+    - paragraph: Let me form the final answer.<code> answer = """## 随访间隔（两份文件一致）
+    - table:
+      - rowgroup:
+        - row "人群 随访间隔 出处":
+          - columnheader "人群"
+          - columnheader "随访间隔"
+          - columnheader "出处"
+      - rowgroup:
+        - row "血压达标患者 至少每 3 个月随访 1 次 《国家基层高血压防治管理指南2025版》第13页，8.1 随访频率：原文“血压达标患者，至少每 3 个月随访 1 次”":
+          - cell "血压达标患者"
+          - cell "至少每 3 个月随访 1 次":
+            - strong: 至少每 3 个月随访 1 次
+          - cell "《国家基层高血压防治管理指南2025版》第13页，8.1 随访频率：原文“血压达标患者，至少每 3 个月随访 1 次”"
+        - row "血压未达标患者 每月至少随访 1 次 同上，第13页，8.1：“血压未达标患者，每月至少随访 1 次”":
+          - cell "血压未达标患者"
+          - cell "每月至少随访 1 次":
+            - strong: 每月至少随访 1 次
+          - cell "同上，第13页，8.1：“血压未达标患者，每月至少随访 1 次”"
+        - row "血压达标者 每 3 个月至少随访 1 次 WS/T 872—2025 第5页，8.3.2.1：“血压达标者：每 3 个月至少随访 1 次。”":
+          - cell "血压达标者"
+          - cell "每 3 个月至少随访 1 次"
+          - cell "WS/T 872—2025 第5页，8.3.2.1：“血压达标者：每 3 个月至少随访 1 次。”"
+        - row "血压未达标者 1 个月至少随访 1 次，直至血压达标 同上，第5页，8.3.2.2：“血压未达标者：1 个月至少随访 1 次，直至血压达标。”":
+          - cell "血压未达标者"
+          - cell "1 个月至少随访 1 次，直至血压达标":
+            - text: 1 个月至少随访 1 次，
+            - strong: 直至血压达标
+          - cell "同上，第5页，8.3.2.2：“血压未达标者：1 个月至少随访 1 次，直至血压达标。”"
+    - paragraph: 要点：
+    - list:
+      - listitem: 达标人群的间隔是“至少每3个月”，即3个月是下限要求，可更频繁；原文措辞为“至少”，不宜读作“必须满3个月才随访”。
+      - listitem: 未达标人群为每月至少1次，且 WS/T 872—2025 明确加上“直至血压达标”这一终止条件，达标后转按达标人群的间隔管理。
+      - listitem: 两份文件还都附带转诊提示：符合转诊条件者（基层指南为“建议”，WS/T 872—2025 为“宜”）按各自转诊条款（8.4）处理，随访间隔不替代转诊判断。
+    - paragraph: 核验状态：以上关系记录均为 verification=pending（自动抽取、待人工核验），confidence 0.95 是规则评分而非医学正确率；本条仅陈述原文写了什么，不构成对个体患者随访方案的确定建议。 """ final_answer(answer) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: answer = """## 随访间隔（两份文件一致）
+      - generic: "| 人群 | 随访间隔 | 出处 |"
+      - generic: "|---|---|---|"
+      - generic: "| 血压达标患者 | **至少每 3 个月随访 1 次** | 《国家基层高血压防治管理指南2025版》第13页，8.1 随访频率：原文“血压达标患者，至少每 3 个月随访 1 次” |"
+      - generic: "| 血压未达标患者 | **每月至少随访 1 次** | 同上，第13页，8.1：“血压未达标患者，每月至少随访 1 次” |"
+      - generic: "| 血压达标者 | 每 3 个月至少随访 1 次 | WS/T 872—2025 第5页，8.3.2.1：“血压达标者：每 3 个月至少随访 1 次。” |"
+      - generic: "| 血压未达标者 | 1 个月至少随访 1 次，**直至血压达标** | 同上，第5页，8.3.2.2：“血压未达标者：1 个月至少随访 1 次，直至血压达标。” |"
+      - generic: 要点：
+      - generic: "- 达标人群的间隔是“至少每3个月”，即3个月是下限要求，可更频繁；原文措辞为“至少”，不宜读作“必须满3个月才随访”。"
+      - generic: "- 未达标人群为每月至少1次，且 WS/T 872—2025 明确加上“直至血压达标”这一终止条件，达标后转按达标人群的间隔管理。"
+      - generic: "- 两份文件还都附带转诊提示：符合转诊条件者（基层指南为“建议”，WS/T 872—2025 为“宜”）按各自转诊条款（8.4）处理，随访间隔不替代转诊判断。"
+      - generic: 核验状态：以上关系记录均为 verification=pending（自动抽取、待人工核验），confidence 0.95 是规则评分而非医学正确率；本条仅陈述原文写了什么，不构成对个体患者随访方案的确定建议。
+      - generic: "\"\"\""
+      - generic: final_answer(answer)
+    - heading "随访间隔（两份文件一致）" [level=2]
+    - table:
+      - rowgroup:
+        - row "人群 随访间隔 出处":
+          - columnheader "人群"
+          - columnheader "随访间隔"
+          - columnheader "出处"
+      - rowgroup:
+        - row "血压达标患者 至少每 3 个月随访 1 次 《国家基层高血压防治管理指南2025版》第13页，8.1 随访频率：原文“血压达标患者，至少每 3 个月随访 1 次”":
+          - cell "血压达标患者"
+          - cell "至少每 3 个月随访 1 次":
+            - strong: 至少每 3 个月随访 1 次
+          - cell "《国家基层高血压防治管理指南2025版》第13页，8.1 随访频率：原文“血压达标患者，至少每 3 个月随访 1 次”"
+        - row "血压未达标患者 每月至少随访 1 次 同上，第13页，8.1：“血压未达标患者，每月至少随访 1 次”":
+          - cell "血压未达标患者"
+          - cell "每月至少随访 1 次":
+            - strong: 每月至少随访 1 次
+          - cell "同上，第13页，8.1：“血压未达标患者，每月至少随访 1 次”"
+        - row "血压达标者 每 3 个月至少随访 1 次 WS/T 872—2025 第5页，8.3.2.1：“血压达标者：每 3 个月至少随访 1 次。”":
+          - cell "血压达标者"
+          - cell "每 3 个月至少随访 1 次"
+          - cell "WS/T 872—2025 第5页，8.3.2.1：“血压达标者：每 3 个月至少随访 1 次。”"
+        - row "血压未达标者 1 个月至少随访 1 次，直至血压达标 同上，第5页，8.3.2.2：“血压未达标者：1 个月至少随访 1 次，直至血压达标。”":
+          - cell "血压未达标者"
+          - cell "1 个月至少随访 1 次，直至血压达标":
+            - text: 1 个月至少随访 1 次，
+            - strong: 直至血压达标
+          - cell "同上，第5页，8.3.2.2：“血压未达标者：1 个月至少随访 1 次，直至血压达标。”"
+    - paragraph: 要点：
+    - list:
+      - listitem: 达标人群的间隔是“至少每3个月”，即3个月是下限要求，可更频繁；原文措辞为“至少”，不宜读作“必须满3个月才随访”。
+      - listitem: 未达标人群为每月至少1次，且 WS/T 872—2025 明确加上“直至血压达标”这一终止条件，达标后转按达标人群的间隔管理。
+      - listitem: 两份文件还都附带转诊提示：符合转诊条件者（基层指南为“建议”，WS/T 872—2025 为“宜”）按各自转诊条款（8.4）处理，随访间隔不替代转诊判断。
+    - paragraph: 核验状态：以上关系记录均为 verification=pending（自动抽取、待人工核验），confidence 0.95 是规则评分而非医学正确率；本条仅陈述原文写了什么，不构成对个体患者随访方案的确定建议。
+    - button "复制":
+      - generic: 复制
+    - button "刷新":
+      - generic: 刷新
+    - button "更多":
+      - generic: 更多
+    - generic "生成耗时 6.29s":
+      - text: 6.29s
+    - button "2% 本轮":
+      - generic: 2%
+      - generic: 本轮
+    - button "滚动到底部" [disabled]:
+      - generic: 滚动到底部
+    - button "规划":
+      - text: 规划
+    - button "执行":
+      - text: 执行
+    - textbox "发送消息..."
+    - combobox:
+      - generic: deepseek-flash
+    - button "添加附件":
+      - generic: 添加附件
+    - button [disabled]:
+    - button "发送" [disabled]:
+- contentinfo:
+  - text: Nexent © 2026
+  - generic: · v2.7.0
+  - link "使用条款":
+    - /url: https://github.com/nexent-hub/nexent?tab=License-1-ov-file#readme

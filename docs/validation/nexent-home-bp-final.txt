@@ -1,0 +1,156 @@
+- alert
+- generic: "* *"
+- generic: "* * * *"
+- banner:
+  - banner:
+    - link "logo Nexent":
+      - /url: /
+      - img "logo"
+      - generic: Nexent
+    - link "Github":
+      - /url: https://github.com/ModelEngine-Group/nexent
+      - text: Github
+    - link "ModelEngine":
+      - /url: http://modelengine-ai.net
+    - text: 简体中文
+    - button "通知":
+    - generic: [账号已隐藏]
+- complementary:
+  - menu:
+    - menuitem "首页":
+      - generic: 首页
+    - menuitem "开始问答":
+      - generic: 开始问答
+    - menuitem "自动任务":
+      - generic: 自动任务
+    - menuitem "智能体开发":
+      - generic: 智能体开发
+    - menuitem "资源仓库":
+      - generic: 资源仓库
+    - menuitem "资源管理":
+      - generic: 资源管理
+  - button:
+- main:
+  - button "新对话":
+    - text: 新对话
+  - button "Toggle Sidebar":
+    - generic: Toggle Sidebar
+  - generic: 今天
+  - button "140/90算高血压吗":
+    - generic: 140/90算高血压吗
+  - button:
+  - button "糖尿病高血压首选降压药":
+    - generic: 糖尿病高血压首选降压药
+  - button:
+  - button "β阻滞剂指南矛盾？":
+    - generic: β阻滞剂指南矛盾？
+  - button:
+  - button "140/90算高血压吗":
+    - generic: 140/90算高血压吗
+  - button:
+  - button "糖尿病高血压首选降压药":
+    - generic: 糖尿病高血压首选降压药
+  - button:
+  - button "β阻滞剂指南与标准矛盾？":
+    - generic: β阻滞剂指南与标准矛盾？
+  - button:
+  - button "140/90算高血压吗":
+    - generic: 140/90算高血压吗
+  - button:
+  - button "糖尿病高血压首选药":
+    - generic: 糖尿病高血压首选药
+  - button:
+  - button "血压随访间隔":
+    - generic: 血压随访间隔
+  - button:
+  - button "血压随访周期差异":
+    - generic: 血压随访周期差异
+  - button:
+  - generic: 最近 7 天
+  - button "80岁以上血压目标":
+    - generic: 80岁以上血压目标
+  - button:
+  - button "糖尿病高血压首选降压药":
+    - generic: 糖尿病高血压首选降压药
+  - button:
+  - button "高血压前期血压范围":
+    - generic: 高血压前期血压范围
+  - button:
+  - button "高血压诊断标准":
+    - generic: 高血压诊断标准
+  - button:
+  - button "已加载全部会话" [disabled]:
+    - generic: 已加载全部会话
+  - button "批量管理":
+    - generic: 批量管理
+  - button "切换旧版":
+    - generic: 切换旧版
+  - button:
+  - generic: 140/90算高血压吗
+  - generic: 高血压用药决策助手
+  - button "分享对话":
+  - generic: 140/90算不算高血压？
+  - generic: 高血压用药决策助手
+  - status:
+    - status:
+      - generic: success
+    - generic: 已完成
+  - button "1 tool call":
+    - generic: 1 tool call
+  - button "Reasoning" [expanded]:
+    - generic: Reasoning
+  - paragraph:
+    - strong: 步骤 1
+    - text: <code> bp = evaluate_blood_pressure(systolic=140, diastolic=90, unit="mmHg", measurement_method="unknown") print(bp) </code>
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: bp = evaluate_blood_pressure(systolic=140, diastolic=90, unit="mmHg", measurement_method="unknown")
+    - generic: print(bp)
+  - button "1 tool call":
+    - generic: 1 tool call
+  - button "Reasoning" [expanded]:
+    - generic: Reasoning
+  - paragraph:
+    - strong: 步骤 2
+    - text: <code> answer = "140/90达到诊室高血压诊断边界，但不等于确诊；需4周内非同日3次规范测量每次均达界。单次读数不能确诊，也不排除高血压。\n出处：国家基层高血压防治管理指南2025版，4.2.1，PDF第4页（自动抽取，待核验）。" assert len(answer) <= 200 final_answer(answer) </code>
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: answer = "140/90达到诊室高血压诊断边界，但不等于确诊；需4周内非同日3次规范测量每次均达界。单次读数不能确诊，也不排除高血压。\n出处：国家基层高血压防治管理指南2025版，4.2.1，PDF第4页（自动抽取，待核验）。"
+    - generic: assert len(answer) <= 200
+    - generic: final_answer(answer)
+  - paragraph: 140/90达到诊室高血压诊断边界，但不等于确诊；需4周内非同日3次规范测量每次均达界。单次读数不能确诊，也不排除高血压。 出处：国家基层高血压防治管理指南2025版，4.2.1，PDF第4页（自动抽取，待核验）。
+  - button "复制":
+    - generic: 复制
+  - button "刷新":
+    - generic: 刷新
+  - button "更多":
+    - generic: 更多
+  - generic "生成耗时 2.59s":
+    - text: 2.59s
+  - button "2% 本轮":
+    - generic: 2%
+    - generic: 本轮
+  - button "滚动到底部" [disabled]:
+    - generic: 滚动到底部
+  - button "规划":
+    - text: 规划
+  - button "执行":
+    - text: 执行
+  - textbox "发送消息..." [active]
+  - combobox:
+    - generic: deepseek-flash
+  - button "知识库：跟随智能体默认":
+    - generic: 知识库：跟随智能体默认
+  - button "添加附件":
+    - generic: 添加附件
+  - button [disabled]:
+  - button "发送" [disabled]:
+- contentinfo:
+  - text: Nexent © 2026
+  - generic: · v2.7.0
+  - link "使用条款":
+    - /url: https://github.com/nexent-hub/nexent?tab=License-1-ov-file#readme

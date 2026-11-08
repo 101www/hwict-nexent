@@ -1,0 +1,48 @@
+{
+  "published_version": "高血压用药决策助手-2610182221",
+  "model": "deepseek-flash",
+  "platform": "Nexent v2.7.0",
+  "measured_at": "2026-10-18 Asia/Shanghai",
+  "scope": "three selected examples, not accuracy or algorithm superiority evaluation",
+  "cases": [
+    {
+      "id": "dm",
+      "question": "合并糖尿病的高血压患者首选哪类降压药？",
+      "answer": "首选A类（ACEI或ARB，二者择一，不宜联用）；未达标可加C或D。\n出处：基层指南2025，5.4.6.1（语义5.4.3.2，版面待核验）p9；A定义5.4.2 p6；联用限制5.4.4 p9。自动抽取待核验。",
+      "characters": 107,
+      "max_characters": 200,
+      "length_passed": true,
+      "observed_page_duration": "2.90s",
+      "transcript": "docs/validation/nexent-home-dm-final.txt",
+      "screenshot": "docs/validation/nexent-home-dm-final.png",
+      "session_context": "independent_new_home_chat",
+      "clinical_verification": "pending"
+    },
+    {
+      "id": "bp",
+      "question": "140/90算不算高血压？",
+      "answer": "140/90达到诊室高血压诊断边界，但不等于确诊；需4周内非同日3次规范测量每次均达界。单次读数不能确诊，也不排除高血压。\n出处：国家基层高血压防治管理指南2025版，4.2.1，PDF第4页（自动抽取，待核验）。",
+      "characters": 107,
+      "max_characters": 200,
+      "length_passed": true,
+      "observed_page_duration": "2.59s",
+      "transcript": "docs/validation/nexent-home-bp-final.txt",
+      "screenshot": "docs/validation/nexent-home-bp-final.png",
+      "session_context": "independent_new_home_chat",
+      "clinical_verification": "pending"
+    },
+    {
+      "id": "beta",
+      "question": "专科指南说β阻滞剂不是一线，管理标准要求配备，矛盾吗？",
+      "answer": "不矛盾：2024临床指南CQ13只针对无合并症者不建议β阻滞剂作一线初始用药，WS/T 872—2025第3页4.2是机构应配备要求，配备不等于首选，也非禁用。\n出处：中国高血压临床实践指南2024 CQ13，第15页；WS/T 872—2025 4.2，第3页。均为自动抽取，待核验。",
+      "characters": 143,
+      "max_characters": 200,
+      "length_passed": true,
+      "observed_page_duration": "2.52s",
+      "transcript": "docs/validation/nexent-home-beta-final.txt",
+      "screenshot": "docs/validation/nexent-home-beta-final.png",
+      "session_context": "independent_new_home_chat",
+      "clinical_verification": "pending"
+    }
+  ]
+}

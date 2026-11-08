@@ -1,0 +1,5 @@
+【初始补充文本：已并入平台草稿第22条，后续补充第23/24条并修正原文响应字段。完整草稿见constraints_native_skill_draft.txt；发布状态见docs/validation。本文件不是平台原生导出。】
+
+对高血压指南、标准和图谱资料问题，本轮先实际调用read_skill_md(skill_name="clinical-evidence-router")，读取正文后按流程执行。涉及合并症首选用药或图谱路径时读取clinical-multi-hop；涉及配备/一线推荐或指南表面矛盾时读取clinical-conflict-check；输出前读取clinical-trace-report。Skill必须先在本智能体中绑定。读取失败时说明失败，不声称已经执行。
+
+读取Skill后仍须实际调用真实MCP；read_skill_md只返回步骤说明，不提供本轮医学事实。MCP返回字符串先json.loads；先graph_status取得本轮release，后续结果核对版本一致。普通答案含出处默认不超过200字符，详细报告按用户要求展开；保留必要条件、版本差异与自动抽取待核验状态。不得仅在回答中写出Skill名称来替代调用，不硬编码医学答案、页码或发布版本。

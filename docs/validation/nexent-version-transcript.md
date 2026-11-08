@@ -1,0 +1,228 @@
+- alert
+- generic: "* *"
+- generic: "* * * *"
+- banner:
+  - banner:
+    - link "logo Nexent":
+      - /url: /
+      - img "logo"
+      - generic: Nexent
+    - link "Github":
+      - /url: https://github.com/ModelEngine-Group/nexent
+      - text: Github
+    - link "ModelEngine":
+      - /url: http://modelengine-ai.net
+    - text: 简体中文
+    - button "通知":
+    - generic: [账号已隐藏]
+- complementary:
+  - menu:
+    - menuitem "首页":
+      - generic: 首页
+    - menuitem "开始问答":
+      - generic: 开始问答
+    - menuitem "自动任务":
+      - generic: 自动任务
+    - menuitem "智能体开发":
+      - generic: 智能体开发
+    - menuitem "资源仓库":
+      - generic: 资源仓库
+    - menuitem "资源管理":
+      - generic: 资源管理
+  - button:
+- main:
+  - button "返回":
+    - generic: 返回
+  - button "版本管理":
+    - generic: 版本管理
+  - main:
+    - heading "智能生成" [level=3]
+    - button "关闭智能生成":
+    - heading "你好，我是智能体生成助手" [level=1]
+    - paragraph: 请描述你希望如何配置当前智能体，我会搜索已安装资源并生成 Prompt 字段。
+    - button "生成提示词 根据已选工具与技能生成":
+      - generic: 生成提示词
+      - generic: 根据已选工具与技能生成
+    - button "推荐可用工具 根据当前角色推荐工具":
+      - generic: 推荐可用工具
+      - generic: 根据当前角色推荐工具
+    - button "推荐可用技能 根据当前角色推荐技能":
+      - generic: 推荐可用技能
+      - generic: 根据当前角色推荐技能
+    - button "生成会话引导 生成开场白与示例问题":
+      - generic: 生成会话引导
+      - generic: 生成开场白与示例问题
+    - button "滚动到底部" [disabled]:
+      - generic: 滚动到底部
+    - textbox "发送消息..."
+    - button "发送" [disabled]:
+    - heading "配置" [level=3]
+    - text: 草稿
+    - text: "当前发布版本:"
+    - generic: 高血压用药决策助手-2610132226
+    - generic: / 共 1 个版本
+    - button "智能生成":
+      - generic: 智能生成
+    - tablist:
+      - tab "基本设置" [selected]
+      - tab "工具与技能"
+      - tab "高级设置"
+    - tabpanel "基本设置":
+      - button "展示信息 配置图标、展示名称、变量名、作者和简介" [expanded]:
+        - generic: 展示信息
+        - paragraph: 配置图标、展示名称、变量名、作者和简介
+      - generic "智能体名称": "* 智能体名称"
+      - textbox "* 智能体名称":
+        - /placeholder: 请输入智能体名称
+        - text: 高血压用药决策助手
+      - generic: 9 / 60
+      - generic "智能体变量名": "* 智能体变量名"
+      - textbox "* 智能体变量名":
+        - /placeholder: 请输入智能体变量名
+        - text: www
+      - generic: 3 / 60
+      - generic "作者": "* 作者"
+      - textbox "* 作者":
+        - /placeholder: 请输入作者名称
+        - text: [账号已隐藏]
+      - generic "智能体描述": "* 智能体描述"
+      - textbox "* 智能体描述":
+        - /placeholder: 请输入智能体描述
+        - text: 基于临床指南的高血压用药决策辅助，每条结论可溯源
+      - generic: 24 / 500
+      - generic "标签"
+      - generic: —
+      - button "编辑标签":
+        - generic: 编辑标签
+      - generic: 智能体图标
+      - button:
+      - generic: 支持 PNG、JPEG、GIF、WebP，最大 2 MB
+      - button "模型与提示词 配置大语言模型以及智能体角色、使用要求和示例" [expanded]:
+        - generic: 模型与提示词
+        - paragraph: 配置大语言模型以及智能体角色、使用要求和示例
+      - generic "模型": "模型 :"
+      - generic "deepseek-flash":
+        - generic: deepseek-flash
+      - combobox
+      - img "down":
+      - button "调整模型优先级" [disabled]:
+      - button "模型参数覆盖":
+      - tablist:
+        - tab "智能体角色" [selected]
+        - tab "使用要求"
+        - tab "示例"
+      - tabpanel "智能体角色":
+        - textbox "请输入智能体的角色、职责和能力": 你是高血压指南与管理标准的资料溯源助手，帮助用户查询三份文档、核对关系、适用条件和版本。结论以工具返回的原文为依据，不把待核验抽取说成已经审核的医疗建议。回答简明，提供可追溯的出处。
+        - button "放大查看":
+      - button "知识库 选择知识库后自动启用知识库检索能力并建立关联":
+        - generic: 知识库
+        - paragraph: 选择知识库后自动启用知识库检索能力并建立关联
+      - button "配置":
+        - generic: 配置
+      - button "选择知识库":
+        - generic: 选择知识库
+      - button "会话引导 配置用户首次进入会话时的开场白和示例问题":
+        - generic: 会话引导
+        - paragraph: 配置用户首次进入会话时的开场白和示例问题
+    - button "停止当前生成并解除编辑锁定" [disabled]:
+      - generic: 解除锁定
+    - button "调试":
+      - generic: 调试
+    - button "发布":
+      - generic: 发布
+    - heading "调试" [level=3]
+    - generic: 对比模式
+    - switch
+    - button "Maximize debug panel":
+    - button "关闭调试":
+    - generic: 请核对 WS/T 872—2025 参考文献里《国家基层高血压防治管理指南》的年份，并与当前加载版本比较。用不超过200字说明结论、原文出处和不能直接替代的原因。
+    - generic: 高血压用药决策助手
+    - status:
+      - status:
+        - generic: success
+      - generic: 已完成
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 1
+      - text: 我会先检查引用版本，再查看当前加载的是哪个版本。
+    - text: <code> ref = check_references(keyword="国家基层高血压防治管理指南", limit=20) print(ref) status = graph_status() print(status) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: ref = check_references(keyword="国家基层高血压防治管理指南", limit=20)
+      - generic: print(ref)
+      - generic: status = graph_status()
+      - generic: print(status)
+    - button "2 tool calls":
+      - generic: 2 tool calls
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 2
+      - text: "I need to get the evidence from the REFERENCES block to confirm the exact citation text, page, section. I already have the evidence string from check_references: \"国家基层高血压防治管理指南[J]. 中国循环杂志，2021\" at page 8, section REFERENCES, block_id B-232e1532f133. Per rules, get_evidence for that block to confirm. That's one call, allowed once."
+    - paragraph: Let me call get_evidence(block_id="B-232e1532f133").<code> ev = get_evidence(block_id="B-232e1532f133") print(ev) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: ev = get_evidence(block_id="B-232e1532f133")
+      - generic: print(ev)
+    - button "1 tool call":
+      - generic: 1 tool call
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 3
+      - text: I have all evidence needed. Write ≤200字 answer.
+    - paragraph: "Facts: WS/T 872—2025 参考文献 [1] 引用《国家基层高血压防治管理指南》，中国循环杂志 2021，36(3):209-220，物理页8，参考文献块 B-232e1532f133。当前加载的是《国家基层高血压防治管理指南2025版》，年份2025，为同名不同版本候选（N-DOC-fa69b0792accaf），库中无2021版全文（document_available=false）。另外正文7、8.1、8.2节以不带年份方式引用该指南（块 B-8e14135f673d、B-13be9bab232a、B-bee9a4b090b8）。"
+    - paragraph: 不能直接替代原因：2021为规范引用版本，2025版是另行发布的版本，内容条款可能变化；且同名不代表条款等同，缺少逐条核对依据；图谱抽取待核验。
+    - paragraph: "Keep under 200字. Draft:"
+    - paragraph: 结论：WS/T 872—2025 参考文献[1]所列《国家基层高血压防治管理指南》年份为2021（中国循环杂志，2021，36(3)：209-220）；当前加载的是2025版，二者同名不同版本。标准正文第7、8.1、8.2节引用该指南时未标年份。
+    - paragraph: 不能直接替代：2021版全文未入库，2025版仅是"同名候选"，条款是否一致未逐条核对；且自动抽取为待核验状态。故只能说明引用年份为2021，不能以2025版内容回答该标准所引条款。
+    - paragraph: "That's about 170 characters. Good. Add 出处 line — but 200字 limit includes? Keep concise. Use source table maybe. The instruction: 结论、原文出处和不能直接替代的原因. I'll include 出处 inline briefly."
+    - paragraph: "Count characters roughly: fine."
+    - paragraph: No citations marks needed since MCP tools not "检索工具"? Rules mention reference_mark from search results; these tools don't return reference_mark, so no citation markers.
+    - paragraph:
+      - strong: 结论
+      - text: ：WS/T 872—2025 参考文献 [1] 所列《国家基层高血压防治管理指南》的年份为
+      - strong: "2021"
+      - text: 年，文献信息为“中国循环杂志，2021，36(3)：209-220”；当前加载的是
+      - strong: 《国家基层高血压防治管理指南2025版》
+      - text: ，它与引用文献同名，但版本不同。标准正文第 7、8.1、8.2 节引用该指南时未标年份。
+    - paragraph:
+      - strong: 出处
+      - text: ：《WS-T872-2025_重排.txt》参考文献，PDF 第 8 页，block B-232e1532f133。
+    - paragraph:
+      - strong: 不能直接替代
+      - text: ：2021 版全文未入库，现阶段 2025 版只是“同名候选”，两版条款是否一致也未逐条核对；并且这些抽取结果都处于待核验状态。因此，只能确认引用年份为 2021，不能用 2025 版内容代替该标准实际引用的条款。
+    - button "复制":
+      - generic: 复制
+    - button "刷新":
+      - generic: 刷新
+    - button "更多":
+      - generic: 更多
+    - generic "生成耗时 6.93s":
+      - text: 6.93s
+    - button "3% 本轮":
+      - generic: 3%
+      - generic: 本轮
+    - button "滚动到底部" [disabled]:
+      - generic: 滚动到底部
+    - button "规划":
+      - text: 规划
+    - button "执行":
+      - text: 执行
+    - textbox "发送消息..." [active]
+    - combobox:
+      - generic: deepseek-flash
+    - button "添加附件":
+      - generic: 添加附件
+    - button [disabled]:
+    - button "发送" [disabled]:
+- contentinfo:
+  - text: Nexent © 2026
+  - generic: · v2.7.0
+  - link "使用条款":
+    - /url: https://github.com/nexent-hub/nexent?tab=License-1-ov-file#readme

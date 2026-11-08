@@ -1,0 +1,390 @@
+- alert: 你好，我是智能体生成助手
+- generic: "* *"
+- generic: "* * * *"
+- banner:
+  - banner:
+    - link "logo Nexent":
+      - /url: /
+      - img "logo"
+      - generic: Nexent
+    - link "Github":
+      - /url: https://github.com/ModelEngine-Group/nexent
+      - text: Github
+    - link "ModelEngine":
+      - /url: http://modelengine-ai.net
+    - text: 简体中文
+    - button "通知":
+    - generic: [账号已隐藏]
+- complementary:
+  - menu:
+    - menuitem "首页":
+      - generic: 首页
+    - menuitem "开始问答":
+      - generic: 开始问答
+    - menuitem "自动任务":
+      - generic: 自动任务
+    - menuitem "智能体开发" [expanded]:
+      - generic: 智能体开发
+    - menu:
+      - menuitem "模型配置":
+        - generic: 模型配置
+      - menuitem "知识库配置":
+        - generic: 知识库配置
+      - menuitem "智能体配置":
+        - generic: 智能体配置
+      - menuitem "记忆配置":
+        - generic: 记忆配置
+      - menuitem "智能体评估":
+        - generic: 智能体评估
+    - menuitem "资源仓库":
+      - generic: 资源仓库
+    - menuitem "资源管理":
+      - generic: 资源管理
+  - button:
+- main:
+  - button "返回":
+    - generic: 返回
+  - button "版本管理":
+    - generic: 版本管理
+  - main:
+    - heading "智能生成" [level=3]
+    - button "关闭智能生成":
+    - heading "你好，我是智能体生成助手" [level=1]
+    - paragraph: 请描述你希望如何配置当前智能体，我会搜索已安装资源并生成 Prompt 字段。
+    - button "生成提示词 根据已选工具与技能生成":
+      - generic: 生成提示词
+      - generic: 根据已选工具与技能生成
+    - button "推荐可用工具 根据当前角色推荐工具":
+      - generic: 推荐可用工具
+      - generic: 根据当前角色推荐工具
+    - button "推荐可用技能 根据当前角色推荐技能":
+      - generic: 推荐可用技能
+      - generic: 根据当前角色推荐技能
+    - button "生成会话引导 生成开场白与示例问题":
+      - generic: 生成会话引导
+      - generic: 生成开场白与示例问题
+    - button "滚动到底部" [disabled]:
+      - generic: 滚动到底部
+    - textbox "发送消息..."
+    - button "发送" [disabled]:
+    - heading "配置" [level=3]
+    - text: 草稿
+    - text: "当前发布版本:"
+    - generic: 高血压用药决策助手-2610132226
+    - generic: / 共 1 个版本
+    - button "智能生成":
+      - generic: 智能生成
+    - tablist:
+      - tab "基本设置" [selected]
+      - tab "工具与技能"
+      - tab "高级设置"
+    - tabpanel "基本设置":
+      - button "展示信息 配置图标、展示名称、变量名、作者和简介" [expanded]:
+        - generic: 展示信息
+        - paragraph: 配置图标、展示名称、变量名、作者和简介
+      - generic "智能体名称": "* 智能体名称"
+      - textbox "* 智能体名称":
+        - /placeholder: 请输入智能体名称
+        - text: 高血压用药决策助手
+      - generic: 9 / 60
+      - generic "智能体变量名": "* 智能体变量名"
+      - textbox "* 智能体变量名":
+        - /placeholder: 请输入智能体变量名
+        - text: www
+      - generic: 3 / 60
+      - generic "作者": "* 作者"
+      - textbox "* 作者":
+        - /placeholder: 请输入作者名称
+        - text: [账号已隐藏]
+      - generic "智能体描述": "* 智能体描述"
+      - textbox "* 智能体描述":
+        - /placeholder: 请输入智能体描述
+        - text: 基于临床指南的高血压用药决策辅助，每条结论可溯源
+      - generic: 24 / 500
+      - generic "标签"
+      - generic: —
+      - button "编辑标签":
+        - generic: 编辑标签
+      - generic: 智能体图标
+      - button:
+      - generic: 支持 PNG、JPEG、GIF、WebP，最大 2 MB
+      - button "模型与提示词 配置大语言模型以及智能体角色、使用要求和示例" [expanded]:
+        - generic: 模型与提示词
+        - paragraph: 配置大语言模型以及智能体角色、使用要求和示例
+      - generic "模型": "模型 :"
+      - generic "deepseek-flash":
+        - generic: deepseek-flash
+      - combobox
+      - img "down":
+      - button "调整模型优先级" [disabled]:
+      - button "模型参数覆盖":
+      - tablist:
+        - tab "智能体角色"
+        - tab "使用要求" [selected]
+        - tab "示例"
+      - tabpanel "使用要求":
+        - textbox "请输入此智能体的使用要求或约束条件": 回答规则： 1. 本助手用于指南和管理标准的资料查询、证据核对。不得仅凭模型记忆给出个体化处方、剂量或确定诊疗结论。 2. 所有事实须先查询工具。管理要求和关系用 query_relations；确认实体用 find_entities；未命中时用 lookup_clause 查原文，必要时用 query_candidates 查待解析候选。未命中不代表原文不存在。 3. 原文核对使用关系的 block_id 调用 get_evidence。每个结论注明文件名、PDF物理页码、章节和关键原文，不固定引用某一指南，不把文件名年份当作实际刊期。 4. 查询指南引用和版本是否匹配时优先调用 check_references。version_mismatch 要明确披露，不得用2025候选静默替代标准实际引用的2021版本。 5. 必须保留 condition、scope、modality、exceptions 和 supporting_evidence 的限制。不得将“宜”改为“必须”；A表示ACEI或ARB，不得把择一选项写成同时使用。 6. traverse_relations 返回的是 evidence_path，图连通不代表临床推断有效；必须保留原始关系方向。compare_threshold只做同单位数学比较；detect_conflicts只列待审核数值差异，不能自动裁决医学冲突。 7. verification=pending 表示自动抽取待核验。confidence是未经校准的规则分数，不是医学正确率。sufficient=false 不妨碍报告原文明确写了什么，但不能宣称已验证临床决策。 8. truncated=true 且需完整清单时，用offset翻页。证据不足时说明已知部分与缺失的具体版本、条款或条件，不编造引文、页码或知识。 9. 问当前图谱信息时调用graph_status；普通问题不用反复调用。回答先给原文支持的结论，再给出处和不确定性。随访对比可查询query_relations(keyword="followUpEvery",limit=10)，保留“至少”和达标/未达标人群的区别。
+        - button "放大查看":
+      - button "知识库 选择知识库后自动启用知识库检索能力并建立关联":
+        - generic: 知识库
+        - paragraph: 选择知识库后自动启用知识库检索能力并建立关联
+      - button "配置":
+        - generic: 配置
+      - button "选择知识库":
+        - generic: 选择知识库
+      - button "会话引导 配置用户首次进入会话时的开场白和示例问题":
+        - generic: 会话引导
+        - paragraph: 配置用户首次进入会话时的开场白和示例问题
+    - button "停止当前生成并解除编辑锁定" [disabled]:
+      - generic: 解除锁定
+    - button "调试":
+      - generic: 调试
+    - button "发布":
+      - generic: 发布
+    - heading "调试" [level=3]
+    - generic: 对比模式
+    - switch
+    - button "Maximize debug panel":
+    - button "关闭调试":
+    - generic: 血压达标和未达标患者分别多久随访一次？请查询真实图谱并核对原文，列出管理标准和基层指南各自的文件名、PDF页码、章节，保留“至少”，说明核验状态。
+    - generic: 高血压用药决策助手
+    - status:
+      - status:
+        - generic: success
+      - generic: 已完成
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 1
+      - text: I'll start by checking the graph status and searching for follow-up interval relations.
+    - text: <code> gs = graph_status() print(gs) </code> <code> rel = query_relations(keyword="followUpEvery", limit=20) print(rel) </code> <code> ent1 = find_entities(keyword="血压达标患者", limit=20) print(ent1) ent2 = find_entities(keyword="未达标", limit=20) print(ent2) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: gs = graph_status()
+      - generic: print(gs)
+      - generic: rel = query_relations(keyword="followUpEvery", limit=20)
+      - generic: print(rel)
+      - generic: ent1 = find_entities(keyword="血压达标患者", limit=20)
+      - generic: print(ent1)
+      - generic: ent2 = find_entities(keyword="未达标", limit=20)
+      - generic: print(ent2)
+    - button "4 tool calls":
+      - generic: 4 tool calls
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 2
+      - text: I need to fetch evidence blocks for the four block_ids to verify original text, then answer.
+    - paragraph: Let me call get_evidence for B-6e3c9e3c8d5a, B-99383b6fd379, B-c79ea4f8af58. Also maybe check_references to see version mismatch disclosures.思考：已获取四条随访关系，分别来自管理标准与基层指南。下一步需用 get_evidence 核对原文与页码，并用 check_references 核查两份文件的引用版本状态。
+    - text: <code> ev1 = get_evidence(block_id="B-c79ea4f8af58") print(ev1) ev2 = get_evidence(block_id="B-99383b6fd379") print(ev2) ev3 = get_evidence(block_id="B-6e3c9e3c8d5a") print(ev3) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: ev1 = get_evidence(block_id="B-c79ea4f8af58")
+      - generic: print(ev1)
+      - generic: ev2 = get_evidence(block_id="B-99383b6fd379")
+      - generic: print(ev2)
+      - generic: ev3 = get_evidence(block_id="B-6e3c9e3c8d5a")
+      - generic: print(ev3)
+    - button "3 tool calls":
+      - generic: 3 tool calls
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 3
+      - text: I have the evidence already. I should verify a bit more — maybe check the standard's 8.1/8.3 section context, and check_references for version matching (the standard references 2021 guideline). Also confirm whether there's a 中国高血压临床实践指南 mention of follow-up. The user asks "管理标准和基层指南各自的文件名、PDF页码、章节" — so just two docs. But should I mention 临床实践指南? Not required.
+    - paragraph: "Let me do one more verification round: check_references to see version matching, and lookup_clause for \"随访\" in WS-T872 to confirm 8.1 section heading and page. Then produce answer."
+    - paragraph: Let me run a code block with check_references and lookup_clause.<code> cr = check_references(keyword="国家基层高血压防治管理指南", limit=20) print(cr)
+    - paragraph: lc1 = lookup_clause(keyword="随访", standard="WS-T872-2025_重排.txt", limit=20) print(lc1) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: cr = check_references(keyword="国家基层高血压防治管理指南", limit=20)
+      - generic: print(cr)
+      - generic: lc1 = lookup_clause(keyword="随访", standard="WS-T872-2025_重排.txt", limit=20)
+      - generic: print(lc1)
+    - button "2 tool calls":
+      - generic: 2 tool calls
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 4
+      - text: "I need to produce the final answer. Let me check whether I have all needed evidence. I have both documents' follow-up frequencies, page numbers, sections, evidence text. Verification statuses pending. Also check_references revealed a version_mismatch: WS/T 872—2025 references 《国家基层高血压防治管理指南》2021 edition, while the knowledge base contains 2025版 — this should be disclosed since user asked about 管理标准和基层指南 each file name."
+    - paragraph: "Note the graph meta: 管理标准 file \"WS-T872-2025_重排.txt\" title 基层医疗卫生机构高血压防治管理标准, year 2025, page numbering PDF physical page. Documents show 2025版指南. Also there's a discrepancy: for 未达标患者, 管理标准 says \"1个月至少随访1次\" while 指南 says \"每月至少随访1次\" — same meaning."
+    - paragraph: Maybe I should verify the 国家基层高血压防治管理指南 section 8.1 page 13 heading path "高血压长期随访管理 / 随访频率". Already have.
+    - paragraph: Perhaps also check compare_threshold? Not necessary. But maybe useful to confirm numeric constraints? The instructions say compare_threshold only does math comparison; not needed since values align.
+    - paragraph: "Should I also check whether 指南 8.1 has any exceptions (e.g., 转诊). The evidence includes \"符合转诊条件者，建议按照转诊要求操作\" — I should mention the exception: patients meeting referral criteria should follow referral requirements."
+    - paragraph: "Let me do one more quick verification: lookup_clause on the 指南 for \"随访频率\" to confirm section numbering and page, and maybe get_evidence for guideline block already done. Also possibly detect_conflicts for follow-up frequency? Not necessary."
+    - paragraph: I could verify that the 指南 chapter heading is correct; get_evidence returned heading_path ["高血压长期随访管理","随访频率"]. Good.
+    - paragraph: "I think one additional check is prudent: check_references keyword \"WS/T 872\" to confirm whether the standard's own citation version mismatch pertains to diagnosis/lifestyle clauses, not necessarily the follow-up clause. Important nuance: the citation mismatches are in sections 7, 8.1, 8.2 — section 8.1's reference is about 血压达标的目标值, not the follow-up interval. So the follow-up interval in 8.3.2 is self-contained. I should disclose that version_mismatch exists in 8.1 regarding target BP values, not about the follow-up frequency itself. That's an accurate, careful statement."
+    - paragraph: Let me run check_references for WS/T 872 maybe to get the missing resolution... Actually I already have the relevant reference evidence. I could do one lookup to confirm the reference block B-13be9bab232a full text for section 8.1.
+    - paragraph: "Let me do a small final verification step: get_evidence for B-13be9bab232a (the 8.1 reference) and lookup_clause keyword \"8.3.2 随访频率\" in standard? Already have."
+    - paragraph: I'll run one code block to fetch B-13be9bab232a and the guideline's block for section 8.1 heading context maybe B-fb856e056a0a (section 7). Then final answer.
+    - paragraph: Actually, careful about not repeating completed actions. get_evidence for B-13be9bab232a is new. Let's do it.<code> ev_ref = get_evidence(block_id="B-13be9bab232a") print(ev_ref) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: ev_ref = get_evidence(block_id="B-13be9bab232a")
+      - generic: print(ev_ref)
+    - button "1 tool call":
+      - generic: 1 tool call
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 5
+      - text: I have the evidence. I still should verify the 国家基层高血压防治管理指南2025版 page 13 block again? Already got B-6e3c9e3c8d5a evidence with page 13, section 8.1. And WS/T 872-2025 pages 5, sections 8.3.2.1 and 8.3.2.2.
+    - paragraph: "I should also check whether the standard's reference to 国家基层高血压防治管理指南 version mismatch matters. The task says \"管理标准和基层指南各自的文件名、PDF页码、章节，保留'至少'，说明核验状态。\" Also mention version mismatch: WS/T 872—2025 references 国家基层高血压防治管理指南 2021版, but入库是2025版. That's a good disclosure — check_references returned version_mismatch. Note the block B-13be9bab232a is section 8.1 治疗原则 page 5 which references 目标值, not 随访. So the version mismatch applies to the standard's citation of the 基层指南 generally (REFERENCES page 8 shows 2021). Should disclose that the std references the 2021 version while the KB contains the 2025 version; the 随访 clauses of the standard are self-contained (no cross-reference needed), so no silent substitution for those clauses. That's honest."
+    - paragraph: "Maybe also check detect_conflicts / compare_threshold for 随访间隔 to see numeric differences. The two sources agree (3 months, 1 month), so detect_conflicts may return nothing or pending differences. Let's do one quick call: compare_threshold(subject=\"随访间隔\", value=3, unit=\"月\") and detect_conflicts(keyword=\"随访\"). This adds value re: numerical verification. Let me do it."
+    - paragraph: Also check query_candidates for 随访 to state pending status? Could mention candidates retained. Maybe not necessary. Let's run compare_threshold and detect_conflicts.<code> ct = compare_threshold(subject="血压达标患者随访间隔", value=3, unit="月") print(ct) ct2 = compare_threshold(subject="血压未达标患者随访间隔", value=1, unit="月") print(ct2) dc = detect_conflicts(subject="随访", limit=10) print(dc) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: ct = compare_threshold(subject="血压达标患者随访间隔", value=3, unit="月")
+      - generic: print(ct)
+      - generic: ct2 = compare_threshold(subject="血压未达标患者随访间隔", value=1, unit="月")
+      - generic: print(ct2)
+      - generic: dc = detect_conflicts(subject="随访", limit=10)
+      - generic: print(dc)
+    - button "3 tool calls":
+      - generic: 3 tool calls
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 6
+      - text: "The evidence is already gathered. I should now produce the final answer, possibly verifying the guideline document title/page. I have all needed: both documents, pages, sections, verification pending, \"至少\" preserved."
+    - paragraph: "Maybe one more check: 管理标准's title \"基层医疗卫生机构高血压防治管理标准\" (WS/T 872—2025), the guideline \"国家基层高血压防治管理指南2025版\". I have the file names. I could just answer."
+    - paragraph: The task said "查询真实图谱并核对原文" — done both query_relations and get_evidence. Also 核验状态 pending.
+    - paragraph: "I should produce a table with file names, PDF physical page, section, original text, verification status. Also note version_mismatch disclosure? The user didn't ask about references, but relevant: WS/T 872 references the 2021 version of 国家基层高血压防治管理指南 (version_mismatch), and the library contains the 2025 file. That's a useful disclosure but not central. I can mention briefly as a caveat since the instruction says version_mismatch must be disclosed when querying guideline citations/versions. Not strictly asked, but a short note is fine — careful not to overstate. I'll add a brief note that WS/T 872—2025 的引用文献为2021版指南（version_mismatch），本次引用的是库内2025版文件名，未静默替代——actually the follow-up clause in WS/T 872 is its own clause 8.3.2.1/8.3.2.2, not citing the other guide. So the version mismatch is about 目标值/诊断标准 references, not follow-up frequency. I can add a footnote that the cited 2021 version isn't in library but that doesn't affect clause 8.3.2 content."
+    - paragraph: Let me write the answer without further tool calls. Should I do one more code block? No—task complete, just answer. But the system prompt requires 思考/代码 loops... but final answer can be given. Prior actions already complete. I'll answer directly.
+    - paragraph: "Include: 达标: ≥每3个月1次; 未达标: 每月至少1次，直至达标 (management standard adds \"直至血压达标\" and 转诊 note)."
+    - paragraph: "Verification: all relations/blocks verification=pending, confidence 0.95 rule heuristic not calibrated; sufficient=false, so graph-level \"已验证\" not claimed; 原文已核读（block原文一致）。"
+    - paragraph: "Table columns: 文件、PDF物理页、章节、人群、原文关键表述、核验状态."
+    - paragraph: "Note graph limitations: 表格勾选关系未恢复, 第4、6页错序 — but pages 5 and 13 are fine; 标准第4、6物理页存在文本错序 — our page 5 not affected."
+    - paragraph: Write answer.
+    - heading "一、结论（先说明原文支持的结论）" [level=2]
+    - list:
+      - strong: 血压达标患者
+      - text: ：中国基层高血压防治管理指南要求
+      - strong: 至少每 3 个月随访 1 次
+      - text: ；WS/T 872—2025 同样要求
+      - strong: 每 3 个月至少随访 1 次
+      - text: 。
+      - strong: 血压未达标患者
+      - text: ：指南要求
+      - strong: 每月至少随访 1 次
+      - text: ；管理标准要求
+      - strong: 1 个月至少随访 1 次，直至血压达标
+      - text: ，并提示符合转诊条件者按转诊条款处理。
+    - paragraph:
+      - text: 两份文件对两类人群的随访间隔表述一致；均使用“
+      - strong: 至少
+      - text: ”，并未使用“必须”；它表示随访频率的最低要求，不能理解为只能按此间隔随访。
+    - heading "二、逐条出处（文件名、PDF 物理页码、章节与原文）" [level=2]
+    - table:
+      - rowgroup:
+        - row "人群 文件名 PDF 物理页 章节 原文关键表述 关系与原文核验状态":
+          - columnheader "人群"
+          - columnheader "文件名"
+          - columnheader "PDF 物理页"
+          - columnheader "章节"
+          - columnheader "原文关键表述"
+          - columnheader "关系与原文核验状态"
+      - rowgroup:
+        - row "血压达标患者 国家基层高血压防治管理指南2025版_重排.txt 13 八、高血压长期随访管理 → 8.1 随访频率 “血压达标患者，至少每 3 个月随访 1 次” verification=pending；confidence 0.95，规则启发式分数，非医学正确率":
+          - cell "血压达标患者"
+          - cell "国家基层高血压防治管理指南2025版_重排.txt"
+          - cell "13"
+          - cell "八、高血压长期随访管理 → 8.1 随访频率"
+          - cell "“血压达标患者，至少每 3 个月随访 1 次”"
+          - cell "verification=pending；confidence 0.95，规则启发式分数，非医学正确率"
+        - row "血压未达标患者 国家基层高血压防治管理指南2025版_重排.txt 13 8.1 随访频率 “血压未达标患者，每月至少随访 1 次” verification=pending；confidence 0.95，未经概率校准":
+          - cell "血压未达标患者"
+          - cell "国家基层高血压防治管理指南2025版_重排.txt"
+          - cell "13"
+          - cell "8.1 随访频率"
+          - cell "“血压未达标患者，每月至少随访 1 次”"
+          - cell "verification=pending；confidence 0.95，未经概率校准"
+        - row "血压达标患者 WS-T872-2025_重排.txt（基层医疗卫生机构高血压防治管理标准） 5 8 治疗与管理 → 8.3 随访管理 → 8.3.2 随访频率 → 8.3.2.1 血压达标者 “8.3.2.1 血压达标者：每 3 个月至少随访 1 次。” verification=pending；confidence 0.95":
+          - cell "血压达标患者"
+          - cell "WS-T872-2025_重排.txt（基层医疗卫生机构高血压防治管理标准）"
+          - cell "5"
+          - cell "8 治疗与管理 → 8.3 随访管理 → 8.3.2 随访频率 → 8.3.2.1 血压达标者"
+          - cell "“8.3.2.1 血压达标者：每 3 个月至少随访 1 次。”"
+          - cell "verification=pending；confidence 0.95"
+        - row "血压未达标患者 WS-T872-2025_重排.txt 5 8.3.2 随访频率 → 8.3.2.2 血压未达标者 “8.3.2.2 血压未达标者：1 个月至少随访 1 次，直至血压达标。符合转诊条件的宜按 8.4 的规定进行转诊。” verification=pending；confidence 0.95":
+          - cell "血压未达标患者"
+          - cell "WS-T872-2025_重排.txt"
+          - cell "5"
+          - cell "8.3.2 随访频率 → 8.3.2.2 血压未达标者"
+          - cell "“8.3.2.2 血压未达标者：1 个月至少随访 1 次，直至血压达标。符合转诊条件的宜按 8.4 的规定进行转诊。”"
+          - cell "verification=pending；confidence 0.95"
+    - paragraph: 原文块核对说明：我已用关系记录中的 block_id 调取完整原文块（指南 B-6e3c9e3c8d5a；标准 B-c79ea4f8af58、B-99383b6fd379），上述引文与原文块逐字一致，包含“至少”“直至血压达标”和转诊提示，未改写或删减条件。
+    - heading "三、适用条件与例外（须一并保留）" [level=2]
+    - list:
+      - listitem: 适用对象：已确诊高血压、进入长期随访管理的患者（标准 8.3.1：对已确诊的高血压患者应进行长期随访）。
+      - listitem: 达标组条件：血压已达标，随访间隔上限为 3 个月（数学比较结果为 3 个月 ≤ 3 个月，命中；该比较只是数值比较，不构成临床裁决）。
+      - text: 未达标组条件：血压未达标者按 1 个月间隔随访，
+      - strong: 直至血压达标
+      - text: ，达标后再转入达标组的随访间隔。
+      - listitem: 例外与转诊：两份文件均提示，符合转诊条件者按转诊要求处理（标准 8.4；指南 8.1 末句“建议按照转诊要求操作”）。
+    - heading "四、核验状态与不确定性（必须说明）" [level=2]
+    - list:
+      - text: 上述 4 条关系及其原文块的
+      - code: verification
+      - text: 均为
+      - strong: pending
+      - text: ，即自动抽取、待人工核验；
+      - code: confidence
+      - text: =0.95 是规则启发式分数，
+      - strong: 不是医学正确率
+      - text: ，也不是“已验证临床决策”。
+      - text: 图谱整体
+      - code: sufficient=false
+      - text: ，322 个节点、2498 条关系中全部为待核验状态；图谱局限包括“表格勾选关系未恢复”“标准第 4、6 物理页存在文本错序”。本问题所引的指南第 13 页、标准第 5 页不在错序页范围内，章节标题为
+      - code: from_text_heading
+      - text: 。
+      - text: 版本提示：WS/T 872—2025 正文在“血压达标目标值”“高血压诊断标准”等处引用《国家基层高血压防治管理指南》，该引用文献标注为
+      - strong: 2021 年
+      - text: ，而库内同名文件为 2025 版，因此
+      - code: check_references
+      - text: 判定为
+      - strong: version_mismatch
+      - text: ，即同名候选与引用版本不同。本次随访频率内容取自标准自身条款 8.3.2.1、8.3.2.2，以及库内 2025 版指南文件 8.1 节的明文，
+      - strong: 未用 2025 版静默替代标准所引 2021 版条款
+      - text: ；如需 2021 版原文，目前文件未入库，无法提供。
+    - paragraph: 出处小结：管理标准为《基层医疗卫生机构高血压防治管理标准》（WS/T 872—2025，文件 WS-T872-2025_重排.txt）第 5 页 8.3.2.1、8.3.2.2 节；基层指南为《国家基层高血压防治管理指南》2025 版（文件 国家基层高血压防治管理指南2025版_重排.txt）第 13 页 8.1 节。所有条目核验状态：pending（待人工核验）。
+    - button "复制":
+      - generic: 复制
+    - button "刷新":
+      - generic: 刷新
+    - button "更多":
+      - generic: 更多
+    - generic "生成耗时 22.17s":
+      - text: 22.17s
+    - button "8% 本轮":
+      - generic: 8%
+      - generic: 本轮
+    - button "滚动到底部" [disabled]:
+      - generic: 滚动到底部
+    - button "规划":
+      - text: 规划
+    - button "执行":
+      - text: 执行
+    - textbox "发送消息..." [active]
+    - combobox:
+      - generic: deepseek-flash
+    - button "添加附件":
+      - generic: 添加附件
+    - button [disabled]:
+    - button "发送" [disabled]:
+- contentinfo:
+  - text: Nexent © 2026
+  - generic: · v2.7.0
+  - link "使用条款":
+    - /url: https://github.com/nexent-hub/nexent?tab=License-1-ov-file#readme

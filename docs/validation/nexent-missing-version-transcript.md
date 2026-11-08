@@ -1,0 +1,371 @@
+- alert
+- generic: "* *"
+- generic: "* * * *"
+- banner:
+  - banner:
+    - link "logo Nexent":
+      - /url: /
+      - img "logo"
+      - generic: Nexent
+    - link "Github":
+      - /url: https://github.com/ModelEngine-Group/nexent
+      - text: Github
+    - link "ModelEngine":
+      - /url: http://modelengine-ai.net
+    - text: 简体中文
+    - button "通知":
+    - generic: [账号已隐藏]
+- complementary:
+  - menu:
+    - menuitem "首页":
+      - generic: 首页
+    - menuitem "开始问答":
+      - generic: 开始问答
+    - menuitem "自动任务":
+      - generic: 自动任务
+    - menuitem "智能体开发":
+      - generic: 智能体开发
+    - menuitem "资源仓库":
+      - generic: 资源仓库
+    - menuitem "资源管理":
+      - generic: 资源管理
+  - button:
+- main:
+  - button "返回":
+    - generic: 返回
+  - button "版本管理":
+    - generic: 版本管理
+  - main:
+    - heading "配置" [level=3]
+    - text: 草稿
+    - text: "当前发布版本:"
+    - generic: 高血压用药决策助手-2610132226
+    - generic: / 共 1 个版本
+    - button "智能生成":
+      - generic: 智能生成
+    - tablist:
+      - tab "基本设置" [selected]
+      - tab "工具与技能"
+      - tab "高级设置"
+    - tabpanel "基本设置":
+      - button "展示信息 配置图标、展示名称、变量名、作者和简介" [expanded]:
+        - generic: 展示信息
+        - paragraph: 配置图标、展示名称、变量名、作者和简介
+      - generic "智能体名称": "* 智能体名称"
+      - textbox "* 智能体名称":
+        - /placeholder: 请输入智能体名称
+        - text: 高血压用药决策助手
+      - generic: 9 / 60
+      - generic "智能体变量名": "* 智能体变量名"
+      - textbox "* 智能体变量名":
+        - /placeholder: 请输入智能体变量名
+        - text: www
+      - generic: 3 / 60
+      - generic "作者": "* 作者"
+      - textbox "* 作者":
+        - /placeholder: 请输入作者名称
+        - text: [账号已隐藏]
+      - generic "智能体描述": "* 智能体描述"
+      - textbox "* 智能体描述":
+        - /placeholder: 请输入智能体描述
+        - text: 基于临床指南的高血压用药决策辅助，每条结论可溯源
+      - generic: 24 / 500
+      - generic "标签"
+      - generic: —
+      - button "编辑标签":
+        - generic: 编辑标签
+      - generic: 智能体图标
+      - button:
+      - generic: 支持 PNG、JPEG、GIF、WebP，最大 2 MB
+      - button "模型与提示词 配置大语言模型以及智能体角色、使用要求和示例" [expanded]:
+        - generic: 模型与提示词
+        - paragraph: 配置大语言模型以及智能体角色、使用要求和示例
+      - generic "模型": "模型 :"
+      - generic "deepseek-flash":
+        - generic: deepseek-flash
+      - combobox
+      - img "down":
+      - button "调整模型优先级" [disabled]:
+      - button "模型参数覆盖":
+      - tablist:
+        - tab "智能体角色" [selected]
+        - tab "使用要求"
+        - tab "示例"
+      - tabpanel "智能体角色":
+        - textbox "请输入智能体的角色、职责和能力": 你是高血压指南与管理标准的资料溯源助手，帮助用户查询三份文档、核对关系、适用条件和版本。结论以工具返回的原文为依据，不把待核验抽取说成已经审核的医疗建议。回答简明，提供可追溯的出处。
+        - button "放大查看":
+      - button "知识库 选择知识库后自动启用知识库检索能力并建立关联":
+        - generic: 知识库
+        - paragraph: 选择知识库后自动启用知识库检索能力并建立关联
+      - button "配置":
+        - generic: 配置
+      - button "选择知识库":
+        - generic: 选择知识库
+      - button "会话引导 配置用户首次进入会话时的开场白和示例问题":
+        - generic: 会话引导
+        - paragraph: 配置用户首次进入会话时的开场白和示例问题
+    - button "停止当前生成并解除编辑锁定" [disabled]:
+      - generic: 解除锁定
+    - button "调试":
+      - generic: 调试
+    - button "发布":
+      - generic: 发布
+    - heading "调试" [level=3]
+    - generic: 对比模式
+    - switch
+    - button "Restore debug panel size":
+    - button "关闭调试":
+    - generic: 请核对 WS/T 872—2025 参考文献里《国家基层高血压防治管理指南》的年份，并与当前加载版本比较。用不超过200字说明结论、原文出处和不能直接替代的原因。
+    - generic: 高血压用药决策助手
+    - status:
+      - status:
+        - generic: success
+      - generic: 已完成
+    - button "Reasoning":
+      - generic: Reasoning
+    - button "Executed code python":
+      - generic: Executed code
+      - generic: python
+    - button "2 tool calls":
+      - generic: 2 tool calls
+    - button "Reasoning":
+      - generic: Reasoning
+    - button "Executed code python":
+      - generic: Executed code
+      - generic: python
+    - button "1 tool call":
+      - generic: 1 tool call
+    - button "Reasoning":
+      - generic: Reasoning
+    - paragraph:
+      - strong: 结论
+      - text: ：WS/T 872—2025 参考文献 [1] 所列《国家基层高血压防治管理指南》的年份为
+      - strong: "2021"
+      - text: 年，文献信息为“中国循环杂志，2021，36(3)：209-220”；当前加载的是
+      - strong: 《国家基层高血压防治管理指南2025版》
+      - text: ，它与引用文献同名，但版本不同。标准正文第 7、8.1、8.2 节引用该指南时未标年份。
+    - paragraph:
+      - strong: 出处
+      - text: ：《WS-T872-2025_重排.txt》参考文献，PDF 第 8 页，block B-232e1532f133。
+    - paragraph:
+      - strong: 不能直接替代
+      - text: ：2021 版全文未入库，现阶段 2025 版只是“同名候选”，两版条款是否一致也未逐条核对；并且这些抽取结果都处于待核验状态。因此，只能确认引用年份为 2021，不能用 2025 版内容代替该标准实际引用的条款。
+    - button "复制":
+      - generic: 复制
+    - button "刷新":
+      - generic: 刷新
+    - button "更多":
+      - generic: 更多
+    - generic "生成耗时 6.93s":
+      - text: 6.93s
+    - button "10% 本轮":
+      - generic: 10%
+      - generic: 本轮
+    - generic: 请提供 WS/T 872—2025 实际引用的2021版《国家基层高血压防治管理指南》中诊断阈值条款的逐字原文和PDF页码。如果缺少指定版本，请明确说明，不要用2025版替代。
+    - generic: 高血压用药决策助手
+    - status:
+      - status:
+        - generic: success
+      - generic: 已完成
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 1
+      - text: "The user asks: provide the verbatim original text and PDF page number of the diagnostic threshold clause in the 2021 version of 《国家基层高血压防治管理指南》 that WS/T 872—2025 actually cites. If the specified version is missing, state clearly, don't substitute 2025 version."
+    - paragraph: "I need to check what's in the knowledge base. Let me search: graph_status, find_entities, check_references, lookup_clause."
+    - paragraph: Let me start.<code> gs = graph_status() print(gs) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: gs = graph_status()
+      - generic: print(gs)
+    - button "1 tool call":
+      - generic: 1 tool call
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 2
+      - text: "The task: provide verbatim original text and PDF page for the diagnostic threshold clause from the 2021 version of 《国家基层高血压防治管理指南》 as actually referenced by WS/T 872—2025. If the specified version is missing, state clearly, don't substitute 2025 version."
+    - paragraph: From graph_status, loaded docs are WS-T872-2025, 国家基层高血压防治管理指南2025版, 中国高血压临床实践指南2025版. No 2021 version loaded. But I should verify via check_references and lookup_clause maybe. Let me check whether the 2021 version content exists in any block (e.g., quoted inside WS/T 872 text). Let's call check_references and lookup_clause for diagnostic threshold in 2021.
+    - paragraph: Do it in one code block.<code> refs = check_references(keyword="国家基层高血压防治管理指南", limit=20) print(refs) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: refs = check_references(keyword="国家基层高血压防治管理指南", limit=20)
+      - generic: print(refs)
+    - button "1 tool call":
+      - generic: 1 tool call
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 3
+      - text: "The user asks for the verbatim text and PDF page of the diagnostic threshold clause in the 2021 version of 《国家基层高血压防治管理指南》 as actually cited by WS/T 872—2025. Need to check whether the 2021 version is in the knowledge base. Graph status shows documents: WS-T872-2025, 国家基层高血压防治管理指南2025版, 中国高血压临床实践指南2025版. So 2021 version not available. check_references already returned version_mismatch, document_available=false for all citations. Section 7 of WS/T 872 references definition of hypertension (高血压、正常高值血压及正常血压的定义) and 高血压诊断标准参见... — that's the citation anchor for diagnostic threshold."
+    - paragraph: "I should verify by lookup_clause in WS/T 872 for 诊断标准 to get exact text and page. Also maybe lookup_clause in the 2025 version for 诊断标准 to show that it exists but cannot substitute — but careful not to present 2025 content as answer. Better: confirm 2021 doc absent via find_entities(type=\"SourceDoc\") or lookup_clause with standard=\"国家基层高血压防治管理指南2021版\"? Let me do a few checks: lookup_clause(keyword=\"诊断标准\", standard=\"WS-T872-2025_重排.txt\"), and find_entities(keyword=\"国家基层高血压防治管理指南\", type=\"SourceDoc\")."
+    - paragraph: "Also get_evidence on B-8e14135f673d for full text of section 7 with page. That block_id hasn't been fetched yet (only B-232e1532f133 was fetched previously... actually in previous turn we fetched references block). Rule: same block_id max once. B-8e14135f673d not fetched yet."
+    - paragraph: Let me run code with parallel executor or sequential calls. Keep it modest.<code> ev = get_evidence(block_id="B-8e14135f673d") print(ev) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: ev = get_evidence(block_id="B-8e14135f673d")
+      - generic: print(ev)
+    - button "1 tool call":
+      - generic: 1 tool call
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 4
+      - text: "The user asks for the verbatim text and PDF page of the diagnostic threshold clause in the 2021 version of 《国家基层高血压防治管理指南》 that WS/T 872—2025 actually cites. We already know: the 2021 version is not in the knowledge base; only the 2025 version candidate is loaded. So we must state the specified version is missing, and not substitute the 2025 version."
+    - paragraph: "Let me verify further: maybe search lookup_clause for \"诊断标准\" in the 2025 file, but that's the 2025 version — we shouldn't present it as 2021. But we can state clearly that 2021 full text is not in the graph (documents list only three files). We could confirm via lookup_clause with standard=\"国家基层高血压防治管理指南2021\" to show no hits."
+    - paragraph: "Let me do a couple of checks: lookup_clause(keyword=\"诊断标准\", standard=\"国家基层高血压防治管理指南2021\") and maybe find_entities(type=\"SourceDoc\", keyword=\"国家基层高血压\"). That confirms absence. Don't repeat check_references or get_evidence on same block."
+    - paragraph: Let's run.<code> r1 = lookup_clause(keyword="高血压诊断标准", standard="国家基层高血压防治管理指南2021", limit=10) print(r1) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: r1 = lookup_clause(keyword="高血压诊断标准", standard="国家基层高血压防治管理指南2021", limit=10)
+      - generic: print(r1)
+    - button "1 tool call":
+      - generic: 1 tool call
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 5
+      - text: I need to continue. The user asks for verbatim text and PDF page of the diagnostic threshold clause from the 2021 version actually referenced. I need to check whether the 2021 version is in the knowledge base. Already checked lookup_clause with standard="国家基层高血压防治管理指南2021" returned empty. But that standard name may not match file name. Let me do a search across documents for 2021 version, find_entities for SourceDoc 2021, and lookup_clause for 诊断标准 without standard filter to see which files have it.
+    - paragraph: Let me run a few queries.<code> docs = find_entities(keyword="国家基层高血压防治管理指南", type="SourceDoc", limit=20) print(docs) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: docs = find_entities(keyword="国家基层高血压防治管理指南", type="SourceDoc", limit=20)
+      - generic: print(docs)
+    - button "1 tool call":
+      - generic: 1 tool call
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 6
+      - text: "The user asks for the verbatim text and PDF page numbers of the diagnostic threshold clause in the 2021 version of the guidelines. We've established: the 2021 version is not loaded (document_available=false, loaded=false). Only the 2025 version is loaded. The WS/T 872—2025 references the 2021 version."
+    - paragraph: I should do one or two more checks to confirm the 2021 document is not in the knowledge base — maybe a lookup_clause search across standards for the 2021 file, or knowledge_base_search. Actually a search in the knowledge base index "医疗-高血压" could confirm whether the 2021 full text exists.
+    - paragraph: "Let me do: lookup_clause(keyword=\"诊断标准\", limit=10) without standard to see what's loaded; and knowledge_base_search for the 2021 guideline diagnosis threshold. Also maybe check_references already showed document_available=false."
+    - paragraph: Let's run a couple of checks in one code block.<code> kb = knowledge_base_search(query="国家基层高血压防治管理指南 2021版 高血压诊断标准 收缩压 舒张压 诊室血压", index_names=["医疗-高血压"]) print(kb) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: kb = knowledge_base_search(query="国家基层高血压防治管理指南 2021版 高血压诊断标准 收缩压 舒张压 诊室血压", index_names=["医疗-高血压"])
+      - generic: print(kb)
+    - button "1 tool call":
+      - generic: 1 tool call
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 7
+      - text: The user asks for the verbatim text and PDF page of the diagnostic threshold clause in the 2021 version of 《国家基层高血压防治管理指南》 as actually cited by WS/T 872—2025. If the specified version is missing, state clearly, don't substitute 2025.
+    - paragraph: "From history: check_references shows document_available=false for 2021 version; candidate docs only 2025. Graph status shows source docs include only three files, none 2021."
+    - paragraph: "Let me do one more verification: lookup_clause for \"诊断标准\" in the 2021 file, and maybe knowledge_base_search restricted — but the KB only has 中国高血压临床实践指南2025版 doc per results. Let's do lookup_clause(keyword=\"高血压诊断标准\", standard=\"国家基层高血压防治管理指南2021版\") and find_entities type SourceDoc keyword 2021. Also lookup_clause with keyword on WS/T 872 for 诊断 standard."
+    - paragraph: Actually already did lookup_clause with standard="国家基层高血压防治管理指南2021" → empty. Let me try a variant standard name and also check_candidates. A small number of calls, then answer.
+    - paragraph: "I'll run: lookup_clause(keyword=\"诊断标准\", standard=\"国家基层高血压防治管理指南2021版_重排.txt\", limit=10), query_candidates(keyword=\"国家基层高血压防治管理指南\", collection=\"entity_candidates\", limit=20), and lookup_clause(keyword=\"诊断标准\", standard=\"WS-T872-2025_重排.txt\", limit=20) to get WS/T's own page wording regarding 诊断标准 referencing."
+    - paragraph: Let's do it.<code> a = lookup_clause(keyword="诊断标准", standard="国家基层高血压防治管理指南2021版_重排.txt", limit=10) print(a) b = query_candidates(keyword="国家基层高血压防治管理指南", collection="entity_candidates", limit=20) print(b) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: a = lookup_clause(keyword="诊断标准", standard="国家基层高血压防治管理指南2021版_重排.txt", limit=10)
+      - generic: print(a)
+      - generic: b = query_candidates(keyword="国家基层高血压防治管理指南", collection="entity_candidates", limit=20)
+      - generic: print(b)
+    - button "2 tool calls":
+      - generic: 2 tool calls
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 8
+      - text: The user asks for the verbatim text and PDF page of the diagnostic threshold clause in the 2021 version of 《国家基层高血压防治管理指南》 that WS/T 872—2025 actually references. If the specified version is missing, state clearly, don't substitute the 2025 version.
+    - paragraph: "From the records: only three documents loaded: WS-T872-2025, 国家基层高血压防治管理指南2025版, 中国高血压临床实践指南2025版. The 2021 version is not loaded (document_available: false). lookup_clause with standard=\"国家基层高血压防治管理指南2021\" returned empty; find_entities shows N-REF-ee7a3bdd86014a loaded:false, year 2021."
+    - paragraph: "Could do one more check: lookup_clause keyword=\"国家基层高血压防治管理指南\" to list all docs? Already know graph has 3 docs. Maybe a quick lookup_clause without standard for \"诊断标准\" limited to check whether any 2021 chunks exist. Already graph_status lists documents — only 3. That's sufficient."
+    - paragraph: Should I verify the standard's clause 7 text again? Already have B-8e14135f673d. Good.
+    - paragraph: "One possible additional check: lookup_clause(keyword=\"国家基层高血压防治管理指南\", limit=20) to confirm only 2025 text blocks. But graph_status documents list is definitive: three source docs, no 2021 file. I think we can answer now. Maybe one quick check to see if there are any 2021 blocks. Let's do a single lookup_clause with keyword \"2021\" maybe to confirm no 2021 guideline text. Hmm, could be useful but risk minimal. Given guidance \"证据足够后立即回答，避免重复工具调用\", I'll answer."
+    - paragraph: "Answer: Not available. State 2021 version not in library, only 2025 version loaded as same-name candidate. Give what the standard itself says (section 7, page 4: \"高血压诊断标准参见《国家基层高血压防治管理指南》。\" and \"高血压、正常高值血压及正常血压的定义参见...\"), and reference list entry page 8 gives 中国循环杂志 2021, 36(3):209-220. But we cannot provide the 2021 guideline's threshold verbatim text or page. Also note KB search returned 中国高血压临床实践指南2025版 content (different document) — should not be confused; note that KB retrieval surfaced only 2025 clinical practice guideline, not the 2021 primary care guideline, so those thresholds cannot be attributed to the 2021 document."
+    - paragraph: "No citations needed since knowledge_base_search was used? Citation rules: only if used retrieval results' facts. I used KB search but I'm saying it doesn't supply the requested content. I could cite [[a2]] if I mention the 2025 clinical guideline threshold. Better to avoid using that content, or if I mention it, cite. I'll mention briefly with citation."
+    - paragraph: Keep under 200字? That constraint was for previous question; this one just says provide verbatim and page, or state missing. Keep concise.
+    - paragraph: Write answer with a short 出处 table maybe.
+    - paragraph: "Structure: 结论：未提供——2021版全文未入库。 标准原文：7 诊断与评估（PDF第4页）：\"高血压诊断标准参见《国家基层高血压防治管理指南》。\"（block B-8e14135f673d） 参考文献（第8页，B-232e1532f133）：\"国家基层高血压防治管理指南[J]. 中国循环杂志，2021，36(3)：209-220\" 无法给出的原因：图谱仅加载3份文档，2021版节点 N-REF-ee7a3bdd86014a 标记 loaded:false；lookup_clause 限定该文件名检索为空。故无逐字原文和页码。不能用2025版替代（版本不同，且为待核验候选）。"
+    - paragraph: Maybe mention KB search returned only 中国高血压临床实践指南2025版, which is different document — 不能作为依据 [[a1]]/[[a2]].
+    - paragraph: I'll add a short table of 出处.
+    - paragraph: "Note page numbers: 标准 section 7 at PDF page 4 (though section_status needs_layout_review), references page 8."
+    - paragraph:
+      - strong: 结论：无法提供。
+      - text: WS/T 872—2025 实际引用的
+      - strong: 2021 版《国家基层高血压防治管理指南》
+      - text: 全文未加载入库，因此我无法给出该版该条款的逐字原文，也无法给出它在 2021 版中的 PDF 页码；我也不会用 2025 版替代。
+    - paragraph:
+      - strong: 已在库中核到的原文（标准自身）
+    - table:
+      - rowgroup:
+        - row "内容 原文 出处":
+          - columnheader "内容"
+          - columnheader "原文"
+          - columnheader "出处"
+      - rowgroup:
+        - row "诊断阈值指向 “高血压诊断标准参见《国家基层高血压防治管理指南》。” 《WS-T872-2025_重排.txt》/ 7 诊断与评估 / PDF 第 4 页 / block B-8e14135f673d":
+          - cell "诊断阈值指向"
+          - cell "“高血压诊断标准参见《国家基层高血压防治管理指南》。”"
+          - cell "《WS-T872-2025_重排.txt》/ 7 诊断与评估 / PDF 第 4 页 / block B-8e14135f673d"
+        - row "定义指向 “高血压、正常高值血压及正常血压的定义参见《国家基层高血压防治管理指南》。” 同上 / PDF 第 4 页":
+          - cell "定义指向"
+          - cell "“高血压、正常高值血压及正常血压的定义参见《国家基层高血压防治管理指南》。”"
+          - cell "同上 / PDF 第 4 页"
+        - row "被引版本 “国家基层高血压防治管理指南[J]. 中国循环杂志，2021，36(3)：209-220” 同上 / 参考文献 / PDF 第 8 页 / block B-232e1532f133":
+          - cell "被引版本"
+          - cell "“国家基层高血压防治管理指南[J]. 中国循环杂志，2021，36(3)：209-220”"
+          - cell "同上 / 参考文献 / PDF 第 8 页 / block B-232e1532f133"
+    - paragraph:
+      - strong: 不能提供的原因
+      - text: ：在当前图谱（知识图谱快照）中，只加载了 3 份文档（WS/T 872—2025、国家基层高血压防治管理指南 2025 版、中国高血压临床实践指南 2025 版）；其中引用目标节点“国家基层高血压防治管理指南（引用版本2021）”标有
+      - code: "loaded: false"
+      - text: ，按 2021 版文件名检索
+      - code: lookup_clause
+      - text: 也为空（结果为空，不等于原文不存在）。用 2025 版或检索命中的《中国高血压临床实践指南2025版》阈值内容替代，属于跨版本、跨文件替代，不能采信
+      - 'button "Open 知识库 1: 中国高血压临床实践指南2025版_知识库文档_重排.txt"': "1"
+      - 'button "Open 知识库 2: 中国高血压临床实践指南2025版_知识库文档_重排.txt"': "2"
+      - text: 。
+    - paragraph:
+      - strong: 说明
+      - text: ：上述抽取均为
+      - code: verification=pending
+      - text: 的自动抽取结果；要补齐条款，需入库 2021 版（中国循环杂志 2021;36(3):209-220）后再逐条核对。
+    - button "3 个来源":
+      - text: 检索结果
+      - generic: 3 个来源
+    - button "复制":
+      - generic: 复制
+    - button "刷新":
+      - generic: 刷新
+    - button "更多":
+      - generic: 更多
+    - generic "生成耗时 22.46s":
+      - text: 22.46s
+    - button "10% 本轮":
+      - generic: 10%
+      - generic: 本轮
+    - button "滚动到底部" [disabled]:
+      - generic: 滚动到底部
+    - button "规划":
+      - text: 规划
+    - button "执行":
+      - text: 执行
+    - textbox "发送消息..." [active]
+    - combobox:
+      - generic: deepseek-flash
+    - button "添加附件":
+      - generic: 添加附件
+    - button [disabled]:
+    - button "发送" [disabled]:
+- contentinfo:
+  - text: Nexent © 2026
+  - generic: · v2.7.0
+  - link "使用条款":
+    - /url: https://github.com/nexent-hub/nexent?tab=License-1-ov-file#readme

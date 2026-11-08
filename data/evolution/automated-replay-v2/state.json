@@ -1,0 +1,60 @@
+{
+  "current": "R-20261106T171125-7a70961960",
+  "releases": [
+    "R-20261106T171125-7a70961960",
+    "R-20261106T171125-21b65ea6b5"
+  ],
+  "proposals": {
+    "P-20261106T171125-b3b6e27af8": {
+      "status": "published",
+      "proposal_sha256": "a58342489044ca588d00b1da1c5330252eb19ae687a8d5378eab842a1497d861",
+      "review_event": "EV-20261106T171125-e4c12460a7",
+      "release_id": "R-20261106T171125-21b65ea6b5"
+    }
+  },
+  "events": [
+    {
+      "id": "EV-20261106T171125-88a9316bd5",
+      "at": "2026-11-06T17:11:25+00:00",
+      "action": "initialize",
+      "release_id": "R-20261106T171125-7a70961960",
+      "label": "历史回放：仅管理标准"
+    },
+    {
+      "id": "EV-20261106T171125-e9034afc4c",
+      "at": "2026-11-06T17:11:25+00:00",
+      "action": "propose",
+      "proposal_id": "P-20261106T171125-b3b6e27af8",
+      "label": "历史回放：加入已持有的基层指南；不是新指南发布"
+    },
+    {
+      "id": "EV-20261106T171125-e4c12460a7",
+      "at": "2026-11-06T17:11:25+00:00",
+      "action": "review",
+      "proposal_id": "P-20261106T171125-b3b6e27af8",
+      "decision": "approve",
+      "reviewer": "automated_acceptance_test",
+      "reason": "自动验收模拟流程审核；不代表人工或临床审核",
+      "actor_kind": "automated_test",
+      "proposal_sha256": "a58342489044ca588d00b1da1c5330252eb19ae687a8d5378eab842a1497d861",
+      "scope": "engineering_publication_only_not_medical_review"
+    },
+    {
+      "id": "EV-20261106T171125-5f49eb8f3b",
+      "at": "2026-11-06T17:11:25+00:00",
+      "action": "publish",
+      "proposal_id": "P-20261106T171125-b3b6e27af8",
+      "release_id": "R-20261106T171125-21b65ea6b5",
+      "actor_kind": "automated_test"
+    },
+    {
+      "id": "EV-20261106T171125-8b7b791a7e",
+      "at": "2026-11-06T17:11:25+00:00",
+      "action": "rollback",
+      "from_release": "R-20261106T171125-21b65ea6b5",
+      "release_id": "R-20261106T171125-7a70961960",
+      "reviewer": "automated_acceptance_test",
+      "reason": "回滚回归测试；不删除更新版本"
+    }
+  ]
+}

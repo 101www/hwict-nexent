@@ -1,0 +1,818 @@
+Browser tab: 7, Title: "AI Agent Platform", URL: "http://192.168.100.150:3000/zh/agents/1".
+1 AXWebArea AI Agent Platform, URL: 192.168.100.150:3000/zh/agents/1
+	2 container
+		3 container
+			4 link Description: logo Nexent, Value: 192.168.100.150:3000/
+			5 link Description: Github, Value: github.com/ModelEngine-Group/nexent
+			6 link Description: ModelEngine, Value: modelengine-ai.net/
+			7 image
+			8 text 简体中文
+			9 image
+			10 button 通知
+				11 image
+			12 text [账号已隐藏]
+			13 image
+		14 menu
+			15 首页
+				16 image
+				17 text 首页
+			18 开始问答
+				19 image
+				20 text 开始问答
+			21 自动任务
+				22 image
+				23 text 自动任务
+			24 (expanded) 智能体开发, Secondary Actions: Collapse
+				25 image
+				26 text 智能体开发
+			27 menu rc-menu-uuid-_r_i_-/agent-dev-popup
+				28 模型配置
+					29 image
+					30 text 模型配置
+				31 知识库配置
+					32 image
+					33 text 知识库配置
+				34 智能体配置
+					35 image
+					36 text 智能体配置
+				37 记忆配置
+					38 image
+					39 text 记忆配置
+				40 智能体评估
+					41 image
+					42 text 智能体评估
+			43 (collapsed) 资源仓库, Secondary Actions: Expand
+				44 image
+				45 text 资源仓库
+			46 资源管理
+				47 image
+				48 text 资源管理
+		49 button
+			50 image
+		51 button 返回
+			52 image
+			53 text 返回
+		54 button 版本管理
+			55 image
+			56 text 版本管理
+		57 container
+			91 heading 配置, Value: 3
+				92 text 配置
+			93 text 草稿
+			94 image
+			95 text 当前发布版本 :
+			96 text 高血压用药决策助手-2610182221
+			97 text /  共 5 个版本
+			98 button 智能生成
+				99 image
+				100 text 智能生成
+			101 container
+				102 tab group
+					103 tab (selectable, settable, boolean) 基本设置, Value: 0, ID: radix-_r_1t_-trigger-basic
+					104 tab (selected, settable, boolean) 工具与技能, Value: 1, ID: radix-_r_1t_-trigger-tools_skills
+					105 tab (selectable, settable, boolean) 高级设置, Value: 0, ID: radix-_r_1t_-trigger-advanced
+				195 container Description: 工具与技能, ID: radix-_r_1t_-content-tools_skills
+					196 button (expanded) 工具 管理 Agent 可使用的工具, Secondary Actions: Collapse
+						197 image
+						198 image
+						199 text 工具
+						200 text 管理 Agent 可使用的工具
+					201 container radix-_r_3k_
+						202 container
+							203 button 刷新工具
+								204 image
+								205 text 刷新工具
+							206 button MCP配置
+								207 image
+								208 text MCP配置
+							209 button 选择工具
+								210 image
+								211 text 选择工具
+						212 text 已选择工具 ( 12 ) MCP （ 12 ）
+						213 button kg-tools-real 12
+							214 image
+							215 text kg-tools-real
+							216 text 12
+						217 text check_references
+						218 button 配置
+							219 image
+						220 button 移除
+							221 image
+						222 text compare_threshold
+						223 button 配置
+							224 image
+						225 button 移除
+							226 image
+						227 text detect_conflicts
+						228 button 配置
+							229 image
+						230 button 移除
+							231 image
+						232 text find_entities
+						233 button 配置
+							234 image
+						235 button 移除
+							236 image
+						237 text get_evidence
+						238 button 配置
+							239 image
+						240 button 移除
+							241 image
+						242 text graph_status
+						243 button 配置
+							244 image
+						245 button 移除
+							246 image
+						247 text lookup_clause
+						248 button 配置
+							249 image
+						250 button 移除
+							251 image
+						252 text query_candidates
+						253 button 配置
+							254 image
+						255 button 移除
+							256 image
+						257 text query_relations
+						258 button 配置
+							259 image
+						260 button 移除
+							261 image
+						262 text traverse_relations
+						263 button 配置
+							264 image
+						265 button 移除
+							266 image
+						267 text evaluate_blood_pressure
+						268 button 配置
+							269 image
+						270 button 移除
+							271 image
+						272 text resolve_regimen
+						273 button 配置
+							274 image
+						275 button 移除
+							276 image
+					277 button (expanded) 技能 管理 Agent 可使用的技能, Secondary Actions: Collapse
+						278 image
+						279 image
+						280 text 技能
+						281 text 管理 Agent 可使用的技能
+					282 container radix-_r_3q_
+						283 container
+							284 button 刷新技能
+								285 image
+								286 text 刷新技能
+							287 button 构建技能, Help: 构建新技能
+								288 image
+								289 text 构建技能
+							290 button 选择技能
+								291 image
+								292 text 选择技能
+						293 container
+							294 text 已选技能 ( 4 )
+						295 button 自定义 4
+							296 image
+							297 text 自定义
+							298 text 4
+						299 text clinical-trace-report
+						300 text 为工具检索或推理结果生成短答及可追溯证据报告。输出实际知识版本、每一跳原文、适用条件、未核验状态；检查引用完整与版本一致，不编造出处、概率或工具调用。
+						301 button
+							302 image
+						303 button 移除
+							304 image
+						305 text clinical-conflict-check
+						306 text 用于高血压指南和标准的表面矛盾、药物配备与一线用药、同范围正反推荐及数值差异比较。核对人群、用途、条件、版本与两份原文，保留潜在冲突，不自动裁决。
+						307 button
+							308 image
+						309 button 移除
+							310 image
+						311 text clinical-multi-hop
+						312 text 高血压合并症首选药或图谱多跳路径问题使用。按同方案组连接人群、方案、药物类别，逐跳核对原文和条件，区分同文跨节与跨文档路径，不把通用连通路径当作临床推断。
+						313 button
+							314 image
+						315 button 移除
+							316 image
+						317 text clinical-evidence-router
+						318 text 高血压资料问答的总流程。随访、用药、血压数值、指南版本、配备与一线推荐比较时先使用；检查发布版本，选择检索或推理工具，转交相关专用Skill及溯源Skill。
+						319 button
+							320 image
+						321 button 移除
+							322 image
+				184 button (disabled) 停止当前生成并解除编辑锁定
+					185 image
+					186 text 解除锁定
+				187 button 调试
+					188 image
+					189 text 调试
+				190 button 发布
+					191 image
+					192 text 发布
+			323 heading 调试, Value: 3
+				324 text 调试
+			325 text 对比模式
+			326 switch 0
+			327 button Maximize debug panel
+				328 image
+			329 button 关闭调试
+				330 image
+			362 container
+				363 container
+					364 text 高血压合并糖尿病患者，指南中有哪些首选降压药方案？
+				365 container
+					366 text 高血压用药决策助手 已完成
+				367 button (expanded) Reasoning, Secondary Actions: Collapse
+					368 image
+					369 text Reasoning
+					370 image
+				371 container
+					372 text 步骤 1
+					373 text  The user asks about preferred antihypertensive drug regimens for hypertension with diabetes. Per instructions, I must first read the skill clinical-evidence-router, then follow flow, call graph_status, then resolve_regimen, then read clinical-multi-hop and clinical-trace-report. Let me start by reading skills. <code> router = read_skill_md("clinical-evidence-router") multi = read_skill_md("clinical-multi-hop") print(router) print("=====") print(multi) </code>
+				374 button (expanded) Executed code PYTHON, Secondary Actions: Collapse
+					375 image
+					376 text Executed code
+					377 text PYTHON
+					378 image
+				379 container
+					380 text router  =  read_skill_md( "clinical-evidence-router" ) multi  =  read_skill_md( "clinical-multi-hop" ) print (router) print ( "=====" ) print (multi)
+				381 button (expanded) 2 tool calls, Secondary Actions: Collapse
+					382 text 2 tool calls
+					383 image
+				452 container radix-_r_4g_
+					453 button (expanded) Used tool: read_skill_md, Secondary Actions: Collapse
+						454 image
+						455 text Used tool
+						456 text : 
+						457 text read_skill_md
+					474 container radix-_r_50_
+						475 text Arguments:
+						476 text {
+  "skill_name": "clinical-evidence-router"
+}
+					458 button (expanded) Used tool: read_skill_md, Secondary Actions: Collapse
+						459 image
+						460 text Used tool
+						461 text : 
+						462 text read_skill_md
+					477 container radix-_r_51_
+						478 text Arguments:
+						479 text {
+  "skill_name": "clinical-multi-hop"
+}
+						480 text Result:
+						481 text # 证据问答总流程（模板1.0.0）
+
+本Skill只编排已绑定的真实MCP，不包含医学答案。适用于三份全文的资料查询；不能把自动抽取当成医生审核。其他行业迁移时替换实体与路由表，保留版本、证据、适用条件和未知状态的处理。
+
+## 第一步：实际查询版本并解析工具响应
+
+Nexent CodeAgent的MCP工具常返回JSON字符串，不能直接对字符串调用.get。每轮定义或复用以下函数；只使用json标准库，不读取本地磁盘，不猜测文件路径。
+
+```python
+import json
+def decode_result(raw):
+    data = json.loads(raw) if isinstance(raw, str) else raw
+    if not isinstance(data, dict):
+        raise ValueError("工具响应不是JSON对象")
+    return data
+status = decode_result(graph_status())
+workflow_release = status.get("knowledge_version", {}).get("release_id")
+print(status)
+```
+
+版本来自本轮响应，不硬编码release_id。若无版本或为unversioned，明确说明版本未纳管，不宣称使用当前已发布版本。工具报错说明连接/执行失败，不能说原文不存在。
+
+后续每次查询都先decode_result，并比较knowledge_version.release_id是否等于workflow_release。发生变化则放弃本次混合证据，从graph_status开始最多重试一次；仍变化则说明更新中，不能拼接两版作单一结论。
+
+## 第二步：选择相关流程，检索与推理协同
+
+- 随访、机构管理与配备：query_relations；随访关系关键词用followUpEvery。逐一收集命中边的条件、文件、page、section、block_id，再用get_evidence核对不同原文块，同一block_id只查一次。
+- 合并症首选用药或图上路径：先实际读取read_skill_md(skill_name="clinical-multi-hop")，按该Skill执行。
+- 数值是否达到标准：evaluate_blood_pressure，参数仅来自用户；未给measurement_method则传unknown，不编造standardized或readings_json。读取边界与rule.requirements，区分数学比较、适用性和确诊前提。单独比较已有约束可用compare_threshold，禁止自动单位换算。
+- 指定指南引用或版本：check_references。若resolution=missing/version_mismatch，能说明现有引用，不能拿另一年份全文冒充指定版本原文。
+- 配备与一线推荐是否矛盾、跨文件数值差异：先实际读取read_skill_md(skill_name="clinical-conflict-check")，再按该Skill执行。
+- 明确查询文件/原文：lookup_clause。实体不明确先find_entities。结构化结果未命中再lookup_clause，必要时query_candidates；候选仅待核验线索。若已有平台knowledge_base_search可补检，但与图谱是不同来源，未命中不能替另一来源作结论。
+
+每个专用Skill加载后才依其正文执行；不要仅在回答中声称用了Skill。read_skill_md缺失或读取失败要明确记录，不能把自行选工具当作原生Skill已执行。
+
+## 第三步：形成证据包并使用溯源流程
+
+在代码变量evidence_packet中组织本轮实际返回内容：question、release_id、route、observed_tool_calls、paths/claims、citations、conditions、uncertainties。citations保留文件、物理页、实际/语义章节、block_id、原文及pending。只收录实际调用，不编造调用记录。数值输入和中间比较来自工具响应。
+
+实际读取read_skill_md(skill_name="clinical-trace-report")并按它输出。普通问答含出处默认不超过200字符，详细证据报告仅用户要求时展开。展示知识版本时可单列；若发生版次混用风险不能为凑字数省略。
+
+所有不确定知识保留verification=pending和原confidence；confidence是未校准规则分，不是正确率。不要创建、发布、批准或删除知识更新；这个问答流程无审核权限。
+=====
+---
+name: clinical-multi-hop
+description: "高血压合并症首选药或图谱多跳路径问题使用。按同方案组连接人群、方案、药物类别，逐跳核对原文和条件，区分同文跨节与跨文档路径，不把通用连通路径当作临床推断。"
+---
+
+# 有条件的多跳取证（模板1.0.0）
+
+输入：用户原问题、总流程本轮release_id（若独立执行，先graph_status）。工具JSON字符串必须json.loads后读取；所有响应版本须一致。
+
+## 专用两跳
+
+对“合并糖尿病的高血压患者首选哪类药”这种问题：实际调用resolve_regimen(population="高血压合并糖尿病患者")，其他人群用工具可识别的完整名称，不能把糖尿病答案套用到未知合并症。
+
+读取items中的paths、components、selection和restrictions等实际存在字段。每条path的steps[].edge必须保留id、headId、tailId、relation、regimen_group、条件和原文出处。确认两条边属于同一个非空regimen_group，再解释人群←首选方案→成分。按components的one_of解读择一，不能把可替代类别变成联用方案。
+
+读取每一跳的supporting_evidence及原文block_id，实际get_evidence核对首选句、定义句和限制句；同一块去重。首选句若section_status=needs_layout_review，同时保留semantic_section、实际section/page，面向用户说明“版面待核验”。不要只引用类别定义冒充人群首选证据。
+
+## 通用路径
+
+未知实体先find_entities。traverse_relations从实际实体开始，最多3跳；查看steps的forward、边本身方向、条件与跳数。路径连通仅表示证据连通，不能由此自动传递药物适应证、禁忌或处方。没有合法可组合路径就报告未找到这类结构化证据，必要时回到原文查找，不强凑两跳。
+
+## 交付给溯源流程
+
+在evidence_packet保留路径和每一跳出处，按路径实际文件去重计数。文件数1且章节不同称“同文跨节两跳”，文件数至少2才称“跨文档路径”；不能把全文入库3份说成每次推理跨了3份。
+
+保留verification=pending、confidence原值和confidence_basis。未核验的两跳结果不能变成个体化处方。最后交给clinical-trace-report；不在Skill中预填药物结论或页码。
+
+
+				384 button (expanded) Reasoning, Secondary Actions: Collapse
+					385 image
+					386 text Reasoning
+					387 image
+				388 container
+					389 text 步骤 2
+					390 text  Follow the router: graph_status, then resolve_regimen, then get_evidence for blocks, then read clinical-trace-report, then final answer ≤200 chars. Let me do step: graph_status + resolve_regimen. <code>  import json def decode_result(raw): data = json.loads(raw) if isinstance(raw, str) else raw return data status = decode_result(graph_status()) print(status) workflow_release = status.get("knowledge_version", {}).get("release_id") print("RELEASE:", workflow_release) reg = decode_result(resolve_regimen(population="高血压合并糖尿病患者")) print(json.dumps(reg, ensure_ascii=False, indent=1))  </code>
+				391 button (expanded) Executed code PYTHON, Secondary Actions: Collapse
+					392 image
+					393 text Executed code
+					394 text PYTHON
+					395 image
+				396 container
+					397 text import  json def  decode_result (raw):     data  =  json.loads(raw)  if  isinstance (raw,  str )  else  raw     return  data status  =  decode_result(graph_status()) print (status) workflow_release  =  status.get( "knowledge_version" , {}).get( "release_id" ) print ( "RELEASE:" , workflow_release) reg  =  decode_result(resolve_regimen( population = "高血压合并糖尿病患者" )) print (json.dumps(reg,  ensure_ascii = False ,  indent = 1 ))
+				398 button (expanded) 2 tool calls, Secondary Actions: Collapse
+					399 text 2 tool calls
+					400 image
+				463 container radix-_r_4j_
+					464 button (expanded) Used tool: graph_status, Secondary Actions: Collapse
+						465 image
+						466 text Used tool
+						467 text : 
+						468 text graph_status
+					482 container radix-_r_52_
+						483 text Arguments:
+						484 text {}
+					469 button (expanded) Used tool: resolve_regimen, Secondary Actions: Collapse
+						470 image
+						471 text Used tool
+						472 text : 
+						473 text resolve_regimen
+					485 container radix-_r_53_
+						486 text Arguments:
+						487 text {
+  "population": "高血压合并糖尿病患者"
+}
+						488 text Result:
+						489 text {'source': 'D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\evolution\\production\\releases\\R-20261107T012120-d13d786332\\graph.json', 'mode': 'real_graph_snapshot', 'knowledge_version': {'graph_sha256': '5516e2bd97523424b4d44872f7ee1a0d057125f2776b3680b7c1d9abf790353f', 'version_store': 'D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\evolution\\production', 'ontology_version': '0.4.0', 'verification': 'pending', 'load_mode': 'published_store', 'release_id': 'R-20261107T012120-d13d786332', 'built_at': '2026-10-18T22:01:10+08:00'}, 'meta': {'domain': '高血压临床诊疗与基层慢病管理', 'ontology_version': '0.4.0', 'lexicon_version': '0.3.0', 'rules_version': '0.4.0', 'legacy_rules_version': '0.1.0', 'management_rules_version': '0.2.0', 'clinical_rules_version': '0.4.0', 'decision_rules_version': '0.4.0', 'retention_policy': 'uncertain_results_retained_pending', 'confidence_definition': '0~1规则启发式抽取评分；未经概率校准，不是医学正确率，不能替代人工核验。', 'built_at': '2026-10-18T22:01:10+08:00', 'source_docs': ['WS-T872-2025_重排.txt', '国家基层高血压防治管理指南2025版_重排.txt', '中国高血压临床实践指南2025版_重排.txt'], 'documents': [{'id': 'N-DOC-cbf1c1ce2a3d61', 'file': 'WS-T872-2025_重排.txt', 'title': '基层医疗卫生机构高血压防治管理标准', 'year': '2025', 'profile': 'standard', 'warnings': [], 'reference_year_evidence': {'file': 'WS-T872-2025_重排.txt', 'section': 'REFERENCES', 'page': 8, 'block_id': 'B-232e1532f133', 'start': 22, 'end': 51, 'evidence': '国家基层高血压防治管理指南[J]. 中国循环杂志，2021', 'section_status': 'from_text_heading', 'verification': 'pending', 'confidence': 0.95, 'confidence_basis': 'rule_heuristic_not_calibrated'}, 'referenced_primary_year': '2021', 'verification': 'pending', 'confidence': 0.9, 'confidence_basis': 'rule_heuristic_not_calibrated', 'verification_reasons': ['document_metadata_requires_review']}, {'id': 'N-DOC-fa69b0792accaf', 'file': '国家基层高血压防治管理指南2025版_重排.txt', 'title': '国家基层高血压防治管理指南', 'year': '2025', 'profile': 'primary', 'warnings': [], 'reference_year_evidence': None, 'referenced_primary_year': '', 'verification': 'pending', 'confidence': 0.9, 'confidence_basis': 'rule_heuristic_not_calibrated', 'verification_reasons': ['document_metadata_requires_review']}, {'id': 'N-DOC-c7e1aac134f39b', 'file': '中国高血压临床实践指南2025版_重排.txt', 'title': '中国高血压临床实践指南', 'year': '2024', 'profile': 'clinical', 'warnings': ['文件名年份 2025 与正文刊期 2024 不同；正文年份仍需人工核验。'], 'reference_year_evidence': None, 'referenced_primary_year': '', 'verification': 'pending', 'confidence': 0.55, 'confidence_basis': 'rule_heuristic_not_calibrated', 'verification_reasons': ['document_metadata_requires_review']}], 'builder': 'pipeline/build_graph.py', 'page_numbering': 'PDF physical page, null if unknown', 'limitations': ['表格勾选关系未恢复，不推断表格列对应关系。', '标准第 4、6 物理页存在文本错序，章节标记需核读，原文和页码仍保留。', '全文数字候选全部保留；诊室血压边界经双证据结构化后仅供数学比较，仍待临床核验，不自动确诊。', '三份全文药物关系使用分源新规则；所有自动抽取关系待人工核验。', '未解析药物语句、数字及重叠实体保留为待核验候选，缺端点/证据断言完整保留。', '数值不同仅为待核对差异，不能自动认定为医学冲突。'], 'history_snapshots': [{'path': 'D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\c27546d13c1343a0870b9fef26402d01cccb26f0d9c4ac096b003deab508f9ac.json', 'sha256': 'c27546d13c1343a0870b9fef26402d01cccb26f0d9c4ac096b003deab508f9ac', 'reason': '保留重建前的完整抽取结果、待核验候选及原文块', 'verification': 'pending', 'confidence': 1.0, 'confidence_basis': 'exact_file_snapshot_sha256'}, {'path': 'D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\0e8caadbe003c6cb1cfa99c4bbe1f786db958c9b006ed1b08b216c6da72fe0aa.json', 'sha256': '0e8caadbe003c6cb1cfa99c4bbe1f786db958c9b006ed1b08b216c6da72fe0aa', 'reason': '保留重建前的完整抽取结果、待核验候选及原文块', 'verification': 'pending', 'confidence': 1.0, 'confidence_basis': 'exact_file_snapshot_sha256'}, {'path': 'D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\57f51542028dec148a54bac2adf81cb82187cc62ae7ca3b8250037cb710edcff.json', 'sha256': '57f51542028dec148a54bac2adf81cb82187cc62ae7ca3b8250037cb710edcff', 'reason': '保留重建前的完整抽取结果、待核验候选及原文块', 'verification': 'pending', 'confidence': 1.0, 'confidence_basis': 'exact_file_snapshot_sha256'}], 'evolution': {'release_id': 'R-20261107T012120-d13d786332', 'kind': 'imported_baseline', 'label': '正式基线：沿用现有三份全文图谱；自动知识仍待核验', 'medical_verification': 'pending'}}, 'nodes': 324, 'edges': 2503, 'blocks': 216, 'candidate_count': 1271, 'sufficient': False, 'message': '已加载真实图谱；自动抽取仍待核验。发布仓库模式在下次工具调用时加载当前发布版本；固定文件模式仍需重启。'}
+RELEASE: R-20261107T012120-d13d786332
+{
+ "items": [
+  {
+   "confidence_basis": "rule_heuristic_not_calibrated",
+   "paths": [
+    {
+     "steps": [
+      {
+       "edge": {
+        "id": "E-66e12bb6b24d32",
+        "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+        "relation": "preferredRegimenFor",
+        "tailId": "N-高血压合并糖尿病患者",
+        "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。",
+        "rule": "PR-COMORBID-DM",
+        "file": "国家基层高血压防治管理指南2025版_重排.txt",
+        "section": "5.4.6.1",
+        "page": 9,
+        "block_id": "B-257f599f3070",
+        "start": 153,
+        "end": 179,
+        "evidence": "合并糖尿病：首选 A，血压未达标者加用 C 或 D。",
+        "section_status": "needs_layout_review",
+        "verification": "pending",
+        "confidence": 0.55,
+        "confidence_basis": "rule_heuristic_not_calibrated",
+        "scope": {
+         "population": "高血压合并糖尿病患者",
+         "purpose": "合并症用药选择"
+        },
+        "basis_sections": [
+         "5.4.2",
+         "5.4.3"
+        ],
+        "source_profile": "primary",
+        "modality": "首选",
+        "source_section_id": "N-B-257f599f3070",
+        "extraction_basis": "全文规则",
+        "semantic_section": "5.4.3.2",
+        "supporting_evidence": [
+         {
+          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+          "section": "5.4.2",
+          "page": 6,
+          "block_id": "B-f9564b21fff0",
+          "start": 0,
+          "end": 1454,
+          "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+          "section_status": "from_text_heading",
+          "verification": "pending",
+          "confidence": 0.95,
+          "confidence_basis": "rule_heuristic_not_calibrated"
+         }
+        ],
+        "combination_limit_evidence": [
+         {
+          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+          "section": "5.4.4",
+          "page": 9,
+          "block_id": "B-16ff197f2a95",
+          "start": 82,
+          "end": 100,
+          "evidence": "不宜联合应用 ACEI 与 ARB。",
+          "section_status": "from_text_heading",
+          "verification": "pending",
+          "confidence": 0.95,
+          "confidence_basis": "rule_heuristic_not_calibrated"
+         }
+        ],
+        "regimen_group": "RG-932a72981a09ec",
+        "verification_reasons": [
+         "clinical_review_required",
+         "sentence_displaced_from_expected_section",
+         "layout_or_section_unverified"
+        ]
+       },
+       "forward": false
+      },
+      {
+       "edge": {
+        "id": "E-44eefca91accf2",
+        "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+        "relation": "hasAlternativeComponent",
+        "tailId": "N-血管紧张素转换酶抑制剂",
+        "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。",
+        "rule": "PR-COMORBID-DM",
+        "file": "国家基层高血压防治管理指南2025版_重排.txt",
+        "section": "5.4.2",
+        "page": 6,
+        "block_id": "B-f9564b21fff0",
+        "start": 0,
+        "end": 1454,
+        "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+        "section_status": "from_text_heading",
+        "verification": "pending",
+        "confidence": 0.88,
+        "confidence_basis": "rule_heuristic_not_calibrated",
+        "option_group": "A",
+        "regimen_group": "RG-932a72981a09ec",
+        "supporting_evidence": [
+         {
+          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+          "section": "5.4.2",
+          "page": 6,
+          "block_id": "B-f9564b21fff0",
+          "start": 0,
+          "end": 1454,
+          "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+          "section_status": "from_text_heading",
+          "verification": "pending",
+          "confidence": 0.95,
+          "confidence_basis": "rule_heuristic_not_calibrated"
+         }
+        ],
+        "combination_limit_evidence": [
+         {
+          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+          "section": "5.4.4",
+          "page": 9,
+          "block_id": "B-16ff197f2a95",
+          "start": 82,
+          "end": 100,
+          "evidence": "不宜联合应用 ACEI 与 ARB。",
+          "section_status": "from_text_heading",
+          "verification": "pending",
+          "confidence": 0.95,
+          "confidence_basis": "rule_heuristic_not_calibrated"
+         }
+        ],
+        "verification_reasons": [
+         "clinical_review_required",
+         "sentence_displaced_from_expected_section"
+        ]
+       },
+       "forward": true
+      }
+     ],
+     "option_group": "A",
+     "hops": 2,
+     "nodes": [
+      "高血压合并糖尿病患者",
+      "血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+      "血管紧张素转换酶抑制剂"
+     ]
+    },
+    {
+     "steps": [
+      {
+       "edge": {
+        "id": "E-66e12bb6b24d32",
+        "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+        "relation": "preferredRegimenFor",
+        "tailId": "N-高血压合并糖尿病患者",
+        "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。",
+        "rule": "PR-COMORBID-DM",
+        "file": "国家基层高血压防治管理指南2025版_重排.txt",
+        "section": "5.4.6.1",
+        "page": 9,
+        "block_id": "B-257f599f3070",
+        "start": 153,
+        "end": 179,
+        "evidence": "合并糖尿病：首选 A，血压未达标者加用 C 或 D。",
+        "section_status": "needs_layout_review",
+        "verification": "pending",
+        "confidence": 0.55,
+        "confidence_basis": "rule_heuristic_not_calibrated",
+        "scope": {
+         "population": "高血压合并糖尿病患者",
+         "purpose": "合并症用药选择"
+        },
+        "basis_sections": [
+         "5.4.2",
+         "5.4.3"
+        ],
+        "source_profile": "primary",
+        "modality": "首选",
+        "source_section_id": "N-B-257f599f3070",
+        "extraction_basis": "全文规则",
+        "semantic_section": "5.4.3.2",
+        "supporting_evidence": [
+         {
+          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+          "section": "5.4.2",
+          "page": 6,
+          "block_id": "B-f9564b21fff0",
+          "start": 0,
+          "end": 1454,
+          "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+          "section_status": "from_text_heading",
+          "verification": "pending",
+          "confidence": 0.95,
+          "confidence_basis": "rule_heuristic_not_calibrated"
+         }
+        ],
+        "combination_limit_evidence": [
+         {
+          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+          "section": "5.4.4",
+          "page": 9,
+          "block_id": "B-16ff197f2a95",
+          "start": 82,
+          "end": 100,
+          "evidence": "不宜联合应用 ACEI 与 ARB。",
+          "section_status": "from_text_heading",
+          "verification": "pending",
+          "confidence": 0.95,
+          "confidence_basis": "rule_heuristic_not_calibrated"
+         }
+        ],
+        "regimen_group": "RG-932a72981a09ec",
+        "verification_reasons": [
+         "clinical_review_required",
+         "sentence_displaced_from_expected_section",
+         "layout_or_section_unverified"
+        ]
+       },
+       "forward": false
+      },
+      {
+       "edge": {
+        "id": "E-6020f469be1583",
+        "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+        "relation": "hasAlternativeComponent",
+        "tailId": "N-血管紧张素II受体阻滞剂",
+        "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。",
+        "rule": "PR-COMORBID-DM",
+        "file": "国家基层高血压防治管理指南2025版_重排.txt",
+        "section": "5.4.2",
+        "page": 6,
+        "block_id": "B-f9564b21fff0",
+        "start": 0,
+        "end": 1454,
+        "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+        "section_status": "from_text_heading",
+        "verification": "pending",
+        "confidence": 0.88,
+        "confidence_basis": "rule_heuristic_not_calibrated",
+        "option_group": "A",
+        "regimen_group": "RG-932a72981a09ec",
+        "supporting_evidence": [
+         {
+          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+          "section": "5.4.2",
+          "page": 6,
+          "block_id": "B-f9564b21fff0",
+          "start": 0,
+          "end": 1454,
+          "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+          "section_status": "from_text_heading",
+          "verification": "pending",
+          "confidence": 0.95,
+          "confidence_basis": "rule_heuristic_not_calibrated"
+         }
+        ],
+        "combination_limit_evidence": [
+         {
+          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+          "section": "5.4.4",
+          "page": 9,
+          "block_id": "B-16ff197f2a95",
+          "start": 82,
+          "end": 100,
+          "evidence": "不宜联合应用 ACEI 与 ARB。",
+          "section_status": "from_text_heading",
+          "verification": "pending",
+          "confidence": 0.95,
+          "confidence_basis": "rule_heuristic_not_calibrated"
+         }
+        ],
+        "verification_reasons": [
+         "clinical_review_required",
+         "sentence_displaced_from_expected_section"
+        ]
+       },
+       "forward": true
+      }
+     ],
+     "option_group": "A",
+     "hops": 2,
+     "nodes": [
+      "高血压合并糖尿病患者",
+      "血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+      "血管紧张素II受体阻滞剂"
+     ]
+    }
+   ],
+   "verification": "pending",
+   "kind": "scoped_regimen_composition",
+   "note": "指南原文的方案解析；保留人群、择一/联用、禁忌和版面疑点，不是个体处方。",
+   "confidence": 0.55,
+   "sufficient": false,
+   "selection": "all_components_with_one_of_per_group",
+   "components": [
+    {
+     "code": "A",
+     "options": [
+      "血管紧张素转换酶抑制剂",
+      "血管紧张素II受体阻滞剂"
+     ],
+     "selection": "one_of"
+    }
+   ]
+  }
+ ],
+ "total": 1,
+ "offset": 0,
+ "truncated": false,
+ "sufficient": false,
+ "verification": "pending",
+ "message": "已组合适用人群与代号定义两跳；仍待核验，不自动产生个体处方。",
+ "knowledge_version": {
+  "graph_sha256": "5516e2bd97523424b4d44872f7ee1a0d057125f2776b3680b7c1d9abf790353f",
+  "version_store": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\evolution\\production",
+  "ontology_version": "0.4.0",
+  "verification": "pending",
+  "load_mode": "published_store",
+  "release_id": "R-20261107T012120-d13d786332",
+  "built_at": "2026-10-18T22:01:10+08:00"
+ }
+}
+
+				401 button (expanded) Reasoning, Secondary Actions: Collapse
+					402 image
+					403 text Reasoning
+					404 image
+				405 container
+					406 text 步骤 3
+					407 text  I need to check the trace report skill, then produce the final answer ≤200 chars. The multi-hop skill says hand to clinical-trace-report. Let me read it. Also the user asked "有哪些首选降压药方案" — plural options. The answer: 合并糖尿病首选A（ACEI或ARB择一），未达标加C或D。出处：基层指南2025 5.4.3.2（抽取位置5.4.6.1，PDF第9页）首选句；5.4.2，第6页，A=ACEI和ARB。 Let me read trace report skill then compose. <code>  trace = read_skill_md("clinical-trace-report") print(trace)  </code>
+				408 button (expanded) Executed code PYTHON, Secondary Actions: Collapse
+					409 image
+					410 text Executed code
+					411 text PYTHON
+					412 image
+				413 container
+					414 text trace  =  read_skill_md( "clinical-trace-report" ) print (trace)
+				415 button (expanded) 1 tool call, Secondary Actions: Collapse
+					416 text 1 tool call
+					417 image
+				490 container radix-_r_4m_
+					491 button (expanded) Used tool: read_skill_md, Secondary Actions: Collapse
+						492 image
+						493 text Used tool
+						494 text : 
+						495 text read_skill_md
+					496 container radix-_r_54_
+						497 text Arguments:
+						498 text {
+  "skill_name": "clinical-trace-report"
+}
+						499 text Result:
+						500 text ---
+name: clinical-trace-report
+description: "为工具检索或推理结果生成短答及可追溯证据报告。输出实际知识版本、每一跳原文、适用条件、未核验状态；检查引用完整与版本一致，不编造出处、概率或工具调用。"
+---
+
+# 证据核对与交付（模板1.0.0）
+
+输入evidence_packet和本轮真实工具结果。这个Skill负责核对和组织，不自带医学事实、不调用写入工具。
+
+## 输出前核对
+
+1. 只使用本轮实际查得的事实与出处；若工具响应是字符串，json.loads后读取。knowledge_version.release_id必须一致；缺失/发生变化时不能写成一个稳定版本的结论。
+2. 每个结论有原文、文件、PDF物理页和章节；多跳保留每一跳的出处。版面错位保留语义章节、实际文本位置及待核验说明；参考文献区域不可写成正文条款。
+3. 保留“至少”“直至”“择一”“不宜联用”等实际限制。血压边界不等于确诊；复测的规范、不同日期、时间窗、次数及每次达到边界等逻辑仅按实际rule.requirements说明，用户未给条件不编造。
+4. 文件名年份不等于正文年份，优先工具source_documents或meta.documents里的year与证据。两文件版本不匹配必须披露，不替缺失旧版编造原文。
+5. verification=pending要说明“自动抽取待核验”。confidence保持来源的规则分及未校准说明，不汇总成医学正确概率；sufficient=false不能改成true。不确定候选不得删除或当成已经审核。
+
+## 普通问答
+
+先回答所问，再给简短出处与必要限制。遵循智能体默认200字符上限；长问题的决定性前提不能通过截断省略。只在实际证据足够支撑资料回答时回答对应部分，缺失部分单独说明。图谱没有返回平台引用标识时直接写文档短名、页码、条款，不伪造[[1]]。
+
+## 用户要求详细证据报告时
+
+依次输出：
+- 所问与资料结论（证据未核验不当个体处方）；
+- 本轮release_id与本体版本；
+- 实际工具调用顺序（只记发生过的调用）；
+- 推理路径，每一步包含节点、关系、方向、条件、edge_id、block_id、文件/页/章节/关键原文；
+- 同文跨节/跨文档的真实范围；
+- 冲突、未命中、版面及版本限制；
+- verification及confidence_basis，不制造专家审批状态。
+
+本Skill只是按返回证据组织报告，不自动生成不可篡改审计认证，也不自动保存用户个人病历。
+
+108
+Last output from code snippet:
+合并糖尿病高血压首选A（ACEI或ARB，择一，不宜ACEI+ARB联用）；未达标加C或D。
+出处：基层指南2025，5.4.3.2（抽取位置5.4.6.1）p9；A定义5.4.2 p6；版面待核验，自动抽取待核验。
+				418 button (expanded) Reasoning, Secondary Actions: Collapse
+					419 image
+					420 text Reasoning
+					421 image
+				422 container
+					423 text 步骤 4
+					424 text  I have the evidence. Need to answer under 200 chars with sources including both hops' pages. Let me compose. 结论：合并糖尿病首选A（ACEI或ARB，择一），不宜ACEI+ARB联用；未达标加C或D。 出处：基层指南2025，5.4.3.2（语义）/抽取位置5.4.6.1，PDF p9；A定义5.4.2，p6；版面待核验；待核验。 Need ≤200 chars. Let me draft and count. "合并糖尿病高血压首选A（ACEI或ARB，择一，不宜联用）；未达标加C或D。出处：基层指南2025，5.4.3.2（抽取位置5.4.6.1）p9；A定义5.4.2 p6；版面待核验，自动抽取待核验。" Count roughly: that's maybe 100 chars. Good. Let me count precisely in code. <code>  answer = "合并糖尿病高血压首选A（ACEI或ARB，择一，不宜ACEI+ARB联用）；未达标加C或D。\n出处：基层指南2025，5.4.3.2（抽取位置5.4.6.1）p9；A定义5.4.2 p6；版面待核验，自动抽取待核验。" print(len(answer)) assert len(answer) <= 200 final_answer(answer)  </code>
+				425 button (expanded) Executed code PYTHON, Secondary Actions: Collapse
+					426 image
+					427 text Executed code
+					428 text PYTHON
+					429 image
+				430 container
+					431 text answer  =  "合并糖尿病高血压首选A（ACEI或ARB，择一，不宜ACEI+ARB联用）；未达标加C或D。 \n 出处：基层指南2025，5.4.3.2（抽取位置5.4.6.1）p9；A定义5.4.2 p6；版面待核验，自动抽取待核验。" print ( len (answer)) assert  len (answer)  <=  200 final_answer(answer)
+				432 text 合并糖尿病高血压首选A（ACEI或ARB，择一，不宜ACEI+ARB联用）；未达标加C或D。 出处：基层指南2025，5.4.3.2（抽取位置5.4.6.1）p9；A定义5.4.2 p6；版面待核验，自动抽取待核验。
+				433 button 复制
+					434 image
+					435 text 复制
+				436 button 刷新
+					437 image
+					438 text 刷新
+				439 pop up button (collapsed) 更多, ID: radix-_r_4r_, Secondary Actions: Expand
+					440 image
+					441 text 更多
+				442 container 生成耗时 7.90s
+					443 image
+					444 text 7.90s
+				445 button 7% 本轮
+					446 image
+					447 text 7
+					448 text %
+					449 text 本轮
+			342 container
+				343 button 滚动到底部
+					344 image
+					345 text 滚动到底部
+				346 container
+					347 button 规划
+						348 image
+						349 text 规划
+					350 button 执行
+						351 image
+						352 text 执行
+					353 text entry area (settable)
+					354 container
+						355 combo box (collapsed) Value: deepseek-flash, Secondary Actions: Expand
+							356 image
+							357 text deepseek-flash
+							358 image
+						359 button 添加附件
+							360 image
+							361 text 添加附件
+						450 button (disabled) 发送
+							451 image
+		193 text Nexent © 2026 ·  v2.7.0
+		194 link Description: 使用条款, Value: github.com/nexent-hub/nexent?tab=License-1-ov-file#readme
+
+The focused UI element is 491 button (expanded) Used tool: read_skill_md, Secondary Actions: Collapse

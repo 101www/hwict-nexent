@@ -1,0 +1,874 @@
+{
+  "version": "0.1.0",
+  "description": "旧摘要兼容规则；三份全文使用 clinical_relation_rules.json。部分命中、缺证据或缺端点的完整候选必须保留。",
+  "conventions": {
+    "section": "只在该小节内生效，防止关系在全文里乱配",
+    "require_all": "全部命中才触发；已做全角→半角归一（≥ 视作 >=）",
+    "evidence_from": "在该块中定位此串，取整句作为 evidence（可溯源的原文片段）",
+    "head_tail": "端点缺失则完整保留在edge_candidates，标记verification=pending与confidence，不能删除。"
+  },
+  "section_topic": {
+    "2.1": {
+      "disease": "高血压",
+      "relation": "diagnosedBy"
+    },
+    "2.2": {
+      "disease": "高血压前期",
+      "relation": "diagnosedBy"
+    },
+    "4.1": {
+      "disease": "高血压",
+      "relation": "hasTarget"
+    },
+    "4.2": {
+      "disease": "高血压",
+      "relation": "diagnosedBy"
+    },
+    "5.1": {
+      "disease": "高血压",
+      "relation": "hasTarget"
+    },
+    "5.2": {
+      "disease": "高血压",
+      "relation": "hasTarget"
+    },
+    "8.1": {
+      "disease": "高血压",
+      "relation": "hasTarget"
+    }
+  },
+  "rules": [
+    {
+      "id": "R-2.3-PROGRESS",
+      "section": "2.3",
+      "head": "高血压前期",
+      "relation": "progressesTo",
+      "tail": "高血压",
+      "require_all": [
+        "进展为",
+        "高血压"
+      ],
+      "evidence_from": "会在10~15年内进展为确诊的高血压患者",
+      "condition": "10~15 年自然史，发生率 65%~70%"
+    },
+    {
+      "id": "R-3.1-HIGH",
+      "section": "3.1",
+      "head": "高血压",
+      "relation": "stratifiedAs",
+      "tail": "高危",
+      "require_all": [
+        "高危人群",
+        "收缩压>=140"
+      ],
+      "evidence_from": "高危人群：收缩压>=140 mmHg",
+      "condition": "收缩压≥140 mmHg 和/或 舒张压≥90 mmHg"
+    },
+    {
+      "id": "R-3.1-PRE-HIGH",
+      "section": "3.1",
+      "head": "高血压前期",
+      "relation": "stratifiedAs",
+      "tail": "高危",
+      "require_all": [
+        "高血压前期人群",
+        "心血管危险因素"
+      ],
+      "evidence_from": "则归类为高危人群",
+      "condition": "合并心脑肾临床并发症、靶器官损害，或≥3 个其他心血管危险因素"
+    },
+    {
+      "id": "R-3.1-PRE-LOW",
+      "section": "3.1",
+      "head": "高血压前期",
+      "relation": "stratifiedAs",
+      "tail": "非高危",
+      "require_all": [
+        "高血压前期人群",
+        "非高危"
+      ],
+      "evidence_from": "否则归为非高危人群",
+      "condition": ""
+    },
+    {
+      "id": "R-3.1-PRE-COMPL",
+      "section": "3.1",
+      "head": "高血压前期",
+      "relation": "complicates",
+      "tail": "临床并发症",
+      "require_all": [
+        "合并心脑肾临床并发症"
+      ],
+      "evidence_from": "若合并心脑肾临床并发症",
+      "condition": ""
+    },
+    {
+      "id": "R-3.1-PRE-TARGET",
+      "section": "3.1",
+      "head": "高血压前期",
+      "relation": "complicates",
+      "tail": "靶器官损害",
+      "require_all": [
+        "靶器官损害"
+      ],
+      "evidence_from": "靶器官损害或具有",
+      "condition": ""
+    },
+    {
+      "id": "R-4.1-TARGET",
+      "section": "4.1",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "靶器官损害",
+      "require_all": [
+        "靶器官损害"
+      ],
+      "evidence_from": "早期启用药物治疗能有效延缓靶器官损害进展",
+      "condition": ""
+    },
+    {
+      "id": "R-5.1-AF",
+      "section": "5.1",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "房颤",
+      "require_all": [
+        "合并房颤"
+      ],
+      "evidence_from": "或合并房颤、冠心病",
+      "condition": ""
+    },
+    {
+      "id": "R-5.1-CHD",
+      "section": "5.1",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "冠心病",
+      "require_all": [
+        "合并房颤、冠心病"
+      ],
+      "evidence_from": "合并房颤、冠心病",
+      "condition": ""
+    },
+    {
+      "id": "R-5.1-HF",
+      "section": "5.1",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "心力衰竭",
+      "require_all": [
+        "冠心病、心力衰竭"
+      ],
+      "evidence_from": "冠心病、心力衰竭",
+      "condition": ""
+    },
+    {
+      "id": "R-5.1-STROKE",
+      "section": "5.1",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "脑梗",
+      "require_all": [
+        "稳定性卒中"
+      ],
+      "evidence_from": "稳定性卒中或非透析慢性肾病患者",
+      "condition": "稳定性卒中"
+    },
+    {
+      "id": "R-5.1-CKD",
+      "section": "5.1",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "慢性肾脏病",
+      "require_all": [
+        "非透析慢性肾病"
+      ],
+      "evidence_from": "非透析慢性肾病患者",
+      "condition": "非透析期"
+    },
+    {
+      "id": "R-5.2-DM",
+      "section": "5.2",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "糖尿病",
+      "require_all": [
+        "合并糖尿病、慢性肾病"
+      ],
+      "evidence_from": "合并糖尿病、慢性肾病",
+      "condition": ""
+    },
+    {
+      "id": "R-5.2-CKD",
+      "section": "5.2",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "慢性肾脏病",
+      "require_all": [
+        "合并糖尿病、慢性肾病"
+      ],
+      "evidence_from": "合并糖尿病、慢性肾病",
+      "condition": ""
+    },
+    {
+      "id": "R-5.2-CHD",
+      "section": "5.2",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "冠心病",
+      "require_all": [
+        "慢性肾病、冠心病"
+      ],
+      "evidence_from": "慢性肾病、冠心病",
+      "condition": ""
+    },
+    {
+      "id": "R-5.2-STROKE",
+      "section": "5.2",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "脑梗",
+      "require_all": [
+        "冠心病、脑梗患者"
+      ],
+      "evidence_from": "冠心病、脑梗患者",
+      "condition": ""
+    },
+    {
+      "id": "R-5.2-PREG",
+      "section": "5.2",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "妊娠期高血压",
+      "require_all": [
+        "妊娠期高血压"
+      ],
+      "evidence_from": "妊娠期高血压：控制在",
+      "condition": "妊娠期"
+    },
+    {
+      "id": "R-6.1-CCB-1L",
+      "section": "6.1",
+      "head": "钙通道阻滞剂",
+      "relation": "firstLineFor",
+      "tail": "高血压",
+      "require_all": [
+        "一线降压药物",
+        "钙通道阻滞剂"
+      ],
+      "evidence_from": "2025版指南明确推荐以下四类为一线降压药物",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-ACEI-1L",
+      "section": "6.1",
+      "head": "血管紧张素转换酶抑制剂",
+      "relation": "firstLineFor",
+      "tail": "高血压",
+      "require_all": [
+        "一线降压药物",
+        "血管紧张素转换酶抑制剂"
+      ],
+      "evidence_from": "2025版指南明确推荐以下四类为一线降压药物",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-ARB-1L",
+      "section": "6.1",
+      "head": "血管紧张素II受体阻滞剂",
+      "relation": "firstLineFor",
+      "tail": "高血压",
+      "require_all": [
+        "一线降压药物",
+        "血管紧张素II受体阻滞剂"
+      ],
+      "evidence_from": "2025版指南明确推荐以下四类为一线降压药物",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-DIU-1L",
+      "section": "6.1",
+      "head": "利尿剂",
+      "relation": "firstLineFor",
+      "tail": "高血压",
+      "require_all": [
+        "一线降压药物",
+        "利尿剂"
+      ],
+      "evidence_from": "2025版指南明确推荐以下四类为一线降压药物",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-CCB-ELDER",
+      "section": "6.1",
+      "head": "钙通道阻滞剂",
+      "relation": "recommendedFor",
+      "tail": "老年人",
+      "require_all": [
+        "钙通道阻滞剂",
+        "老年人"
+      ],
+      "evidence_from": "适用人群：老年人、单纯收缩期高血压",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-CCB-ISH",
+      "section": "6.1",
+      "head": "钙通道阻滞剂",
+      "relation": "recommendedFor",
+      "tail": "单纯收缩期高血压",
+      "require_all": [
+        "单纯收缩期高血压"
+      ],
+      "evidence_from": "老年人、单纯收缩期高血压、动脉硬化人群",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-CCB-AS",
+      "section": "6.1",
+      "head": "钙通道阻滞剂",
+      "relation": "recommendedFor",
+      "tail": "动脉硬化",
+      "require_all": [
+        "动脉硬化人群"
+      ],
+      "evidence_from": "单纯收缩期高血压、动脉硬化人群",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-ACEI-DM",
+      "section": "6.1",
+      "head": "血管紧张素转换酶抑制剂",
+      "relation": "recommendedFor",
+      "tail": "糖尿病",
+      "require_all": [
+        "血管紧张素转换酶抑制剂",
+        "糖尿病、肾病"
+      ],
+      "evidence_from": "适用人群：糖尿病、肾病、心衰、蛋白尿患者",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-ACEI-CKD",
+      "section": "6.1",
+      "head": "血管紧张素转换酶抑制剂",
+      "relation": "recommendedFor",
+      "tail": "慢性肾脏病",
+      "require_all": [
+        "血管紧张素转换酶抑制剂",
+        "肾病"
+      ],
+      "evidence_from": "适用人群：糖尿病、肾病、心衰、蛋白尿患者",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-ACEI-HF",
+      "section": "6.1",
+      "head": "血管紧张素转换酶抑制剂",
+      "relation": "recommendedFor",
+      "tail": "心力衰竭",
+      "require_all": [
+        "血管紧张素转换酶抑制剂",
+        "心衰"
+      ],
+      "evidence_from": "适用人群：糖尿病、肾病、心衰、蛋白尿患者",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-ACEI-PROT",
+      "section": "6.1",
+      "head": "血管紧张素转换酶抑制剂",
+      "relation": "recommendedFor",
+      "tail": "蛋白尿",
+      "require_all": [
+        "血管紧张素转换酶抑制剂",
+        "蛋白尿"
+      ],
+      "evidence_from": "适用人群：糖尿病、肾病、心衰、蛋白尿患者",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-ACEI-RAS",
+      "section": "6.1",
+      "head": "血管紧张素转换酶抑制剂",
+      "relation": "contraindicatedFor",
+      "tail": "双侧肾动脉狭窄",
+      "require_all": [
+        "双侧肾动脉狭窄"
+      ],
+      "evidence_from": "双侧肾动脉狭窄、孕期禁用",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-ACEI-PREG",
+      "section": "6.1",
+      "head": "血管紧张素转换酶抑制剂",
+      "relation": "contraindicatedFor",
+      "tail": "妊娠期高血压",
+      "require_all": [
+        "孕期禁用"
+      ],
+      "evidence_from": "双侧肾动脉狭窄、孕期禁用",
+      "condition": "孕期"
+    },
+    {
+      "id": "R-6.1-ARB-DM",
+      "section": "6.1",
+      "head": "血管紧张素II受体阻滞剂",
+      "relation": "recommendedFor",
+      "tail": "糖尿病",
+      "require_all": [
+        "与ACEI相似"
+      ],
+      "evidence_from": "适用人群：与ACEI相似",
+      "condition": "原文表述为「适用人群与 ACEI 相似」，此处按 ACEI 适用人群继承"
+    },
+    {
+      "id": "R-6.1-DIU-ELDER",
+      "section": "6.1",
+      "head": "利尿剂",
+      "relation": "recommendedFor",
+      "tail": "老年人",
+      "require_all": [
+        "利尿剂",
+        "老年人、难治性高血压"
+      ],
+      "evidence_from": "适用人群：老年人、难治性高血压",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-DIU-RHTN",
+      "section": "6.1",
+      "head": "利尿剂",
+      "relation": "recommendedFor",
+      "tail": "难治性高血压",
+      "require_all": [
+        "难治性高血压"
+      ],
+      "evidence_from": "适用人群：老年人、难治性高血压",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-DIU-K",
+      "section": "6.1",
+      "head": "利尿剂",
+      "relation": "requiresMonitoring",
+      "tail": "血钾",
+      "require_all": [
+        "需监测血钾"
+      ],
+      "evidence_from": "需监测血钾",
+      "condition": "用药期间"
+    },
+    {
+      "id": "R-6.1-DIU-GOUT",
+      "section": "6.1",
+      "head": "利尿剂",
+      "relation": "contraindicatedFor",
+      "tail": "痛风",
+      "require_all": [
+        "痛风患者禁用"
+      ],
+      "evidence_from": "痛风患者禁用",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-LSALT-CKD",
+      "section": "6.1",
+      "head": "低钠盐",
+      "relation": "cautionFor",
+      "tail": "慢性肾脏病",
+      "require_all": [
+        "肾功能异常者不宜使用低钠盐"
+      ],
+      "evidence_from": "肾功能异常者不宜使用低钠盐",
+      "condition": "肾功能异常"
+    },
+    {
+      "id": "R-6.1-DRUG-CCB-1",
+      "section": "6.1",
+      "head": "氨氯地平",
+      "relation": "instanceOf",
+      "tail": "钙通道阻滞剂",
+      "require_all": [
+        "代表药物：氨氯地平"
+      ],
+      "evidence_from": "代表药物：氨氯地平、硝苯地平控释片等",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-DRUG-CCB-2",
+      "section": "6.1",
+      "head": "硝苯地平控释片",
+      "relation": "instanceOf",
+      "tail": "钙通道阻滞剂",
+      "require_all": [
+        "硝苯地平控释片"
+      ],
+      "evidence_from": "代表药物：氨氯地平、硝苯地平控释片等",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-DRUG-ACEI-1",
+      "section": "6.1",
+      "head": "依那普利",
+      "relation": "instanceOf",
+      "tail": "血管紧张素转换酶抑制剂",
+      "require_all": [
+        "依那普利"
+      ],
+      "evidence_from": "代表药物：依那普利、贝那普利等",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-DRUG-ACEI-2",
+      "section": "6.1",
+      "head": "贝那普利",
+      "relation": "instanceOf",
+      "tail": "血管紧张素转换酶抑制剂",
+      "require_all": [
+        "贝那普利"
+      ],
+      "evidence_from": "代表药物：依那普利、贝那普利等",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-DRUG-ARB-1",
+      "section": "6.1",
+      "head": "缬沙坦",
+      "relation": "instanceOf",
+      "tail": "血管紧张素II受体阻滞剂",
+      "require_all": [
+        "缬沙坦"
+      ],
+      "evidence_from": "代表药物：缬沙坦、氯沙坦等",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-DRUG-ARB-2",
+      "section": "6.1",
+      "head": "氯沙坦",
+      "relation": "instanceOf",
+      "tail": "血管紧张素II受体阻滞剂",
+      "require_all": [
+        "氯沙坦"
+      ],
+      "evidence_from": "代表药物：缬沙坦、氯沙坦等",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-DRUG-DIU-1",
+      "section": "6.1",
+      "head": "氢氯噻嗪",
+      "relation": "instanceOf",
+      "tail": "利尿剂",
+      "require_all": [
+        "氢氯噻嗪"
+      ],
+      "evidence_from": "代表药物：氢氯噻嗪、吲达帕胺等",
+      "condition": ""
+    },
+    {
+      "id": "R-6.1-DRUG-DIU-2",
+      "section": "6.1",
+      "head": "吲达帕胺",
+      "relation": "instanceOf",
+      "tail": "利尿剂",
+      "require_all": [
+        "吲达帕胺"
+      ],
+      "evidence_from": "代表药物：氢氯噻嗪、吲达帕胺等",
+      "condition": ""
+    },
+    {
+      "id": "R-6.2-BB-EXCL",
+      "section": "6.2",
+      "head": "β受体阻滞剂",
+      "relation": "excludedFromFirstLine",
+      "tail": "高血压",
+      "require_all": [
+        "排除在一线初始治疗药物之外"
+      ],
+      "evidence_from": "排除在一线初始治疗药物之外",
+      "condition": "2025 版相较既往指南的版本演进"
+    },
+    {
+      "id": "R-6.2-BB-CHD",
+      "section": "6.2",
+      "head": "β受体阻滞剂",
+      "relation": "recommendedFor",
+      "tail": "冠心病",
+      "require_all": [
+        "合并冠心病、心力衰竭"
+      ],
+      "evidence_from": "如合并冠心病、心力衰竭",
+      "condition": "特定场景仍为重要治疗选择"
+    },
+    {
+      "id": "R-6.2-BB-HF",
+      "section": "6.2",
+      "head": "β受体阻滞剂",
+      "relation": "recommendedFor",
+      "tail": "心力衰竭",
+      "require_all": [
+        "合并冠心病、心力衰竭"
+      ],
+      "evidence_from": "如合并冠心病、心力衰竭",
+      "condition": "特定场景仍为重要治疗选择"
+    },
+    {
+      "id": "R-6.2-BB-DRUG-1",
+      "section": "6.2",
+      "head": "美托洛尔",
+      "relation": "instanceOf",
+      "tail": "β受体阻滞剂",
+      "require_all": [
+        "美托洛尔"
+      ],
+      "evidence_from": "如美托洛尔、比索洛尔",
+      "condition": ""
+    },
+    {
+      "id": "R-6.2-BB-DRUG-2",
+      "section": "6.2",
+      "head": "比索洛尔",
+      "relation": "instanceOf",
+      "tail": "β受体阻滞剂",
+      "require_all": [
+        "比索洛尔"
+      ],
+      "evidence_from": "如美托洛尔、比索洛尔",
+      "condition": ""
+    },
+    {
+      "id": "R-6.3-SPC",
+      "section": "6.3",
+      "head": "单片复方制剂",
+      "relation": "preferredFor",
+      "tail": "高血压",
+      "require_all": [
+        "建议优先选用SPC"
+      ],
+      "evidence_from": "建议优先选用SPC",
+      "condition": "以提高用药依从性为目标"
+    },
+    {
+      "id": "R-7.1-CHD",
+      "section": "7.1",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "冠心病",
+      "require_all": [
+        "合并冠心病"
+      ],
+      "evidence_from": "合并冠心病",
+      "condition": ""
+    },
+    {
+      "id": "R-7.1-BB-CHD",
+      "section": "7.1",
+      "head": "β受体阻滞剂",
+      "relation": "preferredFor",
+      "tail": "冠心病",
+      "require_all": [
+        "伴心绞痛患者"
+      ],
+      "evidence_from": "优先推荐β阻滞剂+CCB",
+      "condition": "伴心绞痛"
+    },
+    {
+      "id": "R-7.1-BB-CCB",
+      "section": "7.1",
+      "head": "β受体阻滞剂",
+      "relation": "combinedWith",
+      "tail": "钙通道阻滞剂",
+      "require_all": [
+        "β阻滞剂+CCB"
+      ],
+      "evidence_from": "优先推荐β阻滞剂+CCB",
+      "condition": "伴心绞痛"
+    },
+    {
+      "id": "R-7.1-BB-ACEI",
+      "section": "7.1",
+      "head": "β受体阻滞剂",
+      "relation": "combinedWith",
+      "tail": "血管紧张素转换酶抑制剂",
+      "require_all": [
+        "心梗后患者"
+      ],
+      "evidence_from": "推荐β阻滞剂+ACEI/ARB",
+      "condition": "心梗后"
+    },
+    {
+      "id": "R-7.1-ACEI-MI",
+      "section": "7.1",
+      "head": "血管紧张素转换酶抑制剂",
+      "relation": "recommendedFor",
+      "tail": "心肌梗死",
+      "require_all": [
+        "心梗后患者"
+      ],
+      "evidence_from": "心梗后患者：推荐β阻滞剂+ACEI/ARB",
+      "condition": "心梗后"
+    },
+    {
+      "id": "R-7.2-HF",
+      "section": "7.2",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "心力衰竭",
+      "require_all": [
+        "合并心力衰竭"
+      ],
+      "evidence_from": "合并心力衰竭",
+      "condition": ""
+    },
+    {
+      "id": "R-7.2-ARNI",
+      "section": "7.2",
+      "head": "血管紧张素受体脑啡肽酶抑制剂",
+      "relation": "preferredFor",
+      "tail": "心力衰竭",
+      "require_all": [
+        "ARNI"
+      ],
+      "evidence_from": "优先推荐血管紧张素受体脑啡肽酶抑制剂（ARNI）",
+      "condition": "HFrEF（射血分数降低的心衰）"
+    },
+    {
+      "id": "R-7.3-DM",
+      "section": "7.3",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "糖尿病",
+      "require_all": [
+        "合并糖尿病"
+      ],
+      "evidence_from": "合并糖尿病",
+      "condition": ""
+    },
+    {
+      "id": "R-7.3-ACEI-DM",
+      "section": "7.3",
+      "head": "血管紧张素转换酶抑制剂",
+      "relation": "preferredFor",
+      "tail": "糖尿病",
+      "require_all": [
+        "首选药物",
+        "ACEI/ARB"
+      ],
+      "evidence_from": "首选药物：ACEI/ARB",
+      "condition": "合并糖尿病的高血压患者"
+    },
+    {
+      "id": "R-7.3-ARB-DM",
+      "section": "7.3",
+      "head": "血管紧张素II受体阻滞剂",
+      "relation": "preferredFor",
+      "tail": "糖尿病",
+      "require_all": [
+        "首选药物",
+        "ACEI/ARB"
+      ],
+      "evidence_from": "首选药物：ACEI/ARB",
+      "condition": "合并糖尿病的高血压患者"
+    },
+    {
+      "id": "R-7.3-SGLT2-DM",
+      "section": "7.3",
+      "head": "SGLT2抑制剂",
+      "relation": "recommendedFor",
+      "tail": "糖尿病",
+      "require_all": [
+        "SGLT2抑制剂"
+      ],
+      "evidence_from": "推荐具有心肾保护作用的SGLT2抑制剂或GLP-1受体激动剂",
+      "condition": "联合推荐"
+    },
+    {
+      "id": "R-7.3-GLP1-DM",
+      "section": "7.3",
+      "head": "GLP-1受体激动剂",
+      "relation": "recommendedFor",
+      "tail": "糖尿病",
+      "require_all": [
+        "GLP-1受体激动剂"
+      ],
+      "evidence_from": "SGLT2抑制剂或GLP-1受体激动剂",
+      "condition": "联合推荐"
+    },
+    {
+      "id": "R-7.4-CKD",
+      "section": "7.4",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "慢性肾脏病",
+      "require_all": [
+        "合并慢性肾脏病"
+      ],
+      "evidence_from": "合并慢性肾脏病",
+      "condition": ""
+    },
+    {
+      "id": "R-7.4-ACEI-CKD",
+      "section": "7.4",
+      "head": "血管紧张素转换酶抑制剂",
+      "relation": "preferredFor",
+      "tail": "慢性肾脏病",
+      "require_all": [
+        "推荐ACEI/ARB"
+      ],
+      "evidence_from": "非透析期CKD高血压患者：推荐ACEI/ARB",
+      "condition": "非透析期 CKD"
+    },
+    {
+      "id": "R-7.4-ARB-CKD",
+      "section": "7.4",
+      "head": "血管紧张素II受体阻滞剂",
+      "relation": "preferredFor",
+      "tail": "慢性肾脏病",
+      "require_all": [
+        "推荐ACEI/ARB"
+      ],
+      "evidence_from": "非透析期CKD高血压患者：推荐ACEI/ARB",
+      "condition": "非透析期 CKD"
+    },
+    {
+      "id": "R-8.1-OSA",
+      "section": "8.1",
+      "head": "高血压",
+      "relation": "complicates",
+      "tail": "睡眠呼吸暂停",
+      "require_all": [
+        "需警惕睡眠呼吸暂停"
+      ],
+      "evidence_from": "需警惕睡眠呼吸暂停",
+      "condition": "顽固性高血压的常见幕后原因"
+    },
+    {
+      "id": "R-9.1-POLICY",
+      "section": "9.1",
+      "head": "高血压",
+      "relation": "supportedByPolicy",
+      "tail": "国卫办规划发〔2025〕30号",
+      "require_all": [
+        "建立基层医生智能辅助诊疗应用"
+      ],
+      "evidence_from": "建立基层医生智能辅助诊疗应用",
+      "condition": "基层慢病管理场景"
+    },
+    {
+      "id": "R-9.2-POLICY",
+      "section": "9.2",
+      "head": "高血压",
+      "relation": "supportedByPolicy",
+      "tail": "国卫办规划发〔2025〕30号",
+      "require_all": [
+        "知识图谱构建"
+      ],
+      "evidence_from": "知识图谱构建：抽取高血压数据表示为三元组",
+      "condition": "CDSS 建设场景"
+    }
+  ]
+}

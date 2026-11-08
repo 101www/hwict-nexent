@@ -1,0 +1,12 @@
+{
+  "id": "EV-20261106T171608-6a76bd5392",
+  "at": "2026-11-06T17:16:08+00:00",
+  "action": "review",
+  "proposal_id": "P-20261106T171515-d7294c6d5b",
+  "decision": "approve",
+  "reviewer": "automated_ui_acceptance",
+  "reason": "隔离工作台自动回归：确认审核与发布流程可以运行；不是人工或医学审核。",
+  "actor_kind": "automated_test",
+  "proposal_sha256": "fb00ffb65f37407020eab322df31729abcd47946863c379d945aab60140f6f6d",
+  "scope": "engineering_publication_only_not_medical_review"
+}

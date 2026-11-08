@@ -1,0 +1,4 @@
+proposal_id,timestamp,item_type,name,ai_proposal,human_decision,human_edit,reviewer,reason
+P0001,,entity,,,accepted,,,
+P0002,,relation,,,edited,,,
+P0003,,entity,,,merged,,,

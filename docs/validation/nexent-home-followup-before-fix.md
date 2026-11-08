@@ -1,0 +1,178 @@
+- alert: AI Agent Platform
+- generic: "* *"
+- generic: "* * * *"
+- banner:
+  - banner:
+    - link "logo Nexent":
+      - /url: /
+      - img "logo"
+      - generic: Nexent
+    - link "Github":
+      - /url: https://github.com/ModelEngine-Group/nexent
+      - text: Github
+    - link "ModelEngine":
+      - /url: http://modelengine-ai.net
+    - text: 简体中文
+    - button "通知":
+    - generic: [账号已隐藏]
+- complementary:
+  - menu:
+    - menuitem "首页":
+      - generic: 首页
+    - menuitem "开始问答":
+      - generic: 开始问答
+    - menuitem "自动任务":
+      - generic: 自动任务
+    - menuitem "智能体开发":
+      - generic: 智能体开发
+    - menuitem "资源仓库":
+      - generic: 资源仓库
+    - menuitem "资源管理":
+      - generic: 资源管理
+  - button:
+- main:
+  - button "新对话":
+    - text: 新对话
+  - button "Toggle Sidebar":
+    - generic: Toggle Sidebar
+  - generic: 今天
+  - button "血压随访周期差异":
+    - generic: 血压随访周期差异
+  - button:
+  - generic: 最近 7 天
+  - button "80岁以上血压目标":
+    - generic: 80岁以上血压目标
+  - button:
+  - button "糖尿病高血压首选降压药":
+    - generic: 糖尿病高血压首选降压药
+  - button:
+  - button "高血压前期血压范围":
+    - generic: 高血压前期血压范围
+  - button:
+  - button "高血压诊断标准":
+    - generic: 高血压诊断标准
+  - button:
+  - button "已加载全部会话" [disabled]:
+    - generic: 已加载全部会话
+  - button "批量管理":
+    - generic: 批量管理
+  - button "切换旧版":
+    - generic: 切换旧版
+  - button:
+  - generic: 血压随访周期差异
+  - generic: 高血压用药决策助手
+  - button "分享对话":
+  - separator "2026年10月18日":
+    - time: 2026年10月18日
+  - generic: 血压达标和未达标患者分别多久随访
+  - time: 01:38
+  - generic: 高血压用药决策助手
+  - time: 01:38
+  - button "1 tool call":
+    - generic: 1 tool call
+  - button "Reasoning":
+    - generic: Reasoning
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: results = knowledge_base_search(query="高血压患者随访 血压达标 未达标 随访频率 间隔时间", index_names=["医疗-高血压"])
+    - generic: print(results)
+  - button "1 tool call":
+    - generic: 1 tool call
+  - button "Reasoning":
+    - generic: Reasoning
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: r1 = knowledge_base_search(query="随访管理 血压达标患者 每3个月随访 未达标患者 每2~4周随访", index_names=["医疗-高血压"])
+    - generic: r2 = knowledge_base_search(query="基层高血压随访 转诊 随访频次 达标 未达标 2周 1个月 3个月", index_names=["医疗-高血压"])
+    - generic: print(r1)
+    - generic: print(r2)
+  - button "2 tool calls":
+    - generic: 2 tool calls
+  - button "Reasoning":
+    - generic: Reasoning
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: r3 = knowledge_base_search(query="随访频次 血压达标的患者 血压未达标的患者 随访间隔 基层管理", index_names=["医疗-高血压"])
+    - generic: r4 = knowledge_base_search(query="随访管理章节 治疗后血压评估 调药后复查时间 1个月 2周 复诊", index_names=["医疗-高血压"])
+    - generic: print(r3)
+    - generic: print(r4)
+  - button "2 tool calls":
+    - generic: 2 tool calls
+  - button "Reasoning":
+    - generic: Reasoning
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: r5 = knowledge_base_search(query="随访 达标 未达标 每3个月 每2周 每1个月 基层高血压防治管理指南 随访管理", index_names=["医疗-高血压"])
+    - generic: print(r5)
+  - button "1 tool call":
+    - generic: 1 tool call
+  - button "Reasoning":
+    - generic: Reasoning
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: r6 = knowledge_base_search(query="随访", index_names=["医疗-高血压"])
+    - generic: print(r6)
+  - button "1 tool call":
+    - generic: 1 tool call
+  - button "Reasoning":
+    - generic: Reasoning
+  - paragraph: 已完成多轮检索，知识库中未出现随访间隔的具体规定。
+  - paragraph:
+    - strong: 结论：知识库中未找到相关依据。
+  - paragraph: 关于"血压达标患者与未达标患者的随访间隔"，我已就"随访""随访频次""达标/未达标""2周/1个月/3个月"等关键词，在高血压知识库中进行了多轮检索，但检索到的全部内容均不涉及具体的随访时间间隔，无法回答该问题，也不得以通用医学知识替代。
+  - paragraph: 出处：无
+  - paragraph:
+    - strong: 补充说明（仅供参考，非指南依据）：
+  - paragraph: 知识库中与"随访"直接相关的内容仅有两处，且均为管理层面的表述，不含时间间隔：
+  - list:
+    - text: 政策层面提出可向基层医生提供"辅助诊疗、处方审核、随访管理等智能应用"，加强居民慢性病规范管理服务。
+    - 'button "Open 知识库 16: 中国高血压临床实践指南2025版_知识库文档_重排.txt"': "1"
+    - text: 智能决策支持系统（CDSS）可实现"信息采集、用药推荐、患者管理、随访管理"全流程管理。
+    - 'button "Open 知识库 16: 中国高血压临床实践指南2025版_知识库文档_重排.txt"': "1"
+    - 'button "Open 知识库 19: 中国高血压临床实践指南2025版_知识库文档_重排.txt"': "2"
+  - paragraph: 如需随访频次的具体规定，建议查阅《国家基层高血压防治管理指南（2025版）》全文，或补充上传相关章节后由我重新检索。
+  - paragraph: 出处：《中国高血压临床实践指南2025版》/ 九、基层应用建议 9.1 政策支持、9.2 智能决策支持系统（CDSS）应用（仅含随访管理的一般性表述，无随访间隔规定）
+  - button "21 个来源":
+    - text: 检索结果
+    - generic: 21 个来源
+  - button "复制":
+    - generic: 复制
+  - button "刷新":
+    - generic: 刷新
+  - button "更多":
+    - generic: 更多
+  - generic "生成耗时 11.29s":
+    - text: 11.29s
+  - button "8% 本轮":
+    - generic: 8%
+    - generic: 本轮
+  - button "滚动到底部" [disabled]:
+    - generic: 滚动到底部
+  - button "规划":
+    - text: 规划
+  - button "执行":
+    - text: 执行
+  - textbox "发送消息..." [active]
+  - combobox:
+    - generic: deepseek-flash
+  - button "知识库：跟随智能体默认":
+    - generic: 知识库：跟随智能体默认
+  - button "添加附件":
+    - generic: 添加附件
+  - button [disabled]:
+  - button "发送" [disabled]:
+- contentinfo:
+  - text: Nexent © 2026
+  - generic: · v2.7.0
+  - link "使用条款":
+    - /url: https://github.com/nexent-hub/nexent?tab=License-1-ov-file#readme

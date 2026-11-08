@@ -1,0 +1,5 @@
+# TODO: 若对 Nexent 官方 deployment 有定制（额外挂载自研 MCP 服务等），在此声明。
+# 基础启动仍推荐使用官方方式：
+#   git clone https://github.com/ModelEngine-Group/nexent.git && cd nexent && bash deploy.sh docker
+version: "3.8"
+services: {}

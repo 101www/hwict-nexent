@@ -1,0 +1,234 @@
+{
+  "tested_at": "2026-10-18T21:26:04.289016+08:00",
+  "scope": "Direct Java MCP diagnosis after user reported knowledge-base-only refusal; Nexent route not yet inspected due expired login",
+  "user_reported_failure": "随访间隔问题只返回旧临床知识库摘要并称缺少依据",
+  "passed": true,
+  "calls": [
+    {
+      "tool": "query_relations",
+      "arguments": {
+        "keyword": "followUpEvery",
+        "limit": 10,
+        "offset": 0
+      },
+      "result": {
+        "items": [
+          {
+            "id": "E-5549efd8b935c6",
+            "headId": "N-血压未达标患者",
+            "relation": "followUpEvery",
+            "tailId": "N-随访",
+            "condition": "8.1随访频率血压达标患者，至少每3个月随访1次；血压未达标患者，每月至少随访1次。",
+            "rule": "R-FOLLOWUP-UNCONTROLLED",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "8.1",
+            "page": 13,
+            "block_id": "B-6e3c9e3c8d5a",
+            "start": 0,
+            "end": 52,
+            "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "modality": "至少",
+            "source_section_id": "N-B-6e3c9e3c8d5a",
+            "verification_reasons": [],
+            "head_name": "血压未达标患者",
+            "tail_name": "随访"
+          },
+          {
+            "id": "E-862939a2c6f284",
+            "headId": "N-血压未达标患者",
+            "relation": "followUpEvery",
+            "tailId": "N-随访",
+            "condition": "8.3.2.2血压未达标者：1个月至少随访1次，直至血压达标。",
+            "rule": "R-FOLLOWUP-UNCONTROLLED",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.3.2.2",
+            "page": 5,
+            "block_id": "B-99383b6fd379",
+            "start": 0,
+            "end": 35,
+            "evidence": "8.3.2.2 血压未达标者：1 个月至少随访 1 次，直至血压达标。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "modality": "至少",
+            "source_section_id": "N-B-99383b6fd379",
+            "verification_reasons": [],
+            "head_name": "血压未达标患者",
+            "tail_name": "随访"
+          },
+          {
+            "id": "E-9b6c395e04a1cf",
+            "headId": "N-血压达标患者",
+            "relation": "followUpEvery",
+            "tailId": "N-随访",
+            "condition": "8.1随访频率血压达标患者，至少每3个月随访1次；血压未达标患者，每月至少随访1次。",
+            "rule": "R-FOLLOWUP-CONTROLLED",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "8.1",
+            "page": 13,
+            "block_id": "B-6e3c9e3c8d5a",
+            "start": 0,
+            "end": 52,
+            "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "modality": "至少",
+            "source_section_id": "N-B-6e3c9e3c8d5a",
+            "verification_reasons": [],
+            "head_name": "血压达标患者",
+            "tail_name": "随访"
+          },
+          {
+            "id": "E-bf48cb55593b7f",
+            "headId": "N-血压达标患者",
+            "relation": "followUpEvery",
+            "tailId": "N-随访",
+            "condition": "8.3.2.1血压达标者：每3个月至少随访1次。",
+            "rule": "R-FOLLOWUP-CONTROLLED",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.3.2.1",
+            "page": 5,
+            "block_id": "B-c79ea4f8af58",
+            "start": 0,
+            "end": 29,
+            "evidence": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "modality": "至少",
+            "source_section_id": "N-B-c79ea4f8af58",
+            "verification_reasons": [],
+            "head_name": "血压达标患者",
+            "tail_name": "随访"
+          }
+        ],
+        "total": 4,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "返回原始关系；需联合条件、例外与原文核验。"
+      }
+    },
+    {
+      "tool": "get_evidence",
+      "arguments": {
+        "block_id": "B-6e3c9e3c8d5a"
+      },
+      "result": {
+        "items": [
+          {
+            "id": "B-6e3c9e3c8d5a",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "8.1",
+            "title": "随访频率",
+            "chapter": "高血压长期随访管理",
+            "page": 13,
+            "raw": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。符合转诊条件者，\n建议按照转诊要求操作。",
+            "body": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。符合转诊条件者，\n建议按照转诊要求操作。",
+            "source_text": "",
+            "legacy": false,
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "section_status": "from_text_heading",
+            "heading_path": [
+              "高血压长期随访管理",
+              "随访频率"
+            ]
+          }
+        ],
+        "total": 1,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "返回构建时保存的原文；请保留文件、物理页码、章节及核验状态。"
+      }
+    },
+    {
+      "tool": "get_evidence",
+      "arguments": {
+        "block_id": "B-99383b6fd379"
+      },
+      "result": {
+        "items": [
+          {
+            "id": "B-99383b6fd379",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.3.2.2",
+            "title": "血压未达标者",
+            "chapter": "治疗与管理",
+            "page": 5,
+            "raw": "8.3.2.2 血压未达标者：1 个月至少随访 1 次，直至血压达标。符合转诊条件的宜按 8.4 的规定进行\n转诊。",
+            "body": "8.3.2.2 血压未达标者：1 个月至少随访 1 次，直至血压达标。符合转诊条件的宜按 8.4 的规定进行\n转诊。",
+            "source_text": "",
+            "legacy": false,
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "section_status": "from_text_heading",
+            "heading_path": [
+              "治疗与管理",
+              "随访管理",
+              "随访频率",
+              "血压未达标者"
+            ]
+          }
+        ],
+        "total": 1,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "返回构建时保存的原文；请保留文件、物理页码、章节及核验状态。"
+      }
+    },
+    {
+      "tool": "get_evidence",
+      "arguments": {
+        "block_id": "B-c79ea4f8af58"
+      },
+      "result": {
+        "items": [
+          {
+            "id": "B-c79ea4f8af58",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.3.2.1",
+            "title": "血压达标者",
+            "chapter": "治疗与管理",
+            "page": 5,
+            "raw": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。",
+            "body": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。",
+            "source_text": "",
+            "legacy": false,
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "section_status": "from_text_heading",
+            "heading_path": [
+              "治疗与管理",
+              "随访管理",
+              "随访频率",
+              "血压达标者"
+            ]
+          }
+        ],
+        "total": 1,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "返回构建时保存的原文；请保留文件、物理页码、章节及核验状态。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+Browser tab: 7, Title: "AI Agent Platform", URL: "http://192.168.100.150:3000/zh/agents/1".
+1 AXWebArea AI Agent Platform, URL: 192.168.100.150:3000/zh/agents/1
+	2 container
+		3 container
+			4 link Description: logo Nexent, Value: 192.168.100.150:3000/
+			5 link Description: Github, Value: github.com/ModelEngine-Group/nexent
+			6 link Description: ModelEngine, Value: modelengine-ai.net/
+			7 image
+			8 text 简体中文
+			9 image
+			10 button 通知
+				11 image
+			12 text [账号已隐藏]
+			13 image
+		14 menu
+			15 首页
+				16 image
+				17 text 首页
+			18 开始问答
+				19 image
+				20 text 开始问答
+			21 自动任务
+				22 image
+				23 text 自动任务
+			24 (expanded) 智能体开发, Secondary Actions: Collapse
+				25 image
+				26 text 智能体开发
+			27 menu rc-menu-uuid-_r_i_-/agent-dev-popup
+				28 模型配置
+					29 image
+					30 text 模型配置
+				31 知识库配置
+					32 image
+					33 text 知识库配置
+				34 智能体配置
+					35 image
+					36 text 智能体配置
+				37 记忆配置
+					38 image
+					39 text 记忆配置
+				40 智能体评估
+					41 image
+					42 text 智能体评估
+			43 (collapsed) 资源仓库, Secondary Actions: Expand
+				44 image
+				45 text 资源仓库
+			46 资源管理
+				47 image
+				48 text 资源管理
+		49 button
+			50 image
+		51 button 返回
+			52 image
+			53 text 返回
+		54 button 版本管理
+			55 image
+			56 text 版本管理
+		57 container
+			58 heading 智能生成, Value: 3
+				59 text 智能生成
+			60 button 关闭智能生成
+				61 image
+			62 container
+				63 image
+				64 heading 你好，我是智能体生成助手, Value: 1
+					65 text 你好，我是智能体生成助手
+				66 text 请描述你希望如何配置当前智能体，我会搜索已安装资源并生成 Prompt 字段。
+				67 button 生成提示词 根据已选工具与技能生成
+					68 image
+					69 text 生成提示词
+					70 text 根据已选工具与技能生成
+				71 button 推荐可用工具 根据当前角色推荐工具
+					72 image
+					73 text 推荐可用工具
+					74 text 根据当前角色推荐工具
+				75 button 推荐可用技能 根据当前角色推荐技能
+					76 image
+					77 text 推荐可用技能
+					78 text 根据当前角色推荐技能
+				79 button 生成会话引导 生成开场白与示例问题
+					80 image
+					81 text 生成会话引导
+					82 text 生成开场白与示例问题
+			83 container
+				84 button (disabled) 滚动到底部
+					85 image
+					86 text 滚动到底部
+				87 container
+					88 text entry area (settable)
+					89 button (disabled) 发送
+						90 image
+			91 heading 配置, Value: 3
+				92 text 配置
+			93 text 草稿
+			94 image
+			95 text 当前发布版本 :
+			96 text 高血压用药决策助手-2610182221
+			97 text /  共 5 个版本
+			98 button 智能生成
+				99 image
+				100 text 智能生成
+			101 container
+				102 tab group
+					103 tab (selectable, settable, boolean) 基本设置, Value: 0, ID: radix-_r_1t_-trigger-basic
+					104 tab (selected, settable, boolean) 工具与技能, Value: 1, ID: radix-_r_1t_-trigger-tools_skills
+					105 tab (selectable, settable, boolean) 高级设置, Value: 0, ID: radix-_r_1t_-trigger-advanced
+				195 container Description: 工具与技能, ID: radix-_r_1t_-content-tools_skills
+					196 button (expanded) 工具 管理 Agent 可使用的工具, Secondary Actions: Collapse
+						197 image
+						198 image
+						199 text 工具
+						200 text 管理 Agent 可使用的工具
+					201 container radix-_r_3k_
+						202 container
+							203 button 刷新工具
+								204 image
+								205 text 刷新工具
+							206 button MCP配置
+								207 image
+								208 text MCP配置
+							209 button 选择工具
+								210 image
+								211 text 选择工具
+						212 text 已选择工具 ( 12 ) MCP （ 12 ）
+						213 button kg-tools-real 12
+							214 image
+							215 text kg-tools-real
+							216 text 12
+						217 text check_references
+						218 button 配置
+							219 image
+						220 button 移除
+							221 image
+						222 text compare_threshold
+						223 button 配置
+							224 image
+						225 button 移除
+							226 image
+						227 text detect_conflicts
+						228 button 配置
+							229 image
+						230 button 移除
+							231 image
+						232 text find_entities
+						233 button 配置
+							234 image
+						235 button 移除
+							236 image
+						237 text get_evidence
+						238 button 配置
+							239 image
+						240 button 移除
+							241 image
+						242 text graph_status
+						243 button 配置
+							244 image
+						245 button 移除
+							246 image
+						247 text lookup_clause
+						248 button 配置
+							249 image
+						250 button 移除
+							251 image
+						252 text query_candidates
+						253 button 配置
+							254 image
+						255 button 移除
+							256 image
+						257 text query_relations
+						258 button 配置
+							259 image
+						260 button 移除
+							261 image
+						262 text traverse_relations
+						263 button 配置
+							264 image
+						265 button 移除
+							266 image
+						267 text evaluate_blood_pressure
+						268 button 配置
+							269 image
+						270 button 移除
+							271 image
+						272 text resolve_regimen
+						273 button 配置
+							274 image
+						275 button 移除
+							276 image
+					277 button (expanded) 技能 管理 Agent 可使用的技能, Secondary Actions: Collapse
+						278 image
+						279 image
+						280 text 技能
+						281 text 管理 Agent 可使用的技能
+					282 container radix-_r_3q_
+						283 container
+							284 button 刷新技能
+								285 image
+								286 text 刷新技能
+							287 button 构建技能, Help: 构建新技能
+								288 image
+								289 text 构建技能
+							290 button 选择技能
+								291 image
+								292 text 选择技能
+						293 container
+							294 text 已选技能 ( 4 )
+						295 button 自定义 4
+							296 image
+							297 text 自定义
+							298 text 4
+						299 text clinical-trace-report
+						300 text 为工具检索或推理结果生成短答及可追溯证据报告。输出实际知识版本、每一跳原文、适用条件、未核验状态；检查引用完整与版本一致，不编造出处、概率或工具调用。
+						301 button
+							302 image
+						303 button 移除
+							304 image
+						305 text clinical-conflict-check
+						306 text 用于高血压指南和标准的表面矛盾、药物配备与一线用药、同范围正反推荐及数值差异比较。核对人群、用途、条件、版本与两份原文，保留潜在冲突，不自动裁决。
+						307 button
+							308 image
+						309 button 移除
+							310 image
+						311 text clinical-multi-hop
+						312 text 高血压合并症首选药或图谱多跳路径问题使用。按同方案组连接人群、方案、药物类别，逐跳核对原文和条件，区分同文跨节与跨文档路径，不把通用连通路径当作临床推断。
+						313 button
+							314 image
+						315 button 移除
+							316 image
+						317 text clinical-evidence-router
+						318 text 高血压资料问答的总流程。随访、用药、血压数值、指南版本、配备与一线推荐比较时先使用；检查发布版本，选择检索或推理工具，转交相关专用Skill及溯源Skill。
+						319 button
+							320 image
+						321 button 移除
+							322 image
+				184 button (disabled) 停止当前生成并解除编辑锁定
+					185 image
+					186 text 解除锁定
+				187 button 调试
+					188 image
+					189 text 调试
+				190 button 发布
+					191 image
+					192 text 发布
+		193 text Nexent © 2026 ·  v2.7.0
+		194 link Description: 使用条款, Value: github.com/nexent-hub/nexent?tab=License-1-ov-file#readme
+
+The focused UI element is 290 button 选择技能

@@ -1,0 +1,27 @@
+{
+  "kind": "local_http_smoke_without_review_or_publication",
+  "checks": [
+    {
+      "name": "workbench_page",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "name": "write_without_csrf_token",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "name": "unexpected_host",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "name": "proposal_path_traversal",
+      "status": 400,
+      "passed": true
+    }
+  ],
+  "workbench_state_unchanged": true,
+  "all_passed": true
+}

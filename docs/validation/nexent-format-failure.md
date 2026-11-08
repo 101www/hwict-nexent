@@ -1,0 +1,230 @@
+- alert
+- generic: "* *"
+- generic: "* * * *"
+- banner:
+  - banner:
+    - link "logo Nexent":
+      - /url: /
+      - img "logo"
+      - generic: Nexent
+    - link "Github":
+      - /url: https://github.com/ModelEngine-Group/nexent
+      - text: Github
+    - link "ModelEngine":
+      - /url: http://modelengine-ai.net
+    - text: 简体中文
+    - button "通知":
+    - generic: [账号已隐藏]
+- complementary:
+  - menu:
+    - menuitem "首页":
+      - generic: 首页
+    - menuitem "开始问答":
+      - generic: 开始问答
+    - menuitem "自动任务":
+      - generic: 自动任务
+    - menuitem "智能体开发":
+      - generic: 智能体开发
+    - menuitem "资源仓库":
+      - generic: 资源仓库
+    - menuitem "资源管理":
+      - generic: 资源管理
+  - button:
+- main:
+  - button "返回":
+    - generic: 返回
+  - button "版本管理":
+    - generic: 版本管理
+  - main:
+    - heading "智能生成" [level=3]
+    - button "关闭智能生成":
+    - heading "你好，我是智能体生成助手" [level=1]
+    - paragraph: 请描述你希望如何配置当前智能体，我会搜索已安装资源并生成 Prompt 字段。
+    - button "生成提示词 根据已选工具与技能生成":
+      - generic: 生成提示词
+      - generic: 根据已选工具与技能生成
+    - button "推荐可用工具 根据当前角色推荐工具":
+      - generic: 推荐可用工具
+      - generic: 根据当前角色推荐工具
+    - button "推荐可用技能 根据当前角色推荐技能":
+      - generic: 推荐可用技能
+      - generic: 根据当前角色推荐技能
+    - button "生成会话引导 生成开场白与示例问题":
+      - generic: 生成会话引导
+      - generic: 生成开场白与示例问题
+    - button "滚动到底部" [disabled]:
+      - generic: 滚动到底部
+    - textbox "发送消息..."
+    - button "发送" [disabled]:
+    - heading "配置" [level=3]
+    - text: 草稿
+    - text: "当前发布版本:"
+    - generic: 高血压用药决策助手-2610132226
+    - generic: / 共 1 个版本
+    - button "智能生成":
+      - generic: 智能生成
+    - tablist:
+      - tab "基本设置" [selected]
+      - tab "工具与技能"
+      - tab "高级设置"
+    - tabpanel "基本设置":
+      - button "展示信息 配置图标、展示名称、变量名、作者和简介" [expanded]:
+        - generic: 展示信息
+        - paragraph: 配置图标、展示名称、变量名、作者和简介
+      - generic "智能体名称": "* 智能体名称"
+      - textbox "* 智能体名称":
+        - /placeholder: 请输入智能体名称
+        - text: 高血压用药决策助手
+      - generic: 9 / 60
+      - generic "智能体变量名": "* 智能体变量名"
+      - textbox "* 智能体变量名":
+        - /placeholder: 请输入智能体变量名
+        - text: www
+      - generic: 3 / 60
+      - generic "作者": "* 作者"
+      - textbox "* 作者":
+        - /placeholder: 请输入作者名称
+        - text: [账号已隐藏]
+      - generic "智能体描述": "* 智能体描述"
+      - textbox "* 智能体描述":
+        - /placeholder: 请输入智能体描述
+        - text: 基于临床指南的高血压用药决策辅助，每条结论可溯源
+      - generic: 24 / 500
+      - generic "标签"
+      - generic: —
+      - button "编辑标签":
+        - generic: 编辑标签
+      - generic: 智能体图标
+      - button:
+      - generic: 支持 PNG、JPEG、GIF、WebP，最大 2 MB
+      - button "模型与提示词 配置大语言模型以及智能体角色、使用要求和示例" [expanded]:
+        - generic: 模型与提示词
+        - paragraph: 配置大语言模型以及智能体角色、使用要求和示例
+      - generic "模型": "模型 :"
+      - generic "deepseek-flash":
+        - generic: deepseek-flash
+      - combobox
+      - img "down":
+      - button "调整模型优先级" [disabled]:
+      - button "模型参数覆盖":
+      - tablist:
+        - tab "智能体角色"
+        - tab "使用要求" [selected]
+        - tab "示例"
+      - tabpanel "使用要求":
+        - textbox "请输入此智能体的使用要求或约束条件": 回答规则： 1. 本助手用于指南和管理标准的资料查询、证据核对。不得仅凭模型记忆给出个体化处方、剂量或确定诊疗结论。 2. 所有事实须先查询工具。管理要求和关系用 query_relations；确认实体用 find_entities；未命中时用 lookup_clause 查原文，必要时用 query_candidates 查待解析候选。未命中不代表原文不存在。 3. 原文核对使用关系的 block_id 调用 get_evidence。每个结论注明文件名、PDF物理页码、章节和关键原文，不固定引用某一指南，不把文件名年份当作实际刊期。 4. 查询指南引用和版本是否匹配时优先调用 check_references。version_mismatch 要明确披露，不得用2025候选静默替代标准实际引用的2021版本。 5. 必须保留 condition、scope、modality、exceptions 和 supporting_evidence 的限制。不得将“宜”改为“必须”；A表示ACEI或ARB，不得把择一选项写成同时使用。 6. traverse_relations 返回的是 evidence_path，图连通不代表临床推断有效；必须保留原始关系方向。compare_threshold只做同单位数学比较；detect_conflicts只列待审核数值差异，不能自动裁决医学冲突。 7. verification=pending 表示自动抽取待核验。confidence是未经校准的规则分数，不是医学正确率。sufficient=false 不妨碍报告原文明确写了什么，但不能宣称已验证临床决策。 8. truncated=true 且需完整清单时，用offset翻页。证据不足时说明已知部分与缺失的具体版本、条款或条件，不编造引文、页码或知识。 9. 问当前图谱信息时调用graph_status；普通问题不用反复调用。回答先给原文支持的结论，再给出处和不确定性。随访对比可查询query_relations(keyword="followUpEvery",limit=10)，保留“至少”和达标/未达标人群的区别。 10. 证据足够后立即回答，避免重复工具调用。同一block_id最多核对一次；普通随访查询不额外查询图谱概况、引用版本或数学比较。默认用一段结论和简短出处表，核验状态统一说明一次；不重复长篇局限清单。用户专门问版本、数值或图谱概况时再调用对应工具。 11. 不得把“参考文献中列出”自行称为“规范性引用”，除非原文明示该性质。不同记录的block_id可能不同，不得声称正文与参考文献共用同一个block。版本问题只需说明引用年份、当前候选年份、原文出处及缺少逐条核对依据，避免扩写无关推论。
+        - button "放大查看":
+      - button "知识库 选择知识库后自动启用知识库检索能力并建立关联":
+        - generic: 知识库
+        - paragraph: 选择知识库后自动启用知识库检索能力并建立关联
+      - button "配置":
+        - generic: 配置
+      - button "选择知识库":
+        - generic: 选择知识库
+      - button "会话引导 配置用户首次进入会话时的开场白和示例问题":
+        - generic: 会话引导
+        - paragraph: 配置用户首次进入会话时的开场白和示例问题
+    - button "停止当前生成并解除编辑锁定" [disabled]:
+      - generic: 解除锁定
+    - button "调试":
+      - generic: 调试
+    - button "发布":
+      - generic: 发布
+    - heading "调试" [level=3]
+    - generic: 对比模式
+    - switch
+    - button "Maximize debug panel":
+    - button "关闭调试":
+    - generic: 请核对 WS/T 872—2025 参考文献里《国家基层高血压防治管理指南》的年份，并与当前加载版本比较。用不超过200字说明结论、原文出处和不能直接替代的原因。
+    - generic: 高血压用药决策助手
+    - status:
+      - status:
+        - generic: success
+      - generic: 已完成
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 1
+      - text: 我会先检查标准引用，并定位 WS/T 872—2025 的参考文献原文。
+    - text: <code> refs = check_references(keyword="WS/T 872", limit=20) print(refs) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: refs = check_references(keyword="WS/T 872", limit=20)
+      - generic: print(refs)
+    - button "1 tool call":
+      - generic: 1 tool call
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 2
+      - text: "The check_references with keyword \"WS/T 872\" returned nothing. Let me try other approaches: lookup_clause for \"WS/T 872\" or \"国家基层高血压防治管理指南\", query_relations."
+    - paragraph: Let me search.思考：上一轮按“WS/T 872”查引用未命中。改为直接检索原文块与关系，确认该参考文献条目的年份，以及当前加载版本。
+    - text: <code> kv = lookup_clause(keyword="WS/T 872", limit=20) print(kv) le = find_entities(keyword="国家基层高血压防治管理指南", limit=20) print(le) </code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: kv = lookup_clause(keyword="WS/T 872", limit=20)
+      - generic: print(kv)
+      - generic: le = find_entities(keyword="国家基层高血压防治管理指南", limit=20)
+      - generic: print(le)
+    - button "2 tool calls":
+      - generic: 2 tool calls
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 3
+      - text: I need to find the reference list of WS/T 872—2025 and see what year is cited for 《国家基层高血压防治管理指南》. Let me look up the references section.
+    - paragraph: Let me query lookup_clause with keyword "参考文献" and standard WS.思考：已确认 WS/T 872—2025 原文及当前加载的《国家基层高血压防治管理指南》2025 版元信息。现需定位 WS/T 872—2025 的参考文献条目，核对其中引用该指南的年份。
+    - paragraph: 代码： <code>ref_ws = lookup_clause(keyword="参考文献", standard="WS-T872-2025_重排.txt", limit=20) print(ref_ws)</code>
+    - button "Executed code python" [expanded]:
+      - generic: Executed code
+      - generic: python
+    - code:
+      - generic: ref_ws = lookup_clause(keyword="参考文献", standard="WS-T872-2025_重排.txt", limit=20)
+      - generic: print(ref_ws)
+    - button "1 tool call":
+      - generic: 1 tool call
+    - button "Reasoning" [expanded]:
+      - generic: Reasoning
+    - paragraph:
+      - strong: 步骤 4
+      - text: "I need to produce the final answer within 200 characters (200字). I have evidence: WS/T 872—2025 参考文献 [1] page 8 (PDF物理页8): 国家基层高血压防治管理指南[J]. 中国循环杂志，2021，36(3)：209-220."
+    - paragraph: "Current loaded version: 国家基层高血压防治管理指南2025版_重排.txt, page 1, 中国循环杂志, 2025, 40: 836, 文章编号 1000-3614（2025）09-0836-15."
+    - paragraph: "Need to mention: can't directly replace because the standard's normative references cite 2021 version; 2025 is a different version (vol 40, page 836), not verified as equivalent; the standard's clause 7 relies on the cited version's definitions; substitution needs clause-by-clause check."
+    - paragraph: Should I call check_references once more with "国家基层高血压防治管理指南"? Already check_references(keyword="WS/T 872") returned empty. The instructions say to use check_references when checking citations and version matching. I could do one call to get version_mismatch status. But instruction 10 says avoid repeated calls. I haven't done check_references on 国家基层高血压防治管理指南. Given the task is specifically version matching, a check_references call could provide "version_mismatch" evidence. Let me do one call, low cost.
+    - paragraph: Actually the records only show check_references with WS/T 872 returned empty. Doing check_references(keyword="国家基层高血压防治管理指南") would be a new action, not repeat. Worth it for version_mismatch disclosure.
+    - paragraph: Let me do that and then answer. But I must keep answer ≤200字.
+    - paragraph: I'll call once.
+    - paragraph: <｜｜DSML｜｜ calls> <｜｜DSML｜｜ invoke name="code"> chk = check_references(keyword="国家基层高血压防治管理指南", limit=20) print(chk) </｜｜DSML｜｜ parameter> </｜｜DSML｜｜ invoke> </｜｜DSML｜｜ calls>
+    - button "复制":
+      - generic: 复制
+    - button "刷新":
+      - generic: 刷新
+    - button "更多":
+      - generic: 更多
+    - generic "生成耗时 7.10s":
+      - text: 7.10s
+    - button "6% 本轮":
+      - generic: 6%
+      - generic: 本轮
+    - button "滚动到底部" [disabled]:
+      - generic: 滚动到底部
+    - button "规划":
+      - text: 规划
+    - button "执行":
+      - text: 执行
+    - textbox "发送消息..." [active]
+    - combobox:
+      - generic: deepseek-flash
+    - button "添加附件":
+      - generic: 添加附件
+    - button [disabled]:
+    - button "发送" [disabled]:
+- contentinfo:
+  - text: Nexent © 2026
+  - generic: · v2.7.0
+  - link "使用条款":
+    - /url: https://github.com/nexent-hub/nexent?tab=License-1-ov-file#readme

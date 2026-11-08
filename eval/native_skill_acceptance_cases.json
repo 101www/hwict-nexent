@@ -1,0 +1,87 @@
+{
+  "scope": "Nexent自然问句的原生Skill与真实MCP协同验收要求；实测详见results_file，不能由运行完成推断全部通过",
+  "status": "executed_with_gaps",
+  "common_checks": [
+    "实际read_skill_md读取clinical-evidence-router和clinical-trace-report",
+    "实际graph_status及业务MCP调用，解析字符串响应",
+    "本轮knowledge_version.release_id一致",
+    "出处和限制来自真实返回结果，保留pending",
+    "普通最终答复含出处不超过200字符",
+    "保存调用轨迹、答案、截图、失败及重试"
+  ],
+  "cases": [
+    {
+      "id": "native_skill_followup",
+      "question": "血压达标和未达标患者分别多久随访？",
+      "required_mcp": [
+        "query_relations",
+        "get_evidence"
+      ],
+      "checks": [
+        "保留至少及适用条件",
+        "不能因旧摘要检索未命中断定三份全文无依据"
+      ],
+      "status": "core_demonstrated_with_omission",
+      "evidence_file": "docs/validation/native-skills-home-followup-20261108.txt"
+    },
+    {
+      "id": "native_skill_multi_hop",
+      "question": "高血压合并糖尿病患者，指南中有哪些首选降压药方案？",
+      "required_additional_skill": "clinical-multi-hop",
+      "required_mcp": [
+        "resolve_regimen",
+        "get_evidence"
+      ],
+      "checks": [
+        "真实两跳和同方案组",
+        "保留择一与不宜联用等限制",
+        "同文跨节不称跨文档两跳"
+      ],
+      "status": "partial",
+      "evidence_file": "docs/validation/native-skills-home-multi-hop-20261108.txt"
+    },
+    {
+      "id": "native_skill_threshold",
+      "question": "血压140/90算高血压吗？",
+      "required_mcp": [
+        "evaluate_blood_pressure"
+      ],
+      "checks": [
+        "未给测量方式不能编造",
+        "数学边界与复测确诊前提分开说明"
+      ],
+      "status": "partial",
+      "evidence_file": "docs/validation/native-skills-home-threshold-20261108.txt"
+    },
+    {
+      "id": "native_skill_conflict",
+      "question": "专科指南说β受体阻滞剂不是一线，管理标准要求配备，矛盾吗？",
+      "required_additional_skill": "clinical-conflict-check",
+      "required_mcp": [
+        "detect_conflicts",
+        "get_evidence"
+      ],
+      "checks": [
+        "核对两侧人群用途条件及原文",
+        "不同目的不扩大为全文没有冲突",
+        "不自动按年份裁决"
+      ],
+      "status": "core_example_demonstrated",
+      "evidence_file": "docs/validation/native-skills-home-conflict-20261108.txt"
+    },
+    {
+      "id": "native_skill_missing_version",
+      "question": "请给出管理标准所引2021版基层指南诊断阈值的逐字原文和页码。",
+      "required_mcp": [
+        "check_references"
+      ],
+      "checks": [
+        "指定版本缺失时不拿2025版冒充",
+        "未命中不伪造引文"
+      ],
+      "status": "failed_full_workflow",
+      "evidence_file": "docs/validation/native-skills-home-missing-version-20261108.txt"
+    }
+  ],
+  "results_file": "eval/native_skill_acceptance_results_20261108.json"
+}

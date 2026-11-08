@@ -1,0 +1,597 @@
+{
+  "version": "0.3.0",
+  "description": "受控词表优先最长匹配，所有出现位置保留；重叠的较短匹配也保留为pending候选。",
+  "terms": [
+    {
+      "term": "高血压",
+      "type": "Disease",
+      "aliases": [
+        "原发性高血压"
+      ]
+    },
+    {
+      "term": "高血压前期",
+      "type": "Disease",
+      "aliases": [
+        "Prehypertension"
+      ]
+    },
+    {
+      "term": "单纯收缩期高血压",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "难治性高血压",
+      "type": "Disease",
+      "aliases": [
+        "顽固性高血压"
+      ]
+    },
+    {
+      "term": "冠心病",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "心力衰竭",
+      "type": "Disease",
+      "aliases": [
+        "心衰",
+        "HFrEF"
+      ]
+    },
+    {
+      "term": "糖尿病",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "慢性肾脏病",
+      "type": "Disease",
+      "aliases": [
+        "CKD",
+        "慢性肾病"
+      ]
+    },
+    {
+      "term": "脑梗",
+      "type": "Disease",
+      "aliases": [
+        "脑梗死",
+        "稳定性卒中"
+      ]
+    },
+    {
+      "term": "房颤",
+      "type": "Disease",
+      "aliases": [
+        "心房颤动"
+      ]
+    },
+    {
+      "term": "妊娠期高血压",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "心肌梗死",
+      "type": "Disease",
+      "aliases": [
+        "心梗"
+      ]
+    },
+    {
+      "term": "动脉硬化",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "睡眠呼吸暂停",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "痛风",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "蛋白尿",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "靶器官损害",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "双侧肾动脉狭窄",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "临床并发症",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "乳酸酸中毒",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "钙通道阻滞剂",
+      "type": "DrugClass",
+      "aliases": [
+        "CCB",
+        "钙拮抗剂"
+      ]
+    },
+    {
+      "term": "血管紧张素转换酶抑制剂",
+      "type": "DrugClass",
+      "aliases": [
+        "ACEI",
+        "血管紧张素转化酶抑制剂"
+      ]
+    },
+    {
+      "term": "血管紧张素II受体阻滞剂",
+      "type": "DrugClass",
+      "aliases": [
+        "ARB",
+        "血管紧张素Ⅱ受体阻滞剂",
+        "血管紧张素Ⅱ受体拮抗剂",
+        "血管紧张素受体拮抗剂"
+      ]
+    },
+    {
+      "term": "利尿剂",
+      "type": "DrugClass",
+      "aliases": []
+    },
+    {
+      "term": "β受体阻滞剂",
+      "type": "DrugClass",
+      "aliases": [
+        "β阻滞剂",
+        "β-受体阻滞剂"
+      ]
+    },
+    {
+      "term": "血管紧张素受体脑啡肽酶抑制剂",
+      "type": "DrugClass",
+      "aliases": [
+        "ARNI"
+      ]
+    },
+    {
+      "term": "SGLT2抑制剂",
+      "type": "DrugClass",
+      "aliases": [
+        "SGLT-2抑制剂",
+        "SGLT2i"
+      ]
+    },
+    {
+      "term": "GLP-1受体激动剂",
+      "type": "DrugClass",
+      "aliases": [
+        "GLP-1RA",
+        "GLP‑1RA",
+        "GLP⁃1RA"
+      ]
+    },
+    {
+      "term": "单片复方制剂",
+      "type": "DrugClass",
+      "aliases": [
+        "SPC"
+      ]
+    },
+    {
+      "term": "氨氯地平",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "硝苯地平控释片",
+      "type": "Drug",
+      "aliases": [
+        "硝苯地平"
+      ]
+    },
+    {
+      "term": "依那普利",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "贝那普利",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "缬沙坦",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "氯沙坦",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "氢氯噻嗪",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "吲达帕胺",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "美托洛尔",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "比索洛尔",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "低钠盐",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "收缩压",
+      "type": "Indicator",
+      "aliases": [
+        "SBP"
+      ]
+    },
+    {
+      "term": "舒张压",
+      "type": "Indicator",
+      "aliases": [
+        "DBP"
+      ]
+    },
+    {
+      "term": "诊室血压",
+      "type": "Indicator",
+      "aliases": []
+    },
+    {
+      "term": "家庭自测血压",
+      "type": "Indicator",
+      "aliases": [
+        "家庭动态血压"
+      ]
+    },
+    {
+      "term": "24小时动态血压",
+      "type": "Indicator",
+      "aliases": [
+        "动态血压"
+      ]
+    },
+    {
+      "term": "体质指数",
+      "type": "Indicator",
+      "aliases": [
+        "BMI"
+      ]
+    },
+    {
+      "term": "腰围",
+      "type": "Indicator",
+      "aliases": []
+    },
+    {
+      "term": "血钾",
+      "type": "Indicator",
+      "aliases": []
+    },
+    {
+      "term": "食盐摄入量",
+      "type": "Indicator",
+      "aliases": [
+        "每日食盐"
+      ]
+    },
+    {
+      "term": "运动时长",
+      "type": "Indicator",
+      "aliases": [
+        "中等强度规律运动"
+      ]
+    },
+    {
+      "term": "老年人",
+      "type": "Population",
+      "aliases": []
+    },
+    {
+      "term": "高龄老人",
+      "type": "Population",
+      "aliases": [
+        "80岁及以上高龄老人"
+      ]
+    },
+    {
+      "term": "妊娠期妇女",
+      "type": "Population",
+      "aliases": [
+        "孕期",
+        "妊娠期"
+      ]
+    },
+    {
+      "term": "基层医生",
+      "type": "Population",
+      "aliases": []
+    },
+    {
+      "term": "80岁及以上人群",
+      "type": "Population",
+      "aliases": [
+        "80岁及以上"
+      ]
+    },
+    {
+      "term": "高危",
+      "type": "RiskLevel",
+      "aliases": [
+        "高危人群"
+      ]
+    },
+    {
+      "term": "非高危",
+      "type": "RiskLevel",
+      "aliases": [
+        "非高危人群"
+      ]
+    },
+    {
+      "term": "国卫办规划发〔2025〕30号",
+      "type": "Policy",
+      "aliases": [
+        "人工智能+医疗卫生实施意见"
+      ]
+    },
+    {
+      "term": "中国高血压临床实践指南（2025版）",
+      "type": "SourceDoc",
+      "aliases": [
+        "指南原文",
+        "2025版指南"
+      ]
+    },
+    {
+      "term": "国家基层高血压防治管理指南（2025版）",
+      "type": "SourceDoc",
+      "aliases": [
+        "国家基层高血压防治管理指南"
+      ]
+    },
+    {
+      "term": "Cardiac Research 解读",
+      "type": "SourceDoc",
+      "aliases": [
+        "Cardiac Research"
+      ]
+    },
+    {
+      "term": "基层医疗卫生机构",
+      "type": "Organization",
+      "aliases": []
+    },
+    {
+      "term": "社区卫生服务中心",
+      "type": "Organization",
+      "aliases": []
+    },
+    {
+      "term": "乡镇卫生院",
+      "type": "Organization",
+      "aliases": []
+    },
+    {
+      "term": "上臂式医用电子血压计",
+      "type": "Equipment",
+      "aliases": []
+    },
+    {
+      "term": "身高体重计",
+      "type": "Equipment",
+      "aliases": []
+    },
+    {
+      "term": "软尺",
+      "type": "Equipment",
+      "aliases": []
+    },
+    {
+      "term": "血常规分析仪",
+      "type": "Equipment",
+      "aliases": []
+    },
+    {
+      "term": "尿常规分析仪",
+      "type": "Equipment",
+      "aliases": []
+    },
+    {
+      "term": "血生化分析仪",
+      "type": "Equipment",
+      "aliases": []
+    },
+    {
+      "term": "心电图机",
+      "type": "Equipment",
+      "aliases": []
+    },
+    {
+      "term": "动态血压监测仪",
+      "type": "Equipment",
+      "aliases": []
+    },
+    {
+      "term": "转诊",
+      "type": "ManagementAction",
+      "aliases": []
+    },
+    {
+      "term": "长期随访",
+      "type": "ManagementAction",
+      "aliases": []
+    },
+    {
+      "term": "随访",
+      "type": "ManagementAction",
+      "aliases": []
+    },
+    {
+      "term": "健康教育",
+      "type": "ManagementAction",
+      "aliases": []
+    },
+    {
+      "term": "血压未达标患者",
+      "type": "Population",
+      "aliases": [
+        "血压未达标者"
+      ]
+    },
+    {
+      "term": "血压达标患者",
+      "type": "Population",
+      "aliases": [
+        "血压达标者"
+      ]
+    },
+    {
+      "term": "血压未达标",
+      "type": "ManagementState",
+      "aliases": []
+    },
+    {
+      "term": "血压达标",
+      "type": "ManagementState",
+      "aliases": []
+    },
+    {
+      "term": "配备",
+      "type": "ManagementAction",
+      "aliases": []
+    },
+    {
+      "term": "二氢吡啶类钙通道阻滞剂",
+      "type": "DrugClass",
+      "aliases": [
+        "二氢吡啶类钙拮抗剂",
+        "二氢吡啶类CCB"
+      ]
+    },
+    {
+      "term": "噻嗪类利尿剂",
+      "type": "DrugClass",
+      "aliases": []
+    },
+    {
+      "term": "严重肾功能不全",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "高钾血症",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "妊娠或计划妊娠患者",
+      "type": "Population",
+      "aliases": []
+    },
+    {
+      "term": "诊室静息心率≥80次/min患者",
+      "type": "Population",
+      "aliases": []
+    },
+    {
+      "term": "严重心动过缓",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "病态窦房结综合征",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "二度或三度房室阻滞",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "支气管哮喘",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "运动员",
+      "type": "Population",
+      "aliases": []
+    },
+    {
+      "term": "外周血管疾病",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "阿利吉仑",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "年龄<80岁且无合并症患者",
+      "type": "Population",
+      "aliases": []
+    },
+    {
+      "term": "2型糖尿病",
+      "type": "Disease",
+      "aliases": []
+    },
+    {
+      "term": "沙库巴曲缬沙坦",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "呋塞米",
+      "type": "Drug",
+      "aliases": []
+    },
+    {
+      "term": "袢利尿剂",
+      "type": "DrugClass",
+      "aliases": []
+    }
+  ],
+  "stop_terms": [
+    "高血压患者",
+    "高血压人群",
+    "高血压的"
+  ],
+  "notes": [
+    "stop_terms 用于抑制最长匹配切出的伪实体，避免把词组当实体。",
+    "同义词（aliases）只在定位时参与匹配，统一回写到 term 字段，保证图上同名同点。"
+  ]
+}

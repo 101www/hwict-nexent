@@ -1,0 +1,144 @@
+- alert
+- generic: "* *"
+- generic: "* * * *"
+- banner:
+  - banner:
+    - link "logo Nexent":
+      - /url: /
+      - img "logo"
+      - generic: Nexent
+    - link "Github":
+      - /url: https://github.com/ModelEngine-Group/nexent
+      - text: Github
+    - link "ModelEngine":
+      - /url: http://modelengine-ai.net
+    - text: 简体中文
+    - button "通知":
+    - generic: [账号已隐藏]
+- complementary:
+  - menu:
+    - menuitem "首页":
+      - generic: 首页
+    - menuitem "开始问答":
+      - generic: 开始问答
+    - menuitem "自动任务":
+      - generic: 自动任务
+    - menuitem "智能体开发":
+      - generic: 智能体开发
+    - menuitem "资源仓库":
+      - generic: 资源仓库
+    - menuitem "资源管理":
+      - generic: 资源管理
+  - button:
+- main:
+  - button "展开":
+    - generic: 展开
+  - button "新对话":
+    - generic: 新对话
+  - button "切换旧版":
+    - generic: 切换旧版
+  - button:
+  - generic: 糖尿病高血压首选药
+  - generic: 高血压用药决策助手
+  - button "分享对话":
+  - generic: 合并糖尿病的高血压患者首选哪类降压药？
+  - generic: 高血压用药决策助手
+  - status:
+    - status:
+      - generic: success
+    - generic: 已完成
+  - button "1 tool call":
+    - generic: 1 tool call
+  - button "Reasoning" [expanded]:
+    - generic: Reasoning
+  - paragraph:
+    - strong: 步骤 1
+    - text: <code> result = resolve_regimen(population="高血压合并糖尿病患者") print(result) </code>
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: result = resolve_regimen(population="高血压合并糖尿病患者")
+    - generic: print(result)
+  - button "1 tool call" [expanded]:
+    - generic: 1 tool call
+  - 'button "Used tool: resolve_regimen" [expanded] [active]':
+    - generic: "Used tool: resolve_regimen"
+  - generic: "Arguments:"
+  - generic: "{ \"population\": \"高血压合并糖尿病患者\" }"
+  - generic: "Result:"
+  - generic: "{\"items\":[{\"paths\":[{\"option_group\":\"A\",\"hops\":2,\"nodes\":[\"高血压合并糖尿病患者\",\"血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂\",\"血管紧张素转换酶抑制剂\"],\"steps\":[{\"edge\":{\"id\":\"E-66e12bb6b24d32\",\"headId\":\"N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂\",\"relation\":\"preferredRegimenFor\",\"tailId\":\"N-高血压合并糖尿病患者\",\"condition\":\"高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。\",\"rule\":\"PR-COMORBID-DM\",\"file\":\"国家基层高血压防治管理指南2025版_重排.txt\",\"section\":\"5.4.6.1\",\"page\":9,\"block_id\":\"B-257f599f3070\",\"start\":153,\"end\":179,\"evidence\":\"合并糖尿病：首选 A，血压未达标者加用 C 或 D。\",\"section_status\":\"needs_layout_review\",\"verification\":\"pending\",\"confidence\":0.55,\"confidence_basis\":\"rule_heuristic_not_calibrated\",\"scope\":{\"population\":\"高血压合并糖尿病患者\",\"purpose\":\"合并症用药选择\"},\"basis_sections\":[\"5.4.2\",\"5.4.3\"],\"source_profile\":\"primary\",\"modality\":\"首选\",\"source_section_id\":\"N-B-257f599f3070\",\"extraction_basis\":\"全文规则\",\"semantic_section\":\"5.4.3.2\",\"supporting_evidence\":[{\"file\":\"国家基层高血压防治管理指南2025版_重排.txt\",\"section\":\"5.4.2\",\"page\":6,\"block_id\":\"B-f9564b21fff0\",\"start\":0,\"end\":1454,\"evidence\":\"5.4.2 降压药物选择\\n尽量选用证据明确、可改善预后的五大类降压\\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\\n有条件者也可根据血压达标情况及适应证选择用\\nARNI 替代 ACEI/ARB。\\n为便于记忆，上述降压药物分别以 A、B、C、\\nD 简称。\\nA：ACEI 和 ARB。这两类药物降压作用明确，\\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\\n性肾脏病的患者，有充足的证据证明可改善预后。\\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\\n耐受，可换用 ARB。两类药物均有引起血管神经性\\n水肿的可能，但罕见。\\nB：β 受体阻滞剂。此类药物可降低心率，尤\\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\\n患者。用于合并心肌梗死或心力衰竭的非急性期患\\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\\n过缓、病态窦房结综合征、二度或三度房室阻滞和\\n支气管哮喘患者。运动员、外周血管疾病患者及伴\\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\\n841\\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\\n剂。\\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\\n适用范围相对广，老年单纯收缩期高血压等更适用。\\n常见的不良反应包括头痛、面部潮红、踝部水肿、\\n心跳加快、牙龈增生等。\\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\\n用，可抵消或减轻低钾血症这一不良反应。长期应用\\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\\n监测血钾或补钾，必要时建议转诊至上级医院进一步\\n诊治。\\n近年来由上述药物组合而成的单片复方制剂由\\n于服用方便、依从性好，推荐首选。\\n其他有明确降压效果的传统单片复方制剂，包\\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\\n患者情况仍可使用。\\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\\n以及老年和难治性高血压患者中有一定的降压优\\n势。\\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\\nARNI，以降低潜在的血管性水肿发生风险，同时\\n又不易导致心力衰竭恶化或血压明显波动。ARNI\\n可导致血管性水肿、低血压、肾功能损害、高钾\\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\\n害者应慎用，妊娠者禁用。\\n基层常用降压药物的用法、适应证、禁忌证及\\n不良反应见表 4。\",\"section_status\":\"from_text_heading\",\"verification\":\"pending\",\"confidence\":0.95,\"confidence_basis\":\"rule_heuristic_not_calibrated\"}],\"combination_limit_evidence\":[{\"file\":\"国家基层高血压防治管理指南2025版_重排.txt\",\"section\":\"5.4.4\",\"page\":9,\"block_id\":\"B-16ff197f2a95\",\"start\":82,\"end\":100,\"evidence\":\"不宜联合应用 ACEI 与 ARB。\",\"section_status\":\"from_text_heading\",\"verification\":\"pending\",\"confidence\":0.95,\"confidence_basis\":\"rule_heuristic_not_calibrated\"}],\"regimen_group\":\"RG-932a72981a09ec\",\"verification_reasons\":[\"clinical_review_required\",\"sentence_displaced_from_expected_section\",\"layout_or_section_unverified\"]},\"forward\":false},{\"edge\":{\"id\":\"E-44eefca91accf2\",\"headId\":\"N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂\",\"relation\":\"hasAlternativeComponent\",\"tailId\":\"N-血管紧张素转换酶抑制剂\",\"condition\":\"高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。\",\"rule\":\"PR-COMORBID-DM\",\"file\":\"国家基层高血压防治管理指南2025版_重排.txt\",\"section\":\"5.4.2\",\"page\":6,\"block_id\":\"B-f9564b21fff0\",\"start\":0,\"end\":1454,\"evidence\":\"5.4.2 降压药物选择\\n尽量选用证据明确、可改善预后的五大类降压\\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\\n有条件者也可根据血压达标情况及适应证选择用\\nARNI 替代 ACEI/ARB。\\n为便于记忆，上述降压药物分别以 A、B、C、\\nD 简称。\\nA：ACEI 和 ARB。这两类药物降压作用明确，\\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\\n性肾脏病的患者，有充足的证据证明可改善预后。\\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\\n耐受，可换用 ARB。两类药物均有引起血管神经性\\n水肿的可能，但罕见。\\nB：β 受体阻滞剂。此类药物可降低心率，尤\\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\\n患者。用于合并心肌梗死或心力衰竭的非急性期患\\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\\n过缓、病态窦房结综合征、二度或三度房室阻滞和\\n支气管哮喘患者。运动员、外周血管疾病患者及伴\\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\\n841\\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\\n剂。\\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\\n适用范围相对广，老年单纯收缩期高血压等更适用。\\n常见的不良反应包括头痛、面部潮红、踝部水肿、\\n心跳加快、牙龈增生等。\\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\\n用，可抵消或减轻低钾血症这一不良反应。长期应用\\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\\n监测血钾或补钾，必要时建议转诊至上级医院进一步\\n诊治。\\n近年来由上述药物组合而成的单片复方制剂由\\n于服用方便、依从性好，推荐首选。\\n其他有明确降压效果的传统单片复方制剂，包\\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\\n患者情况仍可使用。\\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\\n以及老年和难治性高血压患者中有一定的降压优\\n势。\\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\\nARNI，以降低潜在的血管性水肿发生风险，同时\\n又不易导致心力衰竭恶化或血压明显波动。ARNI\\n可导致血管性水肿、低血压、肾功能损害、高钾\\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\\n害者应慎用，妊娠者禁用。\\n基层常用降压药物的用法、适应证、禁忌证及\\n不良反应见表 4。\",\"section_status\":\"from_text_heading\",\"verification\":\"pending\",\"confidence\":0.88,\"confidence_basis\":\"rule_heuristic_not_calibrated\",\"option_group\":\"A\",\"regimen_group\":\"RG-932a72981a09ec\",\"supporting_evidence\":[{\"file\":\"国家基层高血压防治管理指南2025版_重排.txt\",\"section\":\"5.4.2\",\"page\":6,\"block_id\":\"B-f9564b21fff0\",\"start\":0,\"end\":1454,\"evidence\":\"5.4.2 降压药物选择\\n尽量选用证据明确、可改善预后的五大类降压\\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\\n有条件者也可根据血压达标情况及适应证选择用\\nARNI 替代 ACEI/ARB。\\n为便于记忆，上述降压药物分别以 A、B、C、\\nD 简称。\\nA：ACEI 和 ARB。这两类药物降压作用明确，\\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\\n性肾脏病的患者，有充足的证据证明可改善预后。\\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\\n耐受，可换用 ARB。两类药物均有引起血管神经性\\n水肿的可能，但罕见。\\nB：β 受体阻滞剂。此类药物可降低心率，尤\\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\\n患者。用于合并心肌梗死或心力衰竭的非急性期患\\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\\n过缓、病态窦房结综合征、二度或三度房室阻滞和\\n支气管哮喘患者。运动员、外周血管疾病患者及伴\\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\\n841\\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\\n剂。\\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\\n适用范围相对广，老年单纯收缩期高血压等更适用。\\n常见的不良反应包括头痛、面部潮红、踝部水肿、\\n心跳加快、牙龈增生等。\\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\\n用，可抵消或减轻低钾血症这一不良反应。长期应用\\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\\n监测血钾或补钾，必要时建议转诊至上级医院进一步\\n诊治。\\n近年来由上述药物组合而成的单片复方制剂由\\n于服用方便、依从性好，推荐首选。\\n其他有明确降压效果的传统单片复方制剂，包\\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\\n患者情况仍可使用。\\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\\n以及老年和难治性高血压患者中有一定的降压优\\n势。\\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\\nARNI，以降低潜在的血管性水肿发生风险，同时\\n又不易导致心力衰竭恶化或血压明显波动。ARNI\\n可导致血管性水肿、低血压、肾功能损害、高钾\\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\\n害者应慎用，妊娠者禁用。\\n基层常用降压药物的用法、适应证、禁忌证及\\n不良反应见表 4。\",\"section_status\":\"from_text_heading\",\"verification\":\"pending\",\"confidence\":0.95,\"confidence_basis\":\"rule_heuristic_not_calibrated\"}],\"combination_limit_evidence\":[{\"file\":\"国家基层高血压防治管理指南2025版_重排.txt\",\"section\":\"5.4.4\",\"page\":9,\"block_id\":\"B-16ff197f2a95\",\"start\":82,\"end\":100,\"evidence\":\"不宜联合应用 ACEI 与 ARB。\",\"section_status\":\"from_text_heading\",\"verification\":\"pending\",\"confidence\":0.95,\"confidence_basis\":\"rule_heuristic_not_calibrated\"}],\"verification_reasons\":[\"clinical_review_required\",\"sentence_displaced_from_expected_section\"]},\"forward\":true}]},{\"option_group\":\"A\",\"hops\":2,\"nodes\":[\"高血压合并糖尿病患者\",\"血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂\",\"血管紧张素II受体阻滞剂\"],\"steps\":[{\"edge\":{\"id\":\"E-66e12bb6b24d32\",\"headId\":\"N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂\",\"relation\":\"preferredRegimenFor\",\"tailId\":\"N-高血压合并糖尿病患者\",\"condition\":\"高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。\",\"rule\":\"PR-COMORBID-DM\",\"file\":\"国家基层高血压防治管理指南2025版_重排.txt\",\"section\":\"5.4.6.1\",\"page\":9,\"block_id\":\"B-257f599f3070\",\"start\":153,\"end\":179,\"evidence\":\"合并糖尿病：首选 A，血压未达标者加用 C 或 D。\",\"section_status\":\"needs_layout_review\",\"verification\":\"pending\",\"confidence\":0.55,\"confidence_basis\":\"rule_heuristic_not_calibrated\",\"scope\":{\"population\":\"高血压合并糖尿病患者\",\"purpose\":\"合并症用药选择\"},\"basis_sections\":[\"5.4.2\",\"5.4.3\"],\"source_profile\":\"primary\",\"modality\":\"首选\",\"source_section_id\":\"N-B-257f599f3070\",\"extraction_basis\":\"全文规则\",\"semantic_section\":\"5.4.3.2\",\"supporting_evidence\":[{\"file\":\"国家基层高血压防治管理指南2025版_重排.txt\",\"section\":\"5.4.2\",\"page\":6,\"block_id\":\"B-f9564b21fff0\",\"start\":0,\"end\":1454,\"evidence\":\"5.4.2 降压药物选择\\n尽量选用证据明确、可改善预后的五大类降压\\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\\n有条件者也可根据血压达标情况及适应证选择用\\nARNI 替代 ACEI/ARB。\\n为便于记忆，上述降压药物分别以 A、B、C、\\nD 简称。\\nA：ACEI 和 ARB。这两类药物降压作用明确，\\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\\n性肾脏病的患者，有充足的证据证明可改善预后。\\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\\n耐受，可换用 ARB。两类药物均有引起血管神经性\\n水肿的可能，但罕见。\\nB：β 受体阻滞剂。此类药物可降低心率，尤\\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\\n患者。用于合并心肌梗死或心力衰竭的非急性期患\\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\\n过缓、病态窦房结综合征、二度或三度房室阻滞和\\n支气管哮喘患者。运动员、外周血管疾病患者及伴\\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\\n841\\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\\n剂。\\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\\n适用范围相对广，老年单纯收缩期高血压等更适用。\\n常见的不良反应包括头痛、面部潮红、踝部水肿、\\n心跳加快、牙龈增生等。\\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\\n用，可抵消或减轻低钾血症这一不良反应。长期应用\\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\\n监测血钾或补钾，必要时建议转诊至上级医院进一步\\n诊治。\\n近年来由上述药物组合而成的单片复方制剂由\\n于服用方便、依从性好，推荐首选。\\n其他有明确降压效果的传统单片复方制剂，包\\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\\n患者情况仍可使用。\\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\\n以及老年和难治性高血压患者中有一定的降压优\\n势。\\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\\nARNI，以降低潜在的血管性水肿发生风险，同时\\n又不易导致心力衰竭恶化或血压明显波动。ARNI\\n可导致血管性水肿、低血压、肾功能损害、高钾\\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\\n害者应慎用，妊娠者禁用。\\n基层常用降压药物的用法、适应证、禁忌证及\\n不良反应见表 4。\",\"section_status\":\"from_text_heading\",\"verification\":\"pending\",\"confidence\":0.95,\"confidence_basis\":\"rule_heuristic_not_calibrated\"}],\"combination_limit_evidence\":[{\"file\":\"国家基层高血压防治管理指南2025版_重排.txt\",\"section\":\"5.4.4\",\"page\":9,\"block_id\":\"B-16ff197f2a95\",\"start\":82,\"end\":100,\"evidence\":\"不宜联合应用 ACEI 与 ARB。\",\"section_status\":\"from_text_heading\",\"verification\":\"pending\",\"confidence\":0.95,\"confidence_basis\":\"rule_heuristic_not_calibrated\"}],\"regimen_group\":\"RG-932a72981a09ec\",\"verification_reasons\":[\"clinical_review_required\",\"sentence_displaced_from_expected_section\",\"layout_or_section_unverified\"]},\"forward\":false},{\"edge\":{\"id\":\"E-6020f469be1583\",\"headId\":\"N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂\",\"relation\":\"hasAlternativeComponent\",\"tailId\":\"N-血管紧张素II受体阻滞剂\",\"condition\":\"高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。\",\"rule\":\"PR-COMORBID-DM\",\"file\":\"国家基层高血压防治管理指南2025版_重排.txt\",\"section\":\"5.4.2\",\"page\":6,\"block_id\":\"B-f9564b21fff0\",\"start\":0,\"end\":1454,\"evidence\":\"5.4.2 降压药物选择\\n尽量选用证据明确、可改善预后的五大类降压\\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\\n有条件者也可根据血压达标情况及适应证选择用\\nARNI 替代 ACEI/ARB。\\n为便于记忆，上述降压药物分别以 A、B、C、\\nD 简称。\\nA：ACEI 和 ARB。这两类药物降压作用明确，\\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\\n性肾脏病的患者，有充足的证据证明可改善预后。\\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\\n耐受，可换用 ARB。两类药物均有引起血管神经性\\n水肿的可能，但罕见。\\nB：β 受体阻滞剂。此类药物可降低心率，尤\\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\\n患者。用于合并心肌梗死或心力衰竭的非急性期患\\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\\n过缓、病态窦房结综合征、二度或三度房室阻滞和\\n支气管哮喘患者。运动员、外周血管疾病患者及伴\\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\\n841\\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\\n剂。\\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\\n适用范围相对广，老年单纯收缩期高血压等更适用。\\n常见的不良反应包括头痛、面部潮红、踝部水肿、\\n心跳加快、牙龈增生等。\\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\\n用，可抵消或减轻低钾血症这一不良反应。长期应用\\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\\n监测血钾或补钾，必要时建议转诊至上级医院进一步\\n诊治。\\n近年来由上述药物组合而成的单片复方制剂由\\n于服用方便、依从性好，推荐首选。\\n其他有明确降压效果的传统单片复方制剂，包\\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\\n患者情况仍可使用。\\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\\n以及老年和难治性高血压患者中有一定的降压优\\n势。\\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\\nARNI，以降低潜在的血管性水肿发生风险，同时\\n又不易导致心力衰竭恶化或血压明显波动。ARNI\\n可导致血管性水肿、低血压、肾功能损害、高钾\\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\\n害者应慎用，妊娠者禁用。\\n基层常用降压药物的用法、适应证、禁忌证及\\n不良反应见表 4。\",\"section_status\":\"from_text_heading\",\"verification\":\"pending\",\"confidence\":0.88,\"confidence_basis\":\"rule_heuristic_not_calibrated\",\"option_group\":\"A\",\"regimen_group\":\"RG-932a72981a09ec\",\"supporting_evidence\":[{\"file\":\"国家基层高血压防治管理指南2025版_重排.txt\",\"section\":\"5.4.2\",\"page\":6,\"block_id\":\"B-f9564b21fff0\",\"start\":0,\"end\":1454,\"evidence\":\"5.4.2 降压药物选择\\n尽量选用证据明确、可改善预后的五大类降压\\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\\n有条件者也可根据血压达标情况及适应证选择用\\nARNI 替代 ACEI/ARB。\\n为便于记忆，上述降压药物分别以 A、B、C、\\nD 简称。\\nA：ACEI 和 ARB。这两类药物降压作用明确，\\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\\n性肾脏病的患者，有充足的证据证明可改善预后。\\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\\n耐受，可换用 ARB。两类药物均有引起血管神经性\\n水肿的可能，但罕见。\\nB：β 受体阻滞剂。此类药物可降低心率，尤\\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\\n患者。用于合并心肌梗死或心力衰竭的非急性期患\\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\\n过缓、病态窦房结综合征、二度或三度房室阻滞和\\n支气管哮喘患者。运动员、外周血管疾病患者及伴\\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\\n841\\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\\n剂。\\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\\n适用范围相对广，老年单纯收缩期高血压等更适用。\\n常见的不良反应包括头痛、面部潮红、踝部水肿、\\n心跳加快、牙龈增生等。\\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\\n用，可抵消或减轻低钾血症这一不良反应。长期应用\\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\\n监测血钾或补钾，必要时建议转诊至上级医院进一步\\n诊治。\\n近年来由上述药物组合而成的单片复方制剂由\\n于服用方便、依从性好，推荐首选。\\n其他有明确降压效果的传统单片复方制剂，包\\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\\n患者情况仍可使用。\\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\\n以及老年和难治性高血压患者中有一定的降压优\\n势。\\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\\nARNI，以降低潜在的血管性水肿发生风险，同时\\n又不易导致心力衰竭恶化或血压明显波动。ARNI\\n可导致血管性水肿、低血压、肾功能损害、高钾\\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\\n害者应慎用，妊娠者禁用。\\n基层常用降压药物的用法、适应证、禁忌证及\\n不良反应见表 4。\",\"section_status\":\"from_text_heading\",\"verification\":\"pending\",\"confidence\":0.95,\"confidence_basis\":\"rule_heuristic_not_calibrated\"}],\"combination_limit_evidence\":[{\"file\":\"国家基层高血压防治管理指南2025版_重排.txt\",\"section\":\"5.4.4\",\"page\":9,\"block_id\":\"B-16ff197f2a95\",\"start\":82,\"end\":100,\"evidence\":\"不宜联合应用 ACEI 与 ARB。\",\"section_status\":\"from_text_heading\",\"verification\":\"pending\",\"confidence\":0.95,\"confidence_basis\":\"rule_heuristic_not_calibrated\"}],\"verification_reasons\":[\"clinical_review_required\",\"sentence_displaced_from_expected_section\"]},\"forward\":true}]}],\"verification\":\"pending\",\"kind\":\"scoped_regimen_composition\",\"note\":\"指南原文的方案解析；保留人群、择一/联用、禁忌和版面疑点，不是个体处方。\",\"confidence\":0.55,\"sufficient\":false,\"selection\":\"all_components_with_one_of_per_group\",\"components\":[{\"code\":\"A\",\"options\":[\"血管紧张素转换酶抑制剂\",\"血管紧张素II受体阻滞剂\"],\"selection\":\"one_of\"}],\"confidence_basis\":\"rule_heuristic_not_calibrated\"}],\"total\":1,\"offset\":0,\"truncated\":false,\"sufficient\":false,\"verification\":\"pending\",\"message\":\"已组合适用人群与代号定义两跳；仍待核验，不自动产生个体处方。\"}"
+  - button "Reasoning" [expanded]:
+    - generic: Reasoning
+  - paragraph:
+    - strong: 步骤 2
+    - text: <code> relations = query_relations(keyword="高血压合并糖尿病患者", limit=10) print(relations) </code>
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: relations = query_relations(keyword="高血压合并糖尿病患者", limit=10)
+    - generic: print(relations)
+  - button "1 tool call":
+    - generic: 1 tool call
+  - button "Reasoning" [expanded]:
+    - generic: Reasoning
+  - paragraph:
+    - strong: 步骤 3
+    - text: <code> ev = get_evidence(block_id="B-257f599f3070") print(ev) </code>
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: ev = get_evidence(block_id="B-257f599f3070")
+    - generic: print(ev)
+  - button "1 tool call":
+    - generic: 1 tool call
+  - button "Reasoning" [expanded]:
+    - generic: Reasoning
+  - paragraph:
+    - strong: 步骤 4
+    - text: <code> final_answer("合并糖尿病的高血压患者首选A类（ACEI或ARB，择一使用），血压未达标者加用C或D，即CCB或噻嗪类利尿剂[[a1]][[a2]]；ACEI与ARB不宜联用[[a3]]。出处：《国家基层高血压防治管理指南2025版》5.4.2（PDF第6页）及5.4.4（PDF第9页）；5.4.6.1页面上虽出现同一句，但该页标题为血压≥180/110 mmHg紧急处理，属版面错位，抽取待核验，非个体处方。") </code>
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: final_answer("合并糖尿病的高血压患者首选A类（ACEI或ARB，择一使用），血压未达标者加用C或D，即CCB或噻嗪类利尿剂[[a1]][[a2]]；ACEI与ARB不宜联用[[a3]]。出处：《国家基层高血压防治管理指南2025版》5.4.2（PDF第6页）及5.4.4（PDF第9页）；5.4.6.1页面上虽出现同一句，但该页标题为血压≥180/110 mmHg紧急处理，属版面错位，抽取待核验，非个体处方。")
+  - paragraph:
+    - text: 合并糖尿病的高血压患者首选A类（ACEI或ARB，择一使用），血压未达标者加用C或D，即CCB或噻嗪类利尿剂
+    - button "来源 1 is loading" [disabled]: "1"
+    - button "来源 2 is loading" [disabled]: "2"
+    - text: ；ACEI与ARB不宜联用
+    - button "来源 3 is loading" [disabled]: "3"
+    - text: 。出处：《国家基层高血压防治管理指南2025版》5.4.2（PDF第6页）及5.4.4（PDF第9页）；5.4.6.1页面上虽出现同一句，但该页标题为血压≥180/110 mmHg紧急处理，属版面错位，抽取待核验，非个体处方。
+  - button "复制":
+    - generic: 复制
+  - button "刷新":
+    - generic: 刷新
+  - button "更多":
+    - generic: 更多
+  - generic "生成耗时 5.02s":
+    - text: 5.02s
+  - button "7% 本轮":
+    - generic: 7%
+    - generic: 本轮
+  - button "滚动到底部":
+    - generic: 滚动到底部
+  - button "规划":
+    - text: 规划
+  - button "执行":
+    - text: 执行
+  - textbox "发送消息..."
+  - combobox:
+    - generic: deepseek-flash
+  - button "知识库：跟随智能体默认":
+    - generic: 知识库：跟随智能体默认
+  - button "添加附件":
+    - generic: 添加附件
+  - button [disabled]:
+  - button "发送" [disabled]:
+- contentinfo:
+  - text: Nexent © 2026
+  - generic: · v2.7.0
+  - link "使用条款":
+    - /url: https://github.com/nexent-hub/nexent?tab=License-1-ov-file#readme

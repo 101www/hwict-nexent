@@ -1,0 +1,369 @@
+{
+  "domain": "高血压临床诊疗与基层慢病管理",
+  "version": "0.4.0",
+  "namespace": "http://example.org/htn#",
+  "description": "领域本体定义。实体类型 = 图上的点，关系类型 = 图上的边，数值约束（Threshold）是一等公民 —— 多跳推理中的确定性判断全部落在它上面。",
+  "entity_types": [
+    {
+      "name": "Disease",
+      "zh": "疾病/合并症",
+      "desc": "高血压及其合并症、并发症、需要鉴别的情形"
+    },
+    {
+      "name": "DrugClass",
+      "zh": "药物类别",
+      "desc": "指南层面的一线/非一线降压药分类，如 CCB、ACEI"
+    },
+    {
+      "name": "Drug",
+      "zh": "具体药物",
+      "desc": "通用名药物，如 氨氯地平"
+    },
+    {
+      "name": "Indicator",
+      "zh": "临床指标",
+      "desc": "可测量的生理/行为指标，如 收缩压、BMI、腰围"
+    },
+    {
+      "name": "Population",
+      "zh": "人群分层",
+      "desc": "年龄、妊娠、基层等人群维度"
+    },
+    {
+      "name": "RiskLevel",
+      "zh": "风险分层",
+      "desc": "2025 版简化为 高危 / 非高危 两类"
+    },
+    {
+      "name": "Policy",
+      "zh": "政策文件",
+      "desc": "支撑落地的国家级政策依据"
+    },
+    {
+      "name": "SourceDoc",
+      "zh": "来源文档",
+      "desc": "溯源锚点：结论最终指向的原始文档"
+    },
+    {
+      "name": "Organization",
+      "zh": "医疗机构",
+      "desc": "管理要求的适用主体"
+    },
+    {
+      "name": "Equipment",
+      "zh": "设备",
+      "desc": "机构配备的设备"
+    },
+    {
+      "name": "ManagementAction",
+      "zh": "管理行为",
+      "desc": "随访、转诊、健康教育等"
+    },
+    {
+      "name": "ManagementState",
+      "zh": "管理状态",
+      "desc": "达标与未达标等"
+    },
+    {
+      "name": "Condition",
+      "zh": "条件条款",
+      "desc": "保留完整原文，待人工核读的条件集合"
+    },
+    {
+      "name": "Section",
+      "zh": "章节证据块",
+      "desc": "文档内章节在某物理页上的原文片段"
+    },
+    {
+      "name": "Threshold",
+      "zh": "数值约束",
+      "desc": "数值约束单独存入 thresholds 数组"
+    },
+    {
+      "name": "DrugRegimen",
+      "zh": "联合用药方案",
+      "desc": "components为同时使用的组成部分；每个组成部分的options择一，ACEI与ARB不能因A的展开而同时使用。"
+    }
+  ],
+  "relation_types": [
+    {
+      "name": "firstLineFor",
+      "zh": "一线推荐用于",
+      "head": "DrugClass",
+      "tail": "Disease",
+      "desc": "指南明确的一线初始治疗"
+    },
+    {
+      "name": "preferredFor",
+      "zh": "优先推荐",
+      "head": [
+        "DrugClass",
+        "Drug"
+      ],
+      "tail": [
+        "Disease",
+        "Population"
+      ],
+      "desc": "特定合并症下的首选（强于 recommendedFor）"
+    },
+    {
+      "name": "recommendedFor",
+      "zh": "推荐用于",
+      "head": [
+        "DrugClass",
+        "Drug"
+      ],
+      "tail": [
+        "Disease",
+        "Population"
+      ],
+      "desc": "适用人群"
+    },
+    {
+      "name": "excludedFromFirstLine",
+      "zh": "排除出一线",
+      "head": "DrugClass",
+      "tail": "Disease",
+      "desc": "版本演进中被降级的药物"
+    },
+    {
+      "name": "contraindicatedFor",
+      "zh": "禁用于",
+      "head": [
+        "DrugClass",
+        "Drug"
+      ],
+      "tail": [
+        "Disease",
+        "Population"
+      ],
+      "desc": "硬禁忌，推理时必须拦截"
+    },
+    {
+      "name": "cautionFor",
+      "zh": "慎用/需监测",
+      "head": [
+        "DrugClass",
+        "Drug"
+      ],
+      "tail": [
+        "Disease",
+        "Population"
+      ],
+      "desc": "软约束，需附加监测建议"
+    },
+    {
+      "name": "combinedWith",
+      "zh": "联合用药",
+      "head": "DrugClass",
+      "tail": "DrugClass",
+      "desc": "指南推荐的联合方案"
+    },
+    {
+      "name": "instanceOf",
+      "zh": "属于类别",
+      "head": "Drug",
+      "tail": "DrugClass",
+      "desc": "药物→类别，使「某药是否一线」必须走 2 跳推理"
+    },
+    {
+      "name": "diagnosedBy",
+      "zh": "诊断依据",
+      "head": "Disease",
+      "tail": "Threshold",
+      "desc": "诊断标准指向的数值约束"
+    },
+    {
+      "name": "hasTarget",
+      "zh": "控制目标",
+      "head": "Disease",
+      "tail": "Threshold",
+      "desc": "该疾病应把指标控制到的范围"
+    },
+    {
+      "name": "requiresMonitoring",
+      "zh": "需监测",
+      "head": [
+        "DrugClass",
+        "Drug"
+      ],
+      "tail": "Indicator"
+    },
+    {
+      "name": "complicates",
+      "zh": "合并",
+      "head": "Disease",
+      "tail": "Disease",
+      "desc": "head 患者合并 tail 疾病 —— 多跳推理的关键边"
+    },
+    {
+      "name": "progressesTo",
+      "zh": "进展为",
+      "head": "Disease",
+      "tail": "Disease",
+      "desc": "疾病自然史，支持风险预警"
+    },
+    {
+      "name": "stratifiedAs",
+      "zh": "分层为",
+      "head": "Disease",
+      "tail": "RiskLevel",
+      "desc": "风险分层结果"
+    },
+    {
+      "name": "supportedByPolicy",
+      "zh": "政策支撑",
+      "head": "Disease",
+      "tail": "Policy",
+      "desc": "落地可行性依据"
+    },
+    {
+      "name": "evidencedBy",
+      "zh": "出处",
+      "head": "*",
+      "tail": "SourceDoc",
+      "desc": "任何节点都可挂载，构成溯源链"
+    },
+    {
+      "name": "containsSection",
+      "zh": "包含章节",
+      "head": "SourceDoc",
+      "tail": "Section"
+    },
+    {
+      "name": "references",
+      "zh": "引用另一文件",
+      "head": "Section",
+      "tail": "SourceDoc",
+      "desc": "resolution 记录缺文档或版本待核验状态"
+    },
+    {
+      "name": "requiresEquipment",
+      "zh": "应配备",
+      "head": "Organization",
+      "tail": "Equipment"
+    },
+    {
+      "name": "recommendsEquipment",
+      "zh": "宜或建议配备",
+      "head": "Organization",
+      "tail": "Equipment"
+    },
+    {
+      "name": "followUpEvery",
+      "zh": "应随访",
+      "head": "Population",
+      "tail": "ManagementAction",
+      "desc": "最大随访间隔在 thresholds 中记录"
+    },
+    {
+      "name": "requiresFollowUp",
+      "zh": "应长期随访",
+      "head": "Disease",
+      "tail": "ManagementAction"
+    },
+    {
+      "name": "requiresEducation",
+      "zh": "健康教育",
+      "head": "Disease",
+      "tail": "ManagementAction"
+    },
+    {
+      "name": "referralWhen",
+      "zh": "需转诊当",
+      "head": "ManagementAction",
+      "tail": "Condition",
+      "desc": "仅存候选条件，不作为自动处置规则"
+    },
+    {
+      "name": "requiresDrugClass",
+      "zh": "应配备药物类别",
+      "head": "Organization",
+      "tail": "DrugClass"
+    },
+    {
+      "name": "alternativeTo",
+      "zh": "可替代",
+      "head": "DrugClass",
+      "tail": "DrugClass"
+    },
+    {
+      "name": "notCombinedWith",
+      "zh": "不宜或不能联用",
+      "head": "DrugClass",
+      "tail": [
+        "DrugClass",
+        "Drug"
+      ]
+    },
+    {
+      "name": "preferredRegimenFor",
+      "zh": "首选联合方案",
+      "head": "DrugRegimen",
+      "tail": [
+        "Disease",
+        "Population"
+      ]
+    },
+    {
+      "name": "recommendedRegimenFor",
+      "zh": "推荐联合方案",
+      "head": "DrugRegimen",
+      "tail": [
+        "Disease",
+        "Population"
+      ]
+    },
+    {
+      "name": "hasComponent",
+      "zh": "方案必要组成部分",
+      "head": "DrugRegimen",
+      "tail": "DrugClass"
+    },
+    {
+      "name": "hasAlternativeComponent",
+      "zh": "方案同组择一成分",
+      "head": "DrugRegimen",
+      "tail": "DrugClass"
+    },
+    {
+      "name": "recommendsDrugClass",
+      "zh": "建议配备药物类别",
+      "head": "Organization",
+      "tail": "DrugClass",
+      "desc": "与应配备区分，保留资源受限时的择一条件。"
+    },
+    {
+      "name": "hasCondition",
+      "zh": "该人群包含的疾病条件",
+      "head": "Population",
+      "tail": "Disease",
+      "desc": "有条件人群描述；不意味着所有高血压患者合并此病。"
+    }
+  ],
+  "numeric_operators": [
+    "<",
+    "<=",
+    ">",
+    ">=",
+    "==",
+    "range"
+  ],
+  "design_notes": [
+    "Threshold 独立成类而非属性，是因为多跳推理需要跨文档比较同一 subject 的多个阈值 —— 冲突检测完全建立在这上面。",
+    "每条边优先携带 citation（file + section + evidence）；缺引用的候选完整保留，标记pending、confidence与缺失原因。",
+    "临床药物关系按三份全文分别抽取，主规则依据基层指南5.4.2/5.4.3。所有自动抽取待核验，缺陷候选保留在图谱JSON内。",
+    "多跳用人群←preferredRegimenFor—方案—hasAlternativeComponent→药物类别，连接同regimen_group；定义和适应证必须分别有原文。",
+    "诊室血压通过OR组合收缩压/舒张压阈值，测量方式及复测协议单独检验；结构化可执行不等于临床已核验。"
+  ],
+  "verification_policy": {
+    "default": "pending",
+    "required_fields": [
+      "verification",
+      "confidence",
+      "confidence_basis"
+    ],
+    "retention": "不确定、缺证据、缺端点、部分命中的完整记录均保留；不得仅记录一个被丢弃的ID。",
+    "confidence": "0~1规则启发式分数，未经概率校准，不代表医学正确率。"
+  }
+}

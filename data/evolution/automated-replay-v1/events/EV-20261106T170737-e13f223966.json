@@ -1,0 +1,12 @@
+{
+  "id": "EV-20261106T170737-e13f223966",
+  "at": "2026-11-06T17:07:37+00:00",
+  "action": "review",
+  "proposal_id": "P-20261106T170737-9d0ae08cce",
+  "decision": "approve",
+  "reviewer": "automated_acceptance_test",
+  "reason": "自动验收模拟流程审核；不代表人工或临床审核",
+  "actor_kind": "automated_test",
+  "proposal_sha256": "e6312664a794050483edaaa3122e76af88f035b6d12f849fe271796f566227b2",
+  "scope": "engineering_publication_only_not_medical_review"
+}

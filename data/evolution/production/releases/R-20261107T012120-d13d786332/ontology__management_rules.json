@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "description": "仅用于已识别的标准/基层指南；标题限制匹配范围，pattern 在去排版空白的整句中匹配，输出保留原文。转诊段落作为待核读条件保存，不直接自动诊疗。",
+  "management_rules": [
+    {
+      "id": "R-FOLLOWUP-CONTROLLED", "profiles": ["standard", "primary"],
+      "title_pattern": "随访频率|血压达标者", "pattern": "血压达标(?:者|患者)[：，](?:至少)?每3个月(?:至少)?随访1次",
+      "head": "血压达标患者", "head_type": "Population", "relation": "followUpEvery",
+      "tail": "随访", "tail_type": "ManagementAction", "interval_months": 3, "modality": "至少"
+    },
+    {
+      "id": "R-FOLLOWUP-UNCONTROLLED", "profiles": ["standard", "primary"],
+      "title_pattern": "随访频率|血压未达标者", "pattern": "血压未达标(?:者|患者)[：，](?:1个月|每月)至少随访1次(?:，直至血压达标)?",
+      "head": "血压未达标患者", "head_type": "Population", "relation": "followUpEvery",
+      "tail": "随访", "tail_type": "ManagementAction", "interval_months": 1, "modality": "至少"
+    },
+    {
+      "id": "R-FOLLOWUP-LONGTERM", "profiles": ["standard"],
+      "title_pattern": "一般要求", "pattern": "对已确诊的高血压患者应进行长期随访",
+      "head": "高血压", "head_type": "Disease", "relation": "requiresFollowUp",
+      "tail": "长期随访", "tail_type": "ManagementAction", "modality": "应"
+    },
+    {
+      "id": "R-HEALTH-EDUCATION", "profiles": ["standard", "primary"],
+      "title_pattern": "随访内容", "pattern": "给予个体化健康教育",
+      "head": "高血压", "head_type": "Disease", "relation": "requiresEducation",
+      "tail": "健康教育", "tail_type": "ManagementAction", "modality": "给予"
+    }
+  ]
+}

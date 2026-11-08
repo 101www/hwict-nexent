@@ -1,0 +1,584 @@
+Browser tab: 7, Title: "AI Agent Platform", URL: "http://192.168.100.150:3000/zh/newchat".
+1 AXWebArea AI Agent Platform, URL: 192.168.100.150:3000/zh/newchat
+	2 container
+		3 container
+			4 link Description: logo Nexent, Value: 192.168.100.150:3000/
+			5 link Description: Github, Value: github.com/ModelEngine-Group/nexent
+			6 link Description: ModelEngine, Value: modelengine-ai.net/
+			7 image
+			33 text 简体中文
+			8 image
+			9 button 通知
+				10 image
+			34 text [账号已隐藏]
+			11 image
+		12 menu
+			35 首页
+				36 image
+				37 text 首页
+			38 开始问答
+				39 image
+				40 text 开始问答
+			41 自动任务
+				42 image
+				43 text 自动任务
+			16 (collapsed) 智能体开发, Secondary Actions: Expand
+				17 image
+				44 text 智能体开发
+			23 (collapsed) 资源仓库, Secondary Actions: Expand
+				24 image
+				45 text 资源仓库
+			46 资源管理
+				47 image
+				48 text 资源管理
+		26 button
+			27 image
+		189 button 新对话
+			190 image
+			191 text 新对话
+		192 button Toggle Sidebar
+			193 image
+			194 text Toggle Sidebar
+		195 container
+			196 text 今天
+			329 button β阻滞剂指南与配备矛盾
+				330 text β阻滞剂指南与配备矛盾
+			331 pop up button (collapsed) ID: radix-_r_mg_, Secondary Actions: Expand
+				332 image
+			333 button 140/90算高血压吗
+				334 text 140/90算高血压吗
+			335 pop up button (collapsed) ID: radix-_r_mj_, Secondary Actions: Expand
+				336 image
+			337 button 糖尿病高血压首选降压药
+				338 text 糖尿病高血压首选降压药
+			339 pop up button (collapsed) ID: radix-_r_mm_, Secondary Actions: Expand
+				340 image
+			341 button 血压随访间隔对比
+				342 text 血压随访间隔对比
+			343 pop up button (collapsed) ID: radix-_r_mp_, Secondary Actions: Expand
+				344 image
+			345 button graph版本核验
+				346 text graph版本核验
+			347 pop up button (collapsed) ID: radix-_r_ms_, Secondary Actions: Expand
+				348 image
+			349 button 查询图谱状态信息
+				350 text 查询图谱状态信息
+			351 pop up button (collapsed) ID: radix-_r_mv_, Secondary Actions: Expand
+				352 image
+			217 text 更早
+			353 button β阻滞剂指南与标准矛盾？
+				354 text β阻滞剂指南与标准矛盾？
+			355 pop up button (collapsed) ID: radix-_r_n2_, Secondary Actions: Expand
+				356 image
+			357 button 140/90算高血压吗
+				358 text 140/90算高血压吗
+			359 pop up button (collapsed) ID: radix-_r_n5_, Secondary Actions: Expand
+				360 image
+			361 button 糖尿病高血压首选降压药
+				362 text 糖尿病高血压首选降压药
+			363 pop up button (collapsed) ID: radix-_r_n8_, Secondary Actions: Expand
+				364 image
+			365 button β阻滞剂指南矛盾？
+				366 text β阻滞剂指南矛盾？
+			367 pop up button (collapsed) ID: radix-_r_nb_, Secondary Actions: Expand
+				368 image
+			369 button 140/90算高血压吗
+				370 text 140/90算高血压吗
+			371 pop up button (collapsed) ID: radix-_r_ne_, Secondary Actions: Expand
+				372 image
+			373 button 糖尿病高血压首选降压药
+				374 text 糖尿病高血压首选降压药
+			375 pop up button (collapsed) ID: radix-_r_nh_, Secondary Actions: Expand
+				376 image
+			377 button β阻滞剂指南与标准矛盾？
+				378 text β阻滞剂指南与标准矛盾？
+			379 pop up button (collapsed) ID: radix-_r_nk_, Secondary Actions: Expand
+				380 image
+			381 button 140/90算高血压吗
+				382 text 140/90算高血压吗
+			383 pop up button (collapsed) ID: radix-_r_nn_, Secondary Actions: Expand
+				384 image
+			385 button 糖尿病高血压首选药
+				386 text 糖尿病高血压首选药
+			387 pop up button (collapsed) ID: radix-_r_nq_, Secondary Actions: Expand
+				388 image
+			389 button 血压随访间隔
+				390 text 血压随访间隔
+			391 pop up button (collapsed) ID: radix-_r_nt_, Secondary Actions: Expand
+				392 image
+			393 button 血压随访周期差异
+				394 text 血压随访周期差异
+			395 pop up button (collapsed) ID: radix-_r_o0_, Secondary Actions: Expand
+				396 image
+			397 button 80岁以上血压目标
+				398 text 80岁以上血压目标
+			399 pop up button (collapsed) ID: radix-_r_o3_, Secondary Actions: Expand
+				400 image
+			401 button 糖尿病高血压首选降压药
+				402 text 糖尿病高血压首选降压药
+			403 pop up button (collapsed) ID: radix-_r_o6_, Secondary Actions: Expand
+				404 image
+			405 button 高血压前期血压范围
+				406 text 高血压前期血压范围
+			407 pop up button (collapsed) ID: radix-_r_o9_, Secondary Actions: Expand
+				408 image
+			409 button 高血压诊断标准
+				410 text 高血压诊断标准
+			411 pop up button (collapsed) ID: radix-_r_oc_, Secondary Actions: Expand
+				412 image
+			278 button (disabled) 已加载全部会话
+		279 button 批量管理
+			280 image
+			281 text 批量管理
+		282 button 切换旧版
+			283 image
+			284 text 切换旧版
+		285 container
+			286 button
+				287 image
+			288 text β阻滞剂指南与配备矛盾 高血压用药决策助手
+			327 button 分享对话
+				328 image
+		413 container
+			414 container
+				415 text 专科指南说β受体阻滞剂不是一线，管理标准要求配备，矛盾吗？
+			416 container
+				417 text 高血压用药决策助手 已完成
+			418 button (collapsed) 1 tool call, Secondary Actions: Expand
+				419 text 1 tool call
+				420 image
+			421 button (expanded) Reasoning, Secondary Actions: Collapse
+				422 image
+				423 text Reasoning
+				424 image
+			425 container
+				426 text 步骤 1 <code>  router = read_skill_md("clinical-evidence-router") print(router) conflict = read_skill_md("clinical-conflict-check") print(conflict)  </code>
+			427 button (expanded) Executed code PYTHON, Secondary Actions: Collapse
+				428 image
+				429 text Executed code
+				430 text PYTHON
+				431 image
+			432 container
+				433 text router  =  read_skill_md( "clinical-evidence-router" ) print (router) conflict  =  read_skill_md( "clinical-conflict-check" ) print (conflict)
+			434 button (expanded) 2 tool calls, Secondary Actions: Collapse
+				435 text 2 tool calls
+				436 image
+			502 container radix-_r_og_
+				503 button (expanded) Used tool: read_skill_md, Secondary Actions: Collapse
+					504 image
+					505 text Used tool
+					506 text : 
+					507 text read_skill_md
+				540 container radix-_r_p0_
+					541 text Arguments:
+					542 text {
+  "skill_name": "clinical-evidence-router"
+}
+				508 button (expanded) Used tool: read_skill_md, Secondary Actions: Collapse
+					509 image
+					510 text Used tool
+					511 text : 
+					512 text read_skill_md
+				543 container radix-_r_p1_
+					544 text Arguments:
+					545 text {
+  "skill_name": "clinical-conflict-check"
+}
+					546 text Result:
+					547 text # 证据问答总流程（模板1.0.0）
+
+本Skill只编排已绑定的真实MCP，不包含医学答案。适用于三份全文的资料查询；不能把自动抽取当成医生审核。其他行业迁移时替换实体与路由表，保留版本、证据、适用条件和未知状态的处理。
+
+## 第一步：实际查询版本并解析工具响应
+
+Nexent CodeAgent的MCP工具常返回JSON字符串，不能直接对字符串调用.get。每轮定义或复用以下函数；只使用json标准库，不读取本地磁盘，不猜测文件路径。
+
+```python
+import json
+def decode_result(raw):
+    data = json.loads(raw) if isinstance(raw, str) else raw
+    if not isinstance(data, dict):
+        raise ValueError("工具响应不是JSON对象")
+    return data
+status = decode_result(graph_status())
+workflow_release = status.get("knowledge_version", {}).get("release_id")
+print(status)
+```
+
+版本来自本轮响应，不硬编码release_id。若无版本或为unversioned，明确说明版本未纳管，不宣称使用当前已发布版本。工具报错说明连接/执行失败，不能说原文不存在。
+
+后续每次查询都先decode_result，并比较knowledge_version.release_id是否等于workflow_release。发生变化则放弃本次混合证据，从graph_status开始最多重试一次；仍变化则说明更新中，不能拼接两版作单一结论。
+
+## 第二步：选择相关流程，检索与推理协同
+
+- 随访、机构管理与配备：query_relations；随访关系关键词用followUpEvery。逐一收集命中边的条件、文件、page、section、block_id，再用get_evidence核对不同原文块，同一block_id只查一次。
+- 合并症首选用药或图上路径：先实际读取read_skill_md(skill_name="clinical-multi-hop")，按该Skill执行。
+- 数值是否达到标准：evaluate_blood_pressure，参数仅来自用户；未给measurement_method则传unknown，不编造standardized或readings_json。读取边界与rule.requirements，区分数学比较、适用性和确诊前提。单独比较已有约束可用compare_threshold，禁止自动单位换算。
+- 指定指南引用或版本：check_references。若resolution=missing/version_mismatch，能说明现有引用，不能拿另一年份全文冒充指定版本原文。
+- 配备与一线推荐是否矛盾、跨文件数值差异：先实际读取read_skill_md(skill_name="clinical-conflict-check")，再按该Skill执行。
+- 明确查询文件/原文：lookup_clause。实体不明确先find_entities。结构化结果未命中再lookup_clause，必要时query_candidates；候选仅待核验线索。若已有平台knowledge_base_search可补检，但与图谱是不同来源，未命中不能替另一来源作结论。
+
+每个专用Skill加载后才依其正文执行；不要仅在回答中声称用了Skill。read_skill_md缺失或读取失败要明确记录，不能把自行选工具当作原生Skill已执行。
+
+## 第三步：形成证据包并使用溯源流程
+
+在代码变量evidence_packet中组织本轮实际返回内容：question、release_id、route、observed_tool_calls、paths/claims、citations、conditions、uncertainties。citations保留文件、物理页、实际/语义章节、block_id、原文及pending。只收录实际调用，不编造调用记录。数值输入和中间比较来自工具响应。
+
+实际读取read_skill_md(skill_name="clinical-trace-report")并按它输出。普通问答含出处默认不超过200字符，详细证据报告仅用户要求时展开。展示知识版本时可单列；若发生版次混用风险不能为凑字数省略。
+
+所有不确定知识保留verification=pending和原confidence；confidence是未校准规则分，不是正确率。不要创建、发布、批准或删除知识更新；这个问答流程无审核权限。
+---
+name: clinical-conflict-check
+description: "用于高血压指南和标准的表面矛盾、药物配备与一线用药、同范围正反推荐及数值差异比较。核对人群、用途、条件、版本与两份原文，保留潜在冲突，不自动裁决。"
+---
+
+# 比较适用范围与冲突（模板1.0.0）
+
+输入用户问题和本轮release_id；独立执行先graph_status。实际调用detect_conflicts(subject=用户主题)。处理JSON字符串先json.loads；逐次核对knowledge_version，不混合发布版本。
+
+读取items中的status、reason、items和source_documents。比较每条原始断言的实体/关系、人群、purpose、条件、例外、单位、测量场景和规范版本，再用get_evidence核对涉及的不同block_id。缺少的条件保持未知，禁止脑补。
+
+- not_conflicting_different_purpose：仅说明这两条断言的目的不同。例如配备药品与初始治疗推荐不能直接当成同一命题。保留两份出处，不扩大为“全文完全一致”。
+- potential_conflict_same_scope：同范围正反推荐是待人工核对的潜在冲突，完整保留双方证据，不替医学规范决定胜方。
+- scope_or_condition_requires_review、needs_review：条件或数值有待核对；数值不同不自动等于规范冲突。若缺少单位/人群/目的，不做等价比较。
+- 结果为空：只能说当前已覆盖模式未命中，不能宣称全文没有冲突。可继续query_relations/lookup_clause补检。
+
+版本更新不天然意味着更高效力；不依据文件名年份选胜方。source_documents有实际year及warning时保留；引用版本缺失时用check_references核对，不静默替代。
+
+将两边claims、状态、适用范围、具体证据放入evidence_packet，交给clinical-trace-report。所有候选保留pending与原confidence，本Skill不批准/发布/删除知识。
+
+
+			437 button (expanded) Reasoning, Secondary Actions: Collapse
+				438 image
+				439 text Reasoning
+				440 image
+			441 container
+				442 text 步骤 2 <code>  import json def decode_result(raw): data = json.loads(raw) if isinstance(raw, str) else raw return data status = decode_result(graph_status()) print(status) release = status["knowledge_version"]["release_id"] evidence_packet = {"release_id": release, "results": [], "evidence": {}} def checked(raw): r = decode_result(raw) assert r["knowledge_version"]["release_id"] == release evidence_packet["results"].append(r) return r conflict = checked(detect_conflicts(subject="β受体阻滞剂", limit=10)) print(json.dumps(conflict, ensure_ascii=False, indent=1)[:4000])  </code>
+			443 button (expanded) Executed code PYTHON, Secondary Actions: Collapse
+				444 image
+				445 text Executed code
+				446 text PYTHON
+				447 image
+			448 container
+				449 text import  json def  decode_result (raw):     data  =  json.loads(raw)  if  isinstance (raw,  str )  else  raw     return  data status  =  decode_result(graph_status()) print (status) release  =  status[ "knowledge_version" ][ "release_id" ] evidence_packet  =  { "release_id" : release,  "results" : [],  "evidence" : {}} def  checked (raw):     r  =  decode_result(raw)     assert  r[ "knowledge_version" ][ "release_id" ]  ==  release     evidence_packet[ "results" ].append(r)     return  r conflict  =  checked(detect_conflicts( subject = "β受体阻滞剂" ,  limit = 10 )) print (json.dumps(conflict,  ensure_ascii = False ,  indent = 1 )[: 4000 ])
+			450 button (expanded) 2 tool calls, Secondary Actions: Collapse
+				451 text 2 tool calls
+				452 image
+			513 container radix-_r_oj_
+				514 button (expanded) Used tool: graph_status, Secondary Actions: Collapse
+					515 image
+					516 text Used tool
+					517 text : 
+					518 text graph_status
+				548 container radix-_r_p2_
+					549 text Arguments:
+					550 text {}
+				519 button (expanded) Used tool: detect_conflicts, Secondary Actions: Collapse
+					520 image
+					521 text Used tool
+					522 text : 
+					523 text detect_conflicts
+				551 container radix-_r_p3_
+					552 text Arguments:
+					553 text {
+  "subject": "β受体阻滞剂",
+  "limit": 10
+}
+					554 text Result:
+					555 text {'source': 'D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\evolution\\production\\releases\\R-20261107T012120-d13d786332\\graph.json', 'mode': 'real_graph_snapshot', 'knowledge_version': {'graph_sha256': '5516e2bd97523424b4d44872f7ee1a0d057125f2776b3680b7c1d9abf790353f', 'version_store': 'D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\evolution\\production', 'ontology_version': '0.4.0', 'verification': 'pending', 'load_mode': 'published_store', 'release_id': 'R-20261107T012120-d13d786332', 'built_at': '2026-10-18T22:01:10+08:00'}, 'meta': {'domain': '高血压临床诊疗与基层慢病管理', 'ontology_version': '0.4.0', 'lexicon_version': '0.3.0', 'rules_version': '0.4.0', 'legacy_rules_version': '0.1.0', 'management_rules_version': '0.2.0', 'clinical_rules_version': '0.4.0', 'decision_rules_version': '0.4.0', 'retention_policy': 'uncertain_results_retained_pending', 'confidence_definition': '0~1规则启发式抽取评分；未经概率校准，不是医学正确率，不能替代人工核验。', 'built_at': '2026-10-18T22:01:10+08:00', 'source_docs': ['WS-T872-2025_重排.txt', '国家基层高血压防治管理指南2025版_重排.txt', '中国高血压临床实践指南2025版_重排.txt'], 'documents': [{'id': 'N-DOC-cbf1c1ce2a3d61', 'file': 'WS-T872-2025_重排.txt', 'title': '基层医疗卫生机构高血压防治管理标准', 'year': '2025', 'profile': 'standard', 'warnings': [], 'reference_year_evidence': {'file': 'WS-T872-2025_重排.txt', 'section': 'REFERENCES', 'page': 8, 'block_id': 'B-232e1532f133', 'start': 22, 'end': 51, 'evidence': '国家基层高血压防治管理指南[J]. 中国循环杂志，2021', 'section_status': 'from_text_heading', 'verification': 'pending', 'confidence': 0.95, 'confidence_basis': 'rule_heuristic_not_calibrated'}, 'referenced_primary_year': '2021', 'verification': 'pending', 'confidence': 0.9, 'confidence_basis': 'rule_heuristic_not_calibrated', 'verification_reasons': ['document_metadata_requires_review']}, {'id': 'N-DOC-fa69b0792accaf', 'file': '国家基层高血压防治管理指南2025版_重排.txt', 'title': '国家基层高血压防治管理指南', 'year': '2025', 'profile': 'primary', 'warnings': [], 'reference_year_evidence': None, 'referenced_primary_year': '', 'verification': 'pending', 'confidence': 0.9, 'confidence_basis': 'rule_heuristic_not_calibrated', 'verification_reasons': ['document_metadata_requires_review']}, {'id': 'N-DOC-c7e1aac134f39b', 'file': '中国高血压临床实践指南2025版_重排.txt', 'title': '中国高血压临床实践指南', 'year': '2024', 'profile': 'clinical', 'warnings': ['文件名年份 2025 与正文刊期 2024 不同；正文年份仍需人工核验。'], 'reference_year_evidence': None, 'referenced_primary_year': '', 'verification': 'pending', 'confidence': 0.55, 'confidence_basis': 'rule_heuristic_not_calibrated', 'verification_reasons': ['document_metadata_requires_review']}], 'builder': 'pipeline/build_graph.py', 'page_numbering': 'PDF physical page, null if unknown', 'limitations': ['表格勾选关系未恢复，不推断表格列对应关系。', '标准第 4、6 物理页存在文本错序，章节标记需核读，原文和页码仍保留。', '全文数字候选全部保留；诊室血压边界经双证据结构化后仅供数学比较，仍待临床核验，不自动确诊。', '三份全文药物关系使用分源新规则；所有自动抽取关系待人工核验。', '未解析药物语句、数字及重叠实体保留为待核验候选，缺端点/证据断言完整保留。', '数值不同仅为待核对差异，不能自动认定为医学冲突。'], 'history_snapshots': [{'path': 'D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\c27546d13c1343a0870b9fef26402d01cccb26f0d9c4ac096b003deab508f9ac.json', 'sha256': 'c27546d13c1343a0870b9fef26402d01cccb26f0d9c4ac096b003deab508f9ac', 'reason': '保留重建前的完整抽取结果、待核验候选及原文块', 'verification': 'pending', 'confidence': 1.0, 'confidence_basis': 'exact_file_snapshot_sha256'}, {'path': 'D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\0e8caadbe003c6cb1cfa99c4bbe1f786db958c9b006ed1b08b216c6da72fe0aa.json', 'sha256': '0e8caadbe003c6cb1cfa99c4bbe1f786db958c9b006ed1b08b216c6da72fe0aa', 'reason': '保留重建前的完整抽取结果、待核验候选及原文块', 'verification': 'pending', 'confidence': 1.0, 'confidence_basis': 'exact_file_snapshot_sha256'}, {'path': 'D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\57f51542028dec148a54bac2adf81cb82187cc62ae7ca3b8250037cb710edcff.json', 'sha256': '57f51542028dec148a54bac2adf81cb82187cc62ae7ca3b8250037cb710edcff', 'reason': '保留重建前的完整抽取结果、待核验候选及原文块', 'verification': 'pending', 'confidence': 1.0, 'confidence_basis': 'exact_file_snapshot_sha256'}], 'evolution': {'release_id': 'R-20261107T012120-d13d786332', 'kind': 'imported_baseline', 'label': '正式基线：沿用现有三份全文图谱；自动知识仍待核验', 'medical_verification': 'pending'}}, 'nodes': 324, 'edges': 2503, 'blocks': 216, 'candidate_count': 1271, 'sufficient': False, 'message': '已加载真实图谱；自动抽取仍待核验。发布仓库模式在下次工具调用时加载当前发布版本；固定文件模式仍需重启。'}
+{
+ "items": [
+  {
+   "sufficient": false,
+   "source_documents": [
+    {
+     "id": "N-DOC-cbf1c1ce2a3d61",
+     "file": "WS-T872-2025_重排.txt",
+     "title": "基层医疗卫生机构高血压防治管理标准",
+     "year": "2025",
+     "profile": "standard",
+     "warnings": [],
+     "reference_year_evidence": {
+      "file": "WS-T872-2025_重排.txt",
+      "section": "REFERENCES",
+      "page": 8,
+      "block_id": "B-232e1532f133",
+      "start": 22,
+      "end": 51,
+      "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+      "section_status": "from_text_heading",
+      "verification": "pending",
+      "confidence": 0.95,
+      "confidence_basis": "rule_heuristic_not_calibrated"
+     },
+     "referenced_primary_year": "2021",
+     "verification": "pending",
+     "confidence": 0.9,
+     "confidence_basis": "rule_heuristic_not_calibrated",
+     "verification_reasons": [
+      "document_metadata_requires_review"
+     ]
+    },
+    {
+     "id": "N-DOC-c7e1aac134f39b",
+     "file": "中国高血压临床实践指南2025版_重排.txt",
+     "title": "中国高血压临床实践指南",
+     "year": "2024",
+     "profile": "clinical",
+     "warnings": [
+      "文件名年份 2025 与正文刊期 2024 不同；正文年份仍需人工核验。"
+     ],
+     "reference_year_evidence": null,
+     "referenced_primary_year": "",
+     "verification": "pending",
+     "confidence": 0.55,
+     "confidence_basis": "rule_heuristic_not_calibrated",
+     "verification_reasons": [
+      "document_metadata_requires_review"
+     ]
+    }
+   ],
+   "items": [
+    {
+     "id": "E-14248f27040608",
+     "headId": "N-基层医疗卫生机构",
+     "relation": "requiresDrugClass",
+     "tailId": "N-β受体阻滞剂",
+     "condition": "基层医疗卫生机构应至少配备5大类降压药：血管紧张素转换酶抑制剂、血管紧张素Ⅱ受体阻滞剂、二氢吡啶类钙通道阻滞剂、噻嗪类利尿剂和β受体阻滞剂。",
+     "rule": "STD-DRUG-STOCK",
+     "file": "WS-T872-2025_重排.txt",
+     "section": "4.2",
+     "page": 3,
+     "block_id": "B-022083302079",
+     "start": 9,
+     "end": 80,
+     "evidence": "基层医疗卫生机构应至少配备5大类降压药：血管紧张素转换酶抑制剂、血管紧张素Ⅱ受体阻滞剂、\n二氢吡啶类钙通道阻滞剂、噻嗪类利尿剂和β受体阻滞剂。",
+     "section_status": "from_text_heading",
+     "verification": "pending",
+     "confidence": 0.92,
+     "confidence_basis": "rule_heuristic_not_calibrated",
+     "scope": {
+      "purpose": "机构药物保障；不等于一线初始用药"
+     },
+     "basis_sections": [],
+     "source_profile": "standard",
+     "modality": "应至少配备",
+     "source_section_id": "N-B-022083302079",
+     "extraction_basis": "全文规则",
+     "choice_group": "",
+     "exceptions": [],
+     "verification_reasons": [
+      "clinical_review_required"
+     ]
+    },
+    {
+     "id": "E-6f972edc504aa0",
+     "headId": "N-β受体阻滞剂",
+     "relation": "excludedFromFirstLine",
+     "tailId": "N-高血压",
+     "condition": "无临床合并症的一线初始用药；不等于所有场景禁用；因此本指南不建议将β受体阻滞剂作为一线初始降压药物。",
+     "rule": "CL-BB-NOT-FIRST-LINE",
+     "file": "中国高血压临床实践指南2025版_重排.txt",
+     "section": "CQ13",
+     "page": 15,
+     "block_id": "B-1ef44f45c4d3",
+     "start": 1336,
+     "end": 1363,
+     "evidence": "因此本指南不建议将β受体阻滞剂作为一线初始\n降压药物。",
+     "section_status": "from_text_heading",
+     "verification": "pending",
+     "confidence": 0.92,
+     "confidence_basis": "rule_heuristic_not_calibrated",
+     "scope": {
+      "population": "无临床合并症的高血压患者",
+      "purpose": "一线初始降压"
+     },
+     "basis_sections": [],
+     "source_profile": "clinical",
+     "modality": "不建议",
+     "source_section_id": "N-B-1ef44f45c4d3",
+     "extraction_basis": "全文规则",
+     "choice_group": "",
+     "exceptions": [],
+     "verification_reasons": [
+      "clinical_review_required"
+     ]
+    }
+   ],
+   "verification": "pending",
+   "reason": "机构药物配备与无合并症患者一线初始用药是不同决策；配备不意味着所有患者首选，非首选也不意味着禁用。",
+   "subject": "β受体阻滞剂",
+   "kind": "drug_recommendation_scope_comparison",
+   "confidence": 0.55,
+   "status": "not_conflicting_different_purpose",
+   "confidence_basis": "rule_heuristic_not_calibrated"
+  },
+  {
+   "sufficient": false,
+   "source_documents": [
+    {
+     "id": "N-DOC-fa69b0792accaf",
+     "file": "国家基层高血压防治管理指南2025版_重排.txt",
+     "title": "国家基层高血压防治管理指南",
+     "year": "2025",
+     "profile": "primary",
+     "warnings": [],
+     "reference_year_evidence": null,
+     "ref
+
+			453 button (expanded) Reasoning, Secondary Actions: Collapse
+				454 image
+				455 text Reasoning
+				456 image
+			457 container
+				458 text 步骤 3 <code>  import json trace = read_skill_md("clinical-trace-report") print(trace[:1500]) for bid in ["B-022083302079", "B-1ef44f45c4d3"]: resp = checked(get_evidence(block_id=bid)) block = resp["items"][0] assert block["id"] == bid and block["body"] evidence_packet["evidence"][bid] = block print(bid, block.get("page"), block.get("section"), block["body"][:200])  </code>
+			459 button (expanded) Executed code PYTHON, Secondary Actions: Collapse
+				460 image
+				461 text Executed code
+				462 text PYTHON
+				463 image
+			464 container
+				465 text import  json trace  =  read_skill_md( "clinical-trace-report" ) print (trace[: 1500 ]) for  bid  in  [ "B-022083302079" ,  "B-1ef44f45c4d3" ]:     resp  =  checked(get_evidence( block_id = bid))     block  =  resp[ "items" ][ 0 ]     assert  block[ "id" ]  ==  bid  and  block[ "body" ]     evidence_packet[ "evidence" ][bid]  =  block     print (bid, block.get( "page" ), block.get( "section" ), block[ "body" ][: 200 ])
+			466 button (expanded) 3 tool calls, Secondary Actions: Collapse
+				467 text 3 tool calls
+				468 image
+			524 container radix-_r_om_
+				525 button (expanded) Used tool: read_skill_md, Secondary Actions: Collapse
+					526 image
+					527 text Used tool
+					528 text : 
+					529 text read_skill_md
+				556 container radix-_r_p4_
+					557 text Arguments:
+					558 text {
+  "skill_name": "clinical-trace-report"
+}
+				530 button (expanded) Used tool: get_evidence, Secondary Actions: Collapse
+					531 image
+					532 text Used tool
+					533 text : 
+					534 text get_evidence
+				559 container radix-_r_p5_
+					560 text Arguments:
+					561 text {
+  "block_id": "B-022083302079"
+}
+				535 button (expanded) Used tool: get_evidence, Secondary Actions: Collapse
+					536 image
+					537 text Used tool
+					538 text : 
+					539 text get_evidence
+				562 container radix-_r_p6_
+					563 text Arguments:
+					564 text {
+  "block_id": "B-1ef44f45c4d3"
+}
+					565 text Result:
+					566 text ---
+name: clinical-trace-report
+description: "为工具检索或推理结果生成短答及可追溯证据报告。输出实际知识版本、每一跳原文、适用条件、未核验状态；检查引用完整与版本一致，不编造出处、概率或工具调用。"
+---
+
+# 证据核对与交付（模板1.0.0）
+
+输入evidence_packet和本轮真实工具结果。这个Skill负责核对和组织，不自带医学事实、不调用写入工具。
+
+## 输出前核对
+
+1. 只使用本轮实际查得的事实与出处；若工具响应是字符串，json.loads后读取。knowledge_version.release_id必须一致；缺失/发生变化时不能写成一个稳定版本的结论。
+2. 每个结论有原文、文件、PDF物理页和章节；多跳保留每一跳的出处。版面错位保留语义章节、实际文本位置及待核验说明；参考文献区域不可写成正文条款。
+3. 保留“至少”“直至”“择一”“不宜联用”等实际限制。血压边界不等于确诊；复测的规范、不同日期、时间窗、次数及每次达到边界等逻辑仅按实际rule.requirements说明，用户未给条件不编造。
+4. 文件名年份不等于正文年份，优先工具source_documents或meta.documents里的year与证据。两文件版本不匹配必须披露，不替缺失旧版编造原文。
+5. verification=pending要说明“自动抽取待核验”。confidence保持来源的规则分及未校准说明，不汇总成医学正确概率；sufficient=false不能改成true。不确定候选不得删除或当成已经审核。
+
+## 普通问答
+
+先回答所问，再给简短出处与必要限制。遵循智能体默认200字符上限；长问题的决定性前提不能通过截断省略。只在实际证据足够支撑资料回答时回答对应部分，缺失部分单独说明。图谱没有返回平台引用标识时直接写文档短名、页码、条款，不伪造[[1]]。
+
+## 用户要求详细证据报告时
+
+依次输出：
+- 所问与资料结论（证据未核验不当个体处方）；
+- 本轮release_id与本体版本；
+- 实际工具调用顺序（只记发生过的调用）；
+- 推理路径，每一步包含节点、关系、方向、条件、edge_id、block_id、文件/页/章节/关键原文；
+- 同文跨节/跨文档的真实范围；
+- 冲突、未命中、版面及版本限制；
+- verification及confidence_basis，不制造专家审批状态。
+
+本Skill只是按返回证据组织报告，不自动生成不可篡改审计认证，也不自动保存用户个人病历。
+
+B-022083302079 3 4.2 4.2 药物保障
+基层医疗卫生机构应至少配备5大类降压药：血管紧张素转换酶抑制剂、血管紧张素Ⅱ受体阻滞剂、
+二氢吡啶类钙通道阻滞剂、噻嗪类利尿剂和β受体阻滞剂。
+B-1ef44f45c4d3 15 CQ13 临床问题 13  无临床合并症的高血压患者初始降
+压药物如何推荐？
+推荐意见
+· 推 荐 将 血 管 紧 张 素 转 化 酶 抑 制 剂
+（angiotensin‑converting enzyme inhibitor，
+ACEI）、血 管 紧 张 素 受 体 拮 抗 剂（angiotensin
+receptor  blocker，ARB）、钙 通 道 阻 滞 剂（calcium
+channel 
+Last output from code snippet:
+不矛盾：CQ13仅指无合并症者不作一线初始用药，WS/T 872—2025 4.2是机构“应至少配备”，配备不等于首选，也非禁用。
+出处：临床指南CQ13第15页；WS/T 872—2025 4.2第3页。自动抽取待核验。
+			469 button (expanded) Reasoning, Secondary Actions: Collapse
+				470 image
+				471 text Reasoning
+				472 image
+			473 container
+				474 text 步骤 4 <code>  answer = "不矛盾：CQ13仅指无合并症者不作一线初始用药，WS/T 872—2025 4.2是机构“应至少配备”，配备不等于首选，也非禁用。\n出处：临床指南CQ13第15页；WS/T 872—2025 4.2第3页。自动抽取待核验。" assert evidence_packet["results"] and len(evidence_packet["evidence"]) == 2 assert "自动抽取待核验" in answer assert len(answer) <= 200, len(answer) final_answer(answer)  </code>
+			475 button (expanded) Executed code PYTHON, Secondary Actions: Collapse
+				476 image
+				477 text Executed code
+				478 text PYTHON
+				479 image
+			480 container
+				481 text answer  =  "不矛盾：CQ13仅指无合并症者不作一线初始用药，WS/T 872—2025 4.2是机构“应至少配备”，配备不等于首选，也非禁用。 \n 出处：临床指南CQ13第15页；WS/T 872—2025 4.2第3页。自动抽取待核验。" assert  evidence_packet[ "results" ]  and  len (evidence_packet[ "evidence" ])  ==  2 assert  "自动抽取待核验"  in  answer assert  len (answer)  <=  200 ,  len (answer) final_answer(answer)
+			482 text 不矛盾：CQ13仅指无合并症者不作一线初始用药，WS/T 872—2025 4.2是机构“应至少配备”，配备不等于首选，也非禁用。 出处：临床指南CQ13第15页；WS/T 872—2025 4.2第3页。自动抽取待核验。
+			483 button 复制
+				484 image
+				485 text 复制
+			486 button 刷新
+				487 image
+				488 text 刷新
+			489 pop up button (collapsed) 更多, ID: radix-_r_or_, Secondary Actions: Expand
+				490 image
+				491 text 更多
+			492 container 生成耗时 6.52s
+				493 image
+				494 text 6.52s
+			495 button 6% 本轮
+				496 image
+				497 text 6
+				498 text %
+				499 text 本轮
+		300 container
+			301 button 滚动到底部
+				302 image
+				303 text 滚动到底部
+			304 container
+				305 button 规划
+					306 image
+					307 text 规划
+				308 button 执行
+					309 image
+					310 text 执行
+				311 text entry area (settable)
+				312 container
+					313 combo box (collapsed) Value: deepseek-flash, Secondary Actions: Expand
+						314 image
+						315 text deepseek-flash
+						316 image
+					317 button 知识库：跟随智能体默认
+						318 image
+						319 text 知识库：跟随智能体默认
+					320 button 添加附件
+						321 image
+						322 text 添加附件
+					500 button (disabled) 发送
+						501 image
+		188 text Nexent © 2026 ·  v2.7.0
+		32 link Description: 使用条款, Value: github.com/nexent-hub/nexent?tab=License-1-ov-file#readme
+
+The focused UI element is 535 button (expanded) Used tool: get_evidence, Secondary Actions: Collapse

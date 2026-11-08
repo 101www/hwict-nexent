@@ -1,0 +1,41 @@
+{
+  "current": "R-20261106T171012-9c1d6e4d16",
+  "releases": [
+    "R-20261106T171012-9c1d6e4d16"
+  ],
+  "proposals": {
+    "P-20261106T171013-6253615b24": {
+      "status": "pending",
+      "proposal_sha256": "6f39ad0c154f5aa2fb771a71949797572df8229829d2a418d9dedc3f5258a863",
+      "review_event": null
+    },
+    "P-20261106T173347-cd0e485d88": {
+      "status": "pending",
+      "proposal_sha256": "ebca3c0eafc89bd492e5dff77e57685e221a329ba28b9e694d8738899baa3056",
+      "review_event": null
+    }
+  },
+  "events": [
+    {
+      "id": "EV-20261106T171012-3752d4bc84",
+      "at": "2026-11-06T17:10:12+00:00",
+      "action": "initialize",
+      "release_id": "R-20261106T171012-9c1d6e4d16",
+      "label": "历史回放：仅管理标准"
+    },
+    {
+      "id": "EV-20261106T171013-7daa55e84a",
+      "at": "2026-11-06T17:10:13+00:00",
+      "action": "propose",
+      "proposal_id": "P-20261106T171013-6253615b24",
+      "label": "历史回放：加入已持有的基层指南；不是新指南发布"
+    },
+    {
+      "id": "EV-20261106T173347-796a08e9a9",
+      "at": "2026-11-06T17:33:47+00:00",
+      "action": "propose",
+      "proposal_id": "P-20261106T173347-cd0e485d88",
+      "label": "自动验收：继续加入专科临床指南，验证第二次增量提案"
+    }
+  ]
+}

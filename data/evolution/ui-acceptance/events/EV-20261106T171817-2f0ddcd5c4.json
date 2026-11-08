@@ -1,0 +1,12 @@
+{
+  "id": "EV-20261106T171817-2f0ddcd5c4",
+  "at": "2026-11-06T17:18:17+00:00",
+  "action": "review",
+  "proposal_id": "P-20261106T171739-42d04da375",
+  "decision": "defer",
+  "reviewer": "automated_ui_acceptance",
+  "reason": "第二轮提案暂缓发布，验证候选完整保留和审核门禁。",
+  "actor_kind": "automated_test",
+  "proposal_sha256": "73a828db326833dfa021e294155598ddd95ee06999dcfdc53c8e07e6b0be9599",
+  "scope": "engineering_publication_only_not_medical_review"
+}

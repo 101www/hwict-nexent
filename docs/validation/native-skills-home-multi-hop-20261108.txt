@@ -1,0 +1,445 @@
+Browser tab: 7, Title: "AI Agent Platform", URL: "http://192.168.100.150:3000/zh/newchat".
+1 AXWebArea AI Agent Platform, URL: 192.168.100.150:3000/zh/newchat
+	2 container
+		3 container
+			4 link Description: logo Nexent, Value: 192.168.100.150:3000/
+			5 link Description: Github, Value: github.com/ModelEngine-Group/nexent
+			6 link Description: ModelEngine, Value: modelengine-ai.net/
+			7 image
+			33 text 简体中文
+			8 image
+			9 button 通知
+				10 image
+			34 text [账号已隐藏]
+			11 image
+		12 menu
+			35 首页
+				36 image
+				37 text 首页
+			38 开始问答
+				39 image
+				40 text 开始问答
+			41 自动任务
+				42 image
+				43 text 自动任务
+			16 (collapsed) 智能体开发, Secondary Actions: Expand
+				17 image
+				44 text 智能体开发
+			23 (collapsed) 资源仓库, Secondary Actions: Expand
+				24 image
+				45 text 资源仓库
+			46 资源管理
+				47 image
+				48 text 资源管理
+		26 button
+			27 image
+		189 button 新对话
+			190 image
+			191 text 新对话
+		192 button Toggle Sidebar
+			193 image
+			194 text Toggle Sidebar
+		195 container
+			196 text 今天
+			321 button 糖尿病高血压首选降压药
+				322 text 糖尿病高血压首选降压药
+			323 pop up button (collapsed) ID: radix-_r_cq_, Secondary Actions: Expand
+				324 image
+			325 button 血压随访间隔对比
+				326 text 血压随访间隔对比
+			327 pop up button (collapsed) ID: radix-_r_ct_, Secondary Actions: Expand
+				328 image
+			329 button graph版本核验
+				330 text graph版本核验
+			331 pop up button (collapsed) ID: radix-_r_d0_, Secondary Actions: Expand
+				332 image
+			333 button 查询图谱状态信息
+				334 text 查询图谱状态信息
+			335 pop up button (collapsed) ID: radix-_r_d3_, Secondary Actions: Expand
+				336 image
+			209 text 更早
+			337 button β阻滞剂指南与标准矛盾？
+				338 text β阻滞剂指南与标准矛盾？
+			339 pop up button (collapsed) ID: radix-_r_d6_, Secondary Actions: Expand
+				340 image
+			341 button 140/90算高血压吗
+				342 text 140/90算高血压吗
+			343 pop up button (collapsed) ID: radix-_r_d9_, Secondary Actions: Expand
+				344 image
+			345 button 糖尿病高血压首选降压药
+				346 text 糖尿病高血压首选降压药
+			347 pop up button (collapsed) ID: radix-_r_dc_, Secondary Actions: Expand
+				348 image
+			349 button β阻滞剂指南矛盾？
+				350 text β阻滞剂指南矛盾？
+			351 pop up button (collapsed) ID: radix-_r_df_, Secondary Actions: Expand
+				352 image
+			353 button 140/90算高血压吗
+				354 text 140/90算高血压吗
+			355 pop up button (collapsed) ID: radix-_r_di_, Secondary Actions: Expand
+				356 image
+			357 button 糖尿病高血压首选降压药
+				358 text 糖尿病高血压首选降压药
+			359 pop up button (collapsed) ID: radix-_r_dl_, Secondary Actions: Expand
+				360 image
+			361 button β阻滞剂指南与标准矛盾？
+				362 text β阻滞剂指南与标准矛盾？
+			363 pop up button (collapsed) ID: radix-_r_do_, Secondary Actions: Expand
+				364 image
+			365 button 140/90算高血压吗
+				366 text 140/90算高血压吗
+			367 pop up button (collapsed) ID: radix-_r_dr_, Secondary Actions: Expand
+				368 image
+			369 button 糖尿病高血压首选药
+				370 text 糖尿病高血压首选药
+			371 pop up button (collapsed) ID: radix-_r_du_, Secondary Actions: Expand
+				372 image
+			373 button 血压随访间隔
+				374 text 血压随访间隔
+			375 pop up button (collapsed) ID: radix-_r_e1_, Secondary Actions: Expand
+				376 image
+			377 button 血压随访周期差异
+				378 text 血压随访周期差异
+			379 pop up button (collapsed) ID: radix-_r_e4_, Secondary Actions: Expand
+				380 image
+			381 button 80岁以上血压目标
+				382 text 80岁以上血压目标
+			383 pop up button (collapsed) ID: radix-_r_e7_, Secondary Actions: Expand
+				384 image
+			385 button 糖尿病高血压首选降压药
+				386 text 糖尿病高血压首选降压药
+			387 pop up button (collapsed) ID: radix-_r_ea_, Secondary Actions: Expand
+				388 image
+			389 button 高血压前期血压范围
+				390 text 高血压前期血压范围
+			391 pop up button (collapsed) ID: radix-_r_ed_, Secondary Actions: Expand
+				392 image
+			393 button 高血压诊断标准
+				394 text 高血压诊断标准
+			395 pop up button (collapsed) ID: radix-_r_eg_, Secondary Actions: Expand
+				396 image
+			270 button (disabled) 已加载全部会话
+		271 button 批量管理
+			272 image
+			273 text 批量管理
+		274 button 切换旧版
+			275 image
+			276 text 切换旧版
+		277 container
+			278 button
+				279 image
+			280 text 糖尿病高血压首选降压药 高血压用药决策助手
+			319 button 分享对话
+				320 image
+		397 container
+			398 container
+				399 text 高血压合并糖尿病患者，指南中有哪些首选降压药方案？
+			400 container
+				401 text 高血压用药决策助手 已完成
+			402 button (collapsed) 1 tool call, Secondary Actions: Expand
+				403 text 1 tool call
+				404 image
+			405 button (expanded) Reasoning, Secondary Actions: Collapse
+				406 image
+				407 text Reasoning
+				408 image
+			409 container
+				410 text 步骤 1 <code>  skill_router = read_skill_md("clinical-evidence-router") print(skill_router)  </code>
+			411 button (expanded) Executed code PYTHON, Secondary Actions: Collapse
+				412 image
+				413 text Executed code
+				414 text PYTHON
+				415 image
+			416 container
+				417 text skill_router  =  read_skill_md( "clinical-evidence-router" ) print (skill_router)
+			418 button (collapsed) 1 tool call, Secondary Actions: Expand
+				419 text 1 tool call
+				420 image
+			421 button (expanded) Reasoning, Secondary Actions: Collapse
+				422 image
+				423 text Reasoning
+				424 image
+			425 container
+				426 text 步骤 2
+				427 text <code>  import json skill_multi = read_skill_md("clinical-multi-hop") print(skill_multi) skill_trace = read_skill_md("clinical-trace-report") print(skill_trace) def decode(raw): return json.loads(raw) if isinstance(raw, str) else raw status = decode(graph_status()) release = status["knowledge_version"]["release_id"] assert release evidence_packet = {"release_id": release, "results": [], "evidence": {}} def checked(raw): result = decode(raw) assert result["knowledge_version"]["release_id"] == release evidence_packet["results"].append(result) return result result = checked(resolve_regimen(population="高血压合并糖尿病患者")) print(json.dumps(result, ensure_ascii=False)[:3000]) block_ids = [] for it in result.get("items", []): for p in it.get("paths", []) or []: for s in p.get("steps", []) or []: if s.get("block_id"): block_ids.append(s["block_id"]) for s in it.get("supporting_evidence", []) or []: if isinstance(s, dict) and s.get("block_id"): block_ids.append(s["block_id"]) for s in it.get("combination_limit_evidence", []) or []: if isinstance(s, dict) and s.get("block_id"): block_ids.append(s["block_id"]) print("BLOCKS:", block_ids)  </code>
+			428 button (expanded) Executed code PYTHON, Secondary Actions: Collapse
+				429 image
+				430 text Executed code
+				431 text PYTHON
+				432 image
+			433 container
+				434 text import  json skill_multi  =  read_skill_md( "clinical-multi-hop" ) print (skill_multi) skill_trace  =  read_skill_md( "clinical-trace-report" ) print (skill_trace) def  decode (raw):     return  json.loads(raw)  if  isinstance (raw,  str )  else  raw status  =  decode(graph_status()) release  =  status[ "knowledge_version" ][ "release_id" ] assert  release evidence_packet  =  { "release_id" : release,  "results" : [],  "evidence" : {}} def  checked (raw):     result  =  decode(raw)     assert  result[ "knowledge_version" ][ "release_id" ]  ==  release     evidence_packet[ "results" ].append(result)     return  result result  =  checked(resolve_regimen( population = "高血压合并糖尿病患者" )) print (json.dumps(result,  ensure_ascii = False )[: 3000 ]) block_ids  =  [] for  it  in  result.get( "items" , []):     for  p  in  it.get( "paths" , [])  or  []:         for  s  in  p.get( "steps" , [])  or  []:             if  s.get( "block_id" ):                 block_ids.append(s[ "block_id" ])     for  s  in  it.get( "supporting_evidence" , [])  or  []:         if  isinstance (s,  dict )  and  s.get( "block_id" ):             block_ids.append(s[ "block_id" ])     for  s  in  it.get( "combination_limit_evidence" , [])  or  []:         if  isinstance (s,  dict )  and  s.get( "block_id" ):             block_ids.append(s[ "block_id" ]) print ( "BLOCKS:" , block_ids)
+			435 button (expanded) 4 tool calls, Secondary Actions: Collapse
+				436 text 4 tool calls
+				437 image
+			488 container radix-_r_en_
+				489 button (expanded) Used tool: read_skill_md, Secondary Actions: Collapse
+					490 image
+					491 text Used tool
+					492 text : 
+					493 text read_skill_md
+				535 container radix-_r_f4_
+					536 text Arguments:
+					537 text {
+  "skill_name": "clinical-multi-hop"
+}
+				494 button (expanded) Used tool: read_skill_md, Secondary Actions: Collapse
+					495 image
+					496 text Used tool
+					497 text : 
+					498 text read_skill_md
+				538 container radix-_r_f5_
+					539 text Arguments:
+					540 text {
+  "skill_name": "clinical-trace-report"
+}
+				499 button (expanded) Used tool: graph_status, Secondary Actions: Collapse
+					500 image
+					501 text Used tool
+					502 text : 
+					503 text graph_status
+				541 container radix-_r_f6_
+					542 text Arguments:
+					543 text {}
+				504 button (expanded) Used tool: resolve_regimen, Secondary Actions: Collapse
+					505 image
+					506 text Used tool
+					507 text : 
+					508 text resolve_regimen
+				544 container radix-_r_f7_
+					545 text Arguments:
+					546 text {
+  "population": "高血压合并糖尿病患者"
+}
+					547 text Result:
+					548 text ---
+name: clinical-multi-hop
+description: "高血压合并症首选药或图谱多跳路径问题使用。按同方案组连接人群、方案、药物类别，逐跳核对原文和条件，区分同文跨节与跨文档路径，不把通用连通路径当作临床推断。"
+---
+
+# 有条件的多跳取证（模板1.0.0）
+
+输入：用户原问题、总流程本轮release_id（若独立执行，先graph_status）。工具JSON字符串必须json.loads后读取；所有响应版本须一致。
+
+## 专用两跳
+
+对“合并糖尿病的高血压患者首选哪类药”这种问题：实际调用resolve_regimen(population="高血压合并糖尿病患者")，其他人群用工具可识别的完整名称，不能把糖尿病答案套用到未知合并症。
+
+读取items中的paths、components、selection和restrictions等实际存在字段。每条path的steps[].edge必须保留id、headId、tailId、relation、regimen_group、条件和原文出处。确认两条边属于同一个非空regimen_group，再解释人群←首选方案→成分。按components的one_of解读择一，不能把可替代类别变成联用方案。
+
+读取每一跳的supporting_evidence及原文block_id，实际get_evidence核对首选句、定义句和限制句；同一块去重。首选句若section_status=needs_layout_review，同时保留semantic_section、实际section/page，面向用户说明“版面待核验”。不要只引用类别定义冒充人群首选证据。
+
+## 通用路径
+
+未知实体先find_entities。traverse_relations从实际实体开始，最多3跳；查看steps的forward、边本身方向、条件与跳数。路径连通仅表示证据连通，不能由此自动传递药物适应证、禁忌或处方。没有合法可组合路径就报告未找到这类结构化证据，必要时回到原文查找，不强凑两跳。
+
+## 交付给溯源流程
+
+在evidence_packet保留路径和每一跳出处，按路径实际文件去重计数。文件数1且章节不同称“同文跨节两跳”，文件数至少2才称“跨文档路径”；不能把全文入库3份说成每次推理跨了3份。
+
+保留verification=pending、confidence原值和confidence_basis。未核验的两跳结果不能变成个体化处方。最后交给clinical-trace-report；不在Skill中预填药物结论或页码。
+
+---
+name: clinical-trace-report
+description: "为工具检索或推理结果生成短答及可追溯证据报告。输出实际知识版本、每一跳原文、适用条件、未核验状态；检查引用完整与版本一致，不编造出处、概率或工具调用。"
+---
+
+# 证据核对与交付（模板1.0.0）
+
+输入evidence_packet和本轮真实工具结果。这个Skill负责核对和组织，不自带医学事实、不调用写入工具。
+
+## 输出前核对
+
+1. 只使用本轮实际查得的事实与出处；若工具响应是字符串，json.loads后读取。knowledge_version.release_id必须一致；缺失/发生变化时不能写成一个稳定版本的结论。
+2. 每个结论有原文、文件、PDF物理页和章节；多跳保留每一跳的出处。版面错位保留语义章节、实际文本位置及待核验说明；参考文献区域不可写成正文条款。
+3. 保留“至少”“直至”“择一”“不宜联用”等实际限制。血压边界不等于确诊；复测的规范、不同日期、时间窗、次数及每次达到边界等逻辑仅按实际rule.requirements说明，用户未给条件不编造。
+4. 文件名年份不等于正文年份，优先工具source_documents或meta.documents里的year与证据。两文件版本不匹配必须披露，不替缺失旧版编造原文。
+5. verification=pending要说明“自动抽取待核验”。confidence保持来源的规则分及未校准说明，不汇总成医学正确概率；sufficient=false不能改成true。不确定候选不得删除或当成已经审核。
+
+## 普通问答
+
+先回答所问，再给简短出处与必要限制。遵循智能体默认200字符上限；长问题的决定性前提不能通过截断省略。只在实际证据足够支撑资料回答时回答对应部分，缺失部分单独说明。图谱没有返回平台引用标识时直接写文档短名、页码、条款，不伪造[[1]]。
+
+## 用户要求详细证据报告时
+
+依次输出：
+- 所问与资料结论（证据未核验不当个体处方）；
+- 本轮release_id与本体版本；
+- 实际工具调用顺序（只记发生过的调用）；
+- 推理路径，每一步包含节点、关系、方向、条件、edge_id、block_id、文件/页/章节/关键原文；
+- 同文跨节/跨文档的真实范围；
+- 冲突、未命中、版面及版本限制；
+- verification及confidence_basis，不制造专家审批状态。
+
+本Skill只是按返回证据组织报告，不自动生成不可篡改审计认证，也不自动保存用户个人病历。
+
+{"items": [{"confidence_basis": "rule_heuristic_not_calibrated", "paths": [{"steps": [{"edge": {"id": "E-66e12bb6b24d32", "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂", "relation": "preferredRegimenFor", "tailId": "N-高血压合并糖尿病患者", "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。", "rule": "PR-COMORBID-DM", "file": "国家基层高血压防治管理指南2025版_重排.txt", "section": "5.4.6.1", "page": 9, "block_id": "B-257f599f3070", "start": 153, "end": 179, "evidence": "合并糖尿病：首选 A，血压未达标者加用 C 或 D。", "section_status": "needs_layout_review", "verification": "pending", "confidence": 0.55, "confidence_basis": "rule_heuristic_not_calibrated", "scope": {"population": "高血压合并糖尿病患者", "purpose": "合并症用药选择"}, "basis_sections": ["5.4.2", "5.4.3"], "source_profile": "primary", "modality": "首选", "source_section_id": "N-B-257f599f3070", "extraction_basis": "全文规则", "semantic_section": "5.4.3.2", "supporting_evidence": [{"file": "国家基层高血压防治管理指南2025版_重排.txt", "section": "5.4.2", "page": 6, "block_id": "B-f9564b21fff0", "start": 0, "end": 1454, "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。", "section_status": "from_text_heading", "verification": "pending", "confidence": 0.95, "confidence_basis": "rule_heuristic_not_calibrated"}], "combination_limit_evidence": [{"file": "国家基层高血压防治管理指南2025版_重排.txt", "section": "5.4.4", "page": 9, "block_id": "B-16ff197f2a95", "start": 82, "end": 100, "evidence": "不宜联合应用 ACEI 与 ARB。", "section_status": "from_text_heading", "verification": "pending", "confidence": 0.95, "confidence_basis": "rule_
+BLOCKS: []
+
+			438 button (expanded) Reasoning, Secondary Actions: Collapse
+				439 image
+				440 text Reasoning
+				441 image
+			442 container
+				443 text 步骤 3
+				444 text <code>  import json def decode(raw): return json.loads(raw) if isinstance(raw, str) else raw status = decode(graph_status()) release = status["knowledge_version"]["release_id"] assert release if "evidence_packet" not in dir(): evidence_packet = {"release_id": release, "results": [], "evidence": {}} if release != evidence_packet["release_id"]: evidence_packet = {"release_id": release, "results": [], "evidence": {}} def checked(raw): result = decode(raw) assert result["knowledge_version"]["release_id"] == release evidence_packet["results"].append(result) return result result = checked(resolve_regimen(population="高血压合并糖尿病患者")) items = result.get("items", []) ids = {"B-257f599f3070", "B-f9564b21fff0", "B-16ff197f2a95"} for it in items: for p in it.get("paths", []) or []: for s in p.get("steps", []) or []: e = s.get("edge", {}) if e.get("block_id"): ids.add(e["block_id"]) for se in e.get("supporting_evidence", []) or []: if se.get("block_id"): ids.add(se["block_id"]) for ce in e.get("combination_limit_evidence", []) or []: if ce.get("block_id"): ids.add(ce["block_id"]) for s in it.get("supporting_evidence", []) or []: if isinstance(s, dict) and s.get("block_id"): ids.add(s["block_id"]) for s in it.get("combination_limit_evidence", []) or []: if isinstance(s, dict) and s.get("block_id") and s.get("evidence"): evidence_packet["evidence"][s["block_id"]] = s for bid in sorted(ids): if bid in evidence_packet["evidence"]: continue resp = checked(get_evidence(block_id=bid)) assert resp["items"] blk = resp["items"][0] assert blk["id"] == bid and blk["body"] evidence_packet["evidence"][bid] = blk print(bid, "|", blk.get("file"), "| p.", blk.get("page"), "|", blk.get("section")) print(blk["body"][:300]) print("PENDING:", any(r.get("verification") == "pending" for r in evidence_packet["results"]))  </code>
+			445 button (expanded) Executed code PYTHON, Secondary Actions: Collapse
+				446 image
+				447 text Executed code
+				448 text PYTHON
+				449 image
+			450 container
+				451 text import  json def  decode (raw):     return  json.loads(raw)  if  isinstance (raw,  str )  else  raw status  =  decode(graph_status()) release  =  status[ "knowledge_version" ][ "release_id" ] assert  release if  "evidence_packet"  not  in  dir ():     evidence_packet  =  { "release_id" : release,  "results" : [],  "evidence" : {}} if  release  !=  evidence_packet[ "release_id" ]:     evidence_packet  =  { "release_id" : release,  "results" : [],  "evidence" : {}} def  checked (raw):     result  =  decode(raw)     assert  result[ "knowledge_version" ][ "release_id" ]  ==  release     evidence_packet[ "results" ].append(result)     return  result result  =  checked(resolve_regimen( population = "高血压合并糖尿病患者" )) items  =  result.get( "items" , []) ids  =  { "B-257f599f3070" ,  "B-f9564b21fff0" ,  "B-16ff197f2a95" } for  it  in  items:     for  p  in  it.get( "paths" , [])  or  []:         for  s  in  p.get( "steps" , [])  or  []:             e  =  s.get( "edge" , {})             if  e.get( "block_id" ):                 ids.add(e[ "block_id" ])             for  se  in  e.get( "supporting_evidence" , [])  or  []:                 if  se.get( "block_id" ):                     ids.add(se[ "block_id" ])             for  ce  in  e.get( "combination_limit_evidence" , [])  or  []:                 if  ce.get( "block_id" ):                     ids.add(ce[ "block_id" ])     for  s  in  it.get( "supporting_evidence" , [])  or  []:         if  isinstance (s,  dict )  and  s.get( "block_id" ):             ids.add(s[ "block_id" ])     for  s  in  it.get( "combination_limit_evidence" , [])  or  []:         if  isinstance (s,  dict )  and  s.get( "block_id" )  and  s.get( "evidence" ):             evidence_packet[ "evidence" ][s[ "block_id" ]]  =  s for  bid  in  sorted (ids):     if  bid  in  evidence_packet[ "evidence" ]:         continue     resp  =  checked(get_evidence( block_id = bid))     assert  resp[ "items" ]     blk  =  resp[ "items" ][ 0 ]     assert  blk[ "id" ]  ==  bid  and  blk[ "body" ]     evidence_packet[ "evidence" ][bid]  =  blk     print (bid,  "|" , blk.get( "file" ),  "| p." , blk.get( "page" ),  "|" , blk.get( "section" ))     print (blk[ "body" ][: 300 ]) print ( "PENDING:" ,  any (r.get( "verification" )  ==  "pending"  for  r  in  evidence_packet[ "results" ]))
+			452 button (expanded) 5 tool calls, Secondary Actions: Collapse
+				453 text 5 tool calls
+				454 image
+			509 container radix-_r_eq_
+				510 button (expanded) Used tool: graph_status, Secondary Actions: Collapse
+					511 image
+					512 text Used tool
+					513 text : 
+					514 text graph_status
+				549 container radix-_r_f8_
+					550 text Arguments:
+					551 text {}
+				515 button (expanded) Used tool: resolve_regimen, Secondary Actions: Collapse
+					516 image
+					517 text Used tool
+					518 text : 
+					519 text resolve_regimen
+				552 container radix-_r_f9_
+					553 text Arguments:
+					554 text {
+  "population": "高血压合并糖尿病患者"
+}
+				520 button (expanded) Used tool: get_evidence, Secondary Actions: Collapse
+					521 image
+					522 text Used tool
+					523 text : 
+					524 text get_evidence
+				555 container radix-_r_fa_
+					556 text Arguments:
+					557 text {
+  "block_id": "B-16ff197f2a95"
+}
+				525 button (expanded) Used tool: get_evidence, Secondary Actions: Collapse
+					526 image
+					527 text Used tool
+					528 text : 
+					529 text get_evidence
+				558 container radix-_r_fb_
+					559 text Arguments:
+					560 text {
+  "block_id": "B-257f599f3070"
+}
+				530 button (expanded) Used tool: get_evidence, Secondary Actions: Collapse
+					531 image
+					532 text Used tool
+					533 text : 
+					534 text get_evidence
+				561 container radix-_r_fc_
+					562 text Arguments:
+					563 text {
+  "block_id": "B-f9564b21fff0"
+}
+					564 text Result:
+					565 text B-16ff197f2a95 | 国家基层高血压防治管理指南2025版_重排.txt | p. 9 | 5.4.4
+5.4.4  用药注意事项
+每次调整药物种类或剂量后建议观察 2~4 周，
+评价药物治疗的有效性，避免频繁更换药物，除非
+出现不良反应等不耐受或需紧急处理的情况。
+不宜联合应用 ACEI 与 ARB。
+B-257f599f3070 | 国家基层高血压防治管理指南2025版_重排.txt | p. 9 | 5.4.6.1
+5.4.6.1   血压≥ 180/110 mmHg，不伴心、脑、肾急
+性并发症的临床症状
+心、脑、肾急性并发症：包括高血压脑病、脑
+出血、蛛网膜下腔出血、脑梗死、主动脉夹层动脉瘤、
+急性心力衰竭、肺水肿、不稳定性心绞痛、急性心
+肌梗死等疾病。
+（1）口服短效降压药物，如卡托普利 12.5~25 mg，
+合并糖尿病：首选 A，血压未达标者加用 C 或 D。
+合并慢性肾脏病：首选 A，血压未达标者加用
+C 或 D。如血肌酐水平首次超出正常范围，建议降
+压治疗方案由上级医院决定。
+合并动脉粥样硬化性外周血管疾病：初始选择 C、
+A、D 或 B 均可，如经单药治疗血压仍未达标，可联
+合用药，方案同“
+B-f9564b21fff0 | 国家基层高血压防治管理指南2025版_重排.txt | p. 6 | 5.4.2
+5.4.2  降压药物选择
+尽量选用证据明确、可改善预后的五大类降压
+药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻
+嗪类利尿剂，以及由上述药物组成的单片复方制剂。
+有条件者也可根据血压达标情况及适应证选择用
+ARNI 替代 ACEI/ARB。
+为便于记忆，上述降压药物分别以 A、B、C、
+D 简称。
+A：ACEI 和 ARB。这两类药物降压作用明确，
+尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢
+性肾脏病的患者，有充足的证据证明可改善预后。
+用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护
+作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265
+µmol/L）的严重肾功能
+PENDING: True
+Last output from code snippet:
+首选A类（ACEI或ARB，二者择一，不宜联用）；未达标加C或D。
+出处：《国家基层高血压防治管理指南2025版》，5.4.2 A定义（PDF第6页）、首选句及5.4.4限制（第9页）；首选句语义条款5.4.3.2，抽取位置5.4.6.1，版面待核验。自动抽取待核验。
+			455 button (expanded) Reasoning, Secondary Actions: Collapse
+				456 image
+				457 text Reasoning
+				458 image
+			459 container
+				460 text 步骤 4 <code>  import json answer = "首选A类（ACEI或ARB，二者择一，不宜联用）；未达标加C或D。\n出处：《国家基层高血压防治管理指南2025版》，5.4.2 A定义（PDF第6页）、首选句及5.4.4限制（第9页）；首选句语义条款5.4.3.2，抽取位置5.4.6.1，版面待核验。自动抽取待核验。" assert evidence_packet["results"] assert all(r["knowledge_version"]["release_id"] == evidence_packet["release_id"] for r in evidence_packet["results"]) assert len(answer) <= 200 final_answer(answer)  </code>
+			461 button (expanded) Executed code PYTHON, Secondary Actions: Collapse
+				462 image
+				463 text Executed code
+				464 text PYTHON
+				465 image
+			466 container
+				467 text import  json answer  =  "首选A类（ACEI或ARB，二者择一，不宜联用）；未达标加C或D。 \n 出处：《国家基层高血压防治管理指南2025版》，5.4.2 A定义（PDF第6页）、首选句及5.4.4限制（第9页）；首选句语义条款5.4.3.2，抽取位置5.4.6.1，版面待核验。自动抽取待核验。" assert  evidence_packet[ "results" ] assert  all (r[ "knowledge_version" ][ "release_id" ]  ==  evidence_packet[ "release_id" ]  for  r  in  evidence_packet[ "results" ]) assert  len (answer)  <=  200 final_answer(answer)
+			468 text 首选A类（ACEI或ARB，二者择一，不宜联用）；未达标加C或D。 出处：《国家基层高血压防治管理指南2025版》，5.4.2 A定义（PDF第6页）、首选句及5.4.4限制（第9页）；首选句语义条款5.4.3.2，抽取位置5.4.6.1，版面待核验。自动抽取待核验。
+			469 button 复制
+				470 image
+				471 text 复制
+			472 button 刷新
+				473 image
+				474 text 刷新
+			475 pop up button (collapsed) 更多, ID: radix-_r_ev_, Secondary Actions: Expand
+				476 image
+				477 text 更多
+			478 container 生成耗时 8.92s
+				479 image
+				480 text 8.92s
+			481 button 6% 本轮
+				482 image
+				483 text 6
+				484 text %
+				485 text 本轮
+		292 container
+			293 button 滚动到底部
+				294 image
+				295 text 滚动到底部
+			296 container
+				297 button 规划
+					298 image
+					299 text 规划
+				300 button 执行
+					301 image
+					302 text 执行
+				303 text entry area (settable)
+				304 container
+					305 combo box (collapsed) Value: deepseek-flash, Secondary Actions: Expand
+						306 image
+						307 text deepseek-flash
+						308 image
+					309 button 知识库：跟随智能体默认
+						310 image
+						311 text 知识库：跟随智能体默认
+					312 button 添加附件
+						313 image
+						314 text 添加附件
+					486 button (disabled) 发送
+						487 image
+		188 text Nexent © 2026 ·  v2.7.0
+		32 link Description: 使用条款, Value: github.com/nexent-hub/nexent?tab=License-1-ov-file#readme
+
+The focused UI element is 530 button (expanded) Used tool: get_evidence, Secondary Actions: Collapse

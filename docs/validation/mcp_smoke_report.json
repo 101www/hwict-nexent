@@ -1,0 +1,1226 @@
+{
+  "tested_at": "2026-10-18T01:08:51+08:00",
+  "url": "http://127.0.0.1:8081/sse",
+  "scope": "Java MCP protocol and real graph; Nexent/model not exercised",
+  "passed": true,
+  "calls": [
+    {
+      "tool": "graph_status",
+      "arguments": {},
+      "result": {
+        "source": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.json",
+        "mode": "real_graph_snapshot",
+        "meta": {
+          "domain": "高血压临床诊疗与基层慢病管理",
+          "ontology_version": "0.3.0",
+          "lexicon_version": "0.3.0",
+          "rules_version": "0.3.0",
+          "legacy_rules_version": "0.1.0",
+          "management_rules_version": "0.2.0",
+          "clinical_rules_version": "0.3.0",
+          "retention_policy": "uncertain_results_retained_pending",
+          "confidence_definition": "0~1规则启发式抽取评分；未经概率校准，不是医学正确率，不能替代人工核验。",
+          "built_at": "2026-10-18T00:45:18+08:00",
+          "source_docs": [
+            "WS-T872-2025_重排.txt",
+            "国家基层高血压防治管理指南2025版_重排.txt",
+            "中国高血压临床实践指南2025版_重排.txt"
+          ],
+          "documents": [
+            {
+              "id": "N-DOC-cbf1c1ce2a3d61",
+              "file": "WS-T872-2025_重排.txt",
+              "title": "基层医疗卫生机构高血压防治管理标准",
+              "year": "2025",
+              "profile": "standard",
+              "warnings": [],
+              "reference_year_evidence": {
+                "file": "WS-T872-2025_重排.txt",
+                "section": "REFERENCES",
+                "page": 8,
+                "block_id": "B-232e1532f133",
+                "start": 22,
+                "end": 51,
+                "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.95,
+                "confidence_basis": "rule_heuristic_not_calibrated"
+              },
+              "referenced_primary_year": "2021",
+              "verification": "pending",
+              "confidence": 0.9,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "document_metadata_requires_review"
+              ]
+            },
+            {
+              "id": "N-DOC-fa69b0792accaf",
+              "file": "国家基层高血压防治管理指南2025版_重排.txt",
+              "title": "国家基层高血压防治管理指南",
+              "year": "2025",
+              "profile": "primary",
+              "warnings": [],
+              "reference_year_evidence": null,
+              "referenced_primary_year": "",
+              "verification": "pending",
+              "confidence": 0.9,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "document_metadata_requires_review"
+              ]
+            },
+            {
+              "id": "N-DOC-c7e1aac134f39b",
+              "file": "中国高血压临床实践指南2025版_重排.txt",
+              "title": "中国高血压临床实践指南",
+              "year": "2024",
+              "profile": "clinical",
+              "warnings": [
+                "文件名年份 2025 与正文刊期 2024 不同；正文年份仍需人工核验。"
+              ],
+              "reference_year_evidence": null,
+              "referenced_primary_year": "",
+              "verification": "pending",
+              "confidence": 0.55,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "document_metadata_requires_review"
+              ]
+            }
+          ],
+          "builder": "pipeline/build_graph.py",
+          "page_numbering": "PDF physical page, null if unknown",
+          "limitations": [
+            "表格勾选关系未恢复，不推断表格列对应关系。",
+            "标准第 4、6 物理页存在文本错序，章节标记需核读，原文和页码仍保留。",
+            "全文中的诊疗数值仅保存为 threshold_candidates，未核验前不用于数值决策。",
+            "三份全文药物关系使用分源新规则；所有自动抽取关系待人工核验。",
+            "未解析药物语句、数字及重叠实体保留为待核验候选，缺端点/证据断言完整保留。",
+            "数值不同仅为待核对差异，不能自动认定为医学冲突。"
+          ],
+          "history_snapshots": [
+            {
+              "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\c27546d13c1343a0870b9fef26402d01cccb26f0d9c4ac096b003deab508f9ac.json",
+              "sha256": "c27546d13c1343a0870b9fef26402d01cccb26f0d9c4ac096b003deab508f9ac",
+              "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+              "verification": "pending",
+              "confidence": 1.0,
+              "confidence_basis": "exact_file_snapshot_sha256"
+            },
+            {
+              "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\0e8caadbe003c6cb1cfa99c4bbe1f786db958c9b006ed1b08b216c6da72fe0aa.json",
+              "sha256": "0e8caadbe003c6cb1cfa99c4bbe1f786db958c9b006ed1b08b216c6da72fe0aa",
+              "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+              "verification": "pending",
+              "confidence": 1.0,
+              "confidence_basis": "exact_file_snapshot_sha256"
+            }
+          ]
+        },
+        "nodes": 322,
+        "edges": 2498,
+        "blocks": 216,
+        "candidate_count": 1271,
+        "sufficient": false,
+        "message": "已加载真实图谱；自动抽取仍待核验。文件更新后需重启服务。"
+      }
+    },
+    {
+      "tool": "find_entities",
+      "arguments": {
+        "keyword": "顽固性高血压",
+        "type": "Disease"
+      },
+      "result": {
+        "items": [
+          {
+            "id": "N-难治性高血压",
+            "name": "难治性高血压",
+            "type": "Disease",
+            "aliases": [
+              "顽固性高血压"
+            ],
+            "attributes": {},
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.4.1",
+            "page": 5,
+            "block_id": "B-2b15546a3ede",
+            "start": 37,
+            "end": 43,
+            "evidence": "难治性高血压",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "sections": [
+              "5.4.2",
+              "7",
+              "8.4.1",
+              "CQ23",
+              "CQ24",
+              "CQ26",
+              "CQ27",
+              "CQ30",
+              "CQ33",
+              "CQ37",
+              "CQ40",
+              "CQ44",
+              "CQ5"
+            ],
+            "evidences": [
+              {
+                "file": "WS-T872-2025_重排.txt",
+                "section": "8.4.1",
+                "page": 5,
+                "block_id": "B-2b15546a3ede",
+                "start": 37,
+                "end": 43,
+                "evidence": "难治性高血压",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.95,
+                "confidence_basis": "rule_heuristic_not_calibrated"
+              },
+              {
+                "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                "section": "5.4.2",
+                "page": 6,
+                "block_id": "B-f9564b21fff0",
+                "start": 1153,
+                "end": 1159,
+                "evidence": "难治性高血压",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.95,
+                "confidence_basis": "rule_heuristic_not_calibrated"
+              },
+              {
+                "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                "section": "7",
+                "page": 12,
+                "block_id": "B-fb856e056a0a",
+                "start": 43,
+                "end": 49,
+                "evidence": "难治性高血压",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.95,
+                "confidence_basis": "rule_heuristic_not_calibrated"
+              }
+            ],
+            "verification_reasons": [],
+            "evidence_count": 44,
+            "evidences_truncated": true
+          }
+        ],
+        "total": 1,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "节点命中不等于结论；出处可用 get_evidence 进一步核对。"
+      }
+    },
+    {
+      "tool": "query_relations",
+      "arguments": {
+        "keyword": "followUpEvery",
+        "limit": 10
+      },
+      "result": {
+        "items": [
+          {
+            "id": "E-5549efd8b935c6",
+            "headId": "N-血压未达标患者",
+            "relation": "followUpEvery",
+            "tailId": "N-随访",
+            "condition": "8.1随访频率血压达标患者，至少每3个月随访1次；血压未达标患者，每月至少随访1次。",
+            "rule": "R-FOLLOWUP-UNCONTROLLED",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "8.1",
+            "page": 13,
+            "block_id": "B-6e3c9e3c8d5a",
+            "start": 0,
+            "end": 52,
+            "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "modality": "至少",
+            "source_section_id": "N-B-6e3c9e3c8d5a",
+            "verification_reasons": [],
+            "head_name": "血压未达标患者",
+            "tail_name": "随访"
+          },
+          {
+            "id": "E-862939a2c6f284",
+            "headId": "N-血压未达标患者",
+            "relation": "followUpEvery",
+            "tailId": "N-随访",
+            "condition": "8.3.2.2血压未达标者：1个月至少随访1次，直至血压达标。",
+            "rule": "R-FOLLOWUP-UNCONTROLLED",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.3.2.2",
+            "page": 5,
+            "block_id": "B-99383b6fd379",
+            "start": 0,
+            "end": 35,
+            "evidence": "8.3.2.2 血压未达标者：1 个月至少随访 1 次，直至血压达标。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "modality": "至少",
+            "source_section_id": "N-B-99383b6fd379",
+            "verification_reasons": [],
+            "head_name": "血压未达标患者",
+            "tail_name": "随访"
+          },
+          {
+            "id": "E-9b6c395e04a1cf",
+            "headId": "N-血压达标患者",
+            "relation": "followUpEvery",
+            "tailId": "N-随访",
+            "condition": "8.1随访频率血压达标患者，至少每3个月随访1次；血压未达标患者，每月至少随访1次。",
+            "rule": "R-FOLLOWUP-CONTROLLED",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "8.1",
+            "page": 13,
+            "block_id": "B-6e3c9e3c8d5a",
+            "start": 0,
+            "end": 52,
+            "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "modality": "至少",
+            "source_section_id": "N-B-6e3c9e3c8d5a",
+            "verification_reasons": [],
+            "head_name": "血压达标患者",
+            "tail_name": "随访"
+          },
+          {
+            "id": "E-bf48cb55593b7f",
+            "headId": "N-血压达标患者",
+            "relation": "followUpEvery",
+            "tailId": "N-随访",
+            "condition": "8.3.2.1血压达标者：每3个月至少随访1次。",
+            "rule": "R-FOLLOWUP-CONTROLLED",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.3.2.1",
+            "page": 5,
+            "block_id": "B-c79ea4f8af58",
+            "start": 0,
+            "end": 29,
+            "evidence": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "modality": "至少",
+            "source_section_id": "N-B-c79ea4f8af58",
+            "verification_reasons": [],
+            "head_name": "血压达标患者",
+            "tail_name": "随访"
+          }
+        ],
+        "total": 4,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "返回原始关系；需联合条件、例外与原文核验。"
+      }
+    },
+    {
+      "tool": "get_evidence",
+      "arguments": {
+        "block_id": "B-6e3c9e3c8d5a"
+      },
+      "result": {
+        "items": [
+          {
+            "id": "B-6e3c9e3c8d5a",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "8.1",
+            "title": "随访频率",
+            "chapter": "高血压长期随访管理",
+            "page": 13,
+            "raw": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。符合转诊条件者，\n建议按照转诊要求操作。",
+            "body": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。符合转诊条件者，\n建议按照转诊要求操作。",
+            "source_text": "",
+            "legacy": false,
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "section_status": "from_text_heading",
+            "heading_path": [
+              "高血压长期随访管理",
+              "随访频率"
+            ]
+          }
+        ],
+        "total": 1,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "返回构建时保存的原文；请保留文件、物理页码、章节及核验状态。"
+      }
+    },
+    {
+      "tool": "lookup_clause",
+      "arguments": {
+        "keyword": "随访频率",
+        "standard": "国家基层"
+      },
+      "result": {
+        "items": [
+          {
+            "id": "B-6e3c9e3c8d5a",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "8.1",
+            "title": "随访频率",
+            "chapter": "高血压长期随访管理",
+            "page": 13,
+            "raw": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。符合转诊条件者，\n建议按照转诊要求操作。",
+            "body": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。符合转诊条件者，\n建议按照转诊要求操作。",
+            "source_text": "",
+            "legacy": false,
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "section_status": "from_text_heading",
+            "heading_path": [
+              "高血压长期随访管理",
+              "随访频率"
+            ]
+          }
+        ],
+        "total": 1,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "原文块按关键词匹配；版面或章节状态需一并检查。"
+      }
+    },
+    {
+      "tool": "check_references",
+      "arguments": {
+        "keyword": "WS/T 872—2025",
+        "limit": 10
+      },
+      "result": {
+        "items": [
+          {
+            "id": "E-806c180128154a",
+            "headId": "N-B-13be9bab232a",
+            "relation": "references",
+            "tailId": "N-REF-ee7a3bdd86014a",
+            "condition": "",
+            "rule": "R-EXPLICIT-REFERENCE",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.1",
+            "page": 5,
+            "block_id": "B-13be9bab232a",
+            "start": 70,
+            "end": 96,
+            "evidence": "血压达标的目标值参见《国家基层高血压防治管理指南》。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.55,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "resolution": "version_mismatch",
+            "requested_year": "2021",
+            "candidate_doc_ids": [
+              "N-DOC-fa69b0792accaf"
+            ],
+            "version_evidence": {
+              "file": "WS-T872-2025_重排.txt",
+              "section": "REFERENCES",
+              "page": 8,
+              "block_id": "B-232e1532f133",
+              "start": 22,
+              "end": 51,
+              "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated"
+            },
+            "document_available": false,
+            "sufficient": false,
+            "verification_reasons": [
+              "version_mismatch"
+            ],
+            "target_name": "国家基层高血压防治管理指南（引用版本2021）",
+            "message": "同名候选文档与引用版本不同，需核验版本和具体条款。"
+          },
+          {
+            "id": "E-f7cb5c4f69d996",
+            "headId": "N-B-8e14135f673d",
+            "relation": "references",
+            "tailId": "N-REF-ee7a3bdd86014a",
+            "condition": "",
+            "rule": "R-EXPLICIT-REFERENCE",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "7",
+            "page": 4,
+            "block_id": "B-8e14135f673d",
+            "start": 362,
+            "end": 398,
+            "evidence": "高血压、正常高值血压及正常血压的定义参见《国家基层高血压防治管理指南》。",
+            "section_status": "needs_layout_review",
+            "verification": "pending",
+            "confidence": 0.55,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "resolution": "version_mismatch",
+            "requested_year": "2021",
+            "candidate_doc_ids": [
+              "N-DOC-fa69b0792accaf"
+            ],
+            "version_evidence": {
+              "file": "WS-T872-2025_重排.txt",
+              "section": "REFERENCES",
+              "page": 8,
+              "block_id": "B-232e1532f133",
+              "start": 22,
+              "end": 51,
+              "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated"
+            },
+            "document_available": false,
+            "sufficient": false,
+            "verification_reasons": [
+              "layout_or_section_unverified",
+              "version_mismatch"
+            ],
+            "target_name": "国家基层高血压防治管理指南（引用版本2021）",
+            "message": "同名候选文档与引用版本不同，需核验版本和具体条款。"
+          },
+          {
+            "id": "E-fcb839e0ee4e82",
+            "headId": "N-B-8e14135f673d",
+            "relation": "references",
+            "tailId": "N-REF-ee7a3bdd86014a",
+            "condition": "",
+            "rule": "R-EXPLICIT-REFERENCE",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "7",
+            "page": 4,
+            "block_id": "B-8e14135f673d",
+            "start": 399,
+            "end": 469,
+            "evidence": "生活方式指导包括：合理膳食（含减少钠盐、增加钾盐摄入）、控制体重、规律运动、戒烟、戒酒、\n高血压诊断标准参见《国家基层高血压防治管理指南》。",
+            "section_status": "needs_layout_review",
+            "verification": "pending",
+            "confidence": 0.55,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "resolution": "version_mismatch",
+            "requested_year": "2021",
+            "candidate_doc_ids": [
+              "N-DOC-fa69b0792accaf"
+            ],
+            "version_evidence": {
+              "file": "WS-T872-2025_重排.txt",
+              "section": "REFERENCES",
+              "page": 8,
+              "block_id": "B-232e1532f133",
+              "start": 22,
+              "end": 51,
+              "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated"
+            },
+            "document_available": false,
+            "sufficient": false,
+            "verification_reasons": [
+              "layout_or_section_unverified",
+              "version_mismatch"
+            ],
+            "target_name": "国家基层高血压防治管理指南（引用版本2021）",
+            "message": "同名候选文档与引用版本不同，需核验版本和具体条款。"
+          },
+          {
+            "id": "E-e7f285fcfebd55",
+            "headId": "N-B-bee9a4b090b8",
+            "relation": "references",
+            "tailId": "N-REF-ee7a3bdd86014a",
+            "condition": "",
+            "rule": "R-EXPLICIT-REFERENCE",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.2",
+            "page": 5,
+            "block_id": "B-bee9a4b090b8",
+            "start": 218,
+            "end": 239,
+            "evidence": "具体参见《国家基层高血压防\n治管理指南》。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.55,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "resolution": "version_mismatch",
+            "requested_year": "2021",
+            "candidate_doc_ids": [
+              "N-DOC-fa69b0792accaf"
+            ],
+            "version_evidence": {
+              "file": "WS-T872-2025_重排.txt",
+              "section": "REFERENCES",
+              "page": 8,
+              "block_id": "B-232e1532f133",
+              "start": 22,
+              "end": 51,
+              "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated"
+            },
+            "document_available": false,
+            "sufficient": false,
+            "verification_reasons": [
+              "version_mismatch"
+            ],
+            "target_name": "国家基层高血压防治管理指南（引用版本2021）",
+            "message": "同名候选文档与引用版本不同，需核验版本和具体条款。"
+          }
+        ],
+        "total": 4,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "不要用另一版本静默替代标准实际引用的版本。"
+      }
+    },
+    {
+      "tool": "traverse_relations",
+      "arguments": {
+        "start_entity": "随访",
+        "relation": "followUpEvery",
+        "hops": 1,
+        "end_entity": "血压达标患者",
+        "limit": 10
+      },
+      "result": {
+        "paths": [
+          {
+            "nodes": [
+              "随访",
+              "血压达标患者"
+            ],
+            "steps": [
+              {
+                "from": "随访",
+                "to": "血压达标患者",
+                "forward": false,
+                "edge": {
+                  "id": "E-9b6c395e04a1cf",
+                  "headId": "N-血压达标患者",
+                  "relation": "followUpEvery",
+                  "tailId": "N-随访",
+                  "condition": "8.1随访频率血压达标患者，至少每3个月随访1次；血压未达标患者，每月至少随访1次。",
+                  "rule": "R-FOLLOWUP-CONTROLLED",
+                  "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                  "section": "8.1",
+                  "page": 13,
+                  "block_id": "B-6e3c9e3c8d5a",
+                  "start": 0,
+                  "end": 52,
+                  "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。",
+                  "section_status": "from_text_heading",
+                  "verification": "pending",
+                  "confidence": 0.95,
+                  "confidence_basis": "rule_heuristic_not_calibrated",
+                  "modality": "至少",
+                  "source_section_id": "N-B-6e3c9e3c8d5a",
+                  "verification_reasons": []
+                }
+              }
+            ],
+            "hops": 1,
+            "kind": "evidence_path",
+            "sufficient": false,
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "minimum_edge_heuristic_not_calibrated"
+          },
+          {
+            "nodes": [
+              "随访",
+              "血压达标患者"
+            ],
+            "steps": [
+              {
+                "from": "随访",
+                "to": "血压达标患者",
+                "forward": false,
+                "edge": {
+                  "id": "E-bf48cb55593b7f",
+                  "headId": "N-血压达标患者",
+                  "relation": "followUpEvery",
+                  "tailId": "N-随访",
+                  "condition": "8.3.2.1血压达标者：每3个月至少随访1次。",
+                  "rule": "R-FOLLOWUP-CONTROLLED",
+                  "file": "WS-T872-2025_重排.txt",
+                  "section": "8.3.2.1",
+                  "page": 5,
+                  "block_id": "B-c79ea4f8af58",
+                  "start": 0,
+                  "end": 29,
+                  "evidence": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。",
+                  "section_status": "from_text_heading",
+                  "verification": "pending",
+                  "confidence": 0.95,
+                  "confidence_basis": "rule_heuristic_not_calibrated",
+                  "modality": "至少",
+                  "source_section_id": "N-B-c79ea4f8af58",
+                  "verification_reasons": []
+                }
+              }
+            ],
+            "hops": 1,
+            "kind": "evidence_path",
+            "sufficient": false,
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "minimum_edge_heuristic_not_calibrated"
+          }
+        ],
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "仅表示证据图连通；适用条件、例外、联合方案及临床结论尚未核验。"
+      }
+    },
+    {
+      "tool": "query_candidates",
+      "arguments": {
+        "keyword": "",
+        "collection": "extraction_candidates",
+        "limit": 2
+      },
+      "result": {
+        "items": [
+          {
+            "record": {
+              "id": "C-NUM-58399f830a13f0",
+              "kind": "numeric_mention",
+              "reason": "数值用途、单位或上下文待核验",
+              "file": "WS-T872-2025_重排.txt",
+              "section": "5",
+              "page": 3,
+              "block_id": "B-4802e3b879f7",
+              "start": 187,
+              "end": 194,
+              "evidence": "10 mmHg",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.35,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "numeric_scope_unverified"
+              ]
+            },
+            "collection": "extraction_candidates"
+          },
+          {
+            "record": {
+              "id": "C-NUM-7b91b2c13e7ace",
+              "kind": "numeric_mention",
+              "reason": "数值用途、单位或上下文待核验",
+              "file": "WS-T872-2025_重排.txt",
+              "section": "8.4.2",
+              "page": 5,
+              "block_id": "B-815aec541025",
+              "start": 50,
+              "end": 58,
+              "evidence": "180 mmHg",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.35,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "numeric_scope_unverified"
+              ]
+            },
+            "collection": "extraction_candidates"
+          }
+        ],
+        "total": 837,
+        "offset": 0,
+        "truncated": true,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "这些是待核验候选，不能据此直接给出临床建议。"
+      }
+    },
+    {
+      "tool": "query_candidates",
+      "arguments": {
+        "keyword": "",
+        "collection": "extraction_candidates",
+        "limit": 2,
+        "offset": 2
+      },
+      "result": {
+        "items": [
+          {
+            "record": {
+              "id": "C-NUM-dccf0b415fc91d",
+              "kind": "numeric_mention",
+              "reason": "数值用途、单位或上下文待核验",
+              "file": "WS-T872-2025_重排.txt",
+              "section": "8.4.2",
+              "page": 5,
+              "block_id": "B-815aec541025",
+              "start": 67,
+              "end": 75,
+              "evidence": "110 mmHg",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.35,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "numeric_scope_unverified"
+              ]
+            },
+            "collection": "extraction_candidates"
+          },
+          {
+            "record": {
+              "id": "C-NUM-71ce576a7ab87c",
+              "kind": "numeric_mention",
+              "reason": "数值用途、单位或上下文待核验",
+              "file": "WS-T872-2025_重排.txt",
+              "section": "8.4.2",
+              "page": 5,
+              "block_id": "B-815aec541025",
+              "start": 178,
+              "end": 188,
+              "evidence": "3.5 mmol/L",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.35,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "numeric_scope_unverified"
+              ]
+            },
+            "collection": "extraction_candidates"
+          }
+        ],
+        "total": 837,
+        "offset": 2,
+        "truncated": true,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "这些是待核验候选，不能据此直接给出临床建议。"
+      }
+    },
+    {
+      "tool": "compare_threshold",
+      "arguments": {
+        "subject": "血压达标患者",
+        "value": 4,
+        "unit": "月"
+      },
+      "result": {
+        "items": [
+          {
+            "constraint": {
+              "id": "TH-48a93b332ede9b",
+              "subject": "血压达标患者随访间隔",
+              "indicator": "随访间隔",
+              "operator": "<=",
+              "value": 3,
+              "unit": "月",
+              "context": "血压达标患者",
+              "basis": "随访频率",
+              "comparison_scope": {
+                "population": "血压达标患者",
+                "purpose": "常规随访"
+              },
+              "file": "国家基层高血压防治管理指南2025版_重排.txt",
+              "section": "8.1",
+              "page": 13,
+              "block_id": "B-6e3c9e3c8d5a",
+              "start": 0,
+              "end": 52,
+              "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": []
+            },
+            "actual": 4.0,
+            "matches": false
+          },
+          {
+            "constraint": {
+              "id": "TH-ccce6dfe4bc2b9",
+              "subject": "血压达标患者随访间隔",
+              "indicator": "随访间隔",
+              "operator": "<=",
+              "value": 3,
+              "unit": "月",
+              "context": "血压达标患者",
+              "basis": "血压达标者",
+              "comparison_scope": {
+                "population": "血压达标患者",
+                "purpose": "常规随访"
+              },
+              "file": "WS-T872-2025_重排.txt",
+              "section": "8.3.2.1",
+              "page": 5,
+              "block_id": "B-c79ea4f8af58",
+              "start": 0,
+              "end": 29,
+              "evidence": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": []
+            },
+            "actual": 4.0,
+            "matches": false
+          }
+        ],
+        "total": 2,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "matches 仅表示数学比较；患者条件、管理目的和条款仍需核验，不执行单位换算。"
+      }
+    },
+    {
+      "tool": "detect_conflicts",
+      "arguments": {},
+      "result": {
+        "items": [],
+        "total": 0,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "未命中；不能据此判断原文不存在相关内容。"
+      }
+    },
+    {
+      "tool": "find_entities",
+      "arguments": {
+        "keyword": "不存在的测试实体xyz"
+      },
+      "result": {
+        "items": [],
+        "total": 0,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "未命中；不能据此判断原文不存在相关内容。"
+      }
+    }
+  ],
+  "server": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {
+      "completions": {},
+      "logging": {},
+      "prompts": {
+        "listChanged": true
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": true
+      },
+      "tools": {
+        "listChanged": true
+      }
+    },
+    "serverInfo": {
+      "name": "kg-tools",
+      "version": "0.2.0"
+    }
+  },
+  "tools": [
+    {
+      "name": "compare_threshold",
+      "description": "仅将数值与已结构化的数值约束作数学比较，保留适用条件和出处。需要匹配单位；命中不构成临床结论，未核验数字候选不会参与。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string",
+            "description": "主题关键词，例如：血压达标患者随访间隔"
+          },
+          "value": {
+            "type": "number",
+            "format": "double",
+            "description": "要比较的数值"
+          },
+          "unit": {
+            "type": "string",
+            "description": "单位，必须与记录相同，例如：月"
+          }
+        },
+        "required": [
+          "subject",
+          "value",
+          "unit"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_evidence",
+      "description": "按关系或引用中的block_id取得完整原文块。偏移start/end为Python字符索引，原文不重排、不改写。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "block_id": {
+            "type": "string",
+            "description": "原文块ID，例如关系中的 block_id"
+          }
+        },
+        "required": [
+          "block_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "lookup_clause",
+      "description": "直接检索保存的文档原文块，包括尚未抽成关系的内容；返回原文、物理页码、章节和block_id。为关键词检索，非语义RAG。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "原文关键词，例如：随访频率"
+          },
+          "standard": {
+            "type": "string",
+            "description": "限定文件名，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "find_entities",
+      "description": "按名称、别名、ID、类型查找真实图谱节点。返回待核验状态和少量出处；未命中不代表原文不存在。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "关键词，例如：血压达标患者"
+          },
+          "type": {
+            "type": "string",
+            "description": "类型，如 Disease/DrugClass/Population/Equipment/SourceDoc，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "query_relations",
+      "description": "按实体名称或关系名称查找关系，返回完整条件、例外、原文、页码、置信分和待核验状态。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "关键词，例如：随访、血压达标患者、requiresEquipment"
+          },
+          "file": {
+            "type": "string",
+            "description": "限定文件名，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "detect_conflicts",
+      "description": "查找同主题、指标、单位和上下文的结构化数值差异，只返回待审核差异，不自动认定医学冲突或选择应采信的文档。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string",
+            "description": "主题关键词，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "check_references",
+      "description": "检查标准引用的指南及版本，区分未入库、版本不匹配和已匹配；有同名文档不代表引用要求已补全。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "来源文件或被引文件关键词，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "query_candidates",
+      "description": "查询保留的待核验抽取，包括未解析药物语句、数值和重叠实体。候选不作为已确认知识使用；支持翻页，不删除原始记录。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "关键词，例如：转诊、ARNI"
+          },
+          "collection": {
+            "type": "string",
+            "description": "集合名，可留空；edge_candidates/entity_candidates/extraction_candidates/threshold_candidates"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "traverse_relations",
+      "description": "沿业务关系做有界多跳检索，支持正反向查找且保留每条边的原始方向、条件和证据。结果只表示证据连通，不是已验证的医学推断。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "start_entity": {
+            "type": "string",
+            "description": "起点名称或ID，例如：血压达标患者"
+          },
+          "relation": {
+            "type": "string",
+            "description": "限定关系，可留空"
+          },
+          "hops": {
+            "type": "integer",
+            "format": "int32",
+            "description": "最大跳数，默认2，最多3"
+          },
+          "end_entity": {
+            "type": "string",
+            "description": "可选终点的准确名称或ID"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "最大路径数，默认10，最多50"
+          }
+        },
+        "required": [
+          "start_entity"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "graph_status",
+      "description": "查看当前加载的真实图谱文件、构建时间、文档版本、数量及局限。先用此工具确认数据来源。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

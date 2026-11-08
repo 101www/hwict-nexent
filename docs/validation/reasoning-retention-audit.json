@@ -1,0 +1,29 @@
+{
+  "kind": "candidate_retention_audit",
+  "previous_snapshot": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\57f51542028dec148a54bac2adf81cb82187cc62ae7ca3b8250037cb710edcff.json",
+  "previous_sha256": "57f51542028dec148a54bac2adf81cb82187cc62ae7ca3b8250037cb710edcff",
+  "current_sha256": "5cb3a9cc4b69e3eae5585abd9e7a0755f06c7a217f05455269bb5e15641bad9d",
+  "collections": {
+    "threshold_candidates": {
+      "before": 273,
+      "after": 273,
+      "missing_ids": []
+    },
+    "entity_candidates": {
+      "before": 161,
+      "after": 161,
+      "missing_ids": []
+    },
+    "extraction_candidates": {
+      "before": 837,
+      "after": 837,
+      "missing_ids": []
+    },
+    "edge_candidates": {
+      "before": 0,
+      "after": 0,
+      "missing_ids": []
+    }
+  },
+  "all_previous_candidate_ids_retained": true
+}

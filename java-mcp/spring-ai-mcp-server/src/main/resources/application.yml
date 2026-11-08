@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: kg-tools-mcp
+  ai:
+    mcp:
+      server:
+        name: kg-tools
+        version: 0.2.0
+        protocol: SSE          # 对应 Nexent 的「远程」接入方式
+        type: SYNC
+
+logging:
+  level:
+    root: INFO
+    io.modelcontextprotocol: INFO
+
+kg:
+  # 二选一：固定图谱路径，或自动跟随已发布版本仓库。
+  # 两项均未设置时：优先项目data/evolution/production；尚无正式仓库时读取原graph.json。
+  graph-path: ${KG_GRAPH_PATH:}
+  evolution-store: ${KG_EVOLUTION_STORE:}

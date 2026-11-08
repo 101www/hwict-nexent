@@ -1,0 +1,108 @@
+- heading "知识更新审核工作台" [level=1]
+- paragraph: 当前演示：已有真实文档的历史入库回放。正式graph.json不受影响。流程批准不等于医学核验，自动记录继续pending。
+- paragraph:
+  - text: 当前版本：
+  - code: R-20261106T171012-9c1d6e4d16
+  - link "刷新":
+    - /url: /
+- heading "变更提案" [level=2]
+- list:
+  - link "历史回放：加入已持有的基层指南；不是新指南发布":
+    - /url: /?proposal=P-20261106T171013-6253615b24
+  - text: · 待审核
+- heading "历史回放：加入已持有的基层指南；不是新指南发布" [level=2]
+- paragraph: 状态：待审核；基线：R-20261106T171012-9c1d6e4d16
+- table:
+  - rowgroup:
+    - row "记录集合 新增 修改 候选未再出现（完整保留）":
+      - columnheader "记录集合"
+      - columnheader "新增"
+      - columnheader "修改"
+      - columnheader "候选未再出现（完整保留）"
+    - row "实体节点 145 37 0":
+      - cell "实体节点"
+      - cell "145"
+      - cell "37"
+      - cell "0"
+    - row "关系断言 923 4 0":
+      - cell "关系断言"
+      - cell "923"
+      - cell "4"
+      - cell "0"
+    - row "可计算阈值 4 0 0":
+      - cell "可计算阈值"
+      - cell "4"
+      - cell "0"
+      - cell "0"
+    - row "组合规则 1 0 0":
+      - cell "组合规则"
+      - cell "1"
+      - cell "0"
+      - cell "0"
+    - row "原文块 85 0 0":
+      - cell "原文块"
+      - cell "85"
+      - cell "0"
+      - cell "0"
+    - row "阈值候选 86 0 0":
+      - cell "阈值候选"
+      - cell "86"
+      - cell "0"
+      - cell "0"
+    - row "关系候选 0 0 0":
+      - cell "关系候选"
+      - cell "0"
+      - cell "0"
+      - cell "0"
+    - row "实体候选 56 0 0":
+      - cell "实体候选"
+      - cell "56"
+      - cell "0"
+      - cell "0"
+    - row "原文片段候选 346 0 0":
+      - cell "原文片段候选"
+      - cell "346"
+      - cell "0"
+      - cell "0"
+- paragraph: 本体内容变化：无（本次是新增知识，未扩充本体）；结构和证据校验：通过
+- heading "同一个问题：合并糖尿病的高血压患者首选哪类药？" [level=3]
+- paragraph: 更新前：未找到该人群的结构化方案证据；更新后：找到两跳证据（待核验）。
+- paragraph: 以下是离线证据观察，不是模型问答。更新后证据待核验，不自动给个体处方。
+- heading "高血压合并糖尿病患者 → 血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂 → 血管紧张素转换酶抑制剂" [level=4]
+- generic "preferredRegimenFor · 国家基层高血压防治管理指南2025版_重排.txt · p9 §5.4.6.1"
+- generic "hasAlternativeComponent · 国家基层高血压防治管理指南2025版_重排.txt · p6 §5.4.2"
+- heading "高血压合并糖尿病患者 → 血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂 → 血管紧张素II受体阻滞剂" [level=4]
+- generic "preferredRegimenFor · 国家基层高血压防治管理指南2025版_重排.txt · p9 §5.4.6.1"
+- generic "hasAlternativeComponent · 国家基层高血压防治管理指南2025版_重排.txt · p6 §5.4.2"
+- paragraph:
+  - link "下载完整提案JSON（含差异ID、校验和前后观察）":
+    - /url: /proposal.json?id=P-20261106T171013-6253615b24
+- paragraph:
+  - link "查看完整候选图谱（全部新增、修改记录及原文）":
+    - /url: /candidate.json?id=P-20261106T171013-6253615b24
+- paragraph:
+  - text: 审核人
+  - textbox "审核人"
+- paragraph:
+  - text: 审核理由
+  - textbox "审核理由"
+- paragraph: 这里只确认是否允许发布这批待核验知识，不代表临床审核。请先展开原文检查。
+- button "保留待核验／暂缓"
+- button "驳回本次发布（保留全部记录）"
+- button "批准流程发布"
+- heading "加入资料，生成下一份提案" [level=2]
+- paragraph: 先把带页码和章节的重排文本放入项目data/raw目录；刷新页面后选择。系统会保留基线已有来源并重新比对，新提案不会自动发布。
+- paragraph:
+  - text: 资料文件
+  - combobox "资料文件":
+    - option "WS-T872-2025_重排.txt" [selected]
+    - option "中国高血压临床实践指南2025版_重排.txt"
+    - option "国家基层高血压防治管理指南2025版_重排.txt"
+- paragraph:
+  - text: 提案说明
+  - textbox "提案说明"
+- button "生成待审提案"
+- heading "发布历史与回滚" [level=2]
+- paragraph: 回滚只改变本仓库指针，不删除后续版本，也不自动重启Java。
+- generic "R-20261106T171012-9c1d6e4d16 · imported_baseline"
+- generic "完整流程事件（含操作人、理由和审核类型）"

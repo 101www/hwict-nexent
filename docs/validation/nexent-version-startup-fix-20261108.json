@@ -1,0 +1,215 @@
+{
+  "tested_at": "2026-11-08T00:36:51.458434+08:00",
+  "problem": "IDEA直接运行主类且未传配置，原8081服务读取固定graph.json，release_id=unversioned",
+  "before": {
+    "release_id": "unversioned",
+    "matches_current_published_version": false,
+    "process_id": 48092,
+    "launch": "IDEA main class without graph/store arguments"
+  },
+  "change": "Spring默认启动在项目存在正式仓库时自动跟随，显式文件路径仍可覆盖；不存在仓库则兼容原文件，已有仓库损坏不静默退回",
+  "after": {
+    "checked_at": "2026-11-08T00:36:51.356911+08:00",
+    "endpoint": "http://192.168.100.1:8081/sse",
+    "expected_release": "R-20261107T012120-d13d786332",
+    "actual_release": "R-20261107T012120-d13d786332",
+    "matches_current_published_version": true,
+    "document_count": 3,
+    "verification": "pending",
+    "nodes": 324,
+    "edges": 2503,
+    "graph_status": {
+      "source": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\evolution\\production\\releases\\R-20261107T012120-d13d786332\\graph.json",
+      "mode": "real_graph_snapshot",
+      "knowledge_version": {
+        "graph_sha256": "5516e2bd97523424b4d44872f7ee1a0d057125f2776b3680b7c1d9abf790353f",
+        "version_store": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\evolution\\production",
+        "ontology_version": "0.4.0",
+        "verification": "pending",
+        "load_mode": "published_store",
+        "release_id": "R-20261107T012120-d13d786332",
+        "built_at": "2026-10-18T22:01:10+08:00"
+      },
+      "meta": {
+        "domain": "高血压临床诊疗与基层慢病管理",
+        "ontology_version": "0.4.0",
+        "lexicon_version": "0.3.0",
+        "rules_version": "0.4.0",
+        "legacy_rules_version": "0.1.0",
+        "management_rules_version": "0.2.0",
+        "clinical_rules_version": "0.4.0",
+        "decision_rules_version": "0.4.0",
+        "retention_policy": "uncertain_results_retained_pending",
+        "confidence_definition": "0~1规则启发式抽取评分；未经概率校准，不是医学正确率，不能替代人工核验。",
+        "built_at": "2026-10-18T22:01:10+08:00",
+        "source_docs": [
+          "WS-T872-2025_重排.txt",
+          "国家基层高血压防治管理指南2025版_重排.txt",
+          "中国高血压临床实践指南2025版_重排.txt"
+        ],
+        "documents": [
+          {
+            "id": "N-DOC-cbf1c1ce2a3d61",
+            "file": "WS-T872-2025_重排.txt",
+            "title": "基层医疗卫生机构高血压防治管理标准",
+            "year": "2025",
+            "profile": "standard",
+            "warnings": [],
+            "reference_year_evidence": {
+              "file": "WS-T872-2025_重排.txt",
+              "section": "REFERENCES",
+              "page": 8,
+              "block_id": "B-232e1532f133",
+              "start": 22,
+              "end": 51,
+              "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated"
+            },
+            "referenced_primary_year": "2021",
+            "verification": "pending",
+            "confidence": 0.9,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "verification_reasons": [
+              "document_metadata_requires_review"
+            ]
+          },
+          {
+            "id": "N-DOC-fa69b0792accaf",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "title": "国家基层高血压防治管理指南",
+            "year": "2025",
+            "profile": "primary",
+            "warnings": [],
+            "reference_year_evidence": null,
+            "referenced_primary_year": "",
+            "verification": "pending",
+            "confidence": 0.9,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "verification_reasons": [
+              "document_metadata_requires_review"
+            ]
+          },
+          {
+            "id": "N-DOC-c7e1aac134f39b",
+            "file": "中国高血压临床实践指南2025版_重排.txt",
+            "title": "中国高血压临床实践指南",
+            "year": "2024",
+            "profile": "clinical",
+            "warnings": [
+              "文件名年份 2025 与正文刊期 2024 不同；正文年份仍需人工核验。"
+            ],
+            "reference_year_evidence": null,
+            "referenced_primary_year": "",
+            "verification": "pending",
+            "confidence": 0.55,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "verification_reasons": [
+              "document_metadata_requires_review"
+            ]
+          }
+        ],
+        "builder": "pipeline/build_graph.py",
+        "page_numbering": "PDF physical page, null if unknown",
+        "limitations": [
+          "表格勾选关系未恢复，不推断表格列对应关系。",
+          "标准第 4、6 物理页存在文本错序，章节标记需核读，原文和页码仍保留。",
+          "全文数字候选全部保留；诊室血压边界经双证据结构化后仅供数学比较，仍待临床核验，不自动确诊。",
+          "三份全文药物关系使用分源新规则；所有自动抽取关系待人工核验。",
+          "未解析药物语句、数字及重叠实体保留为待核验候选，缺端点/证据断言完整保留。",
+          "数值不同仅为待核对差异，不能自动认定为医学冲突。"
+        ],
+        "history_snapshots": [
+          {
+            "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\c27546d13c1343a0870b9fef26402d01cccb26f0d9c4ac096b003deab508f9ac.json",
+            "sha256": "c27546d13c1343a0870b9fef26402d01cccb26f0d9c4ac096b003deab508f9ac",
+            "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+            "verification": "pending",
+            "confidence": 1.0,
+            "confidence_basis": "exact_file_snapshot_sha256"
+          },
+          {
+            "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\0e8caadbe003c6cb1cfa99c4bbe1f786db958c9b006ed1b08b216c6da72fe0aa.json",
+            "sha256": "0e8caadbe003c6cb1cfa99c4bbe1f786db958c9b006ed1b08b216c6da72fe0aa",
+            "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+            "verification": "pending",
+            "confidence": 1.0,
+            "confidence_basis": "exact_file_snapshot_sha256"
+          },
+          {
+            "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\57f51542028dec148a54bac2adf81cb82187cc62ae7ca3b8250037cb710edcff.json",
+            "sha256": "57f51542028dec148a54bac2adf81cb82187cc62ae7ca3b8250037cb710edcff",
+            "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+            "verification": "pending",
+            "confidence": 1.0,
+            "confidence_basis": "exact_file_snapshot_sha256"
+          }
+        ],
+        "evolution": {
+          "release_id": "R-20261107T012120-d13d786332",
+          "kind": "imported_baseline",
+          "label": "正式基线：沿用现有三份全文图谱；自动知识仍待核验",
+          "medical_verification": "pending"
+        }
+      },
+      "nodes": 324,
+      "edges": 2503,
+      "blocks": 216,
+      "candidate_count": 1271,
+      "sufficient": false,
+      "message": "已加载真实图谱；自动抽取仍待核验。发布仓库模式在下次工具调用时加载当前发布版本；固定文件模式仍需重启。"
+    },
+    "limits": "本机直接调用真实MCP；并非Nexent页面发起的调用，不核验临床结论"
+  },
+  "verification_launch": "java -jar java-mcp/spring-ai-mcp-server/target/spring-ai-mcp-server-0.1.0.jar (no graph/store arguments)",
+  "nexent_ui_tested": true,
+  "agent": "高血压用药决策助手",
+  "ui_test_prompt": "请实际调用 graph_status，只报告本次工具响应里的 knowledge_version.release_id、knowledge_version.load_mode、文档数量及核验状态。若字段缺失请直说，不要推测版本。",
+  "ui_response": {
+    "release_id": "R-20261107T012120-d13d786332",
+    "load_mode": "published_store",
+    "document_count": 3,
+    "verification": "pending"
+  },
+  "raw_ui_trace": "nexent-version-startup-fix-20261108.txt",
+  "screenshot": "nexent-version-startup-fix-20261108.png",
+  "screenshot_crop": {
+    "original_size": [
+      788,
+      871
+    ],
+    "box": [
+      320,
+      55,
+      788,
+      610
+    ],
+    "purpose": "保留原智能体标题、实际工具响应和最终回答，移除账户与侧栏"
+  },
+  "java_suites": [
+    {
+      "name": "com.example.ict.mcp.LiveGraphVersionTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "com.example.ict.mcp.RealGraphToolsTest",
+      "tests": "18",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "com.example.ict.mcp.repo.GraphPathResolutionTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0"
+    }
+  ],
+  "formal_graph_sha256": "5cb3a9cc4b69e3eae5585abd9e7a0755f06c7a217f05455269bb5e15641bad9d",
+  "no_medical_records_or_review_states_modified": true,
+  "observed_limitation": "Nexent CodeAgent第一次把工具JSON字符串当dict，出现AttributeError；随后json.loads重试成功。本轮未修改智能体提示词，未把这个过程计作单次工具成功。",
+  "all_passed": true
+}

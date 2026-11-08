@@ -1,0 +1,84 @@
+{
+  "current": "R-20261106T171515-bb1015c38d",
+  "releases": [
+    "R-20261106T171515-bb1015c38d",
+    "R-20261106T171635-7e63747655"
+  ],
+  "proposals": {
+    "P-20261106T171515-d7294c6d5b": {
+      "status": "published",
+      "proposal_sha256": "fb00ffb65f37407020eab322df31729abcd47946863c379d945aab60140f6f6d",
+      "review_event": "EV-20261106T171608-6a76bd5392",
+      "release_id": "R-20261106T171635-7e63747655"
+    },
+    "P-20261106T171739-42d04da375": {
+      "status": "deferred",
+      "proposal_sha256": "73a828db326833dfa021e294155598ddd95ee06999dcfdc53c8e07e6b0be9599",
+      "review_event": "EV-20261106T171817-2f0ddcd5c4"
+    }
+  },
+  "events": [
+    {
+      "id": "EV-20261106T171515-4f3b1126f0",
+      "at": "2026-11-06T17:15:15+00:00",
+      "action": "initialize",
+      "release_id": "R-20261106T171515-bb1015c38d",
+      "label": "历史回放：仅管理标准"
+    },
+    {
+      "id": "EV-20261106T171515-3789c1a70a",
+      "at": "2026-11-06T17:15:15+00:00",
+      "action": "propose",
+      "proposal_id": "P-20261106T171515-d7294c6d5b",
+      "label": "历史回放：加入已持有的基层指南；不是新指南发布"
+    },
+    {
+      "id": "EV-20261106T171608-6a76bd5392",
+      "at": "2026-11-06T17:16:08+00:00",
+      "action": "review",
+      "proposal_id": "P-20261106T171515-d7294c6d5b",
+      "decision": "approve",
+      "reviewer": "automated_ui_acceptance",
+      "reason": "隔离工作台自动回归：确认审核与发布流程可以运行；不是人工或医学审核。",
+      "actor_kind": "automated_test",
+      "proposal_sha256": "fb00ffb65f37407020eab322df31729abcd47946863c379d945aab60140f6f6d",
+      "scope": "engineering_publication_only_not_medical_review"
+    },
+    {
+      "id": "EV-20261106T171635-3f54a3ff73",
+      "at": "2026-11-06T17:16:35+00:00",
+      "action": "publish",
+      "proposal_id": "P-20261106T171515-d7294c6d5b",
+      "release_id": "R-20261106T171635-7e63747655",
+      "actor_kind": "automated_test"
+    },
+    {
+      "id": "EV-20261106T171739-5ee71303ba",
+      "at": "2026-11-06T17:17:39+00:00",
+      "action": "propose",
+      "proposal_id": "P-20261106T171739-42d04da375",
+      "label": "自动验收：继续加入专科临床指南，验证第二次增量提案"
+    },
+    {
+      "id": "EV-20261106T171817-2f0ddcd5c4",
+      "at": "2026-11-06T17:18:17+00:00",
+      "action": "review",
+      "proposal_id": "P-20261106T171739-42d04da375",
+      "decision": "defer",
+      "reviewer": "automated_ui_acceptance",
+      "reason": "第二轮提案暂缓发布，验证候选完整保留和审核门禁。",
+      "actor_kind": "automated_test",
+      "proposal_sha256": "73a828db326833dfa021e294155598ddd95ee06999dcfdc53c8e07e6b0be9599",
+      "scope": "engineering_publication_only_not_medical_review"
+    },
+    {
+      "id": "EV-20261106T171855-f47c9cc8b1",
+      "at": "2026-11-06T17:18:55+00:00",
+      "action": "rollback",
+      "from_release": "R-20261106T171635-7e63747655",
+      "release_id": "R-20261106T171515-bb1015c38d",
+      "reviewer": "automated_ui_acceptance",
+      "reason": "隔离页面回滚验收，不删除任何已发布版本。"
+    }
+  ]
+}

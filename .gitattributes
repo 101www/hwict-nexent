@@ -1,0 +1,17 @@
+# 统一换行符处理，避免 Windows 上提交的 CRLF 破坏 Linux 端脚本
+* text=auto
+
+# Shell 脚本必须保持 LF，否则在 Linux / 容器里执行会报 bad interpreter
+*.sh   text eol=lf
+*.py   text eol=lf
+*.cmd  text eol=crlf
+
+# 二进制文件不做换行转换
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.pdf  binary
+*.jar  binary
+*.docx binary
+*.xlsx binary

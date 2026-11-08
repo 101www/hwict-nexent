@@ -1,0 +1,9 @@
+{
+  "id": "EV-20261106T171855-f47c9cc8b1",
+  "at": "2026-11-06T17:18:55+00:00",
+  "action": "rollback",
+  "from_release": "R-20261106T171635-7e63747655",
+  "release_id": "R-20261106T171515-bb1015c38d",
+  "reviewer": "automated_ui_acceptance",
+  "reason": "隔离页面回滚验收，不删除任何已发布版本。"
+}

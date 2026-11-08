@@ -1,0 +1,43 @@
+# ==========================================================
+# 领域资产认知智能体（华为 ICT 大赛 · 赛题3）
+# ==========================================================
+
+# ---------- 构建产物 ----------
+__pycache__/
+*.py[cod]
+*.class
+target/
+dist/
+build/
+.mvn/
+node_modules/
+
+# ---------- 本地临时环境 ----------
+.tmp/
+vendor/
+.m2-verify/
+.venv/
+venv/
+.env
+.env.local
+*.log
+.DS_Store
+.idea/
+.vscode/
+
+# ---------- 原始 PDF 不进仓库 ----------
+# 理由：官方文件体积大（8 MB），且不主张版权。
+# README 里提供官方下载链接，重排后的文本随仓库提供，足以完整复现。
+data/raw/*.pdf
+!data/raw/.gitkeep
+# 但重排文本是建图的输入，必须保留
+!data/raw/*_重排.txt
+!data/raw/*_文字层.txt
+
+# ---------- 图谱历史快照不留（体积重复） ----------
+data/processed/*.history/
+data/processed/graph.history/
+data/processed/standard_only_graph.history/
+
+# ---------- 进化实验：保留事件与清单，不留每版的完整图谱副本 ----------
+data/evolution/**/graph.json

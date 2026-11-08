@@ -1,0 +1,2038 @@
+{
+  "tested_at": "2026-10-18T22:16:01+08:00",
+  "url": "http://127.0.0.1:8081/sse",
+  "scope": "Java MCP protocol and real graph; Nexent/model not exercised",
+  "passed": true,
+  "calls": [
+    {
+      "tool": "graph_status",
+      "arguments": {},
+      "result": {
+        "source": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.json",
+        "mode": "real_graph_snapshot",
+        "meta": {
+          "domain": "高血压临床诊疗与基层慢病管理",
+          "ontology_version": "0.4.0",
+          "lexicon_version": "0.3.0",
+          "rules_version": "0.4.0",
+          "legacy_rules_version": "0.1.0",
+          "management_rules_version": "0.2.0",
+          "clinical_rules_version": "0.4.0",
+          "decision_rules_version": "0.4.0",
+          "retention_policy": "uncertain_results_retained_pending",
+          "confidence_definition": "0~1规则启发式抽取评分；未经概率校准，不是医学正确率，不能替代人工核验。",
+          "built_at": "2026-10-18T22:01:10+08:00",
+          "source_docs": [
+            "WS-T872-2025_重排.txt",
+            "国家基层高血压防治管理指南2025版_重排.txt",
+            "中国高血压临床实践指南2025版_重排.txt"
+          ],
+          "documents": [
+            {
+              "id": "N-DOC-cbf1c1ce2a3d61",
+              "file": "WS-T872-2025_重排.txt",
+              "title": "基层医疗卫生机构高血压防治管理标准",
+              "year": "2025",
+              "profile": "standard",
+              "warnings": [],
+              "reference_year_evidence": {
+                "file": "WS-T872-2025_重排.txt",
+                "section": "REFERENCES",
+                "page": 8,
+                "block_id": "B-232e1532f133",
+                "start": 22,
+                "end": 51,
+                "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.95,
+                "confidence_basis": "rule_heuristic_not_calibrated"
+              },
+              "referenced_primary_year": "2021",
+              "verification": "pending",
+              "confidence": 0.9,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "document_metadata_requires_review"
+              ]
+            },
+            {
+              "id": "N-DOC-fa69b0792accaf",
+              "file": "国家基层高血压防治管理指南2025版_重排.txt",
+              "title": "国家基层高血压防治管理指南",
+              "year": "2025",
+              "profile": "primary",
+              "warnings": [],
+              "reference_year_evidence": null,
+              "referenced_primary_year": "",
+              "verification": "pending",
+              "confidence": 0.9,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "document_metadata_requires_review"
+              ]
+            },
+            {
+              "id": "N-DOC-c7e1aac134f39b",
+              "file": "中国高血压临床实践指南2025版_重排.txt",
+              "title": "中国高血压临床实践指南",
+              "year": "2024",
+              "profile": "clinical",
+              "warnings": [
+                "文件名年份 2025 与正文刊期 2024 不同；正文年份仍需人工核验。"
+              ],
+              "reference_year_evidence": null,
+              "referenced_primary_year": "",
+              "verification": "pending",
+              "confidence": 0.55,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "document_metadata_requires_review"
+              ]
+            }
+          ],
+          "builder": "pipeline/build_graph.py",
+          "page_numbering": "PDF physical page, null if unknown",
+          "limitations": [
+            "表格勾选关系未恢复，不推断表格列对应关系。",
+            "标准第 4、6 物理页存在文本错序，章节标记需核读，原文和页码仍保留。",
+            "全文数字候选全部保留；诊室血压边界经双证据结构化后仅供数学比较，仍待临床核验，不自动确诊。",
+            "三份全文药物关系使用分源新规则；所有自动抽取关系待人工核验。",
+            "未解析药物语句、数字及重叠实体保留为待核验候选，缺端点/证据断言完整保留。",
+            "数值不同仅为待核对差异，不能自动认定为医学冲突。"
+          ],
+          "history_snapshots": [
+            {
+              "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\c27546d13c1343a0870b9fef26402d01cccb26f0d9c4ac096b003deab508f9ac.json",
+              "sha256": "c27546d13c1343a0870b9fef26402d01cccb26f0d9c4ac096b003deab508f9ac",
+              "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+              "verification": "pending",
+              "confidence": 1.0,
+              "confidence_basis": "exact_file_snapshot_sha256"
+            },
+            {
+              "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\0e8caadbe003c6cb1cfa99c4bbe1f786db958c9b006ed1b08b216c6da72fe0aa.json",
+              "sha256": "0e8caadbe003c6cb1cfa99c4bbe1f786db958c9b006ed1b08b216c6da72fe0aa",
+              "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+              "verification": "pending",
+              "confidence": 1.0,
+              "confidence_basis": "exact_file_snapshot_sha256"
+            },
+            {
+              "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\57f51542028dec148a54bac2adf81cb82187cc62ae7ca3b8250037cb710edcff.json",
+              "sha256": "57f51542028dec148a54bac2adf81cb82187cc62ae7ca3b8250037cb710edcff",
+              "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+              "verification": "pending",
+              "confidence": 1.0,
+              "confidence_basis": "exact_file_snapshot_sha256"
+            }
+          ]
+        },
+        "nodes": 324,
+        "edges": 2503,
+        "blocks": 216,
+        "candidate_count": 1271,
+        "sufficient": false,
+        "message": "已加载真实图谱；自动抽取仍待核验。文件更新后需重启服务。"
+      }
+    },
+    {
+      "tool": "find_entities",
+      "arguments": {
+        "keyword": "顽固性高血压",
+        "type": "Disease"
+      },
+      "result": {
+        "items": [
+          {
+            "id": "N-难治性高血压",
+            "name": "难治性高血压",
+            "type": "Disease",
+            "aliases": [
+              "顽固性高血压"
+            ],
+            "attributes": {},
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.4.1",
+            "page": 5,
+            "block_id": "B-2b15546a3ede",
+            "start": 37,
+            "end": 43,
+            "evidence": "难治性高血压",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "sections": [
+              "5.4.2",
+              "7",
+              "8.4.1",
+              "CQ23",
+              "CQ24",
+              "CQ26",
+              "CQ27",
+              "CQ30",
+              "CQ33",
+              "CQ37",
+              "CQ40",
+              "CQ44",
+              "CQ5"
+            ],
+            "evidences": [
+              {
+                "file": "WS-T872-2025_重排.txt",
+                "section": "8.4.1",
+                "page": 5,
+                "block_id": "B-2b15546a3ede",
+                "start": 37,
+                "end": 43,
+                "evidence": "难治性高血压",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.95,
+                "confidence_basis": "rule_heuristic_not_calibrated"
+              },
+              {
+                "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                "section": "5.4.2",
+                "page": 6,
+                "block_id": "B-f9564b21fff0",
+                "start": 1153,
+                "end": 1159,
+                "evidence": "难治性高血压",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.95,
+                "confidence_basis": "rule_heuristic_not_calibrated"
+              },
+              {
+                "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                "section": "7",
+                "page": 12,
+                "block_id": "B-fb856e056a0a",
+                "start": 43,
+                "end": 49,
+                "evidence": "难治性高血压",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.95,
+                "confidence_basis": "rule_heuristic_not_calibrated"
+              }
+            ],
+            "verification_reasons": [],
+            "evidence_count": 44,
+            "evidences_truncated": true
+          }
+        ],
+        "total": 1,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "节点命中不等于结论；出处可用 get_evidence 进一步核对。"
+      }
+    },
+    {
+      "tool": "query_relations",
+      "arguments": {
+        "keyword": "followUpEvery",
+        "limit": 10
+      },
+      "result": {
+        "items": [
+          {
+            "id": "E-5549efd8b935c6",
+            "headId": "N-血压未达标患者",
+            "relation": "followUpEvery",
+            "tailId": "N-随访",
+            "condition": "8.1随访频率血压达标患者，至少每3个月随访1次；血压未达标患者，每月至少随访1次。",
+            "rule": "R-FOLLOWUP-UNCONTROLLED",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "8.1",
+            "page": 13,
+            "block_id": "B-6e3c9e3c8d5a",
+            "start": 0,
+            "end": 52,
+            "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "modality": "至少",
+            "source_section_id": "N-B-6e3c9e3c8d5a",
+            "verification_reasons": [],
+            "head_name": "血压未达标患者",
+            "tail_name": "随访"
+          },
+          {
+            "id": "E-862939a2c6f284",
+            "headId": "N-血压未达标患者",
+            "relation": "followUpEvery",
+            "tailId": "N-随访",
+            "condition": "8.3.2.2血压未达标者：1个月至少随访1次，直至血压达标。",
+            "rule": "R-FOLLOWUP-UNCONTROLLED",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.3.2.2",
+            "page": 5,
+            "block_id": "B-99383b6fd379",
+            "start": 0,
+            "end": 35,
+            "evidence": "8.3.2.2 血压未达标者：1 个月至少随访 1 次，直至血压达标。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "modality": "至少",
+            "source_section_id": "N-B-99383b6fd379",
+            "verification_reasons": [],
+            "head_name": "血压未达标患者",
+            "tail_name": "随访"
+          },
+          {
+            "id": "E-9b6c395e04a1cf",
+            "headId": "N-血压达标患者",
+            "relation": "followUpEvery",
+            "tailId": "N-随访",
+            "condition": "8.1随访频率血压达标患者，至少每3个月随访1次；血压未达标患者，每月至少随访1次。",
+            "rule": "R-FOLLOWUP-CONTROLLED",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "8.1",
+            "page": 13,
+            "block_id": "B-6e3c9e3c8d5a",
+            "start": 0,
+            "end": 52,
+            "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "modality": "至少",
+            "source_section_id": "N-B-6e3c9e3c8d5a",
+            "verification_reasons": [],
+            "head_name": "血压达标患者",
+            "tail_name": "随访"
+          },
+          {
+            "id": "E-bf48cb55593b7f",
+            "headId": "N-血压达标患者",
+            "relation": "followUpEvery",
+            "tailId": "N-随访",
+            "condition": "8.3.2.1血压达标者：每3个月至少随访1次。",
+            "rule": "R-FOLLOWUP-CONTROLLED",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.3.2.1",
+            "page": 5,
+            "block_id": "B-c79ea4f8af58",
+            "start": 0,
+            "end": 29,
+            "evidence": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "modality": "至少",
+            "source_section_id": "N-B-c79ea4f8af58",
+            "verification_reasons": [],
+            "head_name": "血压达标患者",
+            "tail_name": "随访"
+          }
+        ],
+        "total": 4,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "返回原始关系；需联合条件、例外与原文核验。"
+      }
+    },
+    {
+      "tool": "get_evidence",
+      "arguments": {
+        "block_id": "B-6e3c9e3c8d5a"
+      },
+      "result": {
+        "items": [
+          {
+            "id": "B-6e3c9e3c8d5a",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "8.1",
+            "title": "随访频率",
+            "chapter": "高血压长期随访管理",
+            "page": 13,
+            "raw": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。符合转诊条件者，\n建议按照转诊要求操作。",
+            "body": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。符合转诊条件者，\n建议按照转诊要求操作。",
+            "source_text": "",
+            "legacy": false,
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "section_status": "from_text_heading",
+            "heading_path": [
+              "高血压长期随访管理",
+              "随访频率"
+            ]
+          }
+        ],
+        "total": 1,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "返回构建时保存的原文；请保留文件、物理页码、章节及核验状态。"
+      }
+    },
+    {
+      "tool": "lookup_clause",
+      "arguments": {
+        "keyword": "随访频率",
+        "standard": "国家基层"
+      },
+      "result": {
+        "items": [
+          {
+            "id": "B-6e3c9e3c8d5a",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "8.1",
+            "title": "随访频率",
+            "chapter": "高血压长期随访管理",
+            "page": 13,
+            "raw": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。符合转诊条件者，\n建议按照转诊要求操作。",
+            "body": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。符合转诊条件者，\n建议按照转诊要求操作。",
+            "source_text": "",
+            "legacy": false,
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "section_status": "from_text_heading",
+            "heading_path": [
+              "高血压长期随访管理",
+              "随访频率"
+            ]
+          }
+        ],
+        "total": 1,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "原文块按关键词匹配；版面或章节状态需一并检查。"
+      }
+    },
+    {
+      "tool": "check_references",
+      "arguments": {
+        "keyword": "WS/T 872—2025",
+        "limit": 10
+      },
+      "result": {
+        "items": [
+          {
+            "id": "E-806c180128154a",
+            "headId": "N-B-13be9bab232a",
+            "relation": "references",
+            "tailId": "N-REF-ee7a3bdd86014a",
+            "condition": "",
+            "rule": "R-EXPLICIT-REFERENCE",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.1",
+            "page": 5,
+            "block_id": "B-13be9bab232a",
+            "start": 70,
+            "end": 96,
+            "evidence": "血压达标的目标值参见《国家基层高血压防治管理指南》。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.55,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "resolution": "version_mismatch",
+            "requested_year": "2021",
+            "candidate_doc_ids": [
+              "N-DOC-fa69b0792accaf"
+            ],
+            "version_evidence": {
+              "file": "WS-T872-2025_重排.txt",
+              "section": "REFERENCES",
+              "page": 8,
+              "block_id": "B-232e1532f133",
+              "start": 22,
+              "end": 51,
+              "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated"
+            },
+            "document_available": false,
+            "sufficient": false,
+            "verification_reasons": [
+              "version_mismatch"
+            ],
+            "target_name": "国家基层高血压防治管理指南（引用版本2021）",
+            "message": "同名候选文档与引用版本不同，需核验版本和具体条款。"
+          },
+          {
+            "id": "E-f7cb5c4f69d996",
+            "headId": "N-B-8e14135f673d",
+            "relation": "references",
+            "tailId": "N-REF-ee7a3bdd86014a",
+            "condition": "",
+            "rule": "R-EXPLICIT-REFERENCE",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "7",
+            "page": 4,
+            "block_id": "B-8e14135f673d",
+            "start": 362,
+            "end": 398,
+            "evidence": "高血压、正常高值血压及正常血压的定义参见《国家基层高血压防治管理指南》。",
+            "section_status": "needs_layout_review",
+            "verification": "pending",
+            "confidence": 0.55,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "resolution": "version_mismatch",
+            "requested_year": "2021",
+            "candidate_doc_ids": [
+              "N-DOC-fa69b0792accaf"
+            ],
+            "version_evidence": {
+              "file": "WS-T872-2025_重排.txt",
+              "section": "REFERENCES",
+              "page": 8,
+              "block_id": "B-232e1532f133",
+              "start": 22,
+              "end": 51,
+              "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated"
+            },
+            "document_available": false,
+            "sufficient": false,
+            "verification_reasons": [
+              "layout_or_section_unverified",
+              "version_mismatch"
+            ],
+            "target_name": "国家基层高血压防治管理指南（引用版本2021）",
+            "message": "同名候选文档与引用版本不同，需核验版本和具体条款。"
+          },
+          {
+            "id": "E-fcb839e0ee4e82",
+            "headId": "N-B-8e14135f673d",
+            "relation": "references",
+            "tailId": "N-REF-ee7a3bdd86014a",
+            "condition": "",
+            "rule": "R-EXPLICIT-REFERENCE",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "7",
+            "page": 4,
+            "block_id": "B-8e14135f673d",
+            "start": 399,
+            "end": 469,
+            "evidence": "生活方式指导包括：合理膳食（含减少钠盐、增加钾盐摄入）、控制体重、规律运动、戒烟、戒酒、\n高血压诊断标准参见《国家基层高血压防治管理指南》。",
+            "section_status": "needs_layout_review",
+            "verification": "pending",
+            "confidence": 0.55,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "resolution": "version_mismatch",
+            "requested_year": "2021",
+            "candidate_doc_ids": [
+              "N-DOC-fa69b0792accaf"
+            ],
+            "version_evidence": {
+              "file": "WS-T872-2025_重排.txt",
+              "section": "REFERENCES",
+              "page": 8,
+              "block_id": "B-232e1532f133",
+              "start": 22,
+              "end": 51,
+              "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated"
+            },
+            "document_available": false,
+            "sufficient": false,
+            "verification_reasons": [
+              "layout_or_section_unverified",
+              "version_mismatch"
+            ],
+            "target_name": "国家基层高血压防治管理指南（引用版本2021）",
+            "message": "同名候选文档与引用版本不同，需核验版本和具体条款。"
+          },
+          {
+            "id": "E-e7f285fcfebd55",
+            "headId": "N-B-bee9a4b090b8",
+            "relation": "references",
+            "tailId": "N-REF-ee7a3bdd86014a",
+            "condition": "",
+            "rule": "R-EXPLICIT-REFERENCE",
+            "file": "WS-T872-2025_重排.txt",
+            "section": "8.2",
+            "page": 5,
+            "block_id": "B-bee9a4b090b8",
+            "start": 218,
+            "end": 239,
+            "evidence": "具体参见《国家基层高血压防\n治管理指南》。",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.55,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "resolution": "version_mismatch",
+            "requested_year": "2021",
+            "candidate_doc_ids": [
+              "N-DOC-fa69b0792accaf"
+            ],
+            "version_evidence": {
+              "file": "WS-T872-2025_重排.txt",
+              "section": "REFERENCES",
+              "page": 8,
+              "block_id": "B-232e1532f133",
+              "start": 22,
+              "end": 51,
+              "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated"
+            },
+            "document_available": false,
+            "sufficient": false,
+            "verification_reasons": [
+              "version_mismatch"
+            ],
+            "target_name": "国家基层高血压防治管理指南（引用版本2021）",
+            "message": "同名候选文档与引用版本不同，需核验版本和具体条款。"
+          }
+        ],
+        "total": 4,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "不要用另一版本静默替代标准实际引用的版本。"
+      }
+    },
+    {
+      "tool": "traverse_relations",
+      "arguments": {
+        "start_entity": "随访",
+        "relation": "followUpEvery",
+        "hops": 1,
+        "end_entity": "血压达标患者",
+        "limit": 10
+      },
+      "result": {
+        "paths": [
+          {
+            "nodes": [
+              "随访",
+              "血压达标患者"
+            ],
+            "steps": [
+              {
+                "from": "随访",
+                "to": "血压达标患者",
+                "forward": false,
+                "edge": {
+                  "id": "E-9b6c395e04a1cf",
+                  "headId": "N-血压达标患者",
+                  "relation": "followUpEvery",
+                  "tailId": "N-随访",
+                  "condition": "8.1随访频率血压达标患者，至少每3个月随访1次；血压未达标患者，每月至少随访1次。",
+                  "rule": "R-FOLLOWUP-CONTROLLED",
+                  "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                  "section": "8.1",
+                  "page": 13,
+                  "block_id": "B-6e3c9e3c8d5a",
+                  "start": 0,
+                  "end": 52,
+                  "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。",
+                  "section_status": "from_text_heading",
+                  "verification": "pending",
+                  "confidence": 0.95,
+                  "confidence_basis": "rule_heuristic_not_calibrated",
+                  "modality": "至少",
+                  "source_section_id": "N-B-6e3c9e3c8d5a",
+                  "verification_reasons": []
+                }
+              }
+            ],
+            "hops": 1,
+            "kind": "evidence_path",
+            "sufficient": false,
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "minimum_edge_heuristic_not_calibrated"
+          },
+          {
+            "nodes": [
+              "随访",
+              "血压达标患者"
+            ],
+            "steps": [
+              {
+                "from": "随访",
+                "to": "血压达标患者",
+                "forward": false,
+                "edge": {
+                  "id": "E-bf48cb55593b7f",
+                  "headId": "N-血压达标患者",
+                  "relation": "followUpEvery",
+                  "tailId": "N-随访",
+                  "condition": "8.3.2.1血压达标者：每3个月至少随访1次。",
+                  "rule": "R-FOLLOWUP-CONTROLLED",
+                  "file": "WS-T872-2025_重排.txt",
+                  "section": "8.3.2.1",
+                  "page": 5,
+                  "block_id": "B-c79ea4f8af58",
+                  "start": 0,
+                  "end": 29,
+                  "evidence": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。",
+                  "section_status": "from_text_heading",
+                  "verification": "pending",
+                  "confidence": 0.95,
+                  "confidence_basis": "rule_heuristic_not_calibrated",
+                  "modality": "至少",
+                  "source_section_id": "N-B-c79ea4f8af58",
+                  "verification_reasons": []
+                }
+              }
+            ],
+            "hops": 1,
+            "kind": "evidence_path",
+            "sufficient": false,
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "minimum_edge_heuristic_not_calibrated"
+          }
+        ],
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "仅表示证据图连通；适用条件、例外、联合方案及临床结论尚未核验。"
+      }
+    },
+    {
+      "tool": "query_candidates",
+      "arguments": {
+        "keyword": "",
+        "collection": "extraction_candidates",
+        "limit": 2
+      },
+      "result": {
+        "items": [
+          {
+            "collection": "extraction_candidates",
+            "record": {
+              "id": "C-NUM-58399f830a13f0",
+              "kind": "numeric_mention",
+              "reason": "数值用途、单位或上下文待核验",
+              "file": "WS-T872-2025_重排.txt",
+              "section": "5",
+              "page": 3,
+              "block_id": "B-4802e3b879f7",
+              "start": 187,
+              "end": 194,
+              "evidence": "10 mmHg",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.35,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "numeric_scope_unverified"
+              ]
+            }
+          },
+          {
+            "collection": "extraction_candidates",
+            "record": {
+              "id": "C-NUM-7b91b2c13e7ace",
+              "kind": "numeric_mention",
+              "reason": "数值用途、单位或上下文待核验",
+              "file": "WS-T872-2025_重排.txt",
+              "section": "8.4.2",
+              "page": 5,
+              "block_id": "B-815aec541025",
+              "start": 50,
+              "end": 58,
+              "evidence": "180 mmHg",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.35,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "numeric_scope_unverified"
+              ]
+            }
+          }
+        ],
+        "total": 837,
+        "offset": 0,
+        "truncated": true,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "这些是待核验候选，不能据此直接给出临床建议。"
+      }
+    },
+    {
+      "tool": "query_candidates",
+      "arguments": {
+        "keyword": "",
+        "collection": "extraction_candidates",
+        "limit": 2,
+        "offset": 2
+      },
+      "result": {
+        "items": [
+          {
+            "collection": "extraction_candidates",
+            "record": {
+              "id": "C-NUM-dccf0b415fc91d",
+              "kind": "numeric_mention",
+              "reason": "数值用途、单位或上下文待核验",
+              "file": "WS-T872-2025_重排.txt",
+              "section": "8.4.2",
+              "page": 5,
+              "block_id": "B-815aec541025",
+              "start": 67,
+              "end": 75,
+              "evidence": "110 mmHg",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.35,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "numeric_scope_unverified"
+              ]
+            }
+          },
+          {
+            "collection": "extraction_candidates",
+            "record": {
+              "id": "C-NUM-71ce576a7ab87c",
+              "kind": "numeric_mention",
+              "reason": "数值用途、单位或上下文待核验",
+              "file": "WS-T872-2025_重排.txt",
+              "section": "8.4.2",
+              "page": 5,
+              "block_id": "B-815aec541025",
+              "start": 178,
+              "end": 188,
+              "evidence": "3.5 mmol/L",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.35,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": [
+                "numeric_scope_unverified"
+              ]
+            }
+          }
+        ],
+        "total": 837,
+        "offset": 2,
+        "truncated": true,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "这些是待核验候选，不能据此直接给出临床建议。"
+      }
+    },
+    {
+      "tool": "compare_threshold",
+      "arguments": {
+        "subject": "血压达标患者",
+        "value": 4,
+        "unit": "月"
+      },
+      "result": {
+        "items": [
+          {
+            "constraint": {
+              "id": "TH-48a93b332ede9b",
+              "subject": "血压达标患者随访间隔",
+              "indicator": "随访间隔",
+              "operator": "<=",
+              "value": 3,
+              "unit": "月",
+              "context": "血压达标患者",
+              "basis": "随访频率",
+              "comparison_scope": {
+                "population": "血压达标患者",
+                "purpose": "常规随访"
+              },
+              "file": "国家基层高血压防治管理指南2025版_重排.txt",
+              "section": "8.1",
+              "page": 13,
+              "block_id": "B-6e3c9e3c8d5a",
+              "start": 0,
+              "end": 52,
+              "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": []
+            },
+            "actual": 4.0,
+            "matches": false
+          },
+          {
+            "constraint": {
+              "id": "TH-ccce6dfe4bc2b9",
+              "subject": "血压达标患者随访间隔",
+              "indicator": "随访间隔",
+              "operator": "<=",
+              "value": 3,
+              "unit": "月",
+              "context": "血压达标患者",
+              "basis": "血压达标者",
+              "comparison_scope": {
+                "population": "血压达标患者",
+                "purpose": "常规随访"
+              },
+              "file": "WS-T872-2025_重排.txt",
+              "section": "8.3.2.1",
+              "page": 5,
+              "block_id": "B-c79ea4f8af58",
+              "start": 0,
+              "end": 29,
+              "evidence": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated",
+              "verification_reasons": []
+            },
+            "actual": 4.0,
+            "matches": false
+          }
+        ],
+        "total": 2,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "matches 仅表示数学比较；患者条件、管理目的和条款仍需核验，不执行单位换算。"
+      }
+    },
+    {
+      "tool": "detect_conflicts",
+      "arguments": {},
+      "result": {
+        "items": [
+          {
+            "sufficient": false,
+            "source_documents": [
+              {
+                "id": "N-DOC-cbf1c1ce2a3d61",
+                "file": "WS-T872-2025_重排.txt",
+                "title": "基层医疗卫生机构高血压防治管理标准",
+                "year": "2025",
+                "profile": "standard",
+                "warnings": [],
+                "reference_year_evidence": {
+                  "file": "WS-T872-2025_重排.txt",
+                  "section": "REFERENCES",
+                  "page": 8,
+                  "block_id": "B-232e1532f133",
+                  "start": 22,
+                  "end": 51,
+                  "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+                  "section_status": "from_text_heading",
+                  "verification": "pending",
+                  "confidence": 0.95,
+                  "confidence_basis": "rule_heuristic_not_calibrated"
+                },
+                "referenced_primary_year": "2021",
+                "verification": "pending",
+                "confidence": 0.9,
+                "confidence_basis": "rule_heuristic_not_calibrated",
+                "verification_reasons": [
+                  "document_metadata_requires_review"
+                ]
+              },
+              {
+                "id": "N-DOC-c7e1aac134f39b",
+                "file": "中国高血压临床实践指南2025版_重排.txt",
+                "title": "中国高血压临床实践指南",
+                "year": "2024",
+                "profile": "clinical",
+                "warnings": [
+                  "文件名年份 2025 与正文刊期 2024 不同；正文年份仍需人工核验。"
+                ],
+                "reference_year_evidence": null,
+                "referenced_primary_year": "",
+                "verification": "pending",
+                "confidence": 0.55,
+                "confidence_basis": "rule_heuristic_not_calibrated",
+                "verification_reasons": [
+                  "document_metadata_requires_review"
+                ]
+              }
+            ],
+            "items": [
+              {
+                "id": "E-14248f27040608",
+                "headId": "N-基层医疗卫生机构",
+                "relation": "requiresDrugClass",
+                "tailId": "N-β受体阻滞剂",
+                "condition": "基层医疗卫生机构应至少配备5大类降压药：血管紧张素转换酶抑制剂、血管紧张素Ⅱ受体阻滞剂、二氢吡啶类钙通道阻滞剂、噻嗪类利尿剂和β受体阻滞剂。",
+                "rule": "STD-DRUG-STOCK",
+                "file": "WS-T872-2025_重排.txt",
+                "section": "4.2",
+                "page": 3,
+                "block_id": "B-022083302079",
+                "start": 9,
+                "end": 80,
+                "evidence": "基层医疗卫生机构应至少配备5大类降压药：血管紧张素转换酶抑制剂、血管紧张素Ⅱ受体阻滞剂、\n二氢吡啶类钙通道阻滞剂、噻嗪类利尿剂和β受体阻滞剂。",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.92,
+                "confidence_basis": "rule_heuristic_not_calibrated",
+                "scope": {
+                  "purpose": "机构药物保障；不等于一线初始用药"
+                },
+                "basis_sections": [],
+                "source_profile": "standard",
+                "modality": "应至少配备",
+                "source_section_id": "N-B-022083302079",
+                "extraction_basis": "全文规则",
+                "choice_group": "",
+                "exceptions": [],
+                "verification_reasons": [
+                  "clinical_review_required"
+                ]
+              },
+              {
+                "id": "E-6f972edc504aa0",
+                "headId": "N-β受体阻滞剂",
+                "relation": "excludedFromFirstLine",
+                "tailId": "N-高血压",
+                "condition": "无临床合并症的一线初始用药；不等于所有场景禁用；因此本指南不建议将β受体阻滞剂作为一线初始降压药物。",
+                "rule": "CL-BB-NOT-FIRST-LINE",
+                "file": "中国高血压临床实践指南2025版_重排.txt",
+                "section": "CQ13",
+                "page": 15,
+                "block_id": "B-1ef44f45c4d3",
+                "start": 1336,
+                "end": 1363,
+                "evidence": "因此本指南不建议将β受体阻滞剂作为一线初始\n降压药物。",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.92,
+                "confidence_basis": "rule_heuristic_not_calibrated",
+                "scope": {
+                  "population": "无临床合并症的高血压患者",
+                  "purpose": "一线初始降压"
+                },
+                "basis_sections": [],
+                "source_profile": "clinical",
+                "modality": "不建议",
+                "source_section_id": "N-B-1ef44f45c4d3",
+                "extraction_basis": "全文规则",
+                "choice_group": "",
+                "exceptions": [],
+                "verification_reasons": [
+                  "clinical_review_required"
+                ]
+              }
+            ],
+            "verification": "pending",
+            "reason": "机构药物配备与无合并症患者一线初始用药是不同决策；配备不意味着所有患者首选，非首选也不意味着禁用。",
+            "subject": "β受体阻滞剂",
+            "kind": "drug_recommendation_scope_comparison",
+            "confidence": 0.55,
+            "status": "not_conflicting_different_purpose",
+            "confidence_basis": "rule_heuristic_not_calibrated"
+          },
+          {
+            "sufficient": false,
+            "source_documents": [
+              {
+                "id": "N-DOC-fa69b0792accaf",
+                "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                "title": "国家基层高血压防治管理指南",
+                "year": "2025",
+                "profile": "primary",
+                "warnings": [],
+                "reference_year_evidence": null,
+                "referenced_primary_year": "",
+                "verification": "pending",
+                "confidence": 0.9,
+                "confidence_basis": "rule_heuristic_not_calibrated",
+                "verification_reasons": [
+                  "document_metadata_requires_review"
+                ]
+              },
+              {
+                "id": "N-DOC-c7e1aac134f39b",
+                "file": "中国高血压临床实践指南2025版_重排.txt",
+                "title": "中国高血压临床实践指南",
+                "year": "2024",
+                "profile": "clinical",
+                "warnings": [
+                  "文件名年份 2025 与正文刊期 2024 不同；正文年份仍需人工核验。"
+                ],
+                "reference_year_evidence": null,
+                "referenced_primary_year": "",
+                "verification": "pending",
+                "confidence": 0.55,
+                "confidence_basis": "rule_heuristic_not_calibrated",
+                "verification_reasons": [
+                  "document_metadata_requires_review"
+                ]
+              }
+            ],
+            "items": [
+              {
+                "id": "E-b2ab0879450ae2",
+                "headId": "N-基层医疗卫生机构",
+                "relation": "requiresDrugClass",
+                "tailId": "N-β受体阻滞剂",
+                "condition": "ACEI与ARB建议都配备；无条件者至少配备其中一种；基层医疗卫生机构应配备下述五大类降压药：（1）A：血管紧张素转换酶抑制剂（ACEI）和血管紧张素Ⅱ受体拮抗剂（ARB）两类药物建议都配备。ACEI与ARB降压作用机制相似，无条件的基层医疗卫生机构应至少配备其中一种。（2）B：β受体阻滞剂。（3）C：钙拮抗剂（CCB），二氢吡啶类CCB常用于降压。（4）D：利尿剂，噻嗪类利尿剂常用于降压。",
+                "rule": "PR-DRUG-STOCK",
+                "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                "section": "1.3",
+                "page": 2,
+                "block_id": "B-83ce236bde37",
+                "start": 12,
+                "end": 194,
+                "evidence": "基层医疗卫生机构应配备下述五大类降压药：\n（1）A：血管紧张素转换酶抑制剂（ACEI）和血管紧张\n素Ⅱ受体拮抗剂（ARB）两类药物建议都配备。ACEI\n与 ARB 降压作用机制相似，无条件的基层医疗卫生\n机构应至少配备其中一种。（2） B：β 受体阻滞剂。（3）\nC：钙拮抗剂（CCB），二氢吡啶类 CCB 常用于降压。（4）\nD：利尿剂，噻嗪类利尿剂常用于降压。",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.92,
+                "confidence_basis": "rule_heuristic_not_calibrated",
+                "scope": {
+                  "purpose": "机构药物保障",
+                  "limited_resource_stock_requirement": {
+                    "at_least_one": [
+                      "血管紧张素转换酶抑制剂",
+                      "血管紧张素II受体阻滞剂"
+                    ]
+                  }
+                },
+                "basis_sections": [],
+                "source_profile": "primary",
+                "modality": "应配备",
+                "source_section_id": "N-B-83ce236bde37",
+                "extraction_basis": "全文规则",
+                "choice_group": "",
+                "exceptions": [],
+                "verification_reasons": [
+                  "clinical_review_required"
+                ]
+              },
+              {
+                "id": "E-6f972edc504aa0",
+                "headId": "N-β受体阻滞剂",
+                "relation": "excludedFromFirstLine",
+                "tailId": "N-高血压",
+                "condition": "无临床合并症的一线初始用药；不等于所有场景禁用；因此本指南不建议将β受体阻滞剂作为一线初始降压药物。",
+                "rule": "CL-BB-NOT-FIRST-LINE",
+                "file": "中国高血压临床实践指南2025版_重排.txt",
+                "section": "CQ13",
+                "page": 15,
+                "block_id": "B-1ef44f45c4d3",
+                "start": 1336,
+                "end": 1363,
+                "evidence": "因此本指南不建议将β受体阻滞剂作为一线初始\n降压药物。",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.92,
+                "confidence_basis": "rule_heuristic_not_calibrated",
+                "scope": {
+                  "population": "无临床合并症的高血压患者",
+                  "purpose": "一线初始降压"
+                },
+                "basis_sections": [],
+                "source_profile": "clinical",
+                "modality": "不建议",
+                "source_section_id": "N-B-1ef44f45c4d3",
+                "extraction_basis": "全文规则",
+                "choice_group": "",
+                "exceptions": [],
+                "verification_reasons": [
+                  "clinical_review_required"
+                ]
+              }
+            ],
+            "verification": "pending",
+            "reason": "机构药物配备与无合并症患者一线初始用药是不同决策；配备不意味着所有患者首选，非首选也不意味着禁用。",
+            "subject": "β受体阻滞剂",
+            "kind": "drug_recommendation_scope_comparison",
+            "confidence": 0.55,
+            "status": "not_conflicting_different_purpose",
+            "confidence_basis": "rule_heuristic_not_calibrated"
+          }
+        ],
+        "total": 2,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "仅检查已覆盖数值和关系模式；零条结果不表示全文一致，potential_conflict仍待审核。"
+      }
+    },
+    {
+      "tool": "resolve_regimen",
+      "arguments": {
+        "population": "高血压合并糖尿病患者"
+      },
+      "result": {
+        "items": [
+          {
+            "components": [
+              {
+                "code": "A",
+                "options": [
+                  "血管紧张素转换酶抑制剂",
+                  "血管紧张素II受体阻滞剂"
+                ],
+                "selection": "one_of"
+              }
+            ],
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "paths": [
+              {
+                "steps": [
+                  {
+                    "edge": {
+                      "id": "E-66e12bb6b24d32",
+                      "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+                      "relation": "preferredRegimenFor",
+                      "tailId": "N-高血压合并糖尿病患者",
+                      "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。",
+                      "rule": "PR-COMORBID-DM",
+                      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                      "section": "5.4.6.1",
+                      "page": 9,
+                      "block_id": "B-257f599f3070",
+                      "start": 153,
+                      "end": 179,
+                      "evidence": "合并糖尿病：首选 A，血压未达标者加用 C 或 D。",
+                      "section_status": "needs_layout_review",
+                      "verification": "pending",
+                      "confidence": 0.55,
+                      "confidence_basis": "rule_heuristic_not_calibrated",
+                      "scope": {
+                        "population": "高血压合并糖尿病患者",
+                        "purpose": "合并症用药选择"
+                      },
+                      "basis_sections": [
+                        "5.4.2",
+                        "5.4.3"
+                      ],
+                      "source_profile": "primary",
+                      "modality": "首选",
+                      "source_section_id": "N-B-257f599f3070",
+                      "extraction_basis": "全文规则",
+                      "semantic_section": "5.4.3.2",
+                      "supporting_evidence": [
+                        {
+                          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                          "section": "5.4.2",
+                          "page": 6,
+                          "block_id": "B-f9564b21fff0",
+                          "start": 0,
+                          "end": 1454,
+                          "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+                          "section_status": "from_text_heading",
+                          "verification": "pending",
+                          "confidence": 0.95,
+                          "confidence_basis": "rule_heuristic_not_calibrated"
+                        }
+                      ],
+                      "combination_limit_evidence": [
+                        {
+                          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                          "section": "5.4.4",
+                          "page": 9,
+                          "block_id": "B-16ff197f2a95",
+                          "start": 82,
+                          "end": 100,
+                          "evidence": "不宜联合应用 ACEI 与 ARB。",
+                          "section_status": "from_text_heading",
+                          "verification": "pending",
+                          "confidence": 0.95,
+                          "confidence_basis": "rule_heuristic_not_calibrated"
+                        }
+                      ],
+                      "regimen_group": "RG-932a72981a09ec",
+                      "verification_reasons": [
+                        "clinical_review_required",
+                        "sentence_displaced_from_expected_section",
+                        "layout_or_section_unverified"
+                      ]
+                    },
+                    "forward": false
+                  },
+                  {
+                    "edge": {
+                      "id": "E-44eefca91accf2",
+                      "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+                      "relation": "hasAlternativeComponent",
+                      "tailId": "N-血管紧张素转换酶抑制剂",
+                      "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。",
+                      "rule": "PR-COMORBID-DM",
+                      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                      "section": "5.4.2",
+                      "page": 6,
+                      "block_id": "B-f9564b21fff0",
+                      "start": 0,
+                      "end": 1454,
+                      "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+                      "section_status": "from_text_heading",
+                      "verification": "pending",
+                      "confidence": 0.88,
+                      "confidence_basis": "rule_heuristic_not_calibrated",
+                      "option_group": "A",
+                      "regimen_group": "RG-932a72981a09ec",
+                      "supporting_evidence": [
+                        {
+                          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                          "section": "5.4.2",
+                          "page": 6,
+                          "block_id": "B-f9564b21fff0",
+                          "start": 0,
+                          "end": 1454,
+                          "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+                          "section_status": "from_text_heading",
+                          "verification": "pending",
+                          "confidence": 0.95,
+                          "confidence_basis": "rule_heuristic_not_calibrated"
+                        }
+                      ],
+                      "combination_limit_evidence": [
+                        {
+                          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                          "section": "5.4.4",
+                          "page": 9,
+                          "block_id": "B-16ff197f2a95",
+                          "start": 82,
+                          "end": 100,
+                          "evidence": "不宜联合应用 ACEI 与 ARB。",
+                          "section_status": "from_text_heading",
+                          "verification": "pending",
+                          "confidence": 0.95,
+                          "confidence_basis": "rule_heuristic_not_calibrated"
+                        }
+                      ],
+                      "verification_reasons": [
+                        "clinical_review_required",
+                        "sentence_displaced_from_expected_section"
+                      ]
+                    },
+                    "forward": true
+                  }
+                ],
+                "option_group": "A",
+                "hops": 2,
+                "nodes": [
+                  "高血压合并糖尿病患者",
+                  "血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+                  "血管紧张素转换酶抑制剂"
+                ]
+              },
+              {
+                "steps": [
+                  {
+                    "edge": {
+                      "id": "E-66e12bb6b24d32",
+                      "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+                      "relation": "preferredRegimenFor",
+                      "tailId": "N-高血压合并糖尿病患者",
+                      "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。",
+                      "rule": "PR-COMORBID-DM",
+                      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                      "section": "5.4.6.1",
+                      "page": 9,
+                      "block_id": "B-257f599f3070",
+                      "start": 153,
+                      "end": 179,
+                      "evidence": "合并糖尿病：首选 A，血压未达标者加用 C 或 D。",
+                      "section_status": "needs_layout_review",
+                      "verification": "pending",
+                      "confidence": 0.55,
+                      "confidence_basis": "rule_heuristic_not_calibrated",
+                      "scope": {
+                        "population": "高血压合并糖尿病患者",
+                        "purpose": "合并症用药选择"
+                      },
+                      "basis_sections": [
+                        "5.4.2",
+                        "5.4.3"
+                      ],
+                      "source_profile": "primary",
+                      "modality": "首选",
+                      "source_section_id": "N-B-257f599f3070",
+                      "extraction_basis": "全文规则",
+                      "semantic_section": "5.4.3.2",
+                      "supporting_evidence": [
+                        {
+                          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                          "section": "5.4.2",
+                          "page": 6,
+                          "block_id": "B-f9564b21fff0",
+                          "start": 0,
+                          "end": 1454,
+                          "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+                          "section_status": "from_text_heading",
+                          "verification": "pending",
+                          "confidence": 0.95,
+                          "confidence_basis": "rule_heuristic_not_calibrated"
+                        }
+                      ],
+                      "combination_limit_evidence": [
+                        {
+                          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                          "section": "5.4.4",
+                          "page": 9,
+                          "block_id": "B-16ff197f2a95",
+                          "start": 82,
+                          "end": 100,
+                          "evidence": "不宜联合应用 ACEI 与 ARB。",
+                          "section_status": "from_text_heading",
+                          "verification": "pending",
+                          "confidence": 0.95,
+                          "confidence_basis": "rule_heuristic_not_calibrated"
+                        }
+                      ],
+                      "regimen_group": "RG-932a72981a09ec",
+                      "verification_reasons": [
+                        "clinical_review_required",
+                        "sentence_displaced_from_expected_section",
+                        "layout_or_section_unverified"
+                      ]
+                    },
+                    "forward": false
+                  },
+                  {
+                    "edge": {
+                      "id": "E-6020f469be1583",
+                      "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+                      "relation": "hasAlternativeComponent",
+                      "tailId": "N-血管紧张素II受体阻滞剂",
+                      "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。",
+                      "rule": "PR-COMORBID-DM",
+                      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                      "section": "5.4.2",
+                      "page": 6,
+                      "block_id": "B-f9564b21fff0",
+                      "start": 0,
+                      "end": 1454,
+                      "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+                      "section_status": "from_text_heading",
+                      "verification": "pending",
+                      "confidence": 0.88,
+                      "confidence_basis": "rule_heuristic_not_calibrated",
+                      "option_group": "A",
+                      "regimen_group": "RG-932a72981a09ec",
+                      "supporting_evidence": [
+                        {
+                          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                          "section": "5.4.2",
+                          "page": 6,
+                          "block_id": "B-f9564b21fff0",
+                          "start": 0,
+                          "end": 1454,
+                          "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+                          "section_status": "from_text_heading",
+                          "verification": "pending",
+                          "confidence": 0.95,
+                          "confidence_basis": "rule_heuristic_not_calibrated"
+                        }
+                      ],
+                      "combination_limit_evidence": [
+                        {
+                          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                          "section": "5.4.4",
+                          "page": 9,
+                          "block_id": "B-16ff197f2a95",
+                          "start": 82,
+                          "end": 100,
+                          "evidence": "不宜联合应用 ACEI 与 ARB。",
+                          "section_status": "from_text_heading",
+                          "verification": "pending",
+                          "confidence": 0.95,
+                          "confidence_basis": "rule_heuristic_not_calibrated"
+                        }
+                      ],
+                      "verification_reasons": [
+                        "clinical_review_required",
+                        "sentence_displaced_from_expected_section"
+                      ]
+                    },
+                    "forward": true
+                  }
+                ],
+                "option_group": "A",
+                "hops": 2,
+                "nodes": [
+                  "高血压合并糖尿病患者",
+                  "血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+                  "血管紧张素II受体阻滞剂"
+                ]
+              }
+            ],
+            "verification": "pending",
+            "kind": "scoped_regimen_composition",
+            "note": "指南原文的方案解析；保留人群、择一/联用、禁忌和版面疑点，不是个体处方。",
+            "confidence": 0.55,
+            "sufficient": false,
+            "selection": "all_components_with_one_of_per_group"
+          }
+        ],
+        "total": 1,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "已组合适用人群与代号定义两跳；仍待核验，不自动产生个体处方。"
+      }
+    },
+    {
+      "tool": "evaluate_blood_pressure",
+      "arguments": {
+        "systolic": 140,
+        "diastolic": 90,
+        "unit": "mmHg",
+        "measurement_method": "unknown"
+      },
+      "result": {
+        "kind": "blood_pressure_rule_evaluation",
+        "input": {
+          "measurement_method": "unknown",
+          "unit": "mmHg",
+          "dbp": 90.0,
+          "sbp": 140.0
+        },
+        "systolic_reaches": true,
+        "diastolic_reaches": true,
+        "reference_boundary_reached": true,
+        "scope_status": "method_unconfirmed",
+        "protocol_status": "insufficient_or_unmet_conditions",
+        "missing_or_unmet_conditions": [
+          "measurement_method=office",
+          "standardized_measurement",
+          "dated_repeat_visits"
+        ],
+        "visits": [],
+        "rule": {
+          "id": "DR-4fa4b4412505cb",
+          "kind": "blood_pressure_boundary",
+          "rule": "PR-OFFICE-BP-DIAGNOSTIC-BOUNDARY",
+          "measurement_method": "office",
+          "logic": "OR",
+          "threshold_ids": [
+            "T-fc296bfbca7871",
+            "T-0785f35dd81f5c"
+          ],
+          "scope": "基层成人诊室血压诊断条款；不是家庭/动态血压标准，不代替临床诊断",
+          "requirements": {
+            "minimum_visits": 3,
+            "maximum_days": 28,
+            "non_same_day": true,
+            "standardized": true,
+            "every_visit_reaches_boundary": true
+          },
+          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+          "section": "4.2.1",
+          "page": 4,
+          "block_id": "B-ef7955ae5f02",
+          "start": 366,
+          "end": 405,
+          "evidence": "诊室血压 收缩压≥ 140 mmHg 和 ( 或 ) 舒张压≥ 90 mmHg",
+          "section_status": "from_text_heading",
+          "verification": "pending",
+          "confidence": 0.9,
+          "confidence_basis": "rule_heuristic_not_calibrated",
+          "supporting_evidence": [
+            {
+              "file": "国家基层高血压防治管理指南2025版_重排.txt",
+              "section": "4.2.1",
+              "page": 4,
+              "block_id": "B-ef7955ae5f02",
+              "start": 15,
+              "end": 60,
+              "evidence": "诊室血压诊断标准：4 周内非同日 3 次规范\n测量的诊室血压均≥ 140/90 mmHg。",
+              "section_status": "from_text_heading",
+              "verification": "pending",
+              "confidence": 0.95,
+              "confidence_basis": "rule_heuristic_not_calibrated"
+            }
+          ],
+          "sufficient": false,
+          "verification_reasons": [
+            "clinical_review_required"
+          ]
+        },
+        "thresholds": [
+          {
+            "id": "T-fc296bfbca7871",
+            "subject": "高血压诊室血压诊断边界",
+            "indicator": "收缩压",
+            "value": 140.0,
+            "operator": ">=",
+            "unit": "mmHg",
+            "context": "诊室血压；非单次确诊",
+            "comparison_scope": "基层成人诊室血压诊断条款；不是家庭/动态血压标准，不代替临床诊断",
+            "decision_rule_id": "DR-4fa4b4412505cb",
+            "rule": "PR-OFFICE-BP-DIAGNOSTIC-BOUNDARY",
+            "role": "sbp",
+            "logic": "OR",
+            "execution_status": "mathematical_only_pending_clinical_review",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "4.2.1",
+            "page": 4,
+            "block_id": "B-ef7955ae5f02",
+            "start": 366,
+            "end": 405,
+            "evidence": "诊室血压 收缩压≥ 140 mmHg 和 ( 或 ) 舒张压≥ 90 mmHg",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.9,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "supporting_evidence": [
+              {
+                "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                "section": "4.2.1",
+                "page": 4,
+                "block_id": "B-ef7955ae5f02",
+                "start": 15,
+                "end": 60,
+                "evidence": "诊室血压诊断标准：4 周内非同日 3 次规范\n测量的诊室血压均≥ 140/90 mmHg。",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.95,
+                "confidence_basis": "rule_heuristic_not_calibrated"
+              }
+            ],
+            "verification_reasons": [
+              "clinical_review_required"
+            ],
+            "derived_from": [
+              "TH-3de5fd67081a6a",
+              "TH-b5732c623afe0c",
+              "C-NUM-f9c8576b3ca0c5",
+              "C-NUM-7d4d2998c77394"
+            ]
+          },
+          {
+            "id": "T-0785f35dd81f5c",
+            "subject": "高血压诊室血压诊断边界",
+            "indicator": "舒张压",
+            "value": 90.0,
+            "operator": ">=",
+            "unit": "mmHg",
+            "context": "诊室血压；非单次确诊",
+            "comparison_scope": "基层成人诊室血压诊断条款；不是家庭/动态血压标准，不代替临床诊断",
+            "decision_rule_id": "DR-4fa4b4412505cb",
+            "rule": "PR-OFFICE-BP-DIAGNOSTIC-BOUNDARY",
+            "role": "dbp",
+            "logic": "OR",
+            "execution_status": "mathematical_only_pending_clinical_review",
+            "file": "国家基层高血压防治管理指南2025版_重排.txt",
+            "section": "4.2.1",
+            "page": 4,
+            "block_id": "B-ef7955ae5f02",
+            "start": 366,
+            "end": 405,
+            "evidence": "诊室血压 收缩压≥ 140 mmHg 和 ( 或 ) 舒张压≥ 90 mmHg",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.9,
+            "confidence_basis": "rule_heuristic_not_calibrated",
+            "supporting_evidence": [
+              {
+                "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                "section": "4.2.1",
+                "page": 4,
+                "block_id": "B-ef7955ae5f02",
+                "start": 15,
+                "end": 60,
+                "evidence": "诊室血压诊断标准：4 周内非同日 3 次规范\n测量的诊室血压均≥ 140/90 mmHg。",
+                "section_status": "from_text_heading",
+                "verification": "pending",
+                "confidence": 0.95,
+                "confidence_basis": "rule_heuristic_not_calibrated"
+              }
+            ],
+            "verification_reasons": [
+              "clinical_review_required"
+            ],
+            "derived_from": [
+              "TH-3de5fd67081a6a",
+              "TH-b5732c623afe0c",
+              "C-NUM-f9c8576b3ca0c5",
+              "C-NUM-7d4d2998c77394"
+            ]
+          }
+        ],
+        "sufficient": false,
+        "verification": "pending",
+        "note": "OR表示收缩压或舒张压任一达到即可。单次读数只比较边界；条件齐全也仅表示所报资料符合待核验条款，不自动确诊。未达到本边界不等于排除高血压。"
+      }
+    },
+    {
+      "tool": "find_entities",
+      "arguments": {
+        "keyword": "不存在的测试实体xyz"
+      },
+      "result": {
+        "items": [],
+        "total": 0,
+        "offset": 0,
+        "truncated": false,
+        "sufficient": false,
+        "verification": "pending",
+        "message": "未命中；不能据此判断原文不存在相关内容。"
+      }
+    }
+  ],
+  "server": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {
+      "completions": {},
+      "logging": {},
+      "prompts": {
+        "listChanged": true
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": true
+      },
+      "tools": {
+        "listChanged": true
+      }
+    },
+    "serverInfo": {
+      "name": "kg-tools",
+      "version": "0.2.0"
+    }
+  },
+  "tools": [
+    {
+      "name": "compare_threshold",
+      "description": "仅将数值与已结构化的数值约束作数学比较，保留适用条件和出处。需要匹配单位；命中不构成临床结论，未核验数字候选不会参与。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string",
+            "description": "主题关键词，例如：血压达标患者随访间隔"
+          },
+          "value": {
+            "type": "number",
+            "format": "double",
+            "description": "要比较的数值"
+          },
+          "unit": {
+            "type": "string",
+            "description": "单位，必须与记录相同，例如：月"
+          }
+        },
+        "required": [
+          "subject",
+          "value",
+          "unit"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_evidence",
+      "description": "按关系或引用中的block_id取得完整原文块。偏移start/end为Python字符索引，原文不重排、不改写。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "block_id": {
+            "type": "string",
+            "description": "原文块ID，例如关系中的 block_id"
+          }
+        },
+        "required": [
+          "block_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "resolve_regimen",
+      "description": "按完整人群组合两跳证据：人群←首选方案→择一/必要药物成分。只连接同regimen_group并核对代号定义，保留限制和排版疑点，不是个体处方。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "population": {
+            "type": "string",
+            "description": "完整人群，例如高血压合并糖尿病患者"
+          }
+        },
+        "required": [
+          "population"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "lookup_clause",
+      "description": "直接检索保存的文档原文块，包括尚未抽成关系的内容；返回原文、物理页码、章节和block_id。为关键词检索，非语义RAG。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "原文关键词，例如：随访频率"
+          },
+          "standard": {
+            "type": "string",
+            "description": "限定文件名，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "find_entities",
+      "description": "按名称、别名、ID、类型查找真实图谱节点。返回待核验状态和少量出处；未命中不代表原文不存在。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "关键词，例如：血压达标患者"
+          },
+          "type": {
+            "type": "string",
+            "description": "类型，如 Disease/DrugClass/Population/Equipment/SourceDoc，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "query_relations",
+      "description": "按实体名称或关系名称查找关系，返回完整条件、例外、原文、页码、置信分和待核验状态。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "关键词，例如：随访、血压达标患者、requiresEquipment"
+          },
+          "file": {
+            "type": "string",
+            "description": "限定文件名，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "evaluate_blood_pressure",
+      "description": "对收缩压/舒张压进行OR组合边界比较，并检查诊室、规范测量、4周内非同日3次等条款前提。单次140/90只达到边界，不自动确诊。不得猜测用户未提供的测量条件。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "systolic": {
+            "type": "number",
+            "format": "double",
+            "description": "收缩压数值"
+          },
+          "diastolic": {
+            "type": "number",
+            "format": "double",
+            "description": "舒张压数值"
+          },
+          "unit": {
+            "type": "string",
+            "description": "单位，目前只支持mmHg"
+          },
+          "measurement_method": {
+            "type": "string",
+            "description": "office/home/ambulatory/unknown；用户未说明时传unknown"
+          },
+          "standardized": {
+            "type": "boolean",
+            "description": "是否规范测量，用户未说明时不填"
+          },
+          "readings_json": {
+            "type": "string",
+            "description": "可选复测记录JSON数组，每项date为YYYY-MM-DD、sbp/dbp为数值；不得编造复测记录"
+          }
+        },
+        "required": [
+          "systolic",
+          "diastolic",
+          "unit"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "detect_conflicts",
+      "description": "比较已结构化数值差异及药物推荐作用域。区分配备vs一线初始用药、同范围正反推荐与条件不足；均保留原文，不能自动裁决医学冲突。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string",
+            "description": "主题关键词，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "check_references",
+      "description": "检查标准引用的指南及版本，区分未入库、版本不匹配和已匹配；有同名文档不代表引用要求已补全。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "来源文件或被引文件关键词，可留空"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "query_candidates",
+      "description": "查询保留的待核验抽取，包括未解析药物语句、数值和重叠实体。候选不作为已确认知识使用；支持翻页，不删除原始记录。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "关键词，例如：转诊、ARNI"
+          },
+          "collection": {
+            "type": "string",
+            "description": "集合名，可留空；edge_candidates/entity_candidates/extraction_candidates/threshold_candidates"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "返回条数，默认10，最多50"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int32",
+            "description": "翻页起点，默认0"
+          }
+        },
+        "required": [
+          "keyword"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "traverse_relations",
+      "description": "沿业务关系做有界多跳检索，支持正反向查找且保留每条边的原始方向、条件和证据。结果只表示证据连通，不是已验证的医学推断。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "start_entity": {
+            "type": "string",
+            "description": "起点名称或ID，例如：血压达标患者"
+          },
+          "relation": {
+            "type": "string",
+            "description": "限定关系，可留空"
+          },
+          "hops": {
+            "type": "integer",
+            "format": "int32",
+            "description": "最大跳数，默认2，最多3"
+          },
+          "end_entity": {
+            "type": "string",
+            "description": "可选终点的准确名称或ID"
+          },
+          "limit": {
+            "type": "integer",
+            "format": "int32",
+            "description": "最大路径数，默认10，最多50"
+          }
+        },
+        "required": [
+          "start_entity"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "graph_status",
+      "description": "查看当前加载的真实图谱文件、构建时间、文档版本、数量及局限。先用此工具确认数据来源。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

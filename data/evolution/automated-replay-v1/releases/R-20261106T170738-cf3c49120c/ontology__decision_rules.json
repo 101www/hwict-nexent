@@ -1,0 +1,17 @@
+{
+  "version": "0.4.0",
+  "rules": [
+    {
+      "id": "PR-OFFICE-BP-DIAGNOSTIC-BOUNDARY",
+      "profile": "primary",
+      "section": "4.2.1",
+      "protocol_pattern": "诊室血压诊断标准：(?P<weeks>\\d+)周内非同日(?P<count>\\d+)次规范测量的诊室血压均≥(?P<sbp>\\d+)/(?P<dbp>\\d+)mmHg。",
+      "boundary_pattern": "诊室血压收缩压≥(?P<sbp>\\d+)mmHg和\\(或\\)舒张压≥(?P<dbp>\\d+)mmHg",
+      "method": "office",
+      "scope": "基层成人诊室血压诊断条款；不是家庭/动态血压标准，不代替临床诊断",
+      "logic": "OR",
+      "operator": ">=",
+      "unit": "mmHg"
+    }
+  ]
+}

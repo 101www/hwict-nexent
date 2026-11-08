@@ -1,0 +1,135 @@
+{
+  "scope": "人工核读预期答案的业务验收题；尚非RAG对比成绩",
+  "cases": [
+    {
+      "id": "followup_two_sources",
+      "question": "血压达标和未达标患者分别多久随访一次？请给出管理标准和基层指南各自的出处。",
+      "expected": [
+        "达标：每3个月至少随访1次",
+        "未达标：每月至少随访1次",
+        "标准保留直至血压达标及转诊条件",
+        "自动抽取待核验"
+      ],
+      "sources": [
+        {
+          "file": "WS-T872-2025_重排.txt",
+          "page": 5,
+          "sections": [
+            "8.3.2.1",
+            "8.3.2.2"
+          ]
+        },
+        {
+          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+          "page": 13,
+          "sections": [
+            "8.1"
+          ]
+        }
+      ],
+      "reject": [
+        "省略至少",
+        "混淆达标与未达标",
+        "声称自动抽取已人工审核"
+      ],
+      "home_question": "血压达标和未达标患者分别多久随访",
+      "observed": "旧首页会话只搜索临床摘要而误拒答；发布2610182135后，在首页新对话原句复测，1次search_memory、1次query_relations、3次get_evidence，页面显示5.80s。两人群频次、至少、直至血压达标、原文转诊限制、两份页码与pending符合预期；回答仍偏长。此前草稿曾有DSML未执行及附加解释错误，失败轨迹保留",
+      "published_version": "高血压用药决策助手-2610182135",
+      "transcript": "docs/validation/nexent-home-followup-after-fix.md",
+      "session_context": "new_home_chat_using_published_version"
+    },
+    {
+      "id": "reference_version_mismatch",
+      "question": "WS/T 872—2025 引用的基层指南是哪一年？当前图谱加载的是同一版本吗？能直接替代吗？",
+      "expected": [
+        "参考文献标注2021",
+        "当前同名候选为2025",
+        "引用版本全文未入库",
+        "缺少逐条比对依据，不能静默替代"
+      ],
+      "sources": [
+        {
+          "file": "WS-T872-2025_重排.txt",
+          "page": 8,
+          "sections": [
+            "REFERENCES"
+          ]
+        }
+      ],
+      "reject": [
+        "将2025说成标准实际引用版本",
+        "自行断定规范性引用性质",
+        "混淆正文与参考文献block_id"
+      ],
+      "observed": "修正后样例核心事实符合；曾有输出格式失败，仍需稳定性验证"
+    },
+    {
+      "id": "missing_version_verbatim",
+      "question": "请给出该标准所引2021版基层指南中诊断阈值条款的逐字原文及页码。",
+      "expected": [
+        "说明指定2021版原文未入库",
+        "可以给出标准引用的文献信息",
+        "不能拿2025版冒充2021版原文或页码"
+      ],
+      "reject": [
+        "根据常识补出阈值并假装引文",
+        "伪造2021版页码",
+        "将同名候选当作引用原件"
+      ],
+      "observed": "在版本核查同一会话中追问，8次工具调用（7次图谱MCP、1次平台知识库搜索），页面显示22.46s；明确缺少2021版全文，未编造原文和页码、未用2025版替代。核心预期符合，但调用冗余、回答偏长且未明示第4页章节版面待核验；仍需独立新会话回归",
+      "transcript": "docs/validation/nexent-missing-version-transcript.md",
+      "session_context": "followup_after_reference_version_mismatch_not_independent_session"
+    },
+    {
+      "id": "reasoning_dm",
+      "question": "合并糖尿病的高血压患者首选哪类降压药？",
+      "expected": [
+        "同方案组两跳",
+        "ACEI或ARB择一，不宜联用",
+        "首选句与定义分别引用",
+        "版面错位待核验"
+      ],
+      "published_version": "高血压用药决策助手-2610182221",
+      "observed_answer": "首选A类（ACEI或ARB，二者择一，不宜联用）；未达标可加C或D。\n出处：基层指南2025，5.4.6.1（语义5.4.3.2，版面待核验）p9；A定义5.4.2 p6；联用限制5.4.4 p9。自动抽取待核验。",
+      "characters": 107,
+      "max_characters": 200,
+      "transcript": "docs/validation/nexent-home-dm-final.txt",
+      "session_context": "independent_new_home_chat",
+      "note": "选定样例人工核读，不是准确率或临床审核"
+    },
+    {
+      "id": "reasoning_bp",
+      "question": "140/90算不算高血压？",
+      "expected": [
+        "140/90达到诊室参考边界",
+        "不能仅凭单次确诊",
+        "4周内非同日3次规范测量每次均达界",
+        "物理p4 4.2.1"
+      ],
+      "published_version": "高血压用药决策助手-2610182221",
+      "observed_answer": "140/90达到诊室高血压诊断边界，但不等于确诊；需4周内非同日3次规范测量每次均达界。单次读数不能确诊，也不排除高血压。\n出处：国家基层高血压防治管理指南2025版，4.2.1，PDF第4页（自动抽取，待核验）。",
+      "characters": 107,
+      "max_characters": 200,
+      "transcript": "docs/validation/nexent-home-bp-final.txt",
+      "session_context": "independent_new_home_chat",
+      "note": "选定样例人工核读，不是准确率或临床审核"
+    },
+    {
+      "id": "reasoning_beta",
+      "question": "专科指南说β阻滞剂不是一线，管理标准要求配备，矛盾吗？",
+      "expected": [
+        "不同用途不直接矛盾",
+        "无合并症的一线初始用药",
+        "机构配备不等于每位患者首选",
+        "实际刊期2024，临床p15和标准p3"
+      ],
+      "published_version": "高血压用药决策助手-2610182221",
+      "observed_answer": "不矛盾：2024临床指南CQ13只针对无合并症者不建议β阻滞剂作一线初始用药，WS/T 872—2025第3页4.2是机构应配备要求，配备不等于首选，也非禁用。\n出处：中国高血压临床实践指南2024 CQ13，第15页；WS/T 872—2025 4.2，第3页。均为自动抽取，待核验。",
+      "characters": 143,
+      "max_characters": 200,
+      "transcript": "docs/validation/nexent-home-beta-final.txt",
+      "session_context": "independent_new_home_chat",
+      "note": "选定样例人工核读，不是准确率或临床审核"
+    }
+  ]
+}

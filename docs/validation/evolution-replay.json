@@ -1,0 +1,173 @@
+{
+  "tested_at": "2026-11-07T01:11:25.835872+08:00",
+  "kind": "real_document_historical_ingestion_replay_with_explicit_automated_reviewer",
+  "store": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\evolution\\automated-replay-v2",
+  "baseline_release": "R-20261106T171125-7a70961960",
+  "proposal_id": "P-20261106T171125-b3b6e27af8",
+  "published_release": "R-20261106T171125-21b65ea6b5",
+  "review": {
+    "id": "EV-20261106T171125-e4c12460a7",
+    "at": "2026-11-06T17:11:25+00:00",
+    "action": "review",
+    "proposal_id": "P-20261106T171125-b3b6e27af8",
+    "decision": "approve",
+    "reviewer": "automated_acceptance_test",
+    "reason": "自动验收模拟流程审核；不代表人工或临床审核",
+    "actor_kind": "automated_test",
+    "proposal_sha256": "a58342489044ca588d00b1da1c5330252eb19ae687a8d5378eab842a1497d861",
+    "scope": "engineering_publication_only_not_medical_review"
+  },
+  "before": {
+    "kind": "offline_evidence_observation_not_llm_or_mcp",
+    "diabetes_paths": [],
+    "diabetes_status": "structured_evidence_not_found",
+    "followup_assertions": [
+      {
+        "id": "E-862939a2c6f284",
+        "headId": "N-血压未达标患者",
+        "tailId": "N-随访",
+        "file": "WS-T872-2025_重排.txt",
+        "evidence": "8.3.2.2 血压未达标者：1 个月至少随访 1 次，直至血压达标。"
+      },
+      {
+        "id": "E-bf48cb55593b7f",
+        "headId": "N-血压达标患者",
+        "tailId": "N-随访",
+        "file": "WS-T872-2025_重排.txt",
+        "evidence": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。"
+      }
+    ],
+    "sufficient": false,
+    "verification": "pending"
+  },
+  "after": {
+    "kind": "offline_evidence_observation_not_llm_or_mcp",
+    "diabetes_paths": [
+      {
+        "nodes": [
+          "高血压合并糖尿病患者",
+          "血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+          "血管紧张素转换酶抑制剂"
+        ],
+        "edge_ids": [
+          "E-66e12bb6b24d32",
+          "E-44eefca91accf2"
+        ],
+        "hops": 2
+      },
+      {
+        "nodes": [
+          "高血压合并糖尿病患者",
+          "血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+          "血管紧张素II受体阻滞剂"
+        ],
+        "edge_ids": [
+          "E-66e12bb6b24d32",
+          "E-6020f469be1583"
+        ],
+        "hops": 2
+      }
+    ],
+    "diabetes_status": "pending_evidence_found",
+    "followup_assertions": [
+      {
+        "id": "E-5549efd8b935c6",
+        "headId": "N-血压未达标患者",
+        "tailId": "N-随访",
+        "file": "国家基层高血压防治管理指南2025版_重排.txt",
+        "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。"
+      },
+      {
+        "id": "E-862939a2c6f284",
+        "headId": "N-血压未达标患者",
+        "tailId": "N-随访",
+        "file": "WS-T872-2025_重排.txt",
+        "evidence": "8.3.2.2 血压未达标者：1 个月至少随访 1 次，直至血压达标。"
+      },
+      {
+        "id": "E-9b6c395e04a1cf",
+        "headId": "N-血压达标患者",
+        "tailId": "N-随访",
+        "file": "国家基层高血压防治管理指南2025版_重排.txt",
+        "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。"
+      },
+      {
+        "id": "E-bf48cb55593b7f",
+        "headId": "N-血压达标患者",
+        "tailId": "N-随访",
+        "file": "WS-T872-2025_重排.txt",
+        "evidence": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。"
+      }
+    ],
+    "sufficient": false,
+    "verification": "pending"
+  },
+  "rollback": {
+    "id": "EV-20261106T171125-8b7b791a7e",
+    "at": "2026-11-06T17:11:25+00:00",
+    "action": "rollback",
+    "from_release": "R-20261106T171125-21b65ea6b5",
+    "release_id": "R-20261106T171125-7a70961960",
+    "reviewer": "automated_acceptance_test",
+    "reason": "回滚回归测试；不删除更新版本"
+  },
+  "restored": {
+    "kind": "offline_evidence_observation_not_llm_or_mcp",
+    "diabetes_paths": [],
+    "diabetes_status": "structured_evidence_not_found",
+    "followup_assertions": [
+      {
+        "id": "E-862939a2c6f284",
+        "headId": "N-血压未达标患者",
+        "tailId": "N-随访",
+        "file": "WS-T872-2025_重排.txt",
+        "evidence": "8.3.2.2 血压未达标者：1 个月至少随访 1 次，直至血压达标。"
+      },
+      {
+        "id": "E-bf48cb55593b7f",
+        "headId": "N-血压达标患者",
+        "tailId": "N-随访",
+        "file": "WS-T872-2025_重排.txt",
+        "evidence": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。"
+      }
+    ],
+    "sufficient": false,
+    "verification": "pending"
+  },
+  "unreviewed_publish_blocked": true,
+  "test_review_requires_explicit_test_flag": true,
+  "validation": {
+    "passed": true,
+    "errors": [],
+    "evidence_spans_checked": 3194,
+    "medical_validation": "not_performed",
+    "checked_at": "2026-11-06T17:11:25+00:00"
+  },
+  "retention": {
+    "threshold_candidates": {
+      "baseline_count": 2,
+      "lost_records": []
+    },
+    "entity_candidates": {
+      "baseline_count": 13,
+      "lost_records": []
+    },
+    "edge_candidates": {
+      "baseline_count": 0,
+      "lost_records": []
+    },
+    "extraction_candidates": {
+      "baseline_count": 11,
+      "lost_records": []
+    }
+  },
+  "formal_graph_unchanged_sha256": "5cb3a9cc4b69e3eae5585abd9e7a0755f06c7a217f05455269bb5e15641bad9d",
+  "all_passed": true,
+  "limits": [
+    "不是新指南版本对比",
+    "没有人工或医学审核",
+    "不是Nexent页面实测",
+    "本体内容本次未变化，验证的是知识更新及本体约束检查",
+    "更新后仍为pending"
+  ]
+}

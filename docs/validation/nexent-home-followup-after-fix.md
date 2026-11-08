@@ -1,0 +1,166 @@
+- alert
+- generic: "* *"
+- generic: "* * * *"
+- banner:
+  - banner:
+    - link "logo Nexent":
+      - /url: /
+      - img "logo"
+      - generic: Nexent
+    - link "Github":
+      - /url: https://github.com/ModelEngine-Group/nexent
+      - text: Github
+    - link "ModelEngine":
+      - /url: http://modelengine-ai.net
+    - text: 简体中文
+    - button "通知":
+    - generic: [账号已隐藏]
+- complementary:
+  - menu:
+    - menuitem "首页":
+      - generic: 首页
+    - menuitem "开始问答":
+      - generic: 开始问答
+    - menuitem "自动任务":
+      - generic: 自动任务
+    - menuitem "智能体开发":
+      - generic: 智能体开发
+    - menuitem "资源仓库":
+      - generic: 资源仓库
+    - menuitem "资源管理":
+      - generic: 资源管理
+  - button:
+- main:
+  - button "展开":
+    - generic: 展开
+  - button "新对话":
+    - generic: 新对话
+  - button "切换旧版":
+    - generic: 切换旧版
+  - button:
+  - generic: 血压随访间隔
+  - generic: 高血压用药决策助手
+  - button "分享对话":
+  - generic: 血压达标和未达标患者分别多久随访
+  - generic: 高血压用药决策助手
+  - status:
+    - status:
+      - generic: success
+    - generic: 已完成
+  - button "1 tool call" [expanded]:
+    - generic: 1 tool call
+  - 'button "Used tool: search_memory"':
+    - generic: "Used tool: search_memory"
+  - button "Reasoning" [expanded]:
+    - generic: Reasoning
+  - paragraph:
+    - strong: 步骤 1
+    - text: 我会先在图谱中查询患者血压达标与未达标时的随访间隔。
+  - text: <code> rel = query_relations(keyword="followUpEvery", limit=10) print(rel) </code>
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: rel = query_relations(keyword="followUpEvery", limit=10)
+    - generic: print(rel)
+  - button "1 tool call" [expanded] [active]:
+    - generic: 1 tool call
+  - 'button "Used tool: query_relations"':
+    - generic: "Used tool: query_relations"
+  - button "Reasoning" [expanded]:
+    - generic: Reasoning
+  - paragraph:
+    - strong: 步骤 2
+    - text: <code> ev1 = get_evidence(block_id="B-6e3c9e3c8d5a") ev2 = get_evidence(block_id="B-99383b6fd379") ev3 = get_evidence(block_id="B-c79ea4f8af58") print(ev1) print(ev2) print(ev3) </code>
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: ev1 = get_evidence(block_id="B-6e3c9e3c8d5a")
+    - generic: ev2 = get_evidence(block_id="B-99383b6fd379")
+    - generic: ev3 = get_evidence(block_id="B-c79ea4f8af58")
+    - generic: print(ev1)
+    - generic: print(ev2)
+    - generic: print(ev3)
+  - button "3 tool calls" [expanded]:
+    - generic: 3 tool calls
+  - 'button "Used tool: get_evidence"':
+    - generic: "Used tool: get_evidence"
+  - 'button "Used tool: get_evidence"':
+    - generic: "Used tool: get_evidence"
+  - 'button "Used tool: get_evidence"':
+    - generic: "Used tool: get_evidence"
+  - button "Reasoning" [expanded]:
+    - generic: Reasoning
+  - paragraph:
+    - strong: 步骤 3
+    - text: <code> final_answer("## 结论\n\n血压达标患者与未达标患者的随访频次，两份文档的规定一致：\n\n| 人群 | 随访频次 | 出处 |\n|---|---|---|\n| 血压达标患者 | 至少每 3 个月随访 1 次 | 《国家基层高血压防治管理指南2025版》8.1 随访频率，PDF 第13页；WS/T 872—2025 8.3.2.1，PDF 第5页 |\n| 血压未达标患者 | 每月至少随访 1 次（WS/T 872—2025 另明确“直至血压达标”） | 《国家基层高血压防治管理指南2025版》8.1 随访频率，PDF 第13页；WS/T 872—2025 8.3.2.2，PDF 第5页 |\n\n## 原文\n\n《国家基层高血压防治管理指南2025版》8.1 随访频率（PDF 第13页）：\n\n> 血压达标患者，至少每 3 个月随访 1 次；血压未达标患者，每月至少随访 1 次。符合转诊条件者，建议按照转诊要求操作。\n\nWS/T 872—2025 8.3.2.1（PDF 第5页）：\n\n> 血压达标者：每 3 个月至少随访 1 次。\n\nWS/T 872—2025 8.3.2.2（PDF 第5页）：\n\n> 血压未达标者：1 个月至少随访 1 次，直至血压达标。符合转诊条件的宜按 8.4 的规定进行转诊。\n\n## 说明\n\n- “至少”是最低频次要求，原文未规定上限，不宜改述为“随访间隔下限”或“必须每3个月一次”。\n- 未达标者的“直至血压达标”仅见于 WS/T 872—2025，基层指南原文未写这一限定。\n- 两份文档均提示符合转诊条件者按转诊要求处理（基层指南未标章节号，WS/T 872—2025 指向 8.4）。\n- 上述关系均由自动抽取生成，核验状态为 pending（confidence 0.95 为规则分数，非医学正确率），原文已逐条核对，但尚未经临床审核，不作为个体化诊疗建议。") </code>
+  - button "Executed code python" [expanded]:
+    - generic: Executed code
+    - generic: python
+  - code:
+    - generic: final_answer("## 结论\n\n血压达标患者与未达标患者的随访频次，两份文档的规定一致：\n\n| 人群 | 随访频次 | 出处 |\n|---|---|---|\n| 血压达标患者 | 至少每 3 个月随访 1 次 | 《国家基层高血压防治管理指南2025版》8.1 随访频率，PDF 第13页；WS/T 872—2025 8.3.2.1，PDF 第5页 |\n| 血压未达标患者 | 每月至少随访 1 次（WS/T 872—2025 另明确“直至血压达标”） | 《国家基层高血压防治管理指南2025版》8.1 随访频率，PDF 第13页；WS/T 872—2025 8.3.2.2，PDF 第5页 |\n\n## 原文\n\n《国家基层高血压防治管理指南2025版》8.1 随访频率（PDF 第13页）：\n\n> 血压达标患者，至少每 3 个月随访 1 次；血压未达标患者，每月至少随访 1 次。符合转诊条件者，建议按照转诊要求操作。\n\nWS/T 872—2025 8.3.2.1（PDF 第5页）：\n\n> 血压达标者：每 3 个月至少随访 1 次。\n\nWS/T 872—2025 8.3.2.2（PDF 第5页）：\n\n> 血压未达标者：1 个月至少随访 1 次，直至血压达标。符合转诊条件的宜按 8.4 的规定进行转诊。\n\n## 说明\n\n- “至少”是最低频次要求，原文未规定上限，不宜改述为“随访间隔下限”或“必须每3个月一次”。\n- 未达标者的“直至血压达标”仅见于 WS/T 872—2025，基层指南原文未写这一限定。\n- 两份文档均提示符合转诊条件者按转诊要求处理（基层指南未标章节号，WS/T 872—2025 指向 8.4）。\n- 上述关系均由自动抽取生成，核验状态为 pending（confidence 0.95 为规则分数，非医学正确率），原文已逐条核对，但尚未经临床审核，不作为个体化诊疗建议。")
+  - heading "结论" [level=2]
+  - paragraph: 血压达标患者与未达标患者的随访频次，两份文档的规定一致：
+  - table:
+    - rowgroup:
+      - row "人群 随访频次 出处":
+        - columnheader "人群"
+        - columnheader "随访频次"
+        - columnheader "出处"
+    - rowgroup:
+      - row "血压达标患者 至少每 3 个月随访 1 次 《国家基层高血压防治管理指南2025版》8.1 随访频率，PDF 第13页；WS/T 872—2025 8.3.2.1，PDF 第5页":
+        - cell "血压达标患者"
+        - cell "至少每 3 个月随访 1 次"
+        - cell "《国家基层高血压防治管理指南2025版》8.1 随访频率，PDF 第13页；WS/T 872—2025 8.3.2.1，PDF 第5页"
+      - row "血压未达标患者 每月至少随访 1 次（WS/T 872—2025 另明确“直至血压达标”） 《国家基层高血压防治管理指南2025版》8.1 随访频率，PDF 第13页；WS/T 872—2025 8.3.2.2，PDF 第5页":
+        - cell "血压未达标患者"
+        - cell "每月至少随访 1 次（WS/T 872—2025 另明确“直至血压达标”）"
+        - cell "《国家基层高血压防治管理指南2025版》8.1 随访频率，PDF 第13页；WS/T 872—2025 8.3.2.2，PDF 第5页"
+  - heading "原文" [level=2]
+  - paragraph: 《国家基层高血压防治管理指南2025版》8.1 随访频率（PDF 第13页）：
+  - blockquote:
+    - paragraph: 血压达标患者，至少每 3 个月随访 1 次；血压未达标患者，每月至少随访 1 次。符合转诊条件者，建议按照转诊要求操作。
+  - paragraph: WS/T 872—2025 8.3.2.1（PDF 第5页）：
+  - blockquote:
+    - paragraph: 血压达标者：每 3 个月至少随访 1 次。
+  - paragraph: WS/T 872—2025 8.3.2.2（PDF 第5页）：
+  - blockquote:
+    - paragraph: 血压未达标者：1 个月至少随访 1 次，直至血压达标。符合转诊条件的宜按 8.4 的规定进行转诊。
+  - heading "说明" [level=2]
+  - list:
+    - listitem: “至少”是最低频次要求，原文未规定上限，不宜改述为“随访间隔下限”或“必须每3个月一次”。
+    - listitem: 未达标者的“直至血压达标”仅见于 WS/T 872—2025，基层指南原文未写这一限定。
+    - listitem: 两份文档均提示符合转诊条件者按转诊要求处理（基层指南未标章节号，WS/T 872—2025 指向 8.4）。
+    - listitem: 上述关系均由自动抽取生成，核验状态为 pending（confidence 0.95 为规则分数，非医学正确率），原文已逐条核对，但尚未经临床审核，不作为个体化诊疗建议。
+  - button "复制":
+    - generic: 复制
+  - button "刷新":
+    - generic: 刷新
+  - button "更多":
+    - generic: 更多
+  - generic "生成耗时 5.80s":
+    - text: 5.80s
+  - button "3% 本轮":
+    - generic: 3%
+    - generic: 本轮
+  - button "滚动到底部":
+    - generic: 滚动到底部
+  - button "规划":
+    - text: 规划
+  - button "执行":
+    - text: 执行
+  - textbox "发送消息..."
+  - combobox:
+    - generic: deepseek-flash
+  - button "知识库：跟随智能体默认":
+    - generic: 知识库：跟随智能体默认
+  - button "添加附件":
+    - generic: 添加附件
+  - button [disabled]:
+  - button "发送" [disabled]:
+- contentinfo:
+  - text: Nexent © 2026
+  - generic: · v2.7.0
+  - link "使用条款":
+    - /url: https://github.com/nexent-hub/nexent?tab=License-1-ov-file#readme

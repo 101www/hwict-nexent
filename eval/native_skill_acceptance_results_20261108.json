@@ -1,0 +1,189 @@
+{
+  "date": "2026-11-08",
+  "scope": "五个首页独立自然问句的原生Skills实际执行观察；非准确率、非全面通过、非医疗审核",
+  "status": "executed_with_gaps",
+  "agent": "高血压用药决策助手",
+  "published_version": "高血压用药决策助手-2611081425",
+  "model": "deepseek-flash",
+  "platform": "Nexent v2.7.0",
+  "knowledge_release": "R-20261107T012120-d13d786332",
+  "native_skills_observed": [
+    "clinical-conflict-check",
+    "clinical-evidence-router",
+    "clinical-multi-hop",
+    "clinical-trace-report"
+  ],
+  "native_export_available": false,
+  "results": [
+    {
+      "id": "native_skill_followup",
+      "question": "血压达标和未达标患者分别多久随访？",
+      "independent_new_home_conversation": true,
+      "status": "core_demonstrated_with_omission",
+      "observed_skills": [
+        "clinical-evidence-router",
+        "clinical-trace-report"
+      ],
+      "observed_mcp_calls": {
+        "graph_status": 1,
+        "query_relations": 1,
+        "get_evidence": 3
+      },
+      "knowledge_release_expected": "R-20261107T012120-d13d786332",
+      "release_evidence": "visible_actual_release",
+      "answer": "血压达标者至少每3个月随访1次；未达标者每月至少随访1次（WS/T 872—2025另注明“直至血压达标”）。 出处：基层指南2025 8.1，第13页；WS/T 872—2025 8.3.2.1/8.3.2.2，第5页。自动抽取待核验。",
+      "answer_characters": 119,
+      "within_200": true,
+      "ui_generation_seconds": 7.66,
+      "supported_findings": [
+        "两个人群频次、至少、直至达标、两份出处及pending保留",
+        "实际读取3个body，业务及原文响应经checked版本断言"
+      ],
+      "issues": [
+        "最终短答未传达符合转诊条件者应按转诊要求操作；不能记为完整条件覆盖"
+      ],
+      "evidence_file": "docs/validation/native-skills-home-followup-20261108.txt",
+      "evidence_sha256": "89fe96c7f9fc270ee109e651b67cd2fc0fc505bca41ce1d037e18625d2859cb3"
+    },
+    {
+      "id": "native_skill_multi_hop",
+      "question": "高血压合并糖尿病患者，指南中有哪些首选降压药方案？",
+      "independent_new_home_conversation": true,
+      "status": "partial",
+      "observed_skills": [
+        "clinical-evidence-router",
+        "clinical-multi-hop",
+        "clinical-trace-report"
+      ],
+      "observed_mcp_calls": {
+        "graph_status": 2,
+        "resolve_regimen": 2,
+        "get_evidence": 3
+      },
+      "knowledge_release_expected": "R-20261107T012120-d13d786332",
+      "release_evidence": "runtime_checked_against_graph_status_but_literal_not_printed_in_saved_UI",
+      "answer": "首选A类（ACEI或ARB，二者择一，不宜联用）；未达标加C或D。 出处：《国家基层高血压防治管理指南2025版》，5.4.2 A定义（PDF第6页）、首选句及5.4.4限制（第9页）；首选句语义条款5.4.3.2，抽取位置5.4.6.1，版面待核验。自动抽取待核验。",
+      "answer_characters": 134,
+      "within_200": true,
+      "ui_generation_seconds": 8.92,
+      "supported_findings": [
+        "实际调用两跳工具并核对首选、定义和联用限制3块",
+        "保留择一、不宜联用、语义/实际章节和版面待核验"
+      ],
+      "issues": [
+        "第一次从steps而非steps[].edge收集block_id，得到空清单，随后修正并重新查询",
+        "重复graph_status与resolve_regimen；未执行Skill要求的同方案组断言，也未在evidence_packet保存独立paths字段",
+        "只问首选却扩写未达标后续C/D，未解释代号；不能记为完全遵循"
+      ],
+      "evidence_file": "docs/validation/native-skills-home-multi-hop-20261108.txt",
+      "evidence_sha256": "1be3c0cfda2b95cab8363d847a14bd86febf5f96783b803e9e592eadabf40f41"
+    },
+    {
+      "id": "native_skill_threshold",
+      "question": "血压140/90算高血压吗？",
+      "independent_new_home_conversation": true,
+      "status": "partial",
+      "observed_skills": [
+        "clinical-evidence-router",
+        "clinical-trace-report"
+      ],
+      "observed_mcp_calls": {
+        "graph_status": 1,
+        "evaluate_blood_pressure": 1,
+        "get_evidence": 1
+      },
+      "knowledge_release_expected": "R-20261107T012120-d13d786332",
+      "release_evidence": "runtime_checked_against_graph_status_but_literal_not_printed_in_saved_UI",
+      "answer": "单次140/90已达诊室高血压判定边界，不等于确诊。需4周内非同日3次规范测量且每次均达界。自动抽取待核验。 出处：基层指南2025，4.2.1，PDF第4页",
+      "answer_characters": 79,
+      "within_200": true,
+      "ui_generation_seconds": 5.11,
+      "supported_findings": [
+        "真实参数measurement_method=unknown，未编造测量记录",
+        "保留边界不等于确诊、4周内非同日3次规范测量且每次均达界"
+      ],
+      "issues": [
+        "最终未明确说明测量方式未提供及适用性待确认，不能记为完整通过",
+        "打印使用不存在的file_name得到None；最终出处由工具其他字段提供，原文实际已读取"
+      ],
+      "evidence_file": "docs/validation/native-skills-home-threshold-20261108.txt",
+      "evidence_sha256": "776aadfa081dda800595c6cddc8cfc349b0ba736cc1410bdd486c7e9cb7fae42"
+    },
+    {
+      "id": "native_skill_conflict",
+      "question": "专科指南说β受体阻滞剂不是一线，管理标准要求配备，矛盾吗？",
+      "independent_new_home_conversation": true,
+      "status": "core_example_demonstrated",
+      "observed_skills": [
+        "clinical-evidence-router",
+        "clinical-conflict-check",
+        "clinical-trace-report"
+      ],
+      "observed_mcp_calls": {
+        "graph_status": 1,
+        "detect_conflicts": 1,
+        "get_evidence": 2
+      },
+      "knowledge_release_expected": "R-20261107T012120-d13d786332",
+      "release_evidence": "visible_actual_release",
+      "answer": "不矛盾：CQ13仅指无合并症者不作一线初始用药，WS/T 872—2025 4.2是机构“应至少配备”，配备不等于首选，也非禁用。 出处：临床指南CQ13第15页；WS/T 872—2025 4.2第3页。自动抽取待核验。",
+      "answer_characters": 111,
+      "within_200": true,
+      "ui_generation_seconds": 6.52,
+      "supported_findings": [
+        "实际读取冲突Skill，比较机构药物保障与无临床合并症初始用药",
+        "实际核对两侧body、页码及章节；版本断言、pending和200字符检查执行",
+        "没有用文件名年份选胜方，没有扩大为全文无冲突"
+      ],
+      "issues": [
+        "只覆盖本题两条断言，未验证同范围真冲突及所有不同问法",
+        "打印的detect_conflicts响应限制4000字符、原文只打印前200字符；保存页面不是未截断的全量协议日志"
+      ],
+      "evidence_file": "docs/validation/native-skills-home-conflict-20261108.txt",
+      "evidence_sha256": "f5f1c781610681428517ccec7260ac91bdbd3116cd584013ce5394be08b0ab3e"
+    },
+    {
+      "id": "native_skill_missing_version",
+      "question": "请给出管理标准所引2021版基层指南诊断阈值的逐字原文和页码。",
+      "independent_new_home_conversation": true,
+      "status": "failed_full_workflow",
+      "observed_skills": [
+        "clinical-evidence-router"
+      ],
+      "observed_mcp_calls": {
+        "graph_status": 6,
+        "check_references": 1,
+        "lookup_clause": 2,
+        "query_candidates": 1,
+        "query_relations": 1,
+        "find_entities": 1,
+        "get_evidence": 4
+      },
+      "knowledge_release_expected": "R-20261107T012120-d13d786332",
+      "release_evidence": "visible_actual_release",
+      "answer": "2021版原文未入库：标准7节仅写“高血压诊断标准参见《国家基层高血压防治管理指南》”，参考文献[1]为2021版（36卷3期209-220页）。 出处：WS/T 872—2025，7节PDF第4页、参考文献第8页。引用版本为2025候选，自动抽取待核验。",
+      "answer_characters": 128,
+      "within_200": true,
+      "ui_generation_seconds": 12.34,
+      "supported_findings": [
+        "说明2021版未入库，未提供虚构的2021阈值原文和页码",
+        "真实引用记录返回requested_year=2021、resolution=version_mismatch"
+      ],
+      "issues": [
+        "漏读clinical-trace-report；初始check_references未经checked，后面多次重置证据包",
+        "重复版本查询和重复读取相同block；不必要地扩查2025内容",
+        "最后一句“引用版本为2025候选”混淆引用2021与当前候选2025，应明确分开",
+        "标准第4页needs_layout_review未在最终传达"
+      ],
+      "evidence_file": "docs/validation/native-skills-home-missing-version-20261108.txt",
+      "evidence_sha256": "919ad6406b050055d6b6f57c4de774f2a310f40e74e40035cf8bb057a3d83487"
+    }
+  ],
+  "limitations": [
+    "每题仅一次独立运行，未评估统计稳定性",
+    "MCP完整对象在平台代码中返回，但print输出可能截断；AX不是原始全量协议导出",
+    "指令Skill依赖模型执行，仍有漏步骤、重复调用和表达偏差",
+    "没有修改或删除不确定知识，pending与confidence保持不变",
+    "本轮未做表格图文、受控RAG对照、医学专家核验及低资源算法评估"
+  ]
+}

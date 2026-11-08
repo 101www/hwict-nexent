@@ -1,0 +1,594 @@
+{
+  "tested_at": "2026-11-07T09:29:32.943790+08:00",
+  "endpoint": "http://192.168.100.1:8081/sse",
+  "expected_release": "R-20261107T012120-d13d786332",
+  "graph_status": {
+    "source": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\evolution\\production\\releases\\R-20261107T012120-d13d786332\\graph.json",
+    "mode": "real_graph_snapshot",
+    "knowledge_version": {
+      "ontology_version": "0.4.0",
+      "verification": "pending",
+      "built_at": "2026-10-18T22:01:10+08:00",
+      "release_id": "R-20261107T012120-d13d786332",
+      "graph_sha256": "5516e2bd97523424b4d44872f7ee1a0d057125f2776b3680b7c1d9abf790353f"
+    },
+    "meta": {
+      "domain": "高血压临床诊疗与基层慢病管理",
+      "ontology_version": "0.4.0",
+      "lexicon_version": "0.3.0",
+      "rules_version": "0.4.0",
+      "legacy_rules_version": "0.1.0",
+      "management_rules_version": "0.2.0",
+      "clinical_rules_version": "0.4.0",
+      "decision_rules_version": "0.4.0",
+      "retention_policy": "uncertain_results_retained_pending",
+      "confidence_definition": "0~1规则启发式抽取评分；未经概率校准，不是医学正确率，不能替代人工核验。",
+      "built_at": "2026-10-18T22:01:10+08:00",
+      "source_docs": [
+        "WS-T872-2025_重排.txt",
+        "国家基层高血压防治管理指南2025版_重排.txt",
+        "中国高血压临床实践指南2025版_重排.txt"
+      ],
+      "documents": [
+        {
+          "id": "N-DOC-cbf1c1ce2a3d61",
+          "file": "WS-T872-2025_重排.txt",
+          "title": "基层医疗卫生机构高血压防治管理标准",
+          "year": "2025",
+          "profile": "standard",
+          "warnings": [],
+          "reference_year_evidence": {
+            "file": "WS-T872-2025_重排.txt",
+            "section": "REFERENCES",
+            "page": 8,
+            "block_id": "B-232e1532f133",
+            "start": 22,
+            "end": 51,
+            "evidence": "国家基层高血压防治管理指南[J]. 中国循环杂志，2021",
+            "section_status": "from_text_heading",
+            "verification": "pending",
+            "confidence": 0.95,
+            "confidence_basis": "rule_heuristic_not_calibrated"
+          },
+          "referenced_primary_year": "2021",
+          "verification": "pending",
+          "confidence": 0.9,
+          "confidence_basis": "rule_heuristic_not_calibrated",
+          "verification_reasons": [
+            "document_metadata_requires_review"
+          ]
+        },
+        {
+          "id": "N-DOC-fa69b0792accaf",
+          "file": "国家基层高血压防治管理指南2025版_重排.txt",
+          "title": "国家基层高血压防治管理指南",
+          "year": "2025",
+          "profile": "primary",
+          "warnings": [],
+          "reference_year_evidence": null,
+          "referenced_primary_year": "",
+          "verification": "pending",
+          "confidence": 0.9,
+          "confidence_basis": "rule_heuristic_not_calibrated",
+          "verification_reasons": [
+            "document_metadata_requires_review"
+          ]
+        },
+        {
+          "id": "N-DOC-c7e1aac134f39b",
+          "file": "中国高血压临床实践指南2025版_重排.txt",
+          "title": "中国高血压临床实践指南",
+          "year": "2024",
+          "profile": "clinical",
+          "warnings": [
+            "文件名年份 2025 与正文刊期 2024 不同；正文年份仍需人工核验。"
+          ],
+          "reference_year_evidence": null,
+          "referenced_primary_year": "",
+          "verification": "pending",
+          "confidence": 0.55,
+          "confidence_basis": "rule_heuristic_not_calibrated",
+          "verification_reasons": [
+            "document_metadata_requires_review"
+          ]
+        }
+      ],
+      "builder": "pipeline/build_graph.py",
+      "page_numbering": "PDF physical page, null if unknown",
+      "limitations": [
+        "表格勾选关系未恢复，不推断表格列对应关系。",
+        "标准第 4、6 物理页存在文本错序，章节标记需核读，原文和页码仍保留。",
+        "全文数字候选全部保留；诊室血压边界经双证据结构化后仅供数学比较，仍待临床核验，不自动确诊。",
+        "三份全文药物关系使用分源新规则；所有自动抽取关系待人工核验。",
+        "未解析药物语句、数字及重叠实体保留为待核验候选，缺端点/证据断言完整保留。",
+        "数值不同仅为待核对差异，不能自动认定为医学冲突。"
+      ],
+      "history_snapshots": [
+        {
+          "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\c27546d13c1343a0870b9fef26402d01cccb26f0d9c4ac096b003deab508f9ac.json",
+          "sha256": "c27546d13c1343a0870b9fef26402d01cccb26f0d9c4ac096b003deab508f9ac",
+          "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+          "verification": "pending",
+          "confidence": 1.0,
+          "confidence_basis": "exact_file_snapshot_sha256"
+        },
+        {
+          "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\0e8caadbe003c6cb1cfa99c4bbe1f786db958c9b006ed1b08b216c6da72fe0aa.json",
+          "sha256": "0e8caadbe003c6cb1cfa99c4bbe1f786db958c9b006ed1b08b216c6da72fe0aa",
+          "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+          "verification": "pending",
+          "confidence": 1.0,
+          "confidence_basis": "exact_file_snapshot_sha256"
+        },
+        {
+          "path": "D:\\JavaProject\\huawei\\nexent-cognitive-agent\\data\\processed\\graph.history\\57f51542028dec148a54bac2adf81cb82187cc62ae7ca3b8250037cb710edcff.json",
+          "sha256": "57f51542028dec148a54bac2adf81cb82187cc62ae7ca3b8250037cb710edcff",
+          "reason": "保留重建前的完整抽取结果、待核验候选及原文块",
+          "verification": "pending",
+          "confidence": 1.0,
+          "confidence_basis": "exact_file_snapshot_sha256"
+        }
+      ],
+      "evolution": {
+        "release_id": "R-20261107T012120-d13d786332",
+        "kind": "imported_baseline",
+        "label": "正式基线：沿用现有三份全文图谱；自动知识仍待核验",
+        "medical_verification": "pending"
+      }
+    },
+    "nodes": 324,
+    "edges": 2503,
+    "blocks": 216,
+    "candidate_count": 1271,
+    "sufficient": false,
+    "message": "已加载真实图谱；自动抽取仍待核验。发布仓库模式在下次工具调用时加载当前发布版本；固定文件模式仍需重启。"
+  },
+  "resolve_regimen": {
+    "items": [
+      {
+        "components": [
+          {
+            "code": "A",
+            "options": [
+              "血管紧张素转换酶抑制剂",
+              "血管紧张素II受体阻滞剂"
+            ],
+            "selection": "one_of"
+          }
+        ],
+        "confidence_basis": "rule_heuristic_not_calibrated",
+        "paths": [
+          {
+            "steps": [
+              {
+                "edge": {
+                  "id": "E-66e12bb6b24d32",
+                  "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+                  "relation": "preferredRegimenFor",
+                  "tailId": "N-高血压合并糖尿病患者",
+                  "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。",
+                  "rule": "PR-COMORBID-DM",
+                  "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                  "section": "5.4.6.1",
+                  "page": 9,
+                  "block_id": "B-257f599f3070",
+                  "start": 153,
+                  "end": 179,
+                  "evidence": "合并糖尿病：首选 A，血压未达标者加用 C 或 D。",
+                  "section_status": "needs_layout_review",
+                  "verification": "pending",
+                  "confidence": 0.55,
+                  "confidence_basis": "rule_heuristic_not_calibrated",
+                  "scope": {
+                    "population": "高血压合并糖尿病患者",
+                    "purpose": "合并症用药选择"
+                  },
+                  "basis_sections": [
+                    "5.4.2",
+                    "5.4.3"
+                  ],
+                  "source_profile": "primary",
+                  "modality": "首选",
+                  "source_section_id": "N-B-257f599f3070",
+                  "extraction_basis": "全文规则",
+                  "semantic_section": "5.4.3.2",
+                  "supporting_evidence": [
+                    {
+                      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                      "section": "5.4.2",
+                      "page": 6,
+                      "block_id": "B-f9564b21fff0",
+                      "start": 0,
+                      "end": 1454,
+                      "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+                      "section_status": "from_text_heading",
+                      "verification": "pending",
+                      "confidence": 0.95,
+                      "confidence_basis": "rule_heuristic_not_calibrated"
+                    }
+                  ],
+                  "combination_limit_evidence": [
+                    {
+                      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                      "section": "5.4.4",
+                      "page": 9,
+                      "block_id": "B-16ff197f2a95",
+                      "start": 82,
+                      "end": 100,
+                      "evidence": "不宜联合应用 ACEI 与 ARB。",
+                      "section_status": "from_text_heading",
+                      "verification": "pending",
+                      "confidence": 0.95,
+                      "confidence_basis": "rule_heuristic_not_calibrated"
+                    }
+                  ],
+                  "regimen_group": "RG-932a72981a09ec",
+                  "verification_reasons": [
+                    "clinical_review_required",
+                    "sentence_displaced_from_expected_section",
+                    "layout_or_section_unverified"
+                  ]
+                },
+                "forward": false
+              },
+              {
+                "edge": {
+                  "id": "E-44eefca91accf2",
+                  "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+                  "relation": "hasAlternativeComponent",
+                  "tailId": "N-血管紧张素转换酶抑制剂",
+                  "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。",
+                  "rule": "PR-COMORBID-DM",
+                  "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                  "section": "5.4.2",
+                  "page": 6,
+                  "block_id": "B-f9564b21fff0",
+                  "start": 0,
+                  "end": 1454,
+                  "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+                  "section_status": "from_text_heading",
+                  "verification": "pending",
+                  "confidence": 0.88,
+                  "confidence_basis": "rule_heuristic_not_calibrated",
+                  "option_group": "A",
+                  "regimen_group": "RG-932a72981a09ec",
+                  "supporting_evidence": [
+                    {
+                      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                      "section": "5.4.2",
+                      "page": 6,
+                      "block_id": "B-f9564b21fff0",
+                      "start": 0,
+                      "end": 1454,
+                      "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+                      "section_status": "from_text_heading",
+                      "verification": "pending",
+                      "confidence": 0.95,
+                      "confidence_basis": "rule_heuristic_not_calibrated"
+                    }
+                  ],
+                  "combination_limit_evidence": [
+                    {
+                      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                      "section": "5.4.4",
+                      "page": 9,
+                      "block_id": "B-16ff197f2a95",
+                      "start": 82,
+                      "end": 100,
+                      "evidence": "不宜联合应用 ACEI 与 ARB。",
+                      "section_status": "from_text_heading",
+                      "verification": "pending",
+                      "confidence": 0.95,
+                      "confidence_basis": "rule_heuristic_not_calibrated"
+                    }
+                  ],
+                  "verification_reasons": [
+                    "clinical_review_required",
+                    "sentence_displaced_from_expected_section"
+                  ]
+                },
+                "forward": true
+              }
+            ],
+            "option_group": "A",
+            "hops": 2,
+            "nodes": [
+              "高血压合并糖尿病患者",
+              "血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+              "血管紧张素转换酶抑制剂"
+            ]
+          },
+          {
+            "steps": [
+              {
+                "edge": {
+                  "id": "E-66e12bb6b24d32",
+                  "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+                  "relation": "preferredRegimenFor",
+                  "tailId": "N-高血压合并糖尿病患者",
+                  "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。",
+                  "rule": "PR-COMORBID-DM",
+                  "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                  "section": "5.4.6.1",
+                  "page": 9,
+                  "block_id": "B-257f599f3070",
+                  "start": 153,
+                  "end": 179,
+                  "evidence": "合并糖尿病：首选 A，血压未达标者加用 C 或 D。",
+                  "section_status": "needs_layout_review",
+                  "verification": "pending",
+                  "confidence": 0.55,
+                  "confidence_basis": "rule_heuristic_not_calibrated",
+                  "scope": {
+                    "population": "高血压合并糖尿病患者",
+                    "purpose": "合并症用药选择"
+                  },
+                  "basis_sections": [
+                    "5.4.2",
+                    "5.4.3"
+                  ],
+                  "source_profile": "primary",
+                  "modality": "首选",
+                  "source_section_id": "N-B-257f599f3070",
+                  "extraction_basis": "全文规则",
+                  "semantic_section": "5.4.3.2",
+                  "supporting_evidence": [
+                    {
+                      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                      "section": "5.4.2",
+                      "page": 6,
+                      "block_id": "B-f9564b21fff0",
+                      "start": 0,
+                      "end": 1454,
+                      "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+                      "section_status": "from_text_heading",
+                      "verification": "pending",
+                      "confidence": 0.95,
+                      "confidence_basis": "rule_heuristic_not_calibrated"
+                    }
+                  ],
+                  "combination_limit_evidence": [
+                    {
+                      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                      "section": "5.4.4",
+                      "page": 9,
+                      "block_id": "B-16ff197f2a95",
+                      "start": 82,
+                      "end": 100,
+                      "evidence": "不宜联合应用 ACEI 与 ARB。",
+                      "section_status": "from_text_heading",
+                      "verification": "pending",
+                      "confidence": 0.95,
+                      "confidence_basis": "rule_heuristic_not_calibrated"
+                    }
+                  ],
+                  "regimen_group": "RG-932a72981a09ec",
+                  "verification_reasons": [
+                    "clinical_review_required",
+                    "sentence_displaced_from_expected_section",
+                    "layout_or_section_unverified"
+                  ]
+                },
+                "forward": false
+              },
+              {
+                "edge": {
+                  "id": "E-6020f469be1583",
+                  "headId": "N-血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+                  "relation": "hasAlternativeComponent",
+                  "tailId": "N-血管紧张素II受体阻滞剂",
+                  "condition": "高血压合并糖尿病；A为ACEI或ARB；未达标后续加药另见原文；合并糖尿病：首选A，血压未达标者加用C或D。",
+                  "rule": "PR-COMORBID-DM",
+                  "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                  "section": "5.4.2",
+                  "page": 6,
+                  "block_id": "B-f9564b21fff0",
+                  "start": 0,
+                  "end": 1454,
+                  "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+                  "section_status": "from_text_heading",
+                  "verification": "pending",
+                  "confidence": 0.88,
+                  "confidence_basis": "rule_heuristic_not_calibrated",
+                  "option_group": "A",
+                  "regimen_group": "RG-932a72981a09ec",
+                  "supporting_evidence": [
+                    {
+                      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                      "section": "5.4.2",
+                      "page": 6,
+                      "block_id": "B-f9564b21fff0",
+                      "start": 0,
+                      "end": 1454,
+                      "evidence": "5.4.2  降压药物选择\n尽量选用证据明确、可改善预后的五大类降压\n药 物， 即 ACEI、ARB、β 受 体 阻 滞 剂、CCB、 噻\n嗪类利尿剂，以及由上述药物组成的单片复方制剂。\n有条件者也可根据血压达标情况及适应证选择用\nARNI 替代 ACEI/ARB。\n为便于记忆，上述降压药物分别以 A、B、C、\nD 简称。\nA：ACEI 和 ARB。这两类药物降压作用明确，\n尤其适用于伴心力衰竭、心肌梗死后、糖尿病、慢\n性肾脏病的患者，有充足的证据证明可改善预后。\n用于蛋白尿患者时，可降低尿蛋白，具有肾脏保护\n作用，但双侧肾动脉狭窄、血肌酐≥ 3 mg/dl（265\nµmol/L）的严重肾功能不全及高钾血症患者禁用。妊\n娠或计划妊娠患者禁用。ACEI 易引起干咳，若无法\n耐受，可换用 ARB。两类药物均有引起血管神经性\n水肿的可能，但罕见。\nB：β 受体阻滞剂。此类药物可降低心率，尤\n其适用于心率偏快（诊室静息心率≥ 80 次 /min）的\n患者。用于合并心肌梗死或心力衰竭的非急性期患\n者，可改善预后；用于冠心病、劳力型心绞痛患者，\n可减轻心绞痛症状。β 受体阻滞剂禁用于严重心动\n过缓、病态窦房结综合征、二度或三度房室阻滞和\n支气管哮喘患者。运动员、外周血管疾病患者及伴\n睡眠呼吸暂停综合征的患者慎用，建议遵循上级医\n院建议。长期应用 β 受体阻滞剂者突然停药可发生\n反跳现象即撤药综合征，应在停药前逐渐减少剂量。\n841\n推荐使用选择性 β1 受体阻滞剂及 α-β 受体阻滞\n剂。\nC：CCB。最常用于降压的是二氢吡啶类 CCB。\n此类药物降压作用强，耐受性较好，无绝对禁忌证，\n适用范围相对广，老年单纯收缩期高血压等更适用。\n常见的不良反应包括头痛、面部潮红、踝部水肿、\n心跳加快、牙龈增生等。\nD：利尿剂。噻嗪类利尿剂较为常用。尤其适用\n于老年人、单纯收缩期高血压及合并心力衰竭的患者。\n噻嗪类利尿剂的主要不良反应是低钾血症，且随着利\n尿剂使用剂量增加，低钾血症发生率也相应增加，因\n此建议小剂量使用。小剂量利尿剂与 ACEI 或 ARB 合\n用，可抵消或减轻低钾血症这一不良反应。长期应用\n利尿剂者应监测血钾，高尿酸血症患者慎用，痛风患\n者禁用噻嗪类利尿剂。伴严重心力衰竭或慢性肾功能\n不全时，可能需要应用袢利尿剂（如呋塞米），同时需\n监测血钾或补钾，必要时建议转诊至上级医院进一步\n诊治。\n近年来由上述药物组合而成的单片复方制剂由\n于服用方便、依从性好，推荐首选。\n其他有明确降压效果的传统单片复方制剂，包\n括复方利血平片、复方利血平氨苯蝶啶片等，根据\n患者情况仍可使用。\n沙库巴曲缬沙坦是新近推荐的 ARNI 类降压药，\n在高血压合并心力衰竭、左心室肥厚、慢性肾脏病\n以及老年和难治性高血压患者中有一定的降压优\n势。\nARNI 不 能 与 ACEI、ARB（ 相 同 成 分 的 ARB\n除外 ）、阿利吉仑联用。如果从 ACEI 转换成 ARNI，\n必须在停止 ACEI 治疗至少 36 h 之后才能开始应用\nARNI，以降低潜在的血管性水肿发生风险，同时\n又不易导致心力衰竭恶化或血压明显波动。ARNI\n可导致血管性水肿、低血压、肾功能损害、高钾\n血 症。 重 度 肾 功 能 不 全 [ 估 算 肾 小 球 滤 过 率 <30\nml/（min·1.73 m2）]、肾动脉狭窄及中度肝功能损\n害者应慎用，妊娠者禁用。\n基层常用降压药物的用法、适应证、禁忌证及\n不良反应见表 4。",
+                      "section_status": "from_text_heading",
+                      "verification": "pending",
+                      "confidence": 0.95,
+                      "confidence_basis": "rule_heuristic_not_calibrated"
+                    }
+                  ],
+                  "combination_limit_evidence": [
+                    {
+                      "file": "国家基层高血压防治管理指南2025版_重排.txt",
+                      "section": "5.4.4",
+                      "page": 9,
+                      "block_id": "B-16ff197f2a95",
+                      "start": 82,
+                      "end": 100,
+                      "evidence": "不宜联合应用 ACEI 与 ARB。",
+                      "section_status": "from_text_heading",
+                      "verification": "pending",
+                      "confidence": 0.95,
+                      "confidence_basis": "rule_heuristic_not_calibrated"
+                    }
+                  ],
+                  "verification_reasons": [
+                    "clinical_review_required",
+                    "sentence_displaced_from_expected_section"
+                  ]
+                },
+                "forward": true
+              }
+            ],
+            "option_group": "A",
+            "hops": 2,
+            "nodes": [
+              "高血压合并糖尿病患者",
+              "血管紧张素转换酶抑制剂或血管紧张素II受体阻滞剂",
+              "血管紧张素II受体阻滞剂"
+            ]
+          }
+        ],
+        "verification": "pending",
+        "kind": "scoped_regimen_composition",
+        "note": "指南原文的方案解析；保留人群、择一/联用、禁忌和版面疑点，不是个体处方。",
+        "confidence": 0.55,
+        "sufficient": false,
+        "selection": "all_components_with_one_of_per_group"
+      }
+    ],
+    "total": 1,
+    "offset": 0,
+    "truncated": false,
+    "sufficient": false,
+    "verification": "pending",
+    "message": "已组合适用人群与代号定义两跳；仍待核验，不自动产生个体处方。",
+    "knowledge_version": {
+      "ontology_version": "0.4.0",
+      "verification": "pending",
+      "built_at": "2026-10-18T22:01:10+08:00",
+      "release_id": "R-20261107T012120-d13d786332",
+      "graph_sha256": "5516e2bd97523424b4d44872f7ee1a0d057125f2776b3680b7c1d9abf790353f"
+    }
+  },
+  "followup": {
+    "items": [
+      {
+        "id": "E-5549efd8b935c6",
+        "headId": "N-血压未达标患者",
+        "relation": "followUpEvery",
+        "tailId": "N-随访",
+        "condition": "8.1随访频率血压达标患者，至少每3个月随访1次；血压未达标患者，每月至少随访1次。",
+        "rule": "R-FOLLOWUP-UNCONTROLLED",
+        "file": "国家基层高血压防治管理指南2025版_重排.txt",
+        "section": "8.1",
+        "page": 13,
+        "block_id": "B-6e3c9e3c8d5a",
+        "start": 0,
+        "end": 52,
+        "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。",
+        "section_status": "from_text_heading",
+        "verification": "pending",
+        "confidence": 0.95,
+        "confidence_basis": "rule_heuristic_not_calibrated",
+        "modality": "至少",
+        "source_section_id": "N-B-6e3c9e3c8d5a",
+        "verification_reasons": [],
+        "head_name": "血压未达标患者",
+        "tail_name": "随访"
+      },
+      {
+        "id": "E-862939a2c6f284",
+        "headId": "N-血压未达标患者",
+        "relation": "followUpEvery",
+        "tailId": "N-随访",
+        "condition": "8.3.2.2血压未达标者：1个月至少随访1次，直至血压达标。",
+        "rule": "R-FOLLOWUP-UNCONTROLLED",
+        "file": "WS-T872-2025_重排.txt",
+        "section": "8.3.2.2",
+        "page": 5,
+        "block_id": "B-99383b6fd379",
+        "start": 0,
+        "end": 35,
+        "evidence": "8.3.2.2 血压未达标者：1 个月至少随访 1 次，直至血压达标。",
+        "section_status": "from_text_heading",
+        "verification": "pending",
+        "confidence": 0.95,
+        "confidence_basis": "rule_heuristic_not_calibrated",
+        "modality": "至少",
+        "source_section_id": "N-B-99383b6fd379",
+        "verification_reasons": [],
+        "head_name": "血压未达标患者",
+        "tail_name": "随访"
+      },
+      {
+        "id": "E-9b6c395e04a1cf",
+        "headId": "N-血压达标患者",
+        "relation": "followUpEvery",
+        "tailId": "N-随访",
+        "condition": "8.1随访频率血压达标患者，至少每3个月随访1次；血压未达标患者，每月至少随访1次。",
+        "rule": "R-FOLLOWUP-CONTROLLED",
+        "file": "国家基层高血压防治管理指南2025版_重排.txt",
+        "section": "8.1",
+        "page": 13,
+        "block_id": "B-6e3c9e3c8d5a",
+        "start": 0,
+        "end": 52,
+        "evidence": "8.1  随访频率\n血压达标患者，至少每 3 个月随访 1 次；血压\n未达标患者，每月至少随访 1 次。",
+        "section_status": "from_text_heading",
+        "verification": "pending",
+        "confidence": 0.95,
+        "confidence_basis": "rule_heuristic_not_calibrated",
+        "modality": "至少",
+        "source_section_id": "N-B-6e3c9e3c8d5a",
+        "verification_reasons": [],
+        "head_name": "血压达标患者",
+        "tail_name": "随访"
+      },
+      {
+        "id": "E-bf48cb55593b7f",
+        "headId": "N-血压达标患者",
+        "relation": "followUpEvery",
+        "tailId": "N-随访",
+        "condition": "8.3.2.1血压达标者：每3个月至少随访1次。",
+        "rule": "R-FOLLOWUP-CONTROLLED",
+        "file": "WS-T872-2025_重排.txt",
+        "section": "8.3.2.1",
+        "page": 5,
+        "block_id": "B-c79ea4f8af58",
+        "start": 0,
+        "end": 29,
+        "evidence": "8.3.2.1 血压达标者：每 3 个月至少随访 1 次。",
+        "section_status": "from_text_heading",
+        "verification": "pending",
+        "confidence": 0.95,
+        "confidence_basis": "rule_heuristic_not_calibrated",
+        "modality": "至少",
+        "source_section_id": "N-B-c79ea4f8af58",
+        "verification_reasons": [],
+        "head_name": "血压达标患者",
+        "tail_name": "随访"
+      }
+    ],
+    "total": 4,
+    "offset": 0,
+    "truncated": false,
+    "sufficient": false,
+    "verification": "pending",
+    "message": "返回原始关系；需联合条件、例外与原文核验。",
+    "knowledge_version": {
+      "ontology_version": "0.4.0",
+      "verification": "pending",
+      "built_at": "2026-10-18T22:01:10+08:00",
+      "release_id": "R-20261107T012120-d13d786332",
+      "graph_sha256": "5516e2bd97523424b4d44872f7ee1a0d057125f2776b3680b7c1d9abf790353f"
+    }
+  },
+  "tools": [
+    "compare_threshold",
+    "get_evidence",
+    "resolve_regimen",
+    "lookup_clause",
+    "query_relations",
+    "find_entities",
+    "evaluate_blood_pressure",
+    "check_references",
+    "detect_conflicts",
+    "query_candidates",
+    "graph_status",
+    "traverse_relations"
+  ],
+  "all_passed": true,
+  "nexent_ui_tested": false,
+  "limitation": "主机地址直接MCP验证；不等于从Nexent虚拟机或平台页面发起的工具调用"
+}

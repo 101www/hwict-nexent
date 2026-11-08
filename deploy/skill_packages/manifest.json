@@ -1,0 +1,35 @@
+{
+  "template_version": "1.0.0",
+  "format": "nexent_native_skill_markdown",
+  "scope": "instruction_skills_orchestrate_existing_MCP_not_new_clinical_rules",
+  "skills": [
+    {
+      "name": "clinical-evidence-router",
+      "description": "高血压资料问答的总流程。随访、用药、血压数值、指南版本、配备与一线推荐比较时先使用；检查发布版本，选择检索或推理工具，转交相关专用Skill及溯源Skill。",
+      "source": "skills\\evidence_router\\SKILL.md",
+      "package": "deploy\\skill_packages\\clinical-evidence-router.md",
+      "sha256": "b4b03349b5e6412defa5e149a7aa5dd37dddbabb9b8b8aa8aecb718a73f71595"
+    },
+    {
+      "name": "clinical-multi-hop",
+      "description": "高血压合并症首选药或图谱多跳路径问题使用。按同方案组连接人群、方案、药物类别，逐跳核对原文和条件，区分同文跨节与跨文档路径，不把通用连通路径当作临床推断。",
+      "source": "skills\\multi_hop_qa\\SKILL.md",
+      "package": "deploy\\skill_packages\\clinical-multi-hop.md",
+      "sha256": "6c5fa32439af8e3da447484d14c23fb3169aaaf7e2bcc5259e8d6faaf2ecb36c"
+    },
+    {
+      "name": "clinical-conflict-check",
+      "description": "用于高血压指南和标准的表面矛盾、药物配备与一线用药、同范围正反推荐及数值差异比较。核对人群、用途、条件、版本与两份原文，保留潜在冲突，不自动裁决。",
+      "source": "skills\\conflict_detect\\SKILL.md",
+      "package": "deploy\\skill_packages\\clinical-conflict-check.md",
+      "sha256": "163a14a3efedcfc0d5e32a5730b2c2c34f3bae0048b051c48871579bd331c4a5"
+    },
+    {
+      "name": "clinical-trace-report",
+      "description": "为工具检索或推理结果生成短答及可追溯证据报告。输出实际知识版本、每一跳原文、适用条件、未核验状态；检查引用完整与版本一致，不编造出处、概率或工具调用。",
+      "source": "skills\\trace_report\\SKILL.md",
+      "package": "deploy\\skill_packages\\clinical-trace-report.md",
+      "sha256": "32085677513430db7d9044bf36af49eb6b735b4f294f909d164beeec423587a8"
+    }
+  ]
+}

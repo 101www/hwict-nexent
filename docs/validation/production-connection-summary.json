@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-11-07T09:33:36.759231+08:00",
+  "production_release": "R-20261107T012120-d13d786332",
+  "python_tests": {
+    "count": 47,
+    "passed": true
+  },
+  "java_suites": [
+    {
+      "name": "com.example.ict.mcp.LiveGraphVersionTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "com.example.ict.mcp.RealGraphToolsTest",
+      "tests": "18",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "com.example.ict.mcp.repo.GraphPathResolutionTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0"
+    }
+  ],
+  "production_import_preserves_all_original_records": true,
+  "only_added_metadata": "meta.evolution",
+  "formal_graph_sha256": "5cb3a9cc4b69e3eae5585abd9e7a0755f06c7a217f05455269bb5e15641bad9d",
+  "production_has_no_pending_or_automatically_approved_proposals": true,
+  "old_historical_proposals_preserved": true,
+  "production_http_routes_passed": true,
+  "csrf_missing_token_rejected": true,
+  "live_status_matches_release": true,
+  "same_jvm_mcp_test": "evolution-live-mcp.json",
+  "real_host_endpoint_test": "production-mcp-connection.json",
+  "nexent_ui_tested": false,
+  "blocker": "Nexent页面已打开，后续浏览器控制工具报参数错误；本轮未完成平台内问答验收",
+  "not_completed": [
+    "Nexent原生Skills接入",
+    "医学专家核验",
+    "自动语义本体学习"
+  ],
+  "all_implemented_scope_checks_passed": true
+}
